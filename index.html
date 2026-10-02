@@ -2252,6 +2252,332 @@ nav.nav-scrolled{
 .gi-card-volunteer .gi-card-cta{color:#fde68a;border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.1);}
 .gi-card-volunteer .gi-card-cta:hover{background:rgba(245,158,11,0.24);border-color:#f59e0b;color:#ffffff;box-shadow:0 0 16px rgba(245,158,11,0.4);}
 
+/* Sub-actions on get-involved cards */
+.gi-sub-actions{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+  font-size:12px;
+}
+.gi-sub-link{
+  font-family:'Manrope',sans-serif;
+  font-size:11.5px;
+  font-weight:700;
+  color:rgba(255,255,255,0.65);
+  text-decoration:none;
+  transition:all .2s ease;
+}
+.gi-sub-link:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+.gi-sub-dot{
+  color:rgba(255,255,255,0.25);
+  font-size:11px;
+}
+.gi-sub-copy{
+  background:none;
+  border:none;
+  padding:0;
+  font-family:'Manrope',sans-serif;
+  font-size:11.5px;
+  font-weight:600;
+  color:rgba(255,255,255,0.55);
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.gi-sub-copy:hover{
+  color:#38bdf8;
+}
+.gi-sub-copy.copied{
+  color:#10b981;
+}
+
+/* ── SMART CONTACT & SUBMISSION MODAL ── */
+.cmodal-overlay{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .24s ease, visibility .24s ease;
+}
+.cmodal-overlay.open{
+  opacity:1;
+  visibility:visible;
+}
+.cmodal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(3, 4, 8, 0.82);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.cmodal-panel{
+  position:relative;
+  width:100%;
+  max-width:540px;
+  background:#090b14;
+  background:radial-gradient(ellipse 90% 60% at 50% 0%, rgba(99,102,241,0.12) 0%, rgba(6,182,212,0.06) 50%, #090b14 100%);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:24px;
+  padding:32px 28px 26px;
+  box-shadow:0 24px 64px rgba(0,0,0,0.85), 0 0 32px rgba(99,102,241,0.18);
+  transform:translateY(16px) scale(0.97);
+  transition:transform .24s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow:hidden;
+}
+.cmodal-overlay.open .cmodal-panel{
+  transform:translateY(0) scale(1);
+}
+.cmodal-close-btn{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.cmodal-close-btn:hover{
+  background:rgba(255,255,255,0.15);
+  color:#fff;
+  transform:scale(1.05);
+}
+.cmodal-header{
+  margin-bottom:18px;
+  padding-right:32px;
+}
+.cmodal-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'Manrope',sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#38bdf8;
+  background:rgba(56,189,248,0.1);
+  border:1px solid rgba(56,189,248,0.28);
+  padding:4px 11px;
+  border-radius:100px;
+  margin-bottom:10px;
+}
+.cmodal-badge-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#38bdf8;
+  box-shadow:0 0 8px #38bdf8;
+}
+.cmodal-title{
+  font-family:'Manrope',sans-serif;
+  font-size:22px;
+  font-weight:800;
+  color:#fff;
+  letter-spacing:-0.02em;
+  line-height:1.25;
+  margin-bottom:6px;
+}
+.cmodal-desc{
+  font-size:13.5px;
+  color:rgba(255,255,255,0.65);
+  line-height:1.55;
+  margin:0;
+}
+.cmodal-info-strip{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  background:rgba(255,255,255,0.035);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;
+  padding:10px 14px;
+  margin-bottom:18px;
+}
+.cmodal-info-left{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.cmodal-info-label{
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:rgba(255,255,255,0.4);
+}
+.cmodal-info-email{
+  font-family:'Space Grotesk',monospace;
+  font-size:13.5px;
+  font-weight:700;
+  color:#fde68a;
+  letter-spacing:0.02em;
+}
+.cmodal-info-copy-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.16);
+  border-radius:8px;
+  color:#fff;
+  font-family:'Manrope',sans-serif;
+  font-size:11.5px;
+  font-weight:700;
+  padding:6px 12px;
+  cursor:pointer;
+  transition:all .2s ease;
+  white-space:nowrap;
+}
+.cmodal-info-copy-btn:hover{
+  background:rgba(255,255,255,0.18);
+  border-color:rgba(255,255,255,0.3);
+}
+.cmodal-info-copy-btn.copied{
+  background:rgba(16,185,129,0.22);
+  border-color:rgba(16,185,129,0.5);
+  color:#6ee7b7;
+}
+.cmodal-options{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.cmodal-opt-card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.09);
+  background:rgba(255,255,255,0.03);
+  text-decoration:none;
+  color:#fff;
+  transition:all .22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor:pointer;
+  text-align:left;
+  width:100%;
+}
+.cmodal-opt-card:hover{
+  background:rgba(255,255,255,0.07);
+  border-color:rgba(255,255,255,0.2);
+  transform:translateY(-1px);
+}
+.cmodal-opt-form{
+  background:linear-gradient(135deg, rgba(6,182,212,0.12), rgba(99,102,241,0.12));
+  border-color:rgba(56,189,248,0.35);
+  box-shadow:0 0 20px rgba(6,182,212,0.08);
+}
+.cmodal-opt-form:hover{
+  background:linear-gradient(135deg, rgba(6,182,212,0.2), rgba(99,102,241,0.2));
+  border-color:rgba(56,189,248,0.6);
+  box-shadow:0 0 24px rgba(6,182,212,0.25);
+}
+.cmodal-opt-icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.cmodal-opt-icon-form{
+  background:rgba(56,189,248,0.18);
+  color:#38bdf8;
+  border:1px solid rgba(56,189,248,0.35);
+}
+.cmodal-opt-icon-gmail{
+  background:rgba(239,68,68,0.14);
+  color:#f87171;
+  border:1px solid rgba(239,68,68,0.3);
+}
+.cmodal-opt-icon-desktop{
+  background:rgba(129,140,248,0.14);
+  color:#a5b4fc;
+  border:1px solid rgba(129,140,248,0.3);
+}
+.cmodal-opt-icon-copy{
+  background:rgba(245,158,11,0.14);
+  color:#fbbf24;
+  border:1px solid rgba(245,158,11,0.3);
+}
+.cmodal-opt-body{
+  flex:1;
+  min-width:0;
+}
+.cmodal-opt-tag-row{
+  margin-bottom:3px;
+}
+.cmodal-opt-pill{
+  font-size:9.5px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:#38bdf8;
+  background:rgba(56,189,248,0.15);
+  border:1px solid rgba(56,189,248,0.3);
+  padding:2px 8px;
+  border-radius:100px;
+}
+.cmodal-opt-name{
+  font-family:'Manrope',sans-serif;
+  font-size:14.5px;
+  font-weight:700;
+  color:#fff;
+  line-height:1.3;
+}
+.cmodal-opt-detail{
+  font-size:12px;
+  color:rgba(255,255,255,0.55);
+  line-height:1.4;
+  margin-top:2px;
+}
+.cmodal-opt-arrow{
+  color:rgba(255,255,255,0.4);
+  display:flex;
+  align-items:center;
+  transition:all .2s ease;
+  flex-shrink:0;
+}
+.cmodal-opt-card:hover .cmodal-opt-arrow{
+  color:#fff;
+  transform:translateX(3px);
+}
+.cmodal-copy-badge{
+  font-size:11px;
+  font-weight:700;
+  color:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  padding:4px 10px;
+  border-radius:6px;
+}
+.cmodal-footer-note{
+  margin-top:16px;
+  font-size:11.5px;
+  color:rgba(255,255,255,0.5);
+  text-align:center;
+  line-height:1.5;
+}
+.cmodal-footer-note strong{color:rgba(255,255,255,0.85)}
+
 @media(max-width:960px){.get-involved-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:580px){.get-involved-grid{grid-template-columns:1fr;}}
 
@@ -8309,7 +8635,7 @@ html, body {
               </div>
               <h4 class="gi-card-title">Give a Talk</h4>
               <p class="gi-card-desc">Present your research, EIP/ERC work, or protocol insights to a focused audience of Ethereum contributors and builders.</p>
-              <a href="mailto:team@eiphub.xyz?subject=Talk%20Proposal%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta">
+              <a href="mailto:team@eiphub.xyz?subject=Talk%20Proposal%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta" onclick="openContactModal('talk', event)">
                 <span>Submit Proposal</span>
                 <svg class="gi-cta-arrow" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
               </a>
@@ -8325,7 +8651,7 @@ html, body {
               </div>
               <h4 class="gi-card-title">Join a Panel</h4>
               <p class="gi-card-desc">Participate in structured discussions on EIP governance, protocol evolution, application standards, or enterprise adoption.</p>
-              <a href="mailto:team@eiphub.xyz?subject=Panel%20Interest%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta">
+              <a href="mailto:team@eiphub.xyz?subject=Panel%20Interest%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta" onclick="openContactModal('panel', event)">
                 <span>Express Interest</span>
                 <svg class="gi-cta-arrow" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
               </a>
@@ -8341,7 +8667,7 @@ html, body {
               </div>
               <h4 class="gi-card-title">Run a Workshop</h4>
               <p class="gi-card-desc">Lead a hands-on session — spec walkthroughs, live demos, author clinics, or implementation deep-dives across any of the four tracks.</p>
-              <a href="mailto:team@eiphub.xyz?subject=Workshop%20Proposal%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta">
+              <a href="mailto:team@eiphub.xyz?subject=Workshop%20Proposal%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta" onclick="openContactModal('workshop', event)">
                 <span>Propose Workshop</span>
                 <svg class="gi-cta-arrow" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
               </a>
@@ -8357,7 +8683,7 @@ html, body {
               </div>
               <h4 class="gi-card-title">Shift Volunteering</h4>
               <p class="gi-card-desc">Support the hub on the ground — help run sessions, assist attendees, manage the booth, or coordinate logistics across all four days.</p>
-              <a href="mailto:team@eiphub.xyz?subject=Volunteer%20Signup%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta">
+              <a href="mailto:team@eiphub.xyz?subject=Volunteer%20Signup%20-%20EIP%20Hub%20Devcon%208" class="gi-card-cta" onclick="openContactModal('volunteer', event)">
                 <span>Sign Up</span>
                 <svg class="gi-cta-arrow" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
               </a>
@@ -9747,6 +10073,120 @@ html, body {
   </div>
 </footer>
 
+<!-- SMART CONTACT / SUBMISSION MODAL -->
+<div id="contact-modal" class="cmodal-overlay" role="dialog" aria-modal="true" aria-labelledby="cmodal-title" style="display:none">
+  <div class="cmodal-backdrop" onclick="closeContactModal()"></div>
+  <div class="cmodal-panel">
+    <button type="button" class="cmodal-close-btn" onclick="closeContactModal()" aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="cmodal-header">
+      <div class="cmodal-badge">
+        <span class="cmodal-badge-dot"></span>
+        <span id="cmodal-badge-text">Connect with EIP Hub</span>
+      </div>
+      <h3 id="cmodal-title" class="cmodal-title">Submit Proposal</h3>
+      <p id="cmodal-desc" class="cmodal-desc">Choose how you would like to connect or submit. No email software required!</p>
+    </div>
+
+    <!-- Active Email Details Info Bar -->
+    <div class="cmodal-info-strip">
+      <div class="cmodal-info-left">
+        <span class="cmodal-info-label">Recipient</span>
+        <span class="cmodal-info-email">team@eiphub.xyz</span>
+      </div>
+      <button type="button" class="cmodal-info-copy-btn" id="cmodal-quick-copy" onclick="copyContactEmail('team@eiphub.xyz', this)" title="Copy email address">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span>Copy Email</span>
+      </button>
+    </div>
+
+    <!-- Options Stack -->
+    <div class="cmodal-options">
+      <!-- Option 1: Online Form (Primary / highlighted if form exists) -->
+      <a id="cmodal-form-btn" href="#" target="_blank" rel="noopener noreferrer" class="cmodal-opt-card cmodal-opt-form" style="display:none">
+        <div class="cmodal-opt-icon cmodal-opt-icon-form">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="cmodal-opt-body">
+          <div class="cmodal-opt-tag-row">
+            <span class="cmodal-opt-pill">Recommended · Works in Browser</span>
+          </div>
+          <div class="cmodal-opt-name" id="cmodal-form-name">Open Online Application Form</div>
+          <div class="cmodal-opt-detail" id="cmodal-form-detail">Direct submission form · No desktop email app needed</div>
+        </div>
+        <div class="cmodal-opt-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- Option 2: Gmail (Web Browser) -->
+      <a id="cmodal-gmail-btn" href="#" target="_blank" rel="noopener noreferrer" class="cmodal-opt-card cmodal-opt-gmail">
+        <div class="cmodal-opt-icon cmodal-opt-icon-gmail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </div>
+        <div class="cmodal-opt-body">
+          <div class="cmodal-opt-name">Compose in Gmail (Web Browser)</div>
+          <div class="cmodal-opt-detail">Opens mail.google.com in a new tab with recipient &amp; subject prefilled</div>
+        </div>
+        <div class="cmodal-opt-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- Option 3: Default Mail App (Desktop) -->
+      <a id="cmodal-mailto-btn" href="#" class="cmodal-opt-card cmodal-opt-desktop">
+        <div class="cmodal-opt-icon cmodal-opt-icon-desktop">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </div>
+        <div class="cmodal-opt-body">
+          <div class="cmodal-opt-name">Open in Default Mail App</div>
+          <div class="cmodal-opt-detail">Launches Outlook, Apple Mail, or Thunderbird if installed on your device</div>
+        </div>
+        <div class="cmodal-opt-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+      </a>
+
+      <!-- Option 4: Copy Email -->
+      <button type="button" class="cmodal-opt-card cmodal-opt-copy" id="cmodal-copy-btn" onclick="copyContactEmail('team@eiphub.xyz', this)">
+        <div class="cmodal-opt-icon cmodal-opt-icon-copy">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </div>
+        <div class="cmodal-opt-body">
+          <div class="cmodal-opt-name" id="cmodal-copy-text">Copy Email Address</div>
+          <div class="cmodal-opt-detail">team@eiphub.xyz · Paste into Yahoo, Proton, Outlook Web, etc.</div>
+        </div>
+        <div class="cmodal-opt-arrow">
+          <span class="cmodal-copy-badge">Copy</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Footer Note -->
+    <div class="cmodal-footer-note">
+      <span>💡 If you don't have desktop email software, choose <strong>Online Form</strong> or <strong>Gmail</strong>.</span>
+    </div>
+  </div>
+</div>
 
 <script>
 // Countdown — Devcon 8 India: 3 Nov 2026, 08:30 IST to 6 Nov 2026, 19:00 IST
@@ -10479,6 +10919,197 @@ window.addEventListener('scroll', function(){
   startAutoplay();
   updateSlider(0);
 })();
+
+// ── SMART CONTACT & SUBMISSION MODAL LOGIC ──
+function openContactModal(context, event){
+  if(event && event.preventDefault) event.preventDefault();
+  if(event && event.stopPropagation) event.stopPropagation();
+
+  var to = 'team@eiphub.xyz';
+  var subject = 'Inquiry - EIP Hub Devcon 8';
+  var body = '';
+  var formUrl = '';
+  var formName = 'Open Online Form';
+  var formDetail = 'Direct submission form · No desktop email app needed';
+  var title = 'Connect with EIP Hub';
+  var desc = 'Choose how you would like to connect or submit. No email software required!';
+
+  if(context === 'talk' || context === 'speaker'){
+    title = 'Submit a Talk Proposal';
+    subject = 'Talk Proposal - EIP Hub Devcon 8';
+    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
+    formName = 'Open Speaker Application Form (Google Form)';
+    formDetail = 'Official session intake form for lightning talks and tech presentations';
+    desc = 'Apply to speak at Devcon 8 India. You can submit via Google Form or send an email.';
+  } else if(context === 'panel'){
+    title = 'Join a Panel Discussion';
+    subject = 'Panel Interest - EIP Hub Devcon 8';
+    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
+    formName = 'Open Panel Application Form (Google Form)';
+    formDetail = 'Indicate interest in governance, standards, or enterprise panel discussions';
+    desc = 'Participate in structured panel debates with EIP authors and protocol researchers.';
+  } else if(context === 'workshop'){
+    title = 'Propose a Hands-On Workshop';
+    subject = 'Workshop Proposal - EIP Hub Devcon 8';
+    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
+    formName = 'Open Workshop Intake Form (Google Form)';
+    formDetail = 'Propose code clinics, ERC design sessions, and tooling walkthroughs';
+    desc = 'Lead a hands-on developer session across any of the four tracks.';
+  } else if(context === 'volunteer'){
+    title = 'Shift Volunteering at EIP Hub';
+    subject = 'Volunteer Signup - EIP Hub Devcon 8';
+    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
+    formName = 'Open Contributor / Volunteer Form (Google Form)';
+    formDetail = 'Help run sessions, support the booth, or assist attendees on the ground';
+    desc = 'Join the on-ground contributor crew for Devcon 8 India in Mumbai.';
+  } else if(context === 'partner'){
+    title = 'Partner with EIP Hub';
+    subject = 'Partner Inquiry - EIP Hub Devcon 8';
+    formUrl = 'https://forms.gle/dTqzAyXLdhmHtTMh8';
+    formName = 'Open Partnership Application Form (Google Form)';
+    formDetail = 'Co-host technical tracks, support travel grants, or organize workshops';
+    desc = 'Connect with our coordination team to support protocol public goods.';
+  } else if(context === 'student'){
+    title = 'Devcon 8 Student Pass Request';
+    subject = 'Student Pass Request - Devcon 8 Mumbai';
+    formUrl = 'https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/';
+    formName = 'Open Student Pass Application (CryptPad Form)';
+    formDetail = 'Official application for eligible students seeking conference admission support';
+    desc = 'Submit your student details directly online or connect via email.';
+  } else if(typeof context === 'string' && context.indexOf('mailto:') === 0){
+    try {
+      var urlStr = context.substring(7);
+      var parts = urlStr.split('?');
+      to = decodeURIComponent(parts[0]) || 'team@eiphub.xyz';
+      if(parts[1]){
+        var params = new URLSearchParams(parts[1]);
+        if(params.has('subject')) subject = params.get('subject');
+        if(params.has('body')) body = params.get('body');
+      }
+    } catch(err){
+      to = 'team@eiphub.xyz';
+    }
+
+    var lowerSub = (subject || '').toLowerCase();
+    if(lowerSub.indexOf('speaker') !== -1 || lowerSub.indexOf('talk') !== -1 || lowerSub.indexOf('panel') !== -1 || lowerSub.indexOf('workshop') !== -1){
+      title = 'Submit Speaker / Session Proposal';
+      formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
+      formName = 'Open Speaker Application Form (Google Form)';
+      formDetail = 'Fill out the official session intake form directly online';
+      desc = 'Submit your session abstract and speaker credentials directly online or via email.';
+    } else if(lowerSub.indexOf('partner') !== -1){
+      title = 'Partner with EIP Hub';
+      formUrl = 'https://forms.gle/dTqzAyXLdhmHtTMh8';
+      formName = 'Open Partnership Application Form (Google Form)';
+      formDetail = 'Submit your organization / protocol partnership application';
+      desc = 'Connect with our team to co-host tracks or sponsor travel grants.';
+    } else if(lowerSub.indexOf('student') !== -1){
+      title = 'Devcon 8 Student Pass Inquiry';
+      formUrl = 'https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/';
+      formName = 'Open Student Pass Application (CryptPad Form)';
+      formDetail = 'Complete the official student pass request form online';
+      desc = 'Submit your student pass request online or email us directly.';
+    } else if(lowerSub.indexOf('volunteer') !== -1){
+      title = 'Shift Volunteering';
+      formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
+      formName = 'Open Contributor / Volunteer Form (Google Form)';
+      formDetail = 'Apply to volunteer on the ground at Devcon 8 India';
+    } else {
+      title = 'Contact EIP Hub Team';
+      desc = 'Reach out directly to the EIP Hub coordination team in Mumbai.';
+    }
+  }
+
+  var modalEl = document.getElementById('contact-modal');
+  if(!modalEl) return;
+
+  var titleEl = document.getElementById('cmodal-title');
+  var descEl = document.getElementById('cmodal-desc');
+  var formBtn = document.getElementById('cmodal-form-btn');
+  var formNameEl = document.getElementById('cmodal-form-name');
+  var formDetailEl = document.getElementById('cmodal-form-detail');
+  var gmailBtn = document.getElementById('cmodal-gmail-btn');
+  var mailtoBtn = document.getElementById('cmodal-mailto-btn');
+
+  if(titleEl) titleEl.textContent = title;
+  if(descEl) descEl.textContent = desc;
+
+  if(formUrl && formBtn){
+    formBtn.href = formUrl;
+    formBtn.style.display = 'flex';
+    if(formNameEl) formNameEl.textContent = formName;
+    if(formDetailEl) formDetailEl.textContent = formDetail;
+  } else if(formBtn){
+    formBtn.style.display = 'none';
+  }
+
+  var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
+                 '&su=' + encodeURIComponent(subject) +
+                 (body ? '&body=' + encodeURIComponent(body) : '');
+  if(gmailBtn) gmailBtn.href = gmailUrl;
+
+  var mailtoUrl = 'mailto:' + encodeURIComponent(to) +
+                  '?subject=' + encodeURIComponent(subject) +
+                  (body ? '&body=' + encodeURIComponent(body) : '');
+  if(mailtoBtn) mailtoBtn.href = mailtoUrl;
+
+  modalEl.style.display = 'flex';
+  setTimeout(function(){
+    modalEl.classList.add('open');
+  }, 10);
+  document.body.style.overflow = 'hidden';
+}
+
+function closeContactModal(){
+  var modalEl = document.getElementById('contact-modal');
+  if(!modalEl) return;
+  modalEl.classList.remove('open');
+  setTimeout(function(){
+    modalEl.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 240);
+}
+
+function copyContactEmail(email, btnEl){
+  var address = email || 'team@eiphub.xyz';
+  navigator.clipboard.writeText(address).then(function(){
+    if(!btnEl) return;
+    var originalHtml = btnEl.innerHTML;
+    btnEl.classList.add('copied');
+    var span = btnEl.querySelector('span');
+    if(span){
+      span.textContent = '✓ Copied!';
+    } else {
+      btnEl.textContent = '✓ Copied!';
+    }
+    setTimeout(function(){
+      btnEl.classList.remove('copied');
+      btnEl.innerHTML = originalHtml;
+    }, 2200);
+  }).catch(function(){
+    prompt('Copy email address:', address);
+  });
+}
+
+// Global mailto interceptor: prevents dead blank tabs and opens smart contact modal
+document.addEventListener('click', function(e){
+  var mailAnchor = e.target.closest('a[href^="mailto:"]');
+  if(!mailAnchor) return;
+  if(mailAnchor.closest('.cmodal-panel')) return;
+
+  var href = mailAnchor.getAttribute('href');
+  if(!href) return;
+
+  e.preventDefault();
+  openContactModal(href, e);
+});
+
+// Close modal on Escape key
+window.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    closeContactModal();
+  }
+});
 
 </script>
 </body>
