@@ -240,7 +240,35 @@ nav.nav-scrolled{
 
 /* ── HERO ── */
 
-/* ── AUTHENTIC EIP HUB EMBLEM STYLES ── */
+/* ── AUTHENTIC EIP HUB EMBLEM & BRAND STYLES ── */
+.brand-text-img{
+  display:inline-block;
+  vertical-align:middle;
+  object-fit:contain;
+  flex-shrink:0;
+  transition:filter .25s ease, transform .25s ease;
+}
+.nav-brand-text{
+  height:18px;
+  width:auto;
+}
+.hero-brand-text{
+  height:clamp(32px, 7.6vw, 92px);
+  width:auto;
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,0.5));
+}
+.hero-title:hover .hero-brand-text{
+  filter:drop-shadow(0 0 16px rgba(255,255,255,0.7)) drop-shadow(0 0 30px rgba(245,158,11,0.4));
+}
+.closing-brand-text{
+  height:clamp(28px, 6.8vw, 84px);
+  width:auto;
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,0.5));
+}
+.foot-brand-text{
+  height:16px;
+  width:auto;
+}
 .brand-emblem{
   display:inline-block;vertical-align:middle;object-fit:contain;flex-shrink:0;
 }
@@ -6763,7 +6791,7 @@ html, body {
 <nav>
   <a href="#" class="nav-logo">
     <span class="nav-brand">
-      EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem nav-brand-emblem">Hub
+      <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img nav-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem nav-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img nav-brand-text">
     </span>
     <span class="nav-badge"><span class="nav-badge-dot"></span>Devcon 8</span>
   </a>
@@ -6809,8 +6837,8 @@ html, body {
 
   <div class="hero-badge"><span class="dot"></span><strong>Devcon 8</strong>&nbsp;· Mumbai, India · 3–6 Nov 2026</div>
 
-  <h1 class="hero-title">
-    EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem hero-brand-emblem">Hub
+  <h1 class="hero-title" aria-label="EIP Hub">
+    <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img hero-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem hero-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img hero-brand-text">
   </h1>
 
   <p class="hero-sub">A four-day collaborative space at Devcon 8 India exploring Ethereum's processes, protocol upgrades, application standards, and enterprise adoption.</p>
@@ -7406,7 +7434,7 @@ html, body {
           <div class="summit-slider-title-col">
             <div class="summit-block-eyebrow">Interactive Space · Community Booth #29 · Devcon 8 Mumbai</div>
             <h4 class="summit-block-title community-booth-title">Community Booth: Upcoming Activities for Devcon 8</h4>
-            <p class="summit-block-sub">Step inside the official EIP Hub Community Booth at Devcon 8 India (Jio World Centre, Mumbai, Nov 3–6, 2026). Experience hands-on protocol activities across all four days: 1-on-1 EIP Editor triage clinics, whiteboard drafting sessions, client interop demos, live telemetry dashboards, and direct author mentorship.</p>
+            <p class="summit-block-sub">Step inside the official EIP Hub Community Booth at Devcon 8 India (Jio World Centre, Mumbai, Nov 3–6, 2026). Experience hands-on protocol activities across all four days: 1-on-1 EIP Editor triage clinics, whiteboard drafting sessions, client interop demos, live analytics dashboards, and direct author mentorship.</p>
           </div>
           <div class="summit-slider-nav-controls">
             <div class="summit-slider-status">
@@ -7622,15 +7650,15 @@ html, body {
               <span class="summit-act-num">Hub Space · Tooling &amp; Data</span>
               <span class="summit-act-icon">📊</span>
             </div>
-            <h5 class="summit-act-title">EIPsInsight Live Telemetry &amp; Dashboards</h5>
+            <h5 class="summit-act-title">EIPsInsight Live Analytics &amp; Dashboards</h5>
             <p class="summit-act-desc">
-              Continuous large-display monitoring screens demonstrating live <strong>EIPsInsight</strong> governance telemetry: Upgrade Dashboard, Meta EIP status, Protocol roadmap, stagnant drafts, and visual EIP lifecycle telemetry.
+              Continuous large-display monitoring screens demonstrating live <strong>EIPsInsight</strong> governance analytics: Upgrade Dashboard, Meta EIP status, Protocol roadmap, stagnant drafts, and visual EIP lifecycle insights.
             </p>
             <div class="summit-act-tags">
               <span class="summit-act-chip">#EIPsInsight</span>
               <span class="summit-act-chip">#UpgradeDashboard</span>
               <span class="summit-act-chip">#ProtocolRoadmap</span>
-              <span class="summit-act-chip">#LifecycleTelemetry</span>
+              <span class="summit-act-chip">#LifecycleAnalytics</span>
             </div>
           </div>
 
@@ -9965,8 +9993,8 @@ html, body {
   <div class="closing-content">
     <div class="closing-eyebrow"><span class="dot"></span> Registration Open · Free Luma RSVP · Mumbai <span class="dot"></span></div>
 
-    <h2 class="closing-title">
-      EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem closing-brand-emblem">Hub
+    <h2 class="closing-title" aria-label="EIP Hub">
+      <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img closing-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem closing-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img closing-brand-text">
     </h2>
 
     <div class="closing-venue-pill">
@@ -10051,8 +10079,8 @@ html, body {
 <!-- FOOTER -->
 <footer>
   <div class="foot-left">
-    <div class="foot-brand">
-      EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem foot-brand-emblem">Hub
+    <div class="foot-brand" aria-label="EIP Hub">
+      <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img foot-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem foot-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img foot-brand-text">
     </div>
     <span class="foot-tagline">Devcon 8 India Collaborative Space · Mumbai</span>
   </div>
