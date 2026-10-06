@@ -240,7 +240,35 @@ nav.nav-scrolled{
 
 /* ── HERO ── */
 
-/* ── AUTHENTIC EIP HUB EMBLEM STYLES ── */
+/* ── AUTHENTIC EIP HUB EMBLEM & BRAND STYLES ── */
+.brand-text-img{
+  display:inline-block;
+  vertical-align:middle;
+  object-fit:contain;
+  flex-shrink:0;
+  transition:filter .25s ease, transform .25s ease;
+}
+.nav-brand-text{
+  height:18px;
+  width:auto;
+}
+.hero-brand-text{
+  height:clamp(32px, 7.6vw, 92px);
+  width:auto;
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,0.5));
+}
+.hero-title:hover .hero-brand-text{
+  filter:drop-shadow(0 0 16px rgba(255,255,255,0.7)) drop-shadow(0 0 30px rgba(245,158,11,0.4));
+}
+.closing-brand-text{
+  height:clamp(28px, 6.8vw, 84px);
+  width:auto;
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,0.5));
+}
+.foot-brand-text{
+  height:16px;
+  width:auto;
+}
 .brand-emblem{
   display:inline-block;vertical-align:middle;object-fit:contain;flex-shrink:0;
 }
@@ -4445,11 +4473,11 @@ footer{
 
 /* ── HIGHLIGHTED STUDENT PASS SECTION ── */
 .student-pass-card{
-  max-width:840px;margin:0 auto;
-  background:linear-gradient(145deg, rgba(14,28,38,0.92) 0%, rgba(9,16,26,0.97) 50%, rgba(16,26,44,0.92) 100%);
-  border:1px solid rgba(20,184,166,0.35);
-  border-radius:24px;
-  padding:44px 38px 32px;
+  max-width:980px;margin:0 auto;
+  background:linear-gradient(145deg, rgba(14,28,38,0.94) 0%, rgba(9,16,26,0.98) 50%, rgba(16,26,44,0.94) 100%);
+  border:1px solid rgba(20,184,166,0.38);
+  border-radius:26px;
+  padding:48px 40px 34px;
   text-align:center;
   backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
   box-shadow:
@@ -4461,10 +4489,10 @@ footer{
   transition:border-color .3s ease, box-shadow .3s ease;
 }
 .student-pass-card:hover{
-  border-color:rgba(20,184,166,0.6);
+  border-color:rgba(20,184,166,0.65);
   box-shadow:
     0 30px 85px -12px rgba(0,0,0,0.92),
-    0 0 50px -5px rgba(20,184,166,0.35),
+    0 0 55px -5px rgba(20,184,166,0.38),
     inset 0 1px 0 rgba(94,234,212,0.45);
 }
 .student-pass-top-beam{
@@ -4475,8 +4503,8 @@ footer{
 }
 .student-pass-radial-glow{
   position:absolute;top:-60px;left:50%;transform:translateX(-50%);
-  width:380px;height:140px;
-  background:radial-gradient(ellipse at center, rgba(20,184,166,0.25) 0%, rgba(6,182,212,0.08) 50%, transparent 80%);
+  width:440px;height:160px;
+  background:radial-gradient(ellipse at center, rgba(20,184,166,0.28) 0%, rgba(6,182,212,0.1) 50%, transparent 80%);
   pointer-events:none;
 }
 .student-pass-badge{
@@ -4514,47 +4542,96 @@ footer{
 }
 .student-pass-subtitle{
   font-family:'Manrope',sans-serif;
-  font-size:clamp(16px, 1.8vw, 19px);
+  font-size:clamp(15px, 1.8vw, 18.5px);
   font-weight:700;
   color:#5eead4;
   line-height:1.4;
-  margin:0 0 14px;
+  margin:0 0 16px;
 }
 .student-pass-desc{
-  color:rgba(255,255,255,0.76);
-  max-width:720px;
+  color:rgba(255,255,255,0.78);
+  max-width:820px;
   margin:0 auto 28px;
-  font-size:15px;
-  line-height:1.68;
+  font-size:14.5px;
+  line-height:1.7;
 }
 .student-pass-desc strong{
   color:#fff;font-weight:700;
 }
-.student-pass-perks{
-  display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;
-  max-width:760px;margin:0 auto 30px;
-  text-align:left;
+.student-scrutiny-grid{
+  display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:14px;
+  max-width:920px;margin:0 auto 24px;text-align:left;
 }
-.sp-perk{
+.student-scrutiny-card{
   background:rgba(255,255,255,0.035);
   border:1px solid rgba(255,255,255,0.08);
-  border-radius:14px;padding:14px 16px;
-  display:flex;align-items:flex-start;gap:12px;
-  transition:all .22s ease;
+  border-radius:16px;padding:18px 16px;
+  display:flex;flex-direction:column;gap:8px;
+  transition:all .22s cubic-bezier(0.16,1,0.3,1);
+  position:relative;
 }
-.sp-perk:hover{
-  background:rgba(20,184,166,0.06);
-  border-color:rgba(20,184,166,0.35);
+.student-scrutiny-card:hover{
+  background:rgba(20,184,166,0.07);
+  border-color:rgba(20,184,166,0.4);
   transform:translateY(-2px);
-  box-shadow:0 8px 20px -5px rgba(20,184,166,0.18);
+  box-shadow:0 10px 24px -6px rgba(20,184,166,0.2);
 }
-.sp-perk-icon{font-size:22px;line-height:1;margin-top:2px}
-.sp-perk-info{display:flex;flex-direction:column;gap:3px}
-.sp-perk-info strong{
-  font-family:'Manrope',sans-serif;font-size:13.5px;font-weight:700;color:#fff;
+.student-scrutiny-card-top{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
 }
-.sp-perk-info span{
-  font-family:'Manrope',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);line-height:1.4;
+.student-scrutiny-icon-pod{
+  width:34px;height:34px;border-radius:9px;
+  background:rgba(20,184,166,0.14);border:1px solid rgba(20,184,166,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;flex-shrink:0;
+}
+.student-scrutiny-tag{
+  font-family:'Manrope',sans-serif;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;color:#5eead4;
+  padding:2px 8px;border-radius:100px;
+  background:rgba(20,184,166,0.12);border:1px solid rgba(20,184,166,0.25);
+}
+.student-scrutiny-title{
+  font-family:'Manrope',sans-serif;font-size:14px;font-weight:800;color:#fff;
+  margin:0;line-height:1.3;
+}
+.student-scrutiny-desc{
+  font-family:'Manrope',sans-serif;font-size:12px;color:rgba(255,255,255,0.68);
+  line-height:1.55;margin:0;
+}
+.student-pipeline-row{
+  display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:10px;
+  max-width:920px;margin:0 auto 22px;
+}
+.student-pipe-step{
+  background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px;padding:10px 12px;text-align:left;display:flex;align-items:center;gap:9px;
+}
+.student-pipe-num{
+  width:22px;height:22px;border-radius:50%;
+  background:rgba(20,184,166,0.18);border:1px solid rgba(20,184,166,0.4);
+  color:#5eead4;font-family:'Manrope',sans-serif;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.student-pipe-text{
+  font-family:'Manrope',sans-serif;font-size:11.5px;font-weight:700;color:rgba(255,255,255,0.85);line-height:1.3;
+}
+.student-scrutiny-notice{
+  max-width:920px;margin:0 auto 26px;
+  background:rgba(245,158,11,0.06);
+  border:1px solid rgba(245,158,11,0.28);
+  border-radius:14px;padding:14px 18px;
+  display:flex;align-items:flex-start;gap:12px;text-align:left;
+}
+.student-scrutiny-notice-icon{
+  font-size:18px;line-height:1;margin-top:2px;flex-shrink:0;
+}
+.student-scrutiny-notice-text{
+  font-family:'Manrope',sans-serif;font-size:12.5px;color:rgba(255,255,255,0.85);
+  line-height:1.55;
+}
+.student-scrutiny-notice-text strong{
+  color:#fde68a;font-weight:700;
 }
 .student-pass-actions{
   display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;
@@ -4664,12 +4741,91 @@ footer{
   transform:translateY(2px);
 }
 
+.student-provider-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(20,184,166,0.14);border:1px solid rgba(20,184,166,0.36);
+  padding:6px 14px;border-radius:100px;
+  font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;color:#5eead4;
+  margin-bottom:14px;
+}
+.student-sub-block{
+  margin:28px 0;text-align:left;
+}
+.student-sub-title{
+  font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:800;color:#fff;
+  letter-spacing:-0.01em;margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.student-sub-title .sub-tag{
+  font-size:11px;font-weight:700;color:#2dd4bf;background:rgba(20,184,166,0.16);
+  padding:2px 8px;border-radius:6px;border:1px solid rgba(20,184,166,0.3);
+  letter-spacing:.04em;text-transform:uppercase;
+}
+.student-benefits-grid{
+  display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:12px;
+  margin-bottom:24px;
+}
+.student-benefit-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:14px;padding:16px 14px;display:flex;flex-direction:column;gap:6px;
+  transition:all .2s ease;
+}
+.student-benefit-card:hover{
+  background:rgba(20,184,166,0.06);border-color:rgba(20,184,166,0.35);
+  transform:translateY(-2px);
+}
+.student-benefit-icon{
+  font-size:22px;margin-bottom:2px;
+}
+.student-benefit-title{
+  font-family:'Manrope',sans-serif;font-size:13.5px;font-weight:800;color:#fff;
+}
+.student-benefit-desc{
+  font-family:'Manrope',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.68);line-height:1.5;
+}
+.student-who-grid{
+  display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:12px;
+  margin-bottom:24px;
+}
+.student-who-card{
+  background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);
+  border-radius:14px;padding:16px 16px;display:flex;gap:12px;align-items:flex-start;
+  transition:all .2s ease;
+}
+.student-who-card:hover{
+  background:rgba(20,184,166,0.05);border-color:rgba(20,184,166,0.3);
+}
+.student-who-icon-pod{
+  width:36px;height:36px;border-radius:10px;background:rgba(20,184,166,0.12);
+  border:1px solid rgba(20,184,166,0.25);display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;margin-top:2px;
+}
+.student-who-body{
+  flex:1;
+}
+.student-who-title{
+  font-family:'Manrope',sans-serif;font-size:13.5px;font-weight:800;color:#fff;
+  margin-bottom:4px;
+}
+.student-who-desc{
+  font-family:'Manrope',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.68);line-height:1.55;
+}
+
+@media(max-width:920px){
+  .student-scrutiny-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .student-pipeline-row{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .student-benefits-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .student-who-grid{grid-template-columns:1fr}
+}
 @media(max-width:768px){
   .student-pass-card{padding:32px 18px 22px;border-radius:20px}
-  .student-pass-perks{grid-template-columns:1fr;gap:10px}
   .student-pass-actions{flex-direction:column;width:100%}
   .student-pass-btn-primary, .student-pass-btn-secondary, .student-pass-copy-btn{width:100%;justify-content:center}
   .hero-student-pill{flex-direction:column;gap:6px;padding:10px 16px;text-align:center}
+}
+@media(max-width:580px){
+  .student-scrutiny-grid{grid-template-columns:1fr}
+  .student-pipeline-row{grid-template-columns:1fr}
+  .student-benefits-grid{grid-template-columns:1fr}
 }
 .summit-story-card{
   background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
@@ -6763,14 +6919,15 @@ html, body {
 <nav>
   <a href="#" class="nav-logo">
     <span class="nav-brand">
-      EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem nav-brand-emblem">Hub
+      <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img nav-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem nav-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img nav-brand-text">
     </span>
     <span class="nav-badge"><span class="nav-badge-dot"></span>Devcon 8</span>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#partners">Partners</a></li>
     <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#days">Agenda</a></li>
+    <li><a href="#partners">Partners</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <div class="nav-actions">
@@ -6809,8 +6966,8 @@ html, body {
 
   <div class="hero-badge"><span class="dot"></span><strong>Devcon 8</strong>&nbsp;· Mumbai, India · 3–6 Nov 2026</div>
 
-  <h1 class="hero-title">
-    EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem hero-brand-emblem">Hub
+  <h1 class="hero-title" aria-label="EIP Hub">
+    <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img hero-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem hero-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img hero-brand-text">
   </h1>
 
   <p class="hero-sub">A four-day collaborative space at Devcon 8 India exploring Ethereum's processes, protocol upgrades, application standards, and enterprise adoption.</p>
@@ -6847,15 +7004,16 @@ html, body {
   </div>
 
   <div class="hero-ctas">
-    <a href="https://lu.ma/czi58jpe" target="_blank" class="btn-primary">Join</a>
-    <a href="#about" class="btn-outline">See the agenda</a>
+    <a href="https://lu.ma/czi58jpe" target="_blank" class="btn-primary">Join on Luma</a>
+    <a href="#speak" class="btn-outline">Apply to Speak ↗</a>
+    <a href="#days" class="btn-outline">See the agenda ↓</a>
   </div>
 
   <!-- Hero Student Pass Quick Link -->
   <div class="hero-student-wrapper">
     <a href="#student-pass" class="hero-student-pill">
-      <span class="hero-student-tag">🎓 Student Pass</span>
-      <span class="hero-student-text">Planning to attend Devcon without a ticket? Request a Student Pass</span>
+      <span class="hero-student-tag">🎓 Devcon 8 Student Passes</span>
+      <span class="hero-student-text">Interested in Ethereum &amp; standards? Request a free Student Pass</span>
       <span class="hero-student-arr">→</span>
     </a>
   </div>
@@ -7406,7 +7564,7 @@ html, body {
           <div class="summit-slider-title-col">
             <div class="summit-block-eyebrow">Interactive Space · Community Booth #29 · Devcon 8 Mumbai</div>
             <h4 class="summit-block-title community-booth-title">Community Booth: Upcoming Activities for Devcon 8</h4>
-            <p class="summit-block-sub">Step inside the official EIP Hub Community Booth at Devcon 8 India (Jio World Centre, Mumbai, Nov 3–6, 2026). Experience hands-on protocol activities across all four days: 1-on-1 EIP Editor triage clinics, whiteboard drafting sessions, client interop demos, live telemetry dashboards, and direct author mentorship.</p>
+            <p class="summit-block-sub">Step inside the official EIP Hub Community Booth at Devcon 8 India (Jio World Centre, Mumbai, Nov 3–6, 2026). Experience hands-on protocol activities across all four days: 1-on-1 EIP Editor triage clinics, whiteboard drafting sessions, client interop demos, live analytics dashboards, and direct author mentorship.</p>
           </div>
           <div class="summit-slider-nav-controls">
             <div class="summit-slider-status">
@@ -7622,15 +7780,15 @@ html, body {
               <span class="summit-act-num">Hub Space · Tooling &amp; Data</span>
               <span class="summit-act-icon">📊</span>
             </div>
-            <h5 class="summit-act-title">EIPsInsight Live Telemetry &amp; Dashboards</h5>
+            <h5 class="summit-act-title">EIPsInsight Live Analytics &amp; Dashboards</h5>
             <p class="summit-act-desc">
-              Continuous large-display monitoring screens demonstrating live <strong>EIPsInsight</strong> governance telemetry: Upgrade Dashboard, Meta EIP status, Protocol roadmap, stagnant drafts, and visual EIP lifecycle telemetry.
+              Continuous large-display monitoring screens demonstrating live <strong>EIPsInsight</strong> governance analytics: Upgrade Dashboard, Meta EIP status, Protocol roadmap, stagnant drafts, and visual EIP lifecycle insights.
             </p>
             <div class="summit-act-tags">
               <span class="summit-act-chip">#EIPsInsight</span>
               <span class="summit-act-chip">#UpgradeDashboard</span>
               <span class="summit-act-chip">#ProtocolRoadmap</span>
-              <span class="summit-act-chip">#LifecycleTelemetry</span>
+              <span class="summit-act-chip">#LifecycleAnalytics</span>
             </div>
           </div>
 
@@ -7726,6 +7884,381 @@ html, body {
             <span>Join on Luma</span>
             <span class="btn-arr">↗</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPEAKERS & CALL FOR PROPOSALS -->
+<div class="speakers-bg" id="speakers">
+  <div class="wrap" style="text-align:center;padding-bottom:52px">
+    <div class="sec-eyebrow">Speakers &amp; Contributors</div>
+    <div class="sec-title">Meet Our Speakers</div>
+    <div class="speakers-box">
+      <div class="speakers-console-top">
+        <div class="speakers-console-status">
+          <span class="speakers-beacon"></span>
+          <span>Roster Curation in Progress · 2026 Lineup Reveal Imminent</span>
+        </div>
+        <span class="speakers-console-badge">Devcon 8 India · Jio World Centre</span>
+      </div>
+
+      <p class="speakers-tba">
+        The EIP Hub stage gathers the core minds driving Ethereum’s protocol specification and standardization engine. Across all 4 days in Mumbai, attendees will engage directly with four distinct cohorts of technical contributors:
+      </p>
+
+      <div class="speaker-cohorts-grid">
+        <!-- Cohort 1: EIP Editors & Authors -->
+        <div class="speaker-cohort-card cohort-1">
+          <div class="cohort-accent-bar"></div>
+          <div class="cohort-icon-pod">🖋️</div>
+          <h4 class="cohort-title">EIP Editors &amp; Authors</h4>
+          <span class="cohort-sub">Governance &amp; Consensus</span>
+          <p class="cohort-desc">Stewards of EIP-1 and the standards process providing direct review, author office hours, and peer feedback on drafts.</p>
+        </div>
+
+        <!-- Cohort 2: Core Protocol Devs -->
+        <div class="speaker-cohort-card cohort-2">
+          <div class="cohort-accent-bar"></div>
+          <div class="cohort-icon-pod">⚙️</div>
+          <h4 class="cohort-title">Core Protocol Devs</h4>
+          <span class="cohort-sub">Consensus &amp; Execution</span>
+          <p class="cohort-desc">Researchers and engineers working on upcoming Ethereum hard forks, state transition changes, and Prague/Electra upgrades.</p>
+        </div>
+
+        <!-- Cohort 3: Client Implementers -->
+        <div class="speaker-cohort-card cohort-3">
+          <div class="cohort-accent-bar"></div>
+          <div class="cohort-icon-pod">💻</div>
+          <h4 class="cohort-title">Client Implementers</h4>
+          <span class="cohort-sub">Interop &amp; Performance</span>
+          <p class="cohort-desc">Engineers from Geth, Nethermind, Besu, Erigon, Lighthouse, and Prysm testing interop and engine API specifications.</p>
+        </div>
+
+        <!-- Cohort 4: ERC & App Architects -->
+        <div class="speaker-cohort-card cohort-4">
+          <div class="cohort-accent-bar"></div>
+          <div class="cohort-icon-pod">🏗️</div>
+          <h4 class="cohort-title">ERC &amp; App Architects</h4>
+          <span class="cohort-sub">Application Standards</span>
+          <p class="cohort-desc">Authors behind ERC-4337 smart accounts, token extensions, wallet interoperability, and verifiable computing primitives.</p>
+        </div>
+      </div>
+
+      <div class="speakers-box-actions">
+        <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" class="btn-speaker-updates">
+          <span>Get Speaker Updates on Luma</span>
+          <span>↗</span>
+        </a>
+        <a href="#speak" class="btn-speaker-apply-alt">
+          <span>Apply to Speak at EIP Hub</span>
+          <span>↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALL FOR SPEAKERS & PROPOSALS (Best Location) -->
+  <div class="speak-section" id="speak">
+    <div class="speak-card">
+      <div class="speak-badge"><span class="speak-badge-dot"></span> Call for Speakers · Devcon 8 India</div>
+      <h2 class="speak-title">Want to Speak or Present at the EIP Hub?</h2>
+      <p class="speak-sub">Are you authoring an EIP, building around ERC standards, or conducting protocol research? We welcome presentations, workshops, and lightning talks across all four days at Jio World Centre, Mumbai.</p>
+
+      <!-- 4 Session Formats -->
+      <div class="speak-formats">
+        <div class="speak-format-item format-item-lightning">
+          <div class="speak-format-top-bar"></div>
+          <div class="format-icon-pod">⚡</div>
+          <div class="format-title">Lightning Talk</div>
+          <span class="format-time">15–20 Minutes</span>
+          <div class="format-desc">Quick standard walkthroughs, tool launches &amp; concise problem statements.</div>
+        </div>
+        <div class="speak-format-item format-item-deepdive">
+          <div class="speak-format-top-bar"></div>
+          <div class="format-icon-pod">🎙️</div>
+          <div class="format-title">Tech Deep-Dive</div>
+          <span class="format-time">30–45 Minutes</span>
+          <div class="format-desc">Protocol architecture, meta EIP upgrades &amp; in-depth technical analysis.</div>
+        </div>
+        <div class="speak-format-item format-item-clinic">
+          <div class="speak-format-top-bar"></div>
+          <div class="format-icon-pod">🛠️</div>
+          <div class="format-title">Hands-On Clinic</div>
+          <span class="format-time">45 Minutes</span>
+          <div class="format-desc">Live ERC design review, smart contract feedback &amp; code walkthroughs.</div>
+        </div>
+        <div class="speak-format-item format-item-panel">
+          <div class="speak-format-top-bar"></div>
+          <div class="format-icon-pod">👥</div>
+          <div class="format-title">Panel Discussion</div>
+          <span class="format-time">45 Minutes</span>
+          <div class="format-desc">Multi-author debate, governance processes &amp; ecosystem roadmaps.</div>
+        </div>
+      </div>
+
+      <!-- Connect on Email Action Box -->
+      <div class="speak-action-box">
+        <div class="speak-action-topbar">
+          <div class="speak-channel-status">
+            <span class="speak-status-dot"></span>
+            <span class="speak-status-text">Direct Speaker Proposal Channel</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <a href="https://x.com/eiphub" target="_blank" rel="noopener noreferrer" class="speak-email-chip" style="text-decoration:none" title="Follow @eiphub on X (Twitter)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span class="speak-chip-label">𝕏 Handle:</span>
+              <span class="speak-email-val">@eiphub</span>
+            </a>
+            <div class="speak-email-chip">
+              <span class="speak-chip-label">Official Inbox:</span>
+              <span class="speak-email-val">team@eiphub.xyz</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="speak-btn-group">
+          <a href="https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/" target="_blank" rel="noopener noreferrer" class="btn-speak-form">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Speaker Application Form (CryptPad)</span>
+            <span class="btn-arr">↗</span>
+          </a>
+          <button type="button" class="btn-copy-mail" id="copy-speak-mail-btn" onclick="copySpeakerEmail()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span id="copy-btn-text">Copy Email</span>
+          </button>
+          <a href="mailto:team@eiphub.xyz?subject=Speaker%20Proposal%20-%20EIP%20Hub%20Devcon%208&body=Hi%20EIP%20Hub%20Team%2C%0A%0AI%20would%20like%20to%20propose%20a%20talk%2Fsession%20at%20the%20EIP%20Hub%20at%20Devcon%208%20India%20(Nov%203-6%2C%202026%2C%20Mumbai).%0A%0A-%20Speaker%20Name%3A%0A-%20Talk%20Title%3A%0A-%20Preferred%20Format%20(Lightning%20%2F%20Deep-Dive%20%2F%20Workshop%20%2F%20Panel)%3A%0A-%20Target%20Day%20(Day%201%20to%20Day%204)%3A%0A-%20Brief%20Abstract%20(100-150%20words)%3A%0A-%20Relevant%20EIP%2FERC%20or%20Project%20Link%3A%0A-%20Bio%20%26%20Twitter%2FX%20Handle%3A%0A%0AThank%20you!" class="btn-speak-mail">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span>Email Proposal</span>
+            <span class="btn-arr">↗</span>
+          </a>
+        </div>
+
+        <div class="speak-meta-hint">
+          <div class="speak-hint-inner">
+            <span class="speak-hint-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+            </span>
+            <span class="speak-hint-lead">Please include your:</span>
+            <span class="speak-hint-tag">Session Title</span>
+            <span class="speak-hint-tag">150-Word Abstract</span>
+            <span class="speak-hint-tag">Speaker Bio</span>
+            <span class="speak-hint-divider" aria-hidden="true">·</span>
+            <span class="speak-hint-rolling"><span class="rolling-dot"></span>Submissions reviewed on rolling basis</span>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;font-size:12px;color:rgba(255,255,255,0.6);text-align:center;line-height:1.6">
+          <span style="color:#f59e0b;font-weight:700">⚠️ Important Notice:</span> The EIP Hub is a community hub stage and does not provide Devcon conference passes, tickets, or travel stipends. All presenters and attendees must hold an active Devcon 8 ticket for venue admission.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW TO APPLY AS A SPEAKER (Step-by-Step Guide & Criteria) -->
+  <div class="speaker-guide-wrap" id="apply-as-speaker">
+    <div class="speaker-guide-header">
+      <div class="sec-eyebrow">Speaker Onboarding</div>
+      <h3 class="speaker-guide-title">How to Apply as a Speaker</h3>
+      <p class="speaker-guide-sub">
+        We welcome presentations, workshops, and lightning talks from all Ethereum standards contributors. Follow this 4-step process to submit your proposal.
+      </p>
+    </div>
+
+    <!-- 4-Step Process -->
+    <div class="speaker-steps-grid">
+      <!-- Step: Alignment -->
+      <div class="step-card step-card-1">
+        <div class="step-card-top-bar"></div>
+        <div class="step-card-body">
+          <div class="step-card-header">
+            <span class="step-badge"><span class="step-badge-dot"></span>Step: Alignment</span>
+            <div class="step-icon-pod" title="Programming Alignment">🗓️</div>
+          </div>
+          <h4>Align with a Programming Day</h4>
+          <p class="step-desc">Match your research or proposal to one of the four curated Devcon 8 summit days:</p>
+          <div class="step-chips-list">
+            <div class="step-chip" data-tooltip="EIP Process &amp; Community (Nov 3)" title="EIP Process &amp; Community (Nov 3)">
+              <span class="step-chip-tag">Day 1</span>
+              <span class="step-chip-text">EIP Process &amp; Community (Nov 3)</span>
+            </div>
+            <div class="step-chip" data-tooltip="Protocol EIPs &amp; Upgrades (Nov 4)" title="Protocol EIPs &amp; Upgrades (Nov 4)">
+              <span class="step-chip-tag">Day 2</span>
+              <span class="step-chip-text">Protocol EIPs &amp; Upgrades (Nov 4)</span>
+            </div>
+            <div class="step-chip" data-tooltip="Application ERCs &amp; Adoption (Nov 5)" title="Application ERCs &amp; Adoption (Nov 5)">
+              <span class="step-chip-tag">Day 3</span>
+              <span class="step-chip-text">Application ERCs &amp; Adoption (Nov 5)</span>
+            </div>
+            <div class="step-chip" data-tooltip="Enterprise Adoption (Nov 6)" title="Enterprise Adoption (Nov 6)">
+              <span class="step-chip-tag">Day 4</span>
+              <span class="step-chip-text">Enterprise Adoption (Nov 6)</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-card-footer">
+          <span class="step-phase">Alignment Stage</span>
+          <span class="step-footer-action">Alignment ➔</span>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="step-card step-card-2">
+        <div class="step-card-top-bar"></div>
+        <div class="step-card-body">
+          <div class="step-card-header">
+            <span class="step-badge"><span class="step-badge-dot"></span>Step: Format</span>
+            <div class="step-icon-pod" title="Session Format">🎙️</div>
+          </div>
+          <h4>Select Your Session Format</h4>
+          <p class="step-desc">Pick the ideal stage format suited to your technical depth and presentation style:</p>
+          <div class="step-chips-list">
+            <div class="step-chip" data-tooltip="Lightning Talk &amp; Concise Demo (15–20m)" title="Lightning Talk &amp; Concise Demo (15–20m)">
+              <span class="step-chip-tag">⚡ 15–20m</span>
+              <span class="step-chip-text">Lightning Talk &amp; Concise Demo</span>
+            </div>
+            <div class="step-chip" data-tooltip="Tech Deep-Dive &amp; Architecture (30–45m)" title="Tech Deep-Dive &amp; Architecture (30–45m)">
+              <span class="step-chip-tag">🔬 30–45m</span>
+              <span class="step-chip-text">Tech Deep-Dive &amp; Architecture</span>
+            </div>
+            <div class="step-chip" data-tooltip="Hands-On Clinic &amp; Code Review (45m)" title="Hands-On Clinic &amp; Code Review (45m)">
+              <span class="step-chip-tag">🛠️ 45m</span>
+              <span class="step-chip-text">Hands-On Clinic &amp; Code Review</span>
+            </div>
+            <div class="step-chip" data-tooltip="Panel Discussion &amp; Debate (45m)" title="Panel Discussion &amp; Debate (45m)">
+              <span class="step-chip-tag">💬 45m</span>
+              <span class="step-chip-text">Panel Discussion &amp; Debate</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-card-footer">
+          <span class="step-phase">Format Stage</span>
+          <span class="step-footer-action">Format ➔</span>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="step-card step-card-3">
+        <div class="step-card-top-bar"></div>
+        <div class="step-card-body">
+          <div class="step-card-header">
+            <span class="step-badge"><span class="step-badge-dot"></span>Step: Intake</span>
+            <div class="step-icon-pod" title="Proposal Intake">📝</div>
+          </div>
+          <h4>Submit Proposal Form</h4>
+          <p class="step-desc">Fill out the official speaker intake form with your technical materials and credentials:</p>
+          <div class="step-chips-list">
+            <div class="step-chip" data-tooltip="150-Word Talk Summary &amp; Takeaways" title="150-Word Talk Summary &amp; Takeaways">
+              <span class="step-chip-tag">Abstract</span>
+              <span class="step-chip-text">150-Word Talk Summary &amp; Takeaways</span>
+            </div>
+            <div class="step-chip" data-tooltip="EIP / ERC Draft or GitHub Repository" title="EIP / ERC Draft or GitHub Repository">
+              <span class="step-chip-tag">Specs</span>
+              <span class="step-chip-text">EIP / ERC Draft or GitHub Repository</span>
+            </div>
+            <div class="step-chip" data-tooltip="Author Profile &amp; Protocol Track Record" title="Author Profile &amp; Protocol Track Record">
+              <span class="step-chip-tag">Bio</span>
+              <span class="step-chip-text">Author Profile &amp; Protocol Track Record</span>
+            </div>
+            <div class="step-chip" data-tooltip="Audience Level &amp; Prerequisites" title="Audience Level &amp; Prerequisites">
+              <span class="step-chip-tag">Target</span>
+              <span class="step-chip-text">Audience Level &amp; Prerequisites</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-card-footer">
+          <span class="step-phase">Intake Stage</span>
+          <span class="step-footer-action">Submission ➔</span>
+        </div>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="step-card step-card-4">
+        <div class="step-card-top-bar"></div>
+        <div class="step-card-body">
+          <div class="step-card-header">
+            <span class="step-badge"><span class="step-badge-dot"></span>Step: Review</span>
+            <div class="step-icon-pod" title="Committee Review">🛡️</div>
+          </div>
+          <h4>Rolling Committee Review</h4>
+          <p class="step-desc">The EIP Hub Review Committee evaluates proposals on a continuous rolling schedule:</p>
+          <div class="step-chips-list">
+            <div class="step-chip" data-tooltip="Peer Assessment by EIP Editors &amp; Curators" title="Peer Assessment by EIP Editors &amp; Curators">
+              <span class="step-chip-tag">Review</span>
+              <span class="step-chip-text">Peer Assessment by EIP Editors &amp; Curators</span>
+            </div>
+            <div class="step-chip" data-tooltip="Jio World Stage, Slot &amp; Room Notice" title="Jio World Stage, Slot &amp; Room Notice">
+              <span class="step-chip-tag">Stage</span>
+              <span class="step-chip-text">Jio World Stage, Slot &amp; Room Notice</span>
+            </div>
+            <div class="step-chip" data-tooltip="Slide Guidelines &amp; Tech Check-In" title="Slide Guidelines &amp; Tech Check-In">
+              <span class="step-chip-tag">Deck AV</span>
+              <span class="step-chip-text">Slide Guidelines &amp; Tech Check-In</span>
+            </div>
+            <div class="step-chip" data-tooltip="Confirmed Session Schedule &amp; Speaker Onboarding" title="Confirmed Session Schedule &amp; Speaker Onboarding">
+              <span class="step-chip-tag">Schedule</span>
+              <span class="step-chip-text">Confirmed Schedule &amp; Stage Onboarding</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-card-footer">
+          <span class="step-phase">Review Stage</span>
+          <span class="step-footer-action">Confirmation ✓</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker Rules & Guidelines Panel -->
+    <div class="speaker-rules-panel">
+      <div class="speaker-rules-top-bar"></div>
+      <div class="speaker-rules-panel-header">
+        <div class="speaker-rules-title-pod">
+          <div class="speaker-rules-badge-icon" aria-hidden="true">📋</div>
+          <div>
+            <h4>Speaker Guidelines &amp; Evaluation Criteria</h4>
+            <p class="speaker-rules-subtitle">All submissions are evaluated against three core Ethereum community standards for credible neutrality and technical merit</p>
+          </div>
+        </div>
+        <span class="speaker-rules-badge-pill"><span class="speak-status-dot" style="background:#38bdf8;box-shadow:0 0 8px #38bdf8;width:6px;height:6px;display:inline-block;border-radius:50%"></span>Standards-First · Neutral</span>
+      </div>
+
+      <div class="speaker-rules-pillars">
+        <div class="speaker-pillar-card pillar-1">
+          <span class="pillar-tag pillar-tag-cyan">Credible Neutrality</span>
+          <div class="pillar-top">
+            <div class="pillar-icon" aria-hidden="true">⚖️</div>
+            <h5>Strictly Project-Neutral</h5>
+          </div>
+          <p>No token promotion, commercial sales pitches, or speculative price talk. Proposals must center on <strong>open technical standards</strong>, community projects, client implementations, or EIP governance.</p>
+        </div>
+
+        <div class="speaker-pillar-card pillar-2">
+          <span class="pillar-tag pillar-tag-indigo">Technical Depth</span>
+          <div class="pillar-top">
+            <div class="pillar-icon" aria-hidden="true">🛠️</div>
+            <h5>Value for Ethereum Builders</h5>
+          </div>
+          <p>Every session must teach, demonstrate live code, or address <strong>real technical challenges</strong> across protocol engineering, developer tooling, or standards interoperability.</p>
+        </div>
+
+        <div class="speaker-pillar-card pillar-3">
+          <span class="pillar-tag pillar-tag-emerald">Inclusion &amp; Mentorship</span>
+          <div class="pillar-top">
+            <div class="pillar-icon" aria-hidden="true">🌍</div>
+            <h5>First-Time &amp; Diverse Voices</h5>
+          </div>
+          <p>We actively champion and mentor <strong>first-time EIP authors</strong> and underrepresented researchers from India and the global Ethereum decentralized ecosystem.</p>
         </div>
       </div>
     </div>
@@ -8439,6 +8972,154 @@ html, body {
   </div>
 </div>
 
+<!-- HIGHLIGHTED SECTION: DEVCON STUDENT PASS REQUEST -->
+<div class="student-pass-section" id="student-pass-section">
+  <div class="student-pass-card" id="student-pass">
+    <div class="student-pass-top-beam" aria-hidden="true"></div>
+    <div class="student-pass-radial-glow" aria-hidden="true"></div>
+
+    <div class="student-pass-header">
+      <div class="student-provider-pill">
+        <span class="student-beacon-dot"></span>
+        <span>Provided by EIP Hub · Devcon 8 India (Mumbai)</span>
+      </div>
+      <h3 class="student-pass-title">Devcon 8 Student Passes</h3>
+      <p class="student-pass-subtitle">Are you a student eager to learn and participate in Ethereum standards at Devcon 8 India?</p>
+    </div>
+
+    <p class="student-pass-desc">
+      <strong>EIP Hub</strong> is offering sponsored <strong>Devcon 8 Student Passes</strong> to help active students and first-time learners attend the conference in Mumbai (Nov 3–6, 2026) and participate in our 4-day interactive tracks!
+    </p>
+
+    <!-- Simple Categories: Who Can Apply -->
+    <div class="student-sub-block">
+      <div class="student-sub-title">
+        <span>Who Can Apply? (Based on Our 4 Daily Tracks)</span>
+        <span class="sub-tag">Easy Eligibility</span>
+      </div>
+      <div class="student-who-grid">
+        <div class="student-who-card">
+          <div class="student-who-icon-pod">📚</div>
+          <div class="student-who-body">
+            <div class="student-who-title">Standards &amp; Governance (Track 1)</div>
+            <div class="student-who-desc">Students curious about how Ethereum evolves, wanting to understand EIP-1 and learn how proposals move from Idea to Final.</div>
+          </div>
+        </div>
+
+        <div class="student-who-card">
+          <div class="student-who-icon-pod">⚡</div>
+          <div class="student-who-body">
+            <div class="student-who-title">Core Protocol &amp; Scaling (Track 2)</div>
+            <div class="student-who-desc">Students interested in consensus, execution clients, Layer 2 rollups, and the technical Ethereum roadmap.</div>
+          </div>
+        </div>
+
+        <div class="student-who-card">
+          <div class="student-who-icon-pod">💻</div>
+          <div class="student-who-body">
+            <div class="student-who-title">Smart Contracts &amp; ERCs (Track 3)</div>
+            <div class="student-who-desc">Students building dApps, exploring ERC standards (like ERC-20, 721, 4337), or active in campus blockchain clubs.</div>
+          </div>
+        </div>
+
+        <div class="student-who-card">
+          <div class="student-who-icon-pod">🌐</div>
+          <div class="student-who-body">
+            <div class="student-who-title">Ecosystem &amp; Real-World Use (Track 4)</div>
+            <div class="student-who-desc">Students exploring real-world Ethereum applications, security, tooling, or open-source community research.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Base Information: What You Get -->
+    <div class="student-sub-block">
+      <div class="student-sub-title">
+        <span>What You Get</span>
+        <span class="sub-tag">Free Benefits</span>
+      </div>
+      <div class="student-benefits-grid">
+        <div class="student-benefit-card">
+          <span class="student-benefit-icon">🎟️</span>
+          <div class="student-benefit-title">Devcon 8 Pass</div>
+          <div class="student-benefit-desc">Sponsored admission ticket for the 4-day Devcon event at Jio World Centre, Mumbai.</div>
+        </div>
+        <div class="student-benefit-card">
+          <span class="student-benefit-icon">🏛️</span>
+          <div class="student-benefit-title">4-Day Hub Access</div>
+          <div class="student-benefit-desc">Full access to all EIP Hub workshops, keynotes, panels, and author clinics.</div>
+        </div>
+        <div class="student-benefit-card">
+          <span class="student-benefit-icon">⚡</span>
+          <div class="student-benefit-title">Meet EIP Editors</div>
+          <div class="student-benefit-desc">1-on-1 access to editors and experienced authors for feedback and guidance.</div>
+        </div>
+        <div class="student-benefit-card">
+          <span class="student-benefit-icon">🤝</span>
+          <div class="student-benefit-title">Community Networking</div>
+          <div class="student-benefit-desc">Meet fellow student builders, mentors, core developers, and teams from around the world.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simple 4-Step How to Apply -->
+    <div class="student-sub-block">
+      <div class="student-sub-title">
+        <span>Simple 4-Step Application</span>
+        <span class="sub-tag">Easy Process</span>
+      </div>
+      <div class="student-pipeline-row">
+        <div class="student-pipe-step">
+          <span class="student-pipe-num">1</span>
+          <span class="student-pipe-text">Fill Simple CryptPad Form</span>
+        </div>
+        <div class="student-pipe-step">
+          <span class="student-pipe-num">2</span>
+          <span class="student-pipe-text">Short Interest &amp; Student Check</span>
+        </div>
+        <div class="student-pipe-step">
+          <span class="student-pipe-num">3</span>
+          <span class="student-pipe-text">Quick Confirmation Email</span>
+        </div>
+        <div class="student-pipe-step">
+          <span class="student-pipe-num">4</span>
+          <span class="student-pipe-text">Receive Pass &amp; Join in Mumbai!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions Row -->
+    <div class="student-pass-actions">
+      <a href="https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/" target="_blank" rel="noopener noreferrer" class="student-pass-btn-primary" id="student-form-btn">
+        <span class="sp-btn-icon">📋</span>
+        <span>Fill Student Pass Form (CryptPad)</span>
+        <span class="sp-btn-arr">↗</span>
+      </a>
+
+      <a href="mailto:team@eiphub.xyz?subject=Student%20Pass%20Request%20-%20Devcon%208%20Mumbai" class="student-pass-btn-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Email team@eiphub.xyz</span>
+      </a>
+
+      <button type="button" class="student-pass-copy-btn" id="copy-student-link-btn" onclick="copyStudentFormLink(event)" title="Copy application form link" aria-label="Copy student form link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span id="student-copy-label">Copy form link</span>
+      </button>
+    </div>
+
+    <div class="student-pass-footer-meta">
+      <span>⚡ Rolling review</span>
+      <span>•</span>
+      <span>Open to all active college &amp; university students</span>
+      <span>•</span>
+      <span>Encrypted &amp; private submission via CryptPad</span>
+    </div>
+  </div>
+</div>
+
 <!-- PARTNERS -->
 <div class="partners-bg" id="partners">
   <div class="full">
@@ -8947,381 +9628,6 @@ html, body {
   </div>
 </div>
 
-<!-- SPEAKERS & CALL FOR PROPOSALS -->
-<div class="speakers-bg" id="speakers">
-  <div class="wrap" style="text-align:center;padding-bottom:52px">
-    <div class="sec-eyebrow">Speakers & Contributors</div>
-    <div class="sec-title">Meet Our Speakers</div>
-    <div class="speakers-box">
-      <div class="speakers-console-top">
-        <div class="speakers-console-status">
-          <span class="speakers-beacon"></span>
-          <span>Roster Curation in Progress · 2026 Lineup Reveal Imminent</span>
-        </div>
-        <span class="speakers-console-badge">Devcon 8 India · Jio World Centre</span>
-      </div>
-
-      <p class="speakers-tba">
-        The EIP Hub stage gathers the core minds driving Ethereum’s protocol specification and standardization engine. Across all 4 days in Mumbai, attendees will engage directly with four distinct cohorts of technical contributors:
-      </p>
-
-      <div class="speaker-cohorts-grid">
-        <!-- Cohort 1: EIP Editors & Authors -->
-        <div class="speaker-cohort-card cohort-1">
-          <div class="cohort-accent-bar"></div>
-          <div class="cohort-icon-pod">🖋️</div>
-          <h4 class="cohort-title">EIP Editors &amp; Authors</h4>
-          <span class="cohort-sub">Governance &amp; Consensus</span>
-          <p class="cohort-desc">Stewards of EIP-1 and the standards process providing direct review, author office hours, and peer feedback on drafts.</p>
-        </div>
-
-        <!-- Cohort 2: Core Protocol Devs -->
-        <div class="speaker-cohort-card cohort-2">
-          <div class="cohort-accent-bar"></div>
-          <div class="cohort-icon-pod">⚙️</div>
-          <h4 class="cohort-title">Core Protocol Devs</h4>
-          <span class="cohort-sub">Consensus &amp; Execution</span>
-          <p class="cohort-desc">Researchers and engineers working on upcoming Ethereum hard forks, state transition changes, and Prague/Electra upgrades.</p>
-        </div>
-
-        <!-- Cohort 3: Client Implementers -->
-        <div class="speaker-cohort-card cohort-3">
-          <div class="cohort-accent-bar"></div>
-          <div class="cohort-icon-pod">💻</div>
-          <h4 class="cohort-title">Client Implementers</h4>
-          <span class="cohort-sub">Interop &amp; Performance</span>
-          <p class="cohort-desc">Engineers from Geth, Nethermind, Besu, Erigon, Lighthouse, and Prysm testing interop and engine API specifications.</p>
-        </div>
-
-        <!-- Cohort 4: ERC & App Architects -->
-        <div class="speaker-cohort-card cohort-4">
-          <div class="cohort-accent-bar"></div>
-          <div class="cohort-icon-pod">🏗️</div>
-          <h4 class="cohort-title">ERC &amp; App Architects</h4>
-          <span class="cohort-sub">Application Standards</span>
-          <p class="cohort-desc">Authors behind ERC-4337 smart accounts, token extensions, wallet interoperability, and verifiable computing primitives.</p>
-        </div>
-      </div>
-
-      <div class="speakers-box-actions">
-        <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" class="btn-speaker-updates">
-          <span>Get Speaker Updates on Luma</span>
-          <span>↗</span>
-        </a>
-        <a href="#speak" class="btn-speaker-apply-alt">
-          <span>Apply to Speak at EIP Hub</span>
-          <span>↓</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- CALL FOR SPEAKERS & PROPOSALS (Best Location) -->
-  <div class="speak-section" id="speak">
-    <div class="speak-card">
-      <div class="speak-badge"><span class="speak-badge-dot"></span> Call for Speakers · Devcon 8 India</div>
-      <h2 class="speak-title">Want to Speak or Present at the EIP Hub?</h2>
-      <p class="speak-sub">Are you authoring an EIP, building around ERC standards, or conducting protocol research? We welcome presentations, workshops, and lightning talks across all four days at Jio World Centre, Mumbai.</p>
-
-      <!-- 4 Session Formats -->
-      <div class="speak-formats">
-        <div class="speak-format-item format-item-lightning">
-          <div class="speak-format-top-bar"></div>
-          <div class="format-icon-pod">⚡</div>
-          <div class="format-title">Lightning Talk</div>
-          <span class="format-time">15–20 Minutes</span>
-          <div class="format-desc">Quick standard walkthroughs, tool launches &amp; concise problem statements.</div>
-        </div>
-        <div class="speak-format-item format-item-deepdive">
-          <div class="speak-format-top-bar"></div>
-          <div class="format-icon-pod">🎙️</div>
-          <div class="format-title">Tech Deep-Dive</div>
-          <span class="format-time">30–45 Minutes</span>
-          <div class="format-desc">Protocol architecture, meta EIP upgrades &amp; in-depth technical analysis.</div>
-        </div>
-        <div class="speak-format-item format-item-clinic">
-          <div class="speak-format-top-bar"></div>
-          <div class="format-icon-pod">🛠️</div>
-          <div class="format-title">Hands-On Clinic</div>
-          <span class="format-time">45 Minutes</span>
-          <div class="format-desc">Live ERC design review, smart contract feedback &amp; code walkthroughs.</div>
-        </div>
-        <div class="speak-format-item format-item-panel">
-          <div class="speak-format-top-bar"></div>
-          <div class="format-icon-pod">👥</div>
-          <div class="format-title">Panel Discussion</div>
-          <span class="format-time">45 Minutes</span>
-          <div class="format-desc">Multi-author debate, governance processes &amp; ecosystem roadmaps.</div>
-        </div>
-      </div>
-
-      <!-- Connect on Email Action Box -->
-      <div class="speak-action-box">
-        <div class="speak-action-topbar">
-          <div class="speak-channel-status">
-            <span class="speak-status-dot"></span>
-            <span class="speak-status-text">Direct Speaker Proposal Channel</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-            <a href="https://x.com/eiphub" target="_blank" rel="noopener noreferrer" class="speak-email-chip" style="text-decoration:none" title="Follow @eiphub on X (Twitter)">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span class="speak-chip-label">𝕏 Handle:</span>
-              <span class="speak-email-val">@eiphub</span>
-            </a>
-            <div class="speak-email-chip">
-              <span class="speak-chip-label">Official Inbox:</span>
-              <span class="speak-email-val">team@eiphub.xyz</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="speak-btn-group">
-          <a href="https://forms.gle/QUpXZuNPQXz68eQJ9" target="_blank" rel="noopener noreferrer" class="btn-speak-form">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <span>Speaker Application Form</span>
-            <span class="btn-arr">↗</span>
-          </a>
-          <button type="button" class="btn-copy-mail" id="copy-speak-mail-btn" onclick="copySpeakerEmail()">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-            </svg>
-            <span id="copy-btn-text">Copy Email</span>
-          </button>
-          <a href="mailto:team@eiphub.xyz?subject=Speaker%20Proposal%20-%20EIP%20Hub%20Devcon%208&body=Hi%20EIP%20Hub%20Team%2C%0A%0AI%20would%20like%20to%20propose%20a%20talk%2Fsession%20at%20the%20EIP%20Hub%20at%20Devcon%208%20India%20(Nov%203-6%2C%202026%2C%20Mumbai).%0A%0A-%20Speaker%20Name%3A%0A-%20Talk%20Title%3A%0A-%20Preferred%20Format%20(Lightning%20%2F%20Deep-Dive%20%2F%20Workshop%20%2F%20Panel)%3A%0A-%20Target%20Day%20(Day%201%20to%20Day%204)%3A%0A-%20Brief%20Abstract%20(100-150%20words)%3A%0A-%20Relevant%20EIP%2FERC%20or%20Project%20Link%3A%0A-%20Bio%20%26%20Twitter%2FX%20Handle%3A%0A%0AThank%20you!" class="btn-speak-mail">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-            <span>Email Proposal</span>
-            <span class="btn-arr">↗</span>
-          </a>
-        </div>
-
-        <div class="speak-meta-hint">
-          <div class="speak-hint-inner">
-            <span class="speak-hint-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="16" x2="12" y2="12"/>
-                <line x1="12" y1="8" x2="12.01" y2="8"/>
-              </svg>
-            </span>
-            <span class="speak-hint-lead">Please include your:</span>
-            <span class="speak-hint-tag">Session Title</span>
-            <span class="speak-hint-tag">150-Word Abstract</span>
-            <span class="speak-hint-tag">Speaker Bio</span>
-            <span class="speak-hint-divider" aria-hidden="true">·</span>
-            <span class="speak-hint-rolling"><span class="rolling-dot"></span>Submissions reviewed on rolling basis</span>
-          </div>
-        </div>
-
-        <div style="margin-top:14px;font-size:12px;color:rgba(255,255,255,0.6);text-align:center;line-height:1.6">
-          <span style="color:#f59e0b;font-weight:700">⚠️ Important Notice:</span> The EIP Hub is a community hub stage and does not provide Devcon conference passes, tickets, or travel stipends. All presenters and attendees must hold an active Devcon 8 ticket for venue admission.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HOW TO APPLY AS A SPEAKER (Step-by-Step Guide & Criteria) -->
-  <div class="speaker-guide-wrap" id="apply-as-speaker">
-    <div class="speaker-guide-header">
-      <div class="sec-eyebrow">Speaker Onboarding</div>
-      <h3 class="speaker-guide-title">How to Apply as a Speaker</h3>
-      <p class="speaker-guide-sub">
-        We welcome presentations, workshops, and lightning talks from all Ethereum standards contributors. Follow this 4-step process to submit your proposal.
-      </p>
-    </div>
-
-    <!-- 4-Step Process -->
-    <div class="speaker-steps-grid">
-      <!-- Step: Alignment -->
-      <div class="step-card step-card-1">
-        <div class="step-card-top-bar"></div>
-        <div class="step-card-body">
-          <div class="step-card-header">
-            <span class="step-badge"><span class="step-badge-dot"></span>Step: Alignment</span>
-            <div class="step-icon-pod" title="Programming Alignment">🗓️</div>
-          </div>
-          <h4>Align with a Programming Day</h4>
-          <p class="step-desc">Match your research or proposal to one of the four curated Devcon 8 summit days:</p>
-          <div class="step-chips-list">
-            <div class="step-chip" data-tooltip="EIP Process &amp; Community (Nov 3)" title="EIP Process &amp; Community (Nov 3)">
-              <span class="step-chip-tag">Day 1</span>
-              <span class="step-chip-text">EIP Process &amp; Community (Nov 3)</span>
-            </div>
-            <div class="step-chip" data-tooltip="Protocol EIPs &amp; Upgrades (Nov 4)" title="Protocol EIPs &amp; Upgrades (Nov 4)">
-              <span class="step-chip-tag">Day 2</span>
-              <span class="step-chip-text">Protocol EIPs &amp; Upgrades (Nov 4)</span>
-            </div>
-            <div class="step-chip" data-tooltip="Application ERCs &amp; Adoption (Nov 5)" title="Application ERCs &amp; Adoption (Nov 5)">
-              <span class="step-chip-tag">Day 3</span>
-              <span class="step-chip-text">Application ERCs &amp; Adoption (Nov 5)</span>
-            </div>
-            <div class="step-chip" data-tooltip="Enterprise Adoption (Nov 6)" title="Enterprise Adoption (Nov 6)">
-              <span class="step-chip-tag">Day 4</span>
-              <span class="step-chip-text">Enterprise Adoption (Nov 6)</span>
-            </div>
-          </div>
-        </div>
-        <div class="step-card-footer">
-          <span class="step-phase">Alignment Stage</span>
-          <span class="step-footer-action">Alignment ➔</span>
-        </div>
-      </div>
-
-      <!-- Step 02 -->
-      <div class="step-card step-card-2">
-        <div class="step-card-top-bar"></div>
-        <div class="step-card-body">
-          <div class="step-card-header">
-            <span class="step-badge"><span class="step-badge-dot"></span>Step: Format</span>
-            <div class="step-icon-pod" title="Session Format">🎙️</div>
-          </div>
-          <h4>Select Your Session Format</h4>
-          <p class="step-desc">Pick the ideal stage format suited to your technical depth and presentation style:</p>
-          <div class="step-chips-list">
-            <div class="step-chip" data-tooltip="Lightning Talk &amp; Concise Demo (15–20m)" title="Lightning Talk &amp; Concise Demo (15–20m)">
-              <span class="step-chip-tag">⚡ 15–20m</span>
-              <span class="step-chip-text">Lightning Talk &amp; Concise Demo</span>
-            </div>
-            <div class="step-chip" data-tooltip="Tech Deep-Dive &amp; Architecture (30–45m)" title="Tech Deep-Dive &amp; Architecture (30–45m)">
-              <span class="step-chip-tag">🔬 30–45m</span>
-              <span class="step-chip-text">Tech Deep-Dive &amp; Architecture</span>
-            </div>
-            <div class="step-chip" data-tooltip="Hands-On Clinic &amp; Code Review (45m)" title="Hands-On Clinic &amp; Code Review (45m)">
-              <span class="step-chip-tag">🛠️ 45m</span>
-              <span class="step-chip-text">Hands-On Clinic &amp; Code Review</span>
-            </div>
-            <div class="step-chip" data-tooltip="Panel Discussion &amp; Debate (45m)" title="Panel Discussion &amp; Debate (45m)">
-              <span class="step-chip-tag">💬 45m</span>
-              <span class="step-chip-text">Panel Discussion &amp; Debate</span>
-            </div>
-          </div>
-        </div>
-        <div class="step-card-footer">
-          <span class="step-phase">Format Stage</span>
-          <span class="step-footer-action">Format ➔</span>
-        </div>
-      </div>
-
-      <!-- Step 03 -->
-      <div class="step-card step-card-3">
-        <div class="step-card-top-bar"></div>
-        <div class="step-card-body">
-          <div class="step-card-header">
-            <span class="step-badge"><span class="step-badge-dot"></span>Step: Intake</span>
-            <div class="step-icon-pod" title="Proposal Intake">📝</div>
-          </div>
-          <h4>Submit Proposal Form</h4>
-          <p class="step-desc">Fill out the official speaker intake form with your technical materials and credentials:</p>
-          <div class="step-chips-list">
-            <div class="step-chip" data-tooltip="150-Word Talk Summary &amp; Takeaways" title="150-Word Talk Summary &amp; Takeaways">
-              <span class="step-chip-tag">Abstract</span>
-              <span class="step-chip-text">150-Word Talk Summary &amp; Takeaways</span>
-            </div>
-            <div class="step-chip" data-tooltip="EIP / ERC Draft or GitHub Repository" title="EIP / ERC Draft or GitHub Repository">
-              <span class="step-chip-tag">Specs</span>
-              <span class="step-chip-text">EIP / ERC Draft or GitHub Repository</span>
-            </div>
-            <div class="step-chip" data-tooltip="Author Profile &amp; Protocol Track Record" title="Author Profile &amp; Protocol Track Record">
-              <span class="step-chip-tag">Bio</span>
-              <span class="step-chip-text">Author Profile &amp; Protocol Track Record</span>
-            </div>
-            <div class="step-chip" data-tooltip="Audience Level &amp; Prerequisites" title="Audience Level &amp; Prerequisites">
-              <span class="step-chip-tag">Target</span>
-              <span class="step-chip-text">Audience Level &amp; Prerequisites</span>
-            </div>
-          </div>
-        </div>
-        <div class="step-card-footer">
-          <span class="step-phase">Intake Stage</span>
-          <span class="step-footer-action">Submission ➔</span>
-        </div>
-      </div>
-
-      <!-- Step 04 -->
-      <div class="step-card step-card-4">
-        <div class="step-card-top-bar"></div>
-        <div class="step-card-body">
-          <div class="step-card-header">
-            <span class="step-badge"><span class="step-badge-dot"></span>Step: Review</span>
-            <div class="step-icon-pod" title="Committee Review">🛡️</div>
-          </div>
-          <h4>Rolling Committee Review</h4>
-          <p class="step-desc">The EIP Hub Review Committee evaluates proposals on a continuous rolling schedule:</p>
-          <div class="step-chips-list">
-            <div class="step-chip" data-tooltip="Peer Assessment by EIP Editors &amp; Curators" title="Peer Assessment by EIP Editors &amp; Curators">
-              <span class="step-chip-tag">Review</span>
-              <span class="step-chip-text">Peer Assessment by EIP Editors &amp; Curators</span>
-            </div>
-            <div class="step-chip" data-tooltip="Jio World Stage, Slot &amp; Room Notice" title="Jio World Stage, Slot &amp; Room Notice">
-              <span class="step-chip-tag">Stage</span>
-              <span class="step-chip-text">Jio World Stage, Slot &amp; Room Notice</span>
-            </div>
-            <div class="step-chip" data-tooltip="Slide Guidelines &amp; Tech Check-In" title="Slide Guidelines &amp; Tech Check-In">
-              <span class="step-chip-tag">Deck AV</span>
-              <span class="step-chip-text">Slide Guidelines &amp; Tech Check-In</span>
-            </div>
-            <div class="step-chip" data-tooltip="Confirmed Session Schedule &amp; Speaker Onboarding" title="Confirmed Session Schedule &amp; Speaker Onboarding">
-              <span class="step-chip-tag">Schedule</span>
-              <span class="step-chip-text">Confirmed Schedule &amp; Stage Onboarding</span>
-            </div>
-          </div>
-        </div>
-        <div class="step-card-footer">
-          <span class="step-phase">Review Stage</span>
-          <span class="step-footer-action">Confirmation ✓</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Speaker Rules & Guidelines Panel -->
-    <div class="speaker-rules-panel">
-      <div class="speaker-rules-top-bar"></div>
-      <div class="speaker-rules-panel-header">
-        <div class="speaker-rules-title-pod">
-          <div class="speaker-rules-badge-icon" aria-hidden="true">📋</div>
-          <div>
-            <h4>Speaker Guidelines &amp; Evaluation Criteria</h4>
-            <p class="speaker-rules-subtitle">All submissions are evaluated against three core Ethereum community standards for credible neutrality and technical merit</p>
-          </div>
-        </div>
-        <span class="speaker-rules-badge-pill"><span class="speak-status-dot" style="background:#38bdf8;box-shadow:0 0 8px #38bdf8;width:6px;height:6px;display:inline-block;border-radius:50%"></span>Standards-First · Neutral</span>
-      </div>
-
-      <div class="speaker-rules-pillars">
-        <div class="speaker-pillar-card pillar-1">
-          <span class="pillar-tag pillar-tag-cyan">Credible Neutrality</span>
-          <div class="pillar-top">
-            <div class="pillar-icon" aria-hidden="true">⚖️</div>
-            <h5>Strictly Project-Neutral</h5>
-          </div>
-          <p>No token promotion, commercial sales pitches, or speculative price talk. Proposals must center on <strong>open technical standards</strong>, community projects, client implementations, or EIP governance.</p>
-        </div>
-
-        <div class="speaker-pillar-card pillar-2">
-          <span class="pillar-tag pillar-tag-indigo">Technical Depth</span>
-          <div class="pillar-top">
-            <div class="pillar-icon" aria-hidden="true">🛠️</div>
-            <h5>Value for Ethereum Builders</h5>
-          </div>
-          <p>Every session must teach, demonstrate live code, or address <strong>real technical challenges</strong> across protocol engineering, developer tooling, or standards interoperability.</p>
-        </div>
-
-        <div class="speaker-pillar-card pillar-3">
-          <span class="pillar-tag pillar-tag-emerald">Inclusion &amp; Mentorship</span>
-          <div class="pillar-top">
-            <div class="pillar-icon" aria-hidden="true">🌍</div>
-            <h5>First-Time &amp; Diverse Voices</h5>
-          </div>
-          <p>We actively champion and mentor <strong>first-time EIP authors</strong> and underrepresented researchers from India and the global Ethereum decentralized ecosystem.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- COMMUNITY: Tweet + Forum side by side -->
 <div class="community-bg" id="community">
   <div class="wrap" style="text-align:center">
@@ -9640,7 +9946,7 @@ html, body {
           <p>Submissions are reviewed on a rolling basis until all schedule slots across all four days are filled.</p>
           <p style="font-size:12.5px;color:rgba(255,255,255,0.72);background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.22);border-radius:10px;padding:9px 13px;margin:12px 0 16px"><strong>Please Note:</strong> The EIP Hub does not provide Devcon conference passes or admission tickets. All session speakers and attendees must hold a valid Devcon 8 ticket to access the Jio World Centre venue.</p>
           <div class="faq-pills">
-            <a href="https://forms.gle/QUpXZuNPQXz68eQJ9" target="_blank" rel="noopener noreferrer" class="faq-pill-link faq-pill-link-primary">Speaker Application Form (Google Form) ↗</a>
+            <a href="https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/" target="_blank" rel="noopener noreferrer" class="faq-pill-link faq-pill-link-primary">Speaker Application Form (CryptPad Form) ↗</a>
             <a href="mailto:team@eiphub.xyz?subject=Speaker%20Proposal%20-%20EIP%20Hub%20Devcon%208" class="faq-pill-link">Email Speaker Proposal ↗</a>
             <a href="#speak" class="faq-pill-link">View Session Formats ↓</a>
           </div>
@@ -9714,7 +10020,7 @@ html, body {
         <button class="faq-q-btn" onclick="toggleFaq(this)">
           <div class="faq-q-left">
             <span class="faq-q-badge" style="color:#2dd4bf;background:rgba(20,184,166,0.14);border-color:rgba(20,184,166,0.35);box-shadow:0 0 10px rgba(20,184,166,0.12)">Q</span>
-            <span class="faq-q-text">Are you a student planning to attend Devcon 8 India without a ticket?</span>
+            <span class="faq-q-text">Are Student Passes available for Devcon 8 India, and who can apply?</span>
           </div>
           <span class="faq-arr">+</span>
         </button>
@@ -9722,12 +10028,15 @@ html, body {
           <div class="faq-ans-header">
             <span class="faq-ans-badge" style="background:rgba(20,184,166,0.15);border-color:rgba(20,184,166,0.4);color:#5eead4"><span class="ans-pulse-dot" style="background:#2dd4bf"></span> ANSWER</span>
           </div>
-          <p><strong>Yes, we'd love to help!</strong> We actively support students, researchers, and first-time contributors wanting to participate in Ethereum protocol standards at Devcon 8 India.</p>
-          <p>If you are an active college, university, or graduate student planning to attend Devcon in Mumbai (3–6 November 2026, Jio World Centre) but don’t have a conference admission ticket, you can submit a <strong>Devcon Student Pass Request</strong>.</p>
-          <p>Please complete the official application form with a brief introduction, your academic institution, and your interest in Ethereum improvement proposals and open standards.</p>
+          <p><strong>Yes!</strong> <strong>EIP Hub</strong> is offering sponsored <strong>Devcon 8 Student Passes</strong> to help college and university students attend the conference at Jio World Centre in Mumbai (Nov 3–6, 2026).</p>
+          <p>We welcome students across all experience levels who are interested in any of our 4 daily tracks:</p>
+          <p>• <strong>Track 1 (Standards &amp; Governance):</strong> Curious to understand EIP-1 and how Ethereum proposals work.<br>
+          • <strong>Track 2 (Protocol &amp; Scaling):</strong> Interested in core client development, consensus, and Layer 2s.<br>
+          • <strong>Track 3 (Smart Contracts &amp; ERCs):</strong> Building dApps, experimenting with tokens, or active in campus Web3 clubs.<br>
+          • <strong>Track 4 (Ecosystem &amp; Real-World Use):</strong> Exploring real-world use cases, security, and open-source public goods.</p>
           <div class="faq-pills">
-            <a href="https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/" target="_blank" rel="noopener noreferrer" class="faq-pill-link faq-pill-link-primary" style="background:rgba(20,184,166,0.22);border-color:rgba(20,184,166,0.5);color:#5eead4">Fill Student Pass Request Form (CryptPad) ↗</a>
-            <a href="#student-pass" class="faq-pill-link">View Student Pass Details ↓</a>
+            <a href="https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/" target="_blank" rel="noopener noreferrer" class="faq-pill-link faq-pill-link-primary" style="background:rgba(20,184,166,0.22);border-color:rgba(20,184,166,0.5);color:#5eead4">Fill Student Pass Form (CryptPad) ↗</a>
+            <a href="#student-pass" class="faq-pill-link">View Student Pass Details ↑</a>
             <a href="mailto:team@eiphub.xyz?subject=Student%20Pass%20Inquiry%20-%20Devcon%208" class="faq-pill-link">Email team@eiphub.xyz ↗</a>
           </div>
         </div>
@@ -9874,82 +10183,6 @@ html, body {
   </div>
 </div>
 
-<!-- HIGHLIGHTED SECTION: DEVCON STUDENT PASS REQUEST -->
-<div class="student-pass-section" id="student-pass-section">
-  <div class="student-pass-card" id="student-pass">
-    <div class="student-pass-top-beam" aria-hidden="true"></div>
-    <div class="student-pass-radial-glow" aria-hidden="true"></div>
-
-    <div class="student-pass-header">
-      <div class="student-pass-badge">
-        <span class="student-pass-beacon"><span class="student-beacon-dot"></span></span>
-        <span>Student Opportunity · Devcon 8 Mumbai</span>
-      </div>
-      <h3 class="student-pass-title">Devcon Student Pass Request</h3>
-      <p class="student-pass-subtitle">Are you a student planning to attend Devcon but don’t have a ticket?</p>
-    </div>
-
-    <p class="student-pass-desc">
-      We believe the future of Ethereum standards relies on students, curious researchers, and first-time open-source contributors. If you are an active college, university, or graduate student eager to join us in Mumbai at the <strong>Jio World Centre (Nov 3–6, 2026)</strong> for four days of deep-dive protocol sessions, EIP author clinics, and editor meetups, submit your pass request below!
-    </p>
-
-    <!-- 3 Perk Pods -->
-    <div class="student-pass-perks">
-      <div class="sp-perk">
-        <span class="sp-perk-icon">🎓</span>
-        <div class="sp-perk-info">
-          <strong>Enrolled Students</strong>
-          <span>Undergrad, graduate &amp; research scholars</span>
-        </div>
-      </div>
-      <div class="sp-perk">
-        <span class="sp-perk-icon">🎟️</span>
-        <div class="sp-perk-info">
-          <strong>Devcon Pass Assistance</strong>
-          <span>Helping you access the Jio World Centre venue</span>
-        </div>
-      </div>
-      <div class="sp-perk">
-        <span class="sp-perk-icon">⚡</span>
-        <div class="sp-perk-info">
-          <strong>Hands-On Mentorship</strong>
-          <span>Direct access to EIP editors, authors &amp; clinics</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Actions Row -->
-    <div class="student-pass-actions">
-      <a href="https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/" target="_blank" rel="noopener noreferrer" class="student-pass-btn-primary" id="student-form-btn">
-        <span class="sp-btn-icon">📋</span>
-        <span>Fill Student Pass Request Form</span>
-        <span class="sp-btn-arr">↗</span>
-      </a>
-
-      <a href="mailto:team@eiphub.xyz?subject=Student%20Pass%20Request%20-%20Devcon%208%20Mumbai" class="student-pass-btn-secondary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        <span>Email team@eiphub.xyz</span>
-      </a>
-
-      <button type="button" class="student-pass-copy-btn" id="copy-student-link-btn" onclick="copyStudentFormLink(event)" title="Copy application form link" aria-label="Copy student form link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-        <span id="student-copy-label">Copy form link</span>
-      </button>
-    </div>
-
-    <div class="student-pass-footer-meta">
-      <span>⚡ Rolling review process</span>
-      <span>•</span>
-      <span>Please apply early as student allocations are limited</span>
-      <span>•</span>
-      <span>Encrypted &amp; private submission via CryptPad</span>
-    </div>
-  </div>
-</div>
-
 <!-- CLOSING & REGISTRATION FINALE -->
 <div class="closing" id="register">
   <!-- Volumetric Spotlight Beams -->
@@ -9965,8 +10198,8 @@ html, body {
   <div class="closing-content">
     <div class="closing-eyebrow"><span class="dot"></span> Registration Open · Free Luma RSVP · Mumbai <span class="dot"></span></div>
 
-    <h2 class="closing-title">
-      EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem closing-brand-emblem">Hub
+    <h2 class="closing-title" aria-label="EIP Hub">
+      <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img closing-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem closing-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img closing-brand-text">
     </h2>
 
     <div class="closing-venue-pill">
@@ -10051,8 +10284,8 @@ html, body {
 <!-- FOOTER -->
 <footer>
   <div class="foot-left">
-    <div class="foot-brand">
-      EIP<img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem foot-brand-emblem">Hub
+    <div class="foot-brand" aria-label="EIP Hub">
+      <img src="Assets/images/eip-wordmark-white.png" alt="EIP" class="brand-text-img foot-brand-text"><img src="Assets/images/eiphub-white.png" alt="EIP Hub Emblem" class="brand-emblem foot-brand-emblem"><img src="Assets/images/hub-wordmark-white.png" alt="Hub" class="brand-text-img foot-brand-text">
     </div>
     <span class="foot-tagline">Devcon 8 India Collaborative Space · Mumbai</span>
   </div>
@@ -10937,29 +11170,29 @@ function openContactModal(context, event){
   if(context === 'talk' || context === 'speaker'){
     title = 'Submit a Talk Proposal';
     subject = 'Talk Proposal - EIP Hub Devcon 8';
-    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
-    formName = 'Open Speaker Application Form (Google Form)';
+    formUrl = 'https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/';
+    formName = 'Open Speaker Application Form (CryptPad Form)';
     formDetail = 'Official session intake form for lightning talks and tech presentations';
-    desc = 'Apply to speak at Devcon 8 India. You can submit via Google Form or send an email.';
+    desc = 'Apply to speak at Devcon 8 India. You can submit via CryptPad Form or send an email.';
   } else if(context === 'panel'){
     title = 'Join a Panel Discussion';
     subject = 'Panel Interest - EIP Hub Devcon 8';
-    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
-    formName = 'Open Panel Application Form (Google Form)';
+    formUrl = 'https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/';
+    formName = 'Open Panel Application Form (CryptPad Form)';
     formDetail = 'Indicate interest in governance, standards, or enterprise panel discussions';
     desc = 'Participate in structured panel debates with EIP authors and protocol researchers.';
   } else if(context === 'workshop'){
     title = 'Propose a Hands-On Workshop';
     subject = 'Workshop Proposal - EIP Hub Devcon 8';
-    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
-    formName = 'Open Workshop Intake Form (Google Form)';
+    formUrl = 'https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/';
+    formName = 'Open Workshop Intake Form (CryptPad Form)';
     formDetail = 'Propose code clinics, ERC design sessions, and tooling walkthroughs';
     desc = 'Lead a hands-on developer session across any of the four tracks.';
   } else if(context === 'volunteer'){
     title = 'Shift Volunteering at EIP Hub';
     subject = 'Volunteer Signup - EIP Hub Devcon 8';
-    formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
-    formName = 'Open Contributor / Volunteer Form (Google Form)';
+    formUrl = 'https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/';
+    formName = 'Open Contributor / Volunteer Form (CryptPad Form)';
     formDetail = 'Help run sessions, support the booth, or assist attendees on the ground';
     desc = 'Join the on-ground contributor crew for Devcon 8 India in Mumbai.';
   } else if(context === 'partner'){
@@ -10993,8 +11226,8 @@ function openContactModal(context, event){
     var lowerSub = (subject || '').toLowerCase();
     if(lowerSub.indexOf('speaker') !== -1 || lowerSub.indexOf('talk') !== -1 || lowerSub.indexOf('panel') !== -1 || lowerSub.indexOf('workshop') !== -1){
       title = 'Submit Speaker / Session Proposal';
-      formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
-      formName = 'Open Speaker Application Form (Google Form)';
+      formUrl = 'https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/';
+      formName = 'Open Speaker Application Form (CryptPad Form)';
       formDetail = 'Fill out the official session intake form directly online';
       desc = 'Submit your session abstract and speaker credentials directly online or via email.';
     } else if(lowerSub.indexOf('partner') !== -1){
@@ -11011,8 +11244,8 @@ function openContactModal(context, event){
       desc = 'Submit your student pass request online or email us directly.';
     } else if(lowerSub.indexOf('volunteer') !== -1){
       title = 'Shift Volunteering';
-      formUrl = 'https://forms.gle/QUpXZuNPQXz68eQJ9';
-      formName = 'Open Contributor / Volunteer Form (Google Form)';
+      formUrl = 'https://cryptpad.fr/form/#/2/form/view/q78P0VZ-28JejEzFYDH0fpddP7GtGERN8goafecPcN8/';
+      formName = 'Open Contributor / Volunteer Form (CryptPad Form)';
       formDetail = 'Apply to volunteer on the ground at Devcon 8 India';
     } else {
       title = 'Contact EIP Hub Team';
