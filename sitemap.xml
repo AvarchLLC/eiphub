@@ -11,6 +11,11 @@
     
     <!-- Image Sitemap entries for Google Image Search -->
     <image:image>
+      <image:loc>https://eiphub.xyz/Assets/images/eiphub-preview.png</image:loc>
+      <image:title>EIP Hub · Devcon 8 India Preview Banner</image:title>
+      <image:caption>Official 4-day collaborative space preview banner for EIP Hub at Devcon 8 India in Mumbai</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://eiphub.xyz/Assets/images/eiphub-white.png</image:loc>
       <image:title>EIP Hub Emblem · Devcon 8 India</image:title>
       <image:caption>Official emblem for EIP Hub at Devcon 8 India in Mumbai</image:caption>
