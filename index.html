@@ -43,12 +43,12 @@
 <meta property="og:site_name" content="EIP Hub · Devcon 8 India">
 <meta property="og:title" content="EIP Hub · Devcon 8 India (Nov 3–6, 2026, Mumbai)">
 <meta property="og:description" content="A four-day collaborative space at Devcon 8 India (3–6 November 2026, Mumbai) for EIPs, ERC standards, protocol upgrades, and open collaboration. Free to attend. Join via Luma.">
-<meta property="og:image" content="https://eiphub.xyz/Assets/images/eiphub-white.png">
-<meta property="og:image:secure_url" content="https://eiphub.xyz/Assets/images/eiphub-white.png">
+<meta property="og:image" content="https://eiphub.xyz/Assets/images/eiphub-preview.png">
+<meta property="og:image:secure_url" content="https://eiphub.xyz/Assets/images/eiphub-preview.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="EIP Hub at Devcon 8 India Emblem and Logo">
+<meta property="og:image:alt" content="EIP Hub · Devcon 8 India (Nov 3–6, 2026, Mumbai) - 4-Day Space for Ethereum Standards">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter Card Tags -->
@@ -59,8 +59,8 @@
 <meta name="twitter:creator" content="@eiphub">
 <meta name="twitter:title" content="EIP Hub · Devcon 8 India (Nov 3–6, 2026, Mumbai)">
 <meta name="twitter:description" content="A four-day space at Devcon 8 India (3–6 November 2026, Mumbai) for EIPs, ERC standards, protocol upgrades, and open collaboration. Free to attend. Join via Luma.">
-<meta name="twitter:image" content="https://eiphub.xyz/Assets/images/eiphub-white.png">
-<meta name="twitter:image:alt" content="EIP Hub Emblem">
+<meta name="twitter:image" content="https://eiphub.xyz/Assets/images/eiphub-preview.png">
+<meta name="twitter:image:alt" content="EIP Hub · Devcon 8 India (Nov 3–6, 2026, Mumbai)">
 
 <!-- Resource Hints & Font Optimization -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,6 +99,7 @@
       "email": "team@eiphub.xyz",
       "sameAs": [
         "https://x.com/eiphub",
+        "https://www.linkedin.com/company/eip-hub/",
         "https://github.com/ethereum/EIPs",
         "https://github.com/ethereum/ERCs",
         "https://forum.devcon.org/t/devcon-8-india-community-hub-eip-hub/8747"
@@ -132,6 +133,7 @@
         }
       },
       "image": [
+        "https://eiphub.xyz/Assets/images/eiphub-preview.png",
         "https://eiphub.xyz/Assets/images/eiphub-white.png",
         "https://eiphub.xyz/Assets/photos/summit-group-photo.webp"
       ],
@@ -451,7 +453,8 @@ nav.nav-scrolled{
 .nav-actions{
   display:inline-flex;align-items:center;gap:8px;
 }
-.nav-social-x{
+.nav-social-x,
+.nav-social-li{
   display:inline-flex;align-items:center;justify-content:center;
   width:32px;height:32px;border-radius:50%;
   background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);
@@ -462,6 +465,11 @@ nav.nav-scrolled{
   background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.35);
   color:#fff;transform:translateY(-1px);
   box-shadow:0 0 14px rgba(255,255,255,0.2);
+}
+.nav-social-li:hover{
+  background:rgba(10,102,194,0.22);border-color:rgba(10,102,194,0.5);
+  color:#fff;transform:translateY(-1px);
+  box-shadow:0 0 14px rgba(10,102,194,0.35);
 }
 
 /* ── HERO ── */
@@ -4536,7 +4544,8 @@ footer{
 .foot-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .foot-tagline{font-size:12px;color:rgba(255,255,255,0.4);border-left:1px solid rgba(255,255,255,0.12);padding-left:16px}
 .foot-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.foot-x-link{
+.foot-x-link,
+.foot-linkedin-link{
   display:inline-flex;align-items:center;gap:8px;
   color:rgba(255,255,255,0.75);text-decoration:none;
   font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;
@@ -4550,7 +4559,14 @@ footer{
   transform:translateY(-1px);
   box-shadow:0 0 16px rgba(255,255,255,0.15);
 }
-.foot-x-link svg{
+.foot-linkedin-link:hover{
+  color:#fff;background:rgba(10,102,194,0.18);
+  border-color:rgba(10,102,194,0.45);
+  transform:translateY(-1px);
+  box-shadow:0 0 16px rgba(10,102,194,0.25);
+}
+.foot-x-link svg,
+.foot-linkedin-link svg{
   color:#fff;flex-shrink:0;
 }
 .foot-mail-link{
@@ -7160,6 +7176,9 @@ html, body {
     <a href="https://x.com/eiphub" target="_blank" rel="noopener noreferrer" class="nav-social-x" title="Follow @eiphub on X (Twitter)" aria-label="EIP Hub on X">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
+    <a href="https://www.linkedin.com/company/eip-hub/" target="_blank" rel="noopener noreferrer" class="nav-social-li" title="Follow EIP Hub on LinkedIn" aria-label="EIP Hub on LinkedIn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/></svg>
+    </a>
     <a href="https://lu.ma/czi58jpe" target="_blank" class="nav-btn">Join</a>
   </div>
 </nav>
@@ -8236,6 +8255,11 @@ html, body {
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               <span class="speak-chip-label">𝕏 Handle:</span>
               <span class="speak-email-val">@eiphub</span>
+            </a>
+            <a href="https://www.linkedin.com/company/eip-hub/" target="_blank" rel="noopener noreferrer" class="speak-email-chip" style="text-decoration:none" title="Follow EIP Hub on LinkedIn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/></svg>
+              <span class="speak-chip-label">LinkedIn:</span>
+              <span class="speak-email-val">eip-hub</span>
             </a>
             <div class="speak-email-chip">
               <span class="speak-chip-label">Official Inbox:</span>
@@ -9951,6 +9975,9 @@ html, body {
             <a href="https://x.com/eiphub" target="_blank" rel="noopener noreferrer" class="btn-tweet-go" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.18);color:#fff">
               Follow @eiphub ↗
             </a>
+            <a href="https://www.linkedin.com/company/eip-hub/" target="_blank" rel="noopener noreferrer" class="btn-tweet-go" style="background:rgba(10,102,194,0.15);border-color:rgba(10,102,194,0.4);color:#fff">
+              Follow on LinkedIn ↗
+            </a>
             <span class="tweet-url-hint">x.com/eiphub</span>
           </div>
         </div>
@@ -10498,6 +10525,11 @@ html, body {
           @eiphub
         </a>
 
+        <a href="https://www.linkedin.com/company/eip-hub/" target="_blank" rel="noopener noreferrer" class="comm-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-1px;margin-right:2px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/></svg>
+          LinkedIn
+        </a>
+
         <a href="https://github.com/ethereum/EIPs" target="_blank" rel="noopener noreferrer" class="comm-pill">GitHub EIPs</a>
         <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" class="comm-pill">Luma Calendar</a>
         <a href="https://cryptpad.fr/form/#/2/form/view/MHixuaRrC7r9WLlXaNU6V2A+cxZrrcYKnyQ7nZeXt+A/" target="_blank" rel="noopener noreferrer" class="comm-pill" style="color:#5eead4;border-color:rgba(20,184,166,0.35)">🎓 Student Pass Form ↗</a>
@@ -10521,6 +10553,12 @@ html, body {
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
       </svg>
       <span>@eiphub</span>
+    </a>
+    <a href="https://www.linkedin.com/company/eip-hub/" target="_blank" rel="noopener noreferrer" class="foot-linkedin-link" title="Follow EIP Hub on LinkedIn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z"/>
+      </svg>
+      <span>LinkedIn</span>
     </a>
     <a href="mailto:team@eiphub.xyz" class="foot-mail-link">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
