@@ -1,0 +1,17 @@
+# ===================================================
+# Robots.txt for EIP Hub (https://eiphub.xyz)
+# Ethereum Improvement Proposals Community Hub @ Devcon 8
+# ===================================================
+
+User-agent: *
+Allow: /
+Allow: /Assets/
+Allow: /Assets/images/
+Allow: /Assets/photos/
+Allow: /Assets/partners/
+
+# Host directive for search engines
+Host: https://eiphub.xyz
+
+# XML Sitemap location
+Sitemap: https://eiphub.xyz/sitemap.xml

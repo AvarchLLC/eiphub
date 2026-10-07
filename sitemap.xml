@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://eiphub.xyz/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Image Sitemap entries for Google Image Search -->
+    <image:image>
+      <image:loc>https://eiphub.xyz/Assets/images/eiphub-white.png</image:loc>
+      <image:title>EIP Hub Emblem · Devcon 8 India</image:title>
+      <image:caption>Official emblem for EIP Hub at Devcon 8 India in Mumbai</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eiphub.xyz/Assets/images/FullEIPHUb%20White.png</image:loc>
+      <image:title>EIP Hub Full Brand Mark</image:title>
+      <image:caption>Full brand logo for EIP Hub</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eiphub.xyz/Assets/photos/summit-group-photo.webp</image:loc>
+      <image:title>EIP Summit Community Group Photo</image:title>
+      <image:caption>Ethereum Improvement Proposals contributors, authors, and researchers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eiphub.xyz/Assets/photos/summit-mainstage-governance.webp</image:loc>
+      <image:title>Ethereum Governance and Protocol Standards</image:title>
+      <image:caption>Mainstage governance session at EIP Summit</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eiphub.xyz/Assets/photos/summit-client-devs.jpeg</image:loc>
+      <image:title>Ethereum Core Client Developers</image:title>
+      <image:caption>AllCoreDevs and client implementers working on network upgrades</image:caption>
+    </image:image>
+  </url>
+</urlset>
