@@ -9,6 +9,7 @@ Allow: /Assets/
 Allow: /Assets/images/
 Allow: /Assets/photos/
 Allow: /Assets/partners/
+Allow: /Assets/speakers/
 
 # Host directive for search engines
 Host: https://eiphub.xyz
