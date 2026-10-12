@@ -976,10 +976,8 @@ nav.nav-scrolled{
   display:flex;align-items:center;gap:28px;
   width:max-content;
   animation:hero-spk-scroll 34s linear infinite;
+  animation-play-state:running;
   will-change:transform;
-}
-.hero-moving-carousel-viewport:hover .hero-moving-carousel-track{
-  animation-play-state:paused; /* Pauses smoothly so user can click! */
 }
 @keyframes hero-spk-scroll{
   0%{transform:translate3d(0, 0, 0)}
@@ -1125,11 +1123,9 @@ nav.nav-scrolled{
   display:flex;
   align-items:center;
   animation:scroll-partners 42s linear infinite;
+  animation-play-state:running;
   white-space:nowrap;
   width:max-content;
-}
-.ticker-partners:hover .ticker-inner{
-  animation-play-state:paused;
 }
 @keyframes scroll-partners{
   0%{transform:translateX(0)}
@@ -14503,8 +14499,70 @@ window.addEventListener('hashchange', function(){
     updateSlider(currentIndex);
   }, { passive: true });
 
+  // Auto-move when screen is active / in viewport
+  if('IntersectionObserver' in window){
+    var summitObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          isPaused = false;
+          startAutoplay();
+        } else {
+          stopAutoplay();
+        }
+      });
+    }, { threshold: 0.15 });
+    summitObserver.observe(container);
+  }
+
+  // Resume auto-move when tab becomes active
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden){
+      isPaused = false;
+      startAutoplay();
+    } else {
+      stopAutoplay();
+    }
+  });
+  window.addEventListener('focus', function(){
+    isPaused = false;
+    startAutoplay();
+  });
+
   startAutoplay();
   updateSlider(0);
+})();
+
+// ── HERO MOVING SPEAKER CAROUSEL AUTO-MOVE CONTROLLER (ACTIVE SCREEN CONTINUOUS MOTION) ──
+(function initHeroMovingCarouselAutoMove(){
+  var viewport = document.querySelector('.hero-moving-carousel-viewport');
+  var track = document.querySelector('.hero-moving-carousel-track');
+  if(!viewport || !track) return;
+
+  function ensureActiveMove(){
+    track.style.animationPlayState = 'running';
+  }
+
+  // Resume auto-move on tab visibility & window focus
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden){
+      ensureActiveMove();
+    }
+  });
+  window.addEventListener('focus', ensureActiveMove);
+
+  // Resume when hero section enters screen
+  if('IntersectionObserver' in window){
+    var heroObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          ensureActiveMove();
+        }
+      });
+    }, { threshold: 0.05 });
+    heroObserver.observe(viewport);
+  }
+
+  ensureActiveMove();
 })();
 
 // ── SMART CONTACT & SUBMISSION MODAL LOGIC ──
