@@ -14498,14 +14498,15 @@ window.addEventListener('hashchange', function(){
     updateSlider(currentIndex);
   }, { passive: true });
 
-  // Auto-move when screen is active / in viewport
+  // Auto-move when screen is active / in viewport; pause when scrolled off screen
   if('IntersectionObserver' in window){
     var summitObserver = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
-        if(entry.isIntersecting){
+        if(entry.isIntersecting && !document.hidden){
           isPaused = false;
           startAutoplay();
         } else {
+          isPaused = true;
           stopAutoplay();
         }
       });
@@ -14513,12 +14514,13 @@ window.addEventListener('hashchange', function(){
     summitObserver.observe(container);
   }
 
-  // Resume auto-move when tab becomes active
+  // Resume auto-move when tab becomes active; pause when inactive
   document.addEventListener('visibilitychange', function(){
     if(!document.hidden){
       isPaused = false;
       startAutoplay();
     } else {
+      isPaused = true;
       stopAutoplay();
     }
   });
@@ -14526,42 +14528,112 @@ window.addEventListener('hashchange', function(){
     isPaused = false;
     startAutoplay();
   });
+  window.addEventListener('blur', function(){
+    isPaused = true;
+    stopAutoplay();
+  });
 
   startAutoplay();
   updateSlider(0);
 })();
 
-// ── HERO MOVING SPEAKER CAROUSEL AUTO-MOVE CONTROLLER (ACTIVE SCREEN CONTINUOUS MOTION) ──
-(function initHeroMovingCarouselAutoMove(){
-  var viewport = document.querySelector('.hero-moving-carousel-viewport');
-  var track = document.querySelector('.hero-moving-carousel-track');
-  if(!viewport || !track) return;
+// ── SCREEN ACTIVE / INACTIVE SMART SLIDER CONTROLLER (AUTO-MOVE WHEN VISIBLE, PAUSE WHEN INACTIVE) ──
+(function initSlidersScreenActiveController(){
+  var heroViewport = document.querySelector('.hero-moving-carousel-viewport');
+  var heroTrack = document.querySelector('.hero-moving-carousel-track');
+  var tickerSection = document.querySelector('.ticker-partners');
+  var tickerInner = document.querySelector('.ticker-inner');
+  var photosScroll = document.querySelector('.photos-scroll');
+  var photosTrack = document.querySelector('.photos-track');
 
-  function ensureActiveMove(){
-    track.style.animationPlayState = 'running';
-  }
+  var isHeroInView = true;
+  var isTickerInView = true;
+  var isPhotosInView = true;
+  var isWindowFocused = !document.hidden;
 
-  // Resume auto-move on tab visibility & window focus
-  document.addEventListener('visibilitychange', function(){
-    if(!document.hidden){
-      ensureActiveMove();
+  function updateHeroState(){
+    if(!heroTrack) return;
+    if(document.hidden || !isWindowFocused || !isHeroInView){
+      heroTrack.style.animationPlayState = 'paused';
+    } else {
+      heroTrack.style.animationPlayState = 'running';
     }
-  });
-  window.addEventListener('focus', ensureActiveMove);
-
-  // Resume when hero section enters screen
-  if('IntersectionObserver' in window){
-    var heroObserver = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          ensureActiveMove();
-        }
-      });
-    }, { threshold: 0.05 });
-    heroObserver.observe(viewport);
   }
 
-  ensureActiveMove();
+  function updateTickerState(){
+    if(!tickerInner) return;
+    if(document.hidden || !isWindowFocused || !isTickerInView){
+      tickerInner.style.animationPlayState = 'paused';
+    } else {
+      tickerInner.style.animationPlayState = 'running';
+    }
+  }
+
+  function updatePhotosState(){
+    if(!photosTrack) return;
+    if(document.hidden || !isWindowFocused || !isPhotosInView){
+      photosTrack.style.animationPlayState = 'paused';
+    } else {
+      photosTrack.style.animationPlayState = 'running';
+    }
+  }
+
+  function updateAllStates(){
+    updateHeroState();
+    updateTickerState();
+    updatePhotosState();
+  }
+
+  // 1. Tab visibility changes (switched tab, minimized window)
+  document.addEventListener('visibilitychange', function(){
+    isWindowFocused = !document.hidden;
+    updateAllStates();
+  });
+
+  // 2. Window focus & blur
+  window.addEventListener('focus', function(){
+    isWindowFocused = true;
+    updateAllStates();
+  });
+  window.addEventListener('blur', function(){
+    isWindowFocused = false;
+    updateAllStates();
+  });
+
+  // 3. Viewport IntersectionObserver (pause when scrolled off screen, auto-move when on screen)
+  if('IntersectionObserver' in window){
+    if(heroViewport){
+      var heroObs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          isHeroInView = entry.isIntersecting;
+          updateHeroState();
+        });
+      }, { threshold: 0.05 });
+      heroObs.observe(heroViewport);
+    }
+
+    if(tickerSection){
+      var tickerObs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          isTickerInView = entry.isIntersecting;
+          updateTickerState();
+        });
+      }, { threshold: 0.05 });
+      tickerObs.observe(tickerSection);
+    }
+
+    if(photosScroll){
+      var photosObs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          isPhotosInView = entry.isIntersecting;
+          updatePhotosState();
+        });
+      }, { threshold: 0.05 });
+      photosObs.observe(photosScroll);
+    }
+  }
+
+  updateAllStates();
 })();
 
 // ── SMART CONTACT & SUBMISSION MODAL LOGIC ──
