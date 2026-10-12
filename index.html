@@ -967,7 +967,8 @@ nav.nav-scrolled{
 /* Viewport with soft gradient vignette mask on left & right edges */
 .hero-moving-carousel-viewport{
   position:relative;width:100%;overflow:hidden;
-  padding:16px 0 32px;
+  padding:16px 0 84px;
+  margin-bottom:-52px;
   mask-image:linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
   -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
@@ -995,7 +996,7 @@ nav.nav-scrolled{
 }
 .spk-orbit-node:hover{
   transform:translateY(-6px) scale(1.15);
-  z-index:20;
+  z-index:900;
 }
 
 /* The Animated Rotating Circle Halo Behind the Image ("backsie circle moving") */
@@ -1062,36 +1063,40 @@ nav.nav-scrolled{
 
 /* Floating Glass Tooltip on Hover */
 .spk-orbit-tooltip{
-  position:absolute;bottom:-46px;left:50%;transform:translateX(-50%) translateY(4px);
-  background:rgba(12,15,28,0.96);
-  border:1px solid rgba(255,255,255,0.18);
-  border-radius:10px;
-  padding:6px 12px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.06);
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  position:absolute;
+  top:calc(100% + 12px);
+  left:50%;
+  transform:translateX(-50%) translateY(4px);
+  background:rgba(10,14,28,0.98);
+  border:1px solid rgba(255,255,255,0.22);
+  border-radius:11px;
+  padding:8px 14px;
+  box-shadow:0 16px 36px rgba(0,0,0,0.92), 0 0 0 1px rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   white-space:nowrap;
   pointer-events:none;
+  user-select:none;
   opacity:0;visibility:hidden;
-  transition:all .22s cubic-bezier(.16,1,.3,1);
-  z-index:30;
-  display:flex;flex-direction:column;align-items:center;gap:2px;
+  transition:opacity .18s ease, transform .22s cubic-bezier(.16,1,.3,1), visibility .18s;
+  z-index:999;
+  display:flex;flex-direction:column;align-items:center;gap:3px;
 }
 .spk-orbit-tooltip::before{
-  content:'';position:absolute;top:-5px;left:50%;transform:translateX(-50%);
-  border-left:5px solid transparent;border-right:5px solid transparent;
-  border-bottom:5px solid rgba(12,15,28,0.96);
+  content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%);
+  border-left:6px solid transparent;border-right:6px solid transparent;
+  border-bottom:6px solid rgba(10,14,28,0.98);
 }
 .spk-orbit-node:hover .spk-orbit-tooltip{
   opacity:1;visibility:visible;
   transform:translateX(-50%) translateY(0);
 }
 .spk-tt-name{
-  font-family:'Manrope',sans-serif;font-size:12.5px;font-weight:800;color:#fff;
-  display:flex;align-items:center;gap:4px;line-height:1.2;
+  font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;color:#ffffff;
+  display:flex;align-items:center;gap:5px;line-height:1.2;letter-spacing:-0.01em;
 }
 .spk-tt-ver{color:#38bdf8;font-size:10px;font-weight:800}
-.spk-tt-org{font-size:10.5px;color:rgba(255,255,255,0.6);font-weight:600}
-.spk-tt-track{font-size:10px;font-weight:700;letter-spacing:.02em}
+.spk-tt-org{font-size:11px;color:rgba(255,255,255,0.72);font-weight:600;line-height:1.2}
+.spk-tt-track{font-size:10px;font-weight:700;letter-spacing:.02em;line-height:1.2}
 
 @media(max-width:680px){
   .spk-orbit-node{width:56px;height:56px}
@@ -8542,7 +8547,7 @@ html, body {
       <div class="hero-moving-carousel-track">
         <!-- ================= LOOP SET 1 ================= -->
         <!-- 1. Pooja Ranjan -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('pooja')" title="Pooja Ranjan · ECH / EIP Editor (Day 1 Keynote)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('pooja')" aria-label="Pooja Ranjan · ECH / EIP Editor (Day 1 Keynote)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d1"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8557,7 +8562,7 @@ html, body {
         </div>
 
         <!-- 2. Justin Florentine -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('justin')" title="Justin Florentine · Hyperledger Besu (Day 2 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('justin')" aria-label="Justin Florentine · Hyperledger Besu (Day 2 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8572,7 +8577,7 @@ html, body {
         </div>
 
         <!-- 3. Maria Inês Silva -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('maria')" title="Maria Inês Silva · Ethereum Foundation (Day 2 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('maria')" aria-label="Maria Inês Silva · Ethereum Foundation (Day 2 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8587,7 +8592,7 @@ html, body {
         </div>
 
         <!-- 4. Gavin Birch -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('gavin-combined')" title="Gavin Birch · Armada &amp; ENS (Days 2 &amp; 4)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('gavin-combined')" aria-label="Gavin Birch · Armada &amp; ENS (Days 2 &amp; 4)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-multi"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8602,7 +8607,7 @@ html, body {
         </div>
 
         <!-- 5. German Abal -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('german-combined')" title="German Abal · EVVM / RollAMate (Days 1 &amp; 4)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('german-combined')" aria-label="German Abal · EVVM / RollAMate (Days 1 &amp; 4)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-multi"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8617,7 +8622,7 @@ html, body {
         </div>
 
         <!-- 6. Dhruvang Choudhari -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('dhruvang')" title="Dhruvang Choudhari · ENS Ecosystem (Day 3 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('dhruvang')" aria-label="Dhruvang Choudhari · ENS Ecosystem (Day 3 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d3"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8632,7 +8637,7 @@ html, body {
         </div>
 
         <!-- 7. Abhimanyu Nag -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('abhimanyu')" title="Abhimanyu Nag · Web3Privacy Now (Day 2 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('abhimanyu')" aria-label="Abhimanyu Nag · Web3Privacy Now (Day 2 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8647,7 +8652,7 @@ html, body {
         </div>
 
         <!-- 8. Rachit Anand Srivastava -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('rachit')" title="Rachit Anand Srivastava · Privacy &amp; Crypto (Day 2 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('rachit')" aria-label="Rachit Anand Srivastava · Privacy &amp; Crypto (Day 2 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8662,7 +8667,7 @@ html, body {
         </div>
 
         <!-- 9. Prem Makeig -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('prem')" title="Prem Makeig · Nxt3D (Day 3 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('prem')" aria-label="Prem Makeig · Nxt3D (Day 3 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d3"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8677,7 +8682,7 @@ html, body {
         </div>
 
         <!-- 10. Thomas Clowes -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('thomas')" title="Thomas Clowes · on.eth (Day 3 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('thomas')" aria-label="Thomas Clowes · on.eth (Day 3 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d3"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8692,7 +8697,7 @@ html, body {
         </div>
 
         <!-- 11. Charchit Kumawat -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('charchit')" title="Charchit Kumawat · Devcon Scholar (Day 4 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('charchit')" aria-label="Charchit Kumawat · Devcon Scholar (Day 4 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d4"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8707,7 +8712,7 @@ html, body {
         </div>
 
         <!-- 12. Stefan -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('stefan')" title="Stefan · ethPandaOps / EF (Day 1 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('stefan')" aria-label="Stefan · ethPandaOps / EF (Day 1 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d1"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8722,7 +8727,7 @@ html, body {
         </div>
 
         <!-- 13. Rafael Matias -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('rafael')" title="Rafael Matias · ethPandaOps / EF (Day 1 Talk)" role="button" tabindex="0">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('rafael')" aria-label="Rafael Matias · ethPandaOps / EF (Day 1 Talk)" role="button" tabindex="0">
           <div class="spk-orbit-halo halo-d1"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8738,7 +8743,7 @@ html, body {
 
         <!-- ================= LOOP SET 2 (EXACT DUPLICATE FOR SEAMLESS 100% INFINITE LOOP) ================= -->
         <!-- 1. Pooja Ranjan -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('pooja')" title="Pooja Ranjan · ECH / EIP Editor" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('pooja')" aria-label="Pooja Ranjan · ECH / EIP Editor" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d1"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8753,7 +8758,7 @@ html, body {
         </div>
 
         <!-- 2. Justin Florentine -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('justin')" title="Justin Florentine · Hyperledger Besu" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('justin')" aria-label="Justin Florentine · Hyperledger Besu" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8768,7 +8773,7 @@ html, body {
         </div>
 
         <!-- 3. Maria Inês Silva -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('maria')" title="Maria Inês Silva · Ethereum Foundation" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('maria')" aria-label="Maria Inês Silva · Ethereum Foundation" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8783,7 +8788,7 @@ html, body {
         </div>
 
         <!-- 4. Gavin Birch -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('gavin-combined')" title="Gavin Birch · Armada &amp; ENS" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('gavin-combined')" aria-label="Gavin Birch · Armada &amp; ENS" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-multi"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8798,7 +8803,7 @@ html, body {
         </div>
 
         <!-- 5. German Abal -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('german-combined')" title="German Abal · EVVM / RollAMate" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('german-combined')" aria-label="German Abal · EVVM / RollAMate" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-multi"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8813,7 +8818,7 @@ html, body {
         </div>
 
         <!-- 6. Dhruvang Choudhari -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('dhruvang')" title="Dhruvang Choudhari · ENS Ecosystem" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('dhruvang')" aria-label="Dhruvang Choudhari · ENS Ecosystem" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d3"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8828,7 +8833,7 @@ html, body {
         </div>
 
         <!-- 7. Abhimanyu Nag -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('abhimanyu')" title="Abhimanyu Nag · Web3Privacy Now" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('abhimanyu')" aria-label="Abhimanyu Nag · Web3Privacy Now" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8843,7 +8848,7 @@ html, body {
         </div>
 
         <!-- 8. Rachit Anand Srivastava -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('rachit')" title="Rachit Anand Srivastava · Privacy &amp; Crypto" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('rachit')" aria-label="Rachit Anand Srivastava · Privacy &amp; Crypto" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d2"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8858,7 +8863,7 @@ html, body {
         </div>
 
         <!-- 9. Prem Makeig -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('prem')" title="Prem Makeig · Nxt3D" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('prem')" aria-label="Prem Makeig · Nxt3D" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d3"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8873,7 +8878,7 @@ html, body {
         </div>
 
         <!-- 10. Thomas Clowes -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('thomas')" title="Thomas Clowes · on.eth" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('thomas')" aria-label="Thomas Clowes · on.eth" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d3"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8888,7 +8893,7 @@ html, body {
         </div>
 
         <!-- 11. Charchit Kumawat -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('charchit')" title="Charchit Kumawat · Devcon Scholar" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('charchit')" aria-label="Charchit Kumawat · Devcon Scholar" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d4"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8903,7 +8908,7 @@ html, body {
         </div>
 
         <!-- 12. Stefan -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('stefan')" title="Stefan · ethPandaOps / EF" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('stefan')" aria-label="Stefan · ethPandaOps / EF" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d1"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
@@ -8918,7 +8923,7 @@ html, body {
         </div>
 
         <!-- 13. Rafael Matias -->
-        <div class="spk-orbit-node" onclick="openSpeakerModal('rafael')" title="Rafael Matias · ethPandaOps / EF" role="button" tabindex="0" aria-hidden="true">
+        <div class="spk-orbit-node" onclick="openSpeakerModal('rafael')" aria-label="Rafael Matias · ethPandaOps / EF" role="button" tabindex="0" aria-hidden="true">
           <div class="spk-orbit-halo halo-d1"></div>
           <div class="spk-orbit-pulse"></div>
           <div class="spk-orbit-circle">
