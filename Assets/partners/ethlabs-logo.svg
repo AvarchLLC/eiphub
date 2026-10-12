@@ -1,0 +1,18 @@
+<svg width="100%" height="100%" viewBox="0 0 64 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ethlabsTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="ethlabsBottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <!-- Ethlabs Ethereum Rhombus Top Segment -->
+  <path d="M32 0L63 51L32 69L1 51Z" fill="url(#ethlabsTop)" opacity="0.95"/>
+  <path d="M32 0L32 69L63 51Z" fill="#ffffff" opacity="0.22"/>
+  <!-- Ethlabs Ethereum Rhombus Bottom Segment -->
+  <path d="M1 57L32 75L63 57L32 104Z" fill="url(#ethlabsBottom)" opacity="0.85"/>
+  <path d="M32 75L63 57L32 104Z" fill="#ffffff" opacity="0.18"/>
+</svg>
