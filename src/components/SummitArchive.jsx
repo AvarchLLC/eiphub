@@ -172,18 +172,22 @@ export default function SummitArchive() {
       <div className="summit-archive-section-bg" id="summit-archive">
         <div className="wrap">
           <div style={{ textAlign: 'center', marginBottom: '38px' }}>
-            <div className="sec-eyebrow" style={{ color: '#fbbf24' }}>Origins &amp; Summit History</div>
-            <div className="sec-title" style={{ color: '#fff' }}>Carrying Forward the Torch: Devconnect Argentina 2025</div>
-            <p className="sec-body">How the inaugural standalone EIP Summit at Devconnect Argentina (Buenos Aires) united researchers, editors, and authors face-to-face — sparking the global movement that now expands into the EIP Hub at Devcon 8 India.</p>
+            <div className="event-phase-badge badge-past" style={{ display: 'inline-flex', marginBottom: '14px' }}>
+              <span className="phase-dot dot-archive"></span>
+              <span>PAST EVENT ARCHIVE · INAUGURAL EIP SUMMIT 2025</span>
+            </div>
+            <div className="sec-eyebrow" style={{ color: '#fbbf24' }}>Past Event Origins &amp; Historical Video Archive</div>
+            <div className="sec-title" style={{ color: '#fff' }}>The Past Event: Inaugural EIP Summit (Devconnect Argentina 2025)</div>
+            <p className="sec-body">The <strong>EIP Summit</strong> was the inaugural standalone past event held in Buenos Aires, Argentina during Devconnect 2025. Founded by ECH Institute, it proved that in-person collaboration breaks through GitHub bottlenecks. Below is the complete 10-session archive of recorded keynotes, technical deep-dives, and author workshops that laid the foundation for our current <strong>EIP Hub at Devcon 8 India</strong>.</p>
           </div>
 
           {/* EIP Summit Legacy & Context Spotlight */}
           <div className="summit-legacy-card" id="summit-spotlight">
             <div className="summit-badge">
-              <span className="summit-badge-beacon"></span>
-              <span>The Evolution of Standards Gathering · From EIP Summit to Devcon 8</span>
+              <span className="summit-badge-beacon" style={{ background: '#fbbf24', boxShadow: '0 0 10px #fbbf24' }}></span>
+              <span>Past Event Legacy · From 2025 EIP Summit to 2026 Devcon 8 Hub</span>
             </div>
-            <h3 className="summit-heading">Carrying Forward the Torch of the EIP Summit</h3>
+            <h3 className="summit-heading">The Historic First Gathering: Inaugural EIP Summit 2025</h3>
             
             {/* Split Story & Mission */}
             <div className="summit-story-block">
@@ -235,11 +239,11 @@ export default function SummitArchive() {
               <div className="summit-video-header">
                 <div className="summit-video-header-left">
                   <div className="summit-video-eyebrow">
-                    <span className="video-live-dot"></span>
-                    <span id="summit-video-eyebrow-text">Watch the Origin Story · Recorded Live at Devconnect Argentina</span>
+                    <span className="video-live-dot" style={{ background: '#fbbf24', boxShadow: '0 0 8px #fbbf24' }}></span>
+                    <span id="summit-video-eyebrow-text">Past Event Archive · Recorded Live at Devconnect Argentina 2025</span>
                   </div>
-                  <h4 className="summit-section-title">Inaugural EIP Summit Session Archive</h4>
-                  <p className="summit-section-sub">10 recorded deep-dives, keynotes, and workshops bridging the research-to-reality pipeline for Ethereum standards.</p>
+                  <h4 className="summit-section-title">Inaugural EIP Summit (2025) Session Archive</h4>
+                  <p className="summit-section-sub">10 recorded deep-dives, keynotes, and author workshops from our past event in Buenos Aires that paved the way for the EIP Hub at Devcon 8.</p>
                 </div>
                 <div className="summit-video-header-actions">
                   <a href="https://lu.ma/5lwboseu" target="_blank" rel="noopener noreferrer" className="btn-video-channel" style={{ borderColor: 'rgba(245,158,11,0.35)', color: '#fbbf24' }} title="View Inaugural EIP Summit Event Page on Luma">

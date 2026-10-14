@@ -104,9 +104,9 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" />
                   <span>Rafael Matias</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-eiplabs')} title="View German Abal's session &amp; bio">
-                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EIP Labs)" />
-                  <span>German Abal (EIP Labs)</span>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} title="View German Abal's session &amp; bio">
+                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
+                  <span>German Abal (EVVM)</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('jochem')} title="View Jochem Brouwer's session &amp; bio">
                   <img src="Assets/photos/speaker-jochem-brouwer.jpg" alt="Jochem Brouwer" />
@@ -202,12 +202,12 @@ export default function DaysProgram({ showMatrix = true }) {
               </div>
               <div className="showcase-eco-box">
                 <div className="showcase-eco-title">Key Partners</div>
-                <div className="showcase-eco-val">Ethlabs &amp; Core Client Teams</div>
+                <div className="showcase-eco-val">Core Client Teams &amp; Researchers</div>
               </div>
             </div>
 
             <div className="showcase-speakers-bar">
-              <div className="showcase-speakers-bar-title">Confirmed Day 2 Speakers</div>
+              <div className="showcase-speakers-bar-title">Featured Day 2 Speakers</div>
               <div className="showcase-speakers-chips">
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} title="View Abhimanyu Nag's session & bio">
                   <img src="Assets/speakers/abhimanyu-nag.png" alt="Abhimanyu Nag" />
@@ -584,7 +584,7 @@ export default function DaysProgram({ showMatrix = true }) {
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Partners</span>
-              <span className="day-meta-val">Ethlabs &amp; Core Client Teams</span>
+              <span className="day-meta-val">Core Client Teams &amp; Researchers</span>
             </div>
           </div>
         </div>
@@ -757,7 +757,7 @@ export default function DaysProgram({ showMatrix = true }) {
                   Execution &amp; Consensus Client Engineers, Protocol Researchers
                 </td>
                 <td className="matrix-partners-cell">
-                  Ethlabs &amp; Core Client Teams
+                  Core Client Teams &amp; Researchers
                 </td>
               </tr>
               <tr>

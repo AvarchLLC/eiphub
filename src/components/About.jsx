@@ -5,15 +5,21 @@ export default function About() {
     <>
 <div className="about-section-bg" id="about">
   <div className="wrap">
-    <div className="sec-eyebrow">About the EIP Hub</div>
-    <div className="about-title">
-      <span className="eip-word"><span className="eip-cap cap-e">E</span><span className="eip-rest">xplore</span></span>
-      <span className="eip-dot">·</span>
-      <span className="eip-word"><span className="eip-cap cap-i">I</span><span className="eip-rest">nnovate</span></span>
-      <span className="eip-dot">·</span>
-      <span className="eip-word"><span className="eip-cap cap-p">P</span><span className="eip-rest">articipate</span></span>
+    <div style={{ textAlign: 'center', marginBottom: '22px' }}>
+      <div className="event-phase-badge badge-current" style={{ display: 'inline-flex', marginBottom: '14px' }}>
+        <span className="phase-dot dot-live"></span>
+        <span>CURRENT EVENT · DEVCON 8 MUMBAI (NOV 3–6, 2026)</span>
+      </div>
+      <div className="sec-eyebrow">The Current Flagship Event</div>
+      <div className="about-title">
+        <span className="eip-word"><span className="eip-cap cap-e">E</span><span className="eip-rest">xplore</span></span>
+        <span className="eip-dot">·</span>
+        <span className="eip-word"><span className="eip-cap cap-i">I</span><span className="eip-rest">nnovate</span></span>
+        <span className="eip-dot">·</span>
+        <span className="eip-word"><span className="eip-cap cap-p">P</span><span className="eip-rest">articipate</span></span>
+      </div>
+      <p className="sec-body">The <strong>EIP Hub at Devcon 8 India</strong> is our active flagship community space for existing and aspiring Ethereum contributors — bringing the research-to-reality pipeline to Mumbai across four full days. Building upon the success of our past event (the 2025 EIP Summit in Argentina), the EIP Hub features 6 interactive spaces, live editor PR triage, client interop labs, and Community Booth #29.</p>
     </div>
-    <p className="sec-body">The <strong>EIP Hub at Devcon 8 India</strong> is the go-to collaborative space for existing and aspiring Ethereum contributors — bringing the research-to-reality pipeline to Mumbai. Across four days, it covers the <strong>EIP Process</strong>, <strong>Protocol EIPs</strong>, <strong>Application ERCs</strong>, and <strong>Enterprise implementation</strong> for broader adoption.</p>
 
     {/* Why Devcon 8 India & Scale Callout (Flagship Devcon 8 India Feature Card) */}
       <div className="summit-india-callout">
@@ -210,7 +216,7 @@ export default function About() {
       </div>
 
     {/* Community Booth: Upcoming Activities for Devcon 8 */}
-      <div className="summit-gallery-section" id="community-booth">
+      <div className="summit-gallery-section" id="community-booth" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '42px', marginTop: '36px' }}>
         <div className="summit-slider-header">
           <div className="summit-slider-title-col">
             <div className="summit-block-eyebrow">Interactive Space · Community Booth #29 · Devcon 8 Mumbai</div>

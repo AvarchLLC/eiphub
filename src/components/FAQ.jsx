@@ -19,7 +19,10 @@ export default function FAQ() {
   return (
     <div className="faq-section-bg" id="faq">
       <div className="wrap">
-        <div className="sec-eyebrow">4-Day Collaborative Hub · FAQ</div>
+        <div className="sec-eyebrow">
+          <span className="sec-eyebrow-dot"></span>
+          <span>4-Day Collaborative Hub · FAQ</span>
+        </div>
         <div className="about-title">
           <span className="eip-word"><span className="eip-cap cap-e">F</span><span className="eip-rest">requently</span></span>
           <span className="eip-dot">·</span>
@@ -191,7 +194,7 @@ export default function FAQ() {
               <div className="faq-ans-header">
                 <span className="faq-ans-badge"><span className="ans-pulse-dot"></span> ANSWER</span>
               </div>
-              <p>The EIP Hub is organized collaboratively by recognized community groups dedicated to open standards: <strong>ECH Institute</strong>, <strong>Ethlabs</strong>, <strong>EIPs Insight</strong>, <strong>EtherWorld</strong>, <strong>ETHShala</strong>, <strong>ETHCluj</strong>, and <strong>ETH Pune</strong>, in partnership with Devcon 8 India.</p>
+              <p>The EIP Hub is organized collaboratively by recognized community groups dedicated to open standards: <strong>ECH Institute</strong>, <strong>EIPs Insight</strong>, <strong>EtherWorld</strong>, <strong>ETHShala</strong>, <strong>ETHCluj</strong>, and <strong>ETH Pune</strong>, in partnership with Devcon 8 India.</p>
 
               <div className="faq-partner-card">
                 <div className="faq-partner-header">
@@ -210,7 +213,6 @@ export default function FAQ() {
                     <span id="copy-partner-text">Copy Email</span>
                   </button>
                   <a href="https://echinstitute.org" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ECH Institute ↗</a>
-                  <a href="https://ethlabs.org" target="_blank" rel="noopener noreferrer" className="faq-pill-link">Ethlabs ↗</a>
                   <a href="https://ethshala.com" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETHShala ↗</a>
                   <a href="https://www.ethcluj.org/" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETHCluj ↗</a>
                   <a href="https://www.ethpune.com" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETH Pune ↗</a>

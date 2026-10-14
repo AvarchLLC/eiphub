@@ -5,12 +5,23 @@ export default function Community() {
     <>
 <div className="community-bg" id="community">
   <div className="wrap" style={{ textAlign: 'center' }}>
-    <div className="sec-eyebrow">Community</div>
+    <div className="sec-eyebrow">
+      <span className="sec-eyebrow-dot" style={{ background: '#10b981', boxShadow: '0 0 8px #10b981' }}></span>
+      <span>Devcon 8 India · Current Event (2026)</span>
+    </div>
     <div className="sec-title">Follow Along and Join the Discussion</div>
+    <p className="sec-body" style={{ maxWidth: '740px', margin: '0 auto 16px', color: 'rgba(255, 255, 255, 0.78)' }}>
+      Official live announcements and community discussions for our active flagship event — <strong>EIP Hub @ Devcon 8 India (Mumbai)</strong>.
+    </p>
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '100px', background: 'rgba(16, 185, 129, 0.12)', border: '1px solid rgba(16, 185, 129, 0.35)', color: '#6ee7b7', fontSize: '12px', fontWeight: '700', marginBottom: '8px' }}>
+      <span className="phase-dot dot-live"></span>
+      <span>Current Event Official Posts &amp; Discussions</span>
+    </div>
+
     <div className="community-grid" style={{ textAlign: 'left' }}>
       {/* Left Card: Official Original Twitter / X Announcement */}
       <div className="community-card">
-        <h4><span className="feat-chip-dot" style={{ background: '#38bdf8' }}></span> From Devcon · Official Announcement</h4>
+        <h4><span className="feat-chip-dot" style={{ background: '#38bdf8' }}></span> Devcon 8 Mumbai · Official Announcement</h4>
         <div className="tweet-widget">
           <div className="tweet-meta-top">
             <span className="tweet-cat-badge"><span className="tweet-cat-dot"></span> Official X Post</span>
@@ -109,7 +120,7 @@ export default function Community() {
 
       {/* Right Card: Rich Devcon Forum Thread Widget */}
       <div className="community-card">
-        <h4><span className="feat-chip-dot" style={{ background: '#818cf8' }}></span> Official Devcon Forum</h4>
+        <h4><span className="feat-chip-dot" style={{ background: '#818cf8' }}></span> Devcon 8 Mumbai · Official Forum Thread</h4>
         <div className="forum-widget">
           <div className="forum-meta-top">
             <span className="forum-cat-badge"><span className="forum-cat-dot"></span> Community Hubs</span>

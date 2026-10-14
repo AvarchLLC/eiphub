@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
 
 // All 11 Confirmed Protocol Leaders & Authors (Equal Spotlight with Dynamic Orbit Shuffling)
 const ALL_SPEAKERS = [
@@ -11,18 +10,6 @@ const ALL_SPEAKERS = [
     track: 'Day 1 · Keynote & Governance',
     badgeIcon: '🎙️',
     photo: 'Assets/speakers/pooja-ranjan.jpg',
-    color: '#fbbf24',
-    glowColor: 'rgba(251, 191, 36, 0.75)',
-    dotType: 'yellow'
-  },
-  {
-    id: 'jochem',
-    modalId: 'jochem',
-    name: 'Jochem Brouwer',
-    org: 'Ethereum Foundation · EIP Editor',
-    track: 'Day 1 · EIP Process Review',
-    badgeIcon: '🖋️',
-    photo: 'Assets/photos/speaker-jochem-brouwer.jpg',
     color: '#fbbf24',
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
@@ -40,16 +27,16 @@ const ALL_SPEAKERS = [
     dotType: 'blue'
   },
   {
-    id: 'stefan',
-    modalId: 'stefan',
-    name: 'Stefan',
-    org: 'ethPandaOps · EF',
-    track: 'Day 1 · Devnets & Upgrades',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/stefan.jpg',
-    color: '#38bdf8',
-    glowColor: 'rgba(56, 189, 248, 0.75)',
-    dotType: 'blue'
+    id: 'jochem',
+    modalId: 'jochem',
+    name: 'Jochem Brouwer',
+    org: 'Ethereum Foundation · EIP Editor',
+    track: 'Day 1 · EIP Process Review',
+    badgeIcon: '🖋️',
+    photo: 'Assets/photos/speaker-jochem-brouwer.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
   },
   {
     id: 'maria',
@@ -64,6 +51,30 @@ const ALL_SPEAKERS = [
     dotType: 'blue'
   },
   {
+    id: 'german',
+    modalId: 'german-combined',
+    name: 'German Abal',
+    org: 'EVVM',
+    track: 'Day 1 & Day 4 · Tooling & EVVM',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/german-abal.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
+  },
+  {
+    id: 'stefan',
+    modalId: 'stefan',
+    name: 'Stefan',
+    org: 'ethPandaOps · EF',
+    track: 'Day 1 · Devnets & Upgrades',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/stefan.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
+  },
+  {
     id: 'rafael',
     modalId: 'rafael',
     name: 'Rafael Matias',
@@ -74,18 +85,6 @@ const ALL_SPEAKERS = [
     color: '#06b6d4',
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
-  },
-  {
-    id: 'german',
-    modalId: 'german-combined',
-    name: 'German Abal',
-    org: 'EVVM (@RollAMate)',
-    track: 'Day 1 & Day 4 · Tooling & EVVM',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/german-abal.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
   },
   {
     id: 'abhimanyu',
@@ -322,37 +321,74 @@ function SacredMandalaSvg({ id = 'main' }) {
 export default function SpeakersMandala() {
   const [speakersList, setSpeakersList] = useState(ALL_SPEAKERS);
   const [isShuffling, setIsShuffling] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
   const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
+  const arenaRef = useRef(null);
 
-  // Shuffle logic: randomly redistributes all 11 speakers between inner and outer orbits
-  // Ensures 100% equality so no speaker is permanently in inner or outer orbit
+  // Preload all 11 speaker avatars into browser memory so transitions are instant & zero-flicker
+  useEffect(() => {
+    ALL_SPEAKERS.forEach(spk => {
+      const img = new Image();
+      img.src = spk.photo;
+    });
+  }, []);
+
+  // Set rotation speed strictly to 0.5x (slow, cinematic, readable pace)
+  const applyPlaybackRate = (rate = 0.5) => {
+    if (!arenaRef.current || typeof arenaRef.current.getAnimations !== 'function') return;
+    try {
+      const anims = arenaRef.current.getAnimations({ subtree: true });
+      anims.forEach(anim => {
+        if (anim.animationName && (
+          anim.animationName.startsWith('orbit') ||
+          anim.animationName.startsWith('spin') ||
+          anim.animationName.includes('astrolabe') ||
+          anim.animationName.includes('mandala')
+        )) {
+          anim.playbackRate = rate;
+        }
+      });
+    } catch (e) {
+      // safe fallback
+    }
+  };
+
+  useEffect(() => {
+    applyPlaybackRate(0.5);
+    const t = setTimeout(() => applyPlaybackRate(0.5), 100);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Seamless Shuffle logic: graceful celestial cross-dissolve
   const shuffleOrbits = () => {
+    if (isShuffling) return;
     setIsShuffling(true);
+
     setTimeout(() => {
       setSpeakersList(prev => {
         const arr = [...prev];
-        // Fisher-Yates random shuffle
         for (let i = arr.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [arr[i], arr[j]] = [arr[j], arr[i]];
         }
         return arr;
       });
-      setTimeout(() => {
-        setIsShuffling(false);
-      }, 300);
-    }, 250);
+
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          setIsShuffling(false);
+        }, 50);
+      });
+    }, 650);
   };
 
-  // Periodic random shuffling every 7.5 seconds so every speaker seamlessly rotates between orbits
+  // Periodic automatic rotation (gentle 14s interval)
   useEffect(() => {
-    if (isPaused || hoveredSpeaker) return;
+    if (hoveredSpeaker) return;
     const timer = setInterval(() => {
       shuffleOrbits();
-    }, 7500);
+    }, 14000);
     return () => clearInterval(timer);
-  }, [isPaused, hoveredSpeaker]);
+  }, [hoveredSpeaker, isShuffling]);
 
   const outerSpeakers = speakersList.slice(0, 6);
   const innerSpeakers = speakersList.slice(6, 11);
@@ -426,21 +462,17 @@ export default function SpeakersMandala() {
 
       <div className="wrap mandala-wrap-wide">
         <div className="mandala-header text-center">
-          <div className="sec-eyebrow">Confirmed Speakers &amp; Contributors</div>
+          <div className="sec-eyebrow">Speakers &amp; Contributors</div>
           <h2 className="sec-title">Protocol Leaders Shaping Standards</h2>
           <p className="sec-body">
-            Explore the core developers, EIP editors, and client implementers confirmed on stage at Jio World Centre, Mumbai. Click any speaker to view talk details and biography.
+            Explore the core developers, EIP editors, and client implementers on stage at Jio World Centre, Mumbai. Click any speaker to view talk details and biography.
           </p>
         </div>
 
         {/* EXPANSIVE SEAMLESS DUAL-ORBIT MANDALA ARENA */}
         <div
-          className={`mandala-arena ${isPaused ? 'is-orbit-paused' : ''}`}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => {
-            setIsPaused(false);
-            setHoveredSpeaker(null);
-          }}
+          ref={arenaRef}
+          className={`mandala-arena ${hoveredSpeaker ? 'is-orbit-paused' : ''}`}
         >
           {/* AMBIENT AURORA BACKDROP GLOW */}
           <div className="mandala-ambient-aurora" aria-hidden="true"></div>
@@ -503,10 +535,6 @@ export default function SpeakersMandala() {
                       className="speaker-photo-img-big"
                       loading="lazy"
                     />
-                    <span
-                      className={`satellite-dot-orb ${spk.dotType === 'yellow' ? 'sat-yellow' : 'sat-blue'}`}
-                      aria-hidden="true"
-                    ></span>
                   </div>
 
                   <div className="speaker-downside-info">
@@ -551,10 +579,6 @@ export default function SpeakersMandala() {
                       className="speaker-photo-img-big"
                       loading="lazy"
                     />
-                    <span
-                      className={`satellite-dot-orb ${spk.dotType === 'yellow' ? 'sat-yellow' : 'sat-blue'}`}
-                      aria-hidden="true"
-                    ></span>
                   </div>
 
                   <div className="speaker-downside-info">
@@ -580,37 +604,6 @@ export default function SpeakersMandala() {
           )}
         </div>
 
-        {/* Orbit Motion Controls Bar */}
-        <div className="mandala-controls-bar">
-          <button
-            type="button"
-            className={`btn-orbit-toggle ${isPaused ? 'paused' : ''}`}
-            onClick={() => setIsPaused(!isPaused)}
-            title={isPaused ? 'Resume Rotation' : 'Pause Rotation'}
-          >
-            <span className="toggle-dot"></span>
-            <span>{isPaused ? '▶ Resume Rotation' : '⏸ Pause Rotation'}</span>
-          </button>
-
-          <button
-            type="button"
-            className="btn-orbit-shuffle"
-            onClick={shuffleOrbits}
-            title="Randomly shuffle all speaker positions across inner and outer orbits"
-          >
-            <span>🔀</span>
-            <span>Shuffle Orbits</span>
-          </button>
-
-          <span className="orbit-status-indicator">
-            <strong>Dynamic Orbit Shuffling</strong> · Equal Spotlight for All Speakers · Click to View Bio
-          </span>
-
-          <Link to="/speakers" className="btn-orbit-all-speakers">
-            <span>All Speakers Grid</span>
-            <span>↗</span>
-          </Link>
-        </div>
       </div>
     </section>
   );

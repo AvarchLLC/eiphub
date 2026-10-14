@@ -1189,23 +1189,23 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 13 Unique Technical Leaders (15 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 11 Unique Technical Leaders (12 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
-    if(statusText){ statusText.style.color = '#fde68a'; statusText.textContent = 'Day 1 · Nov 3 (EIP Process & General Overview) · 4 Confirmed Speakers'; }
+    if(statusText){ statusText.style.color = '#fde68a'; statusText.textContent = 'Day 1 · Nov 3 (EIP Process & General Overview) · 5 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 1 Track · Nov 3, 2026'; }
   } else if(day === 2 || day === '2'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'Day 2 · Nov 4 (Protocol EIPs & Network Upgrades) · 5 Confirmed Speakers'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'Day 2 · Nov 4 (Protocol EIPs & Network Upgrades) · 4 Technical Speakers'; }
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 3 Scheduled Speakers'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 1 Technical Speaker'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
-    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 3 Scheduled Speakers'; }
+    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 2 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 4 Track · Nov 6, 2026'; }
   }
 
@@ -1433,14 +1433,14 @@ const SPEAKERS_DATA = {
     dayNum: 1,
     name: 'German Abal',
     photo: 'Assets/speakers/german-abal.jpg',
-    affiliation: 'EVVM (@RollAMate) · EIP Labs',
+    affiliation: 'EVVM · ETH Cinco De Mayo',
     designation: 'Co-Founder & CTO, EVVM · Standards Tooling Contributor',
     day: 'Day 1 – November 3, 2026',
     track: 'Day 1 · Nov 3 · EIP Process & General Overview',
     time: '⏱️ Session Time: TBA · Day 1',
     format: '⚡ Tooling & Standards Talk',
     talkTitle: 'EIP Process & Standards Tooling: Accelerating Proposal Workflows',
-    talkDesc: 'Discover the tooling innovations and automated pipelines built at EIP Labs and EVVM that empower authors to validate formatting, test markdown schemas, verify interface signatures, and streamline the editorial review process.',
+    talkDesc: 'Discover the tooling innovations and automated pipelines built at EVVM that empower authors to validate formatting, test markdown schemas, verify interface signatures, and streamline the editorial review process.',
     bio: [
       'German Abal (@ariutokintumi) is a blockchain technologist, co-founder & CTO of EVVM, author of EIP-8141 and EIP-8250, and core organizer at ETH Cinco De Mayo. He is dedicated to engineering developer infrastructure that lowers friction for open-source Ethereum specification contributors.',
       'Through EVVM and open tooling, German bridges the builder community with formal standardization pipelines to foster quicker iteration and higher-quality EIP drafts.'
@@ -1632,7 +1632,7 @@ const SPEAKERS_DATA = {
     designation: 'Co-Founder & CTO, EVVM · Core Team ETH Cinco De Mayo',
     day: 'Day 4 – November 6, 2026',
     track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
-    time: '⏱️ 11:00 AM · Day 4 (Confirmed)',
+    time: '⏱️ 11:00 AM · Day 4',
     format: '👥 EVM & Scalability Architecture Presentation',
     talkTitle: 'EVVM: Ethereum Virtual Virtual Machine Architecture & State Scaling',
     talkDesc: 'Explore EVVM (Ethereum Virtual Virtual Machine) and how contract-native virtual blockchains enable high-performance execution, custom rulesets, and privacy while maintaining trust-minimized settlement on Ethereum.',
@@ -1684,11 +1684,11 @@ const SPEAKERS_DATA = {
     dayNum: 1,
     name: 'German Abal',
     photo: 'Assets/speakers/german-abal.jpg',
-    affiliation: 'EVVM (@RollAMate) · ETH Cinco De Mayo · EIP Labs',
+    affiliation: 'EVVM · ETH Cinco De Mayo',
     designation: 'Co-Founder & CTO, EVVM · Standards Tooling Contributor',
     day: 'Day 1 (Nov 3) & Day 4 (Nov 6)',
     track: 'Dual Track Speaker: EIP Process & Tooling (Day 1) + EVVM State Scaling (Day 4)',
-    time: 'Day 1: Standards Talk · Day 4: 11:00 AM (Confirmed)',
+    time: 'Day 1: Standards Talk · Day 4: 11:00 AM',
     format: '⚡ 2 Scheduled Technical Sessions',
     talkTitle: 'Dual Sessions: EIP Process Tooling Workflows & EVVM Scalability',
     talkDesc: 'German Abal presents two specialized sessions across the summit: (1) On Day 1, exploring open-source CI/CD tooling, markdown schema linters, and verification workflows for EIP authors; (2) On Day 4, breaking down EVVM (Ethereum Virtual Virtual Machine) and how contract-native virtual blockchains enable high-performance execution while settling state on Ethereum.',

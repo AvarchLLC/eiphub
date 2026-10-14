@@ -4,80 +4,63 @@ import { Link } from 'react-router-dom';
 const PARTNER_LOGOS = [
   {
     name: 'Ethereum Foundation',
-    logo: 'Assets/partners/ef-logo.svg',
-    category: 'Core Protocol',
-    tagline: 'Protocol Research & Public Goods',
+    logo: '/Assets/partners/ef-full-logo.svg',
+    fallback: '/Assets/partners/ef-logo.svg',
     url: 'https://ethereum.foundation'
   },
   {
-    name: 'Devcon 8',
-    logo: 'Assets/partners/devcon-logo.svg',
-    category: 'Flagship Event',
-    tagline: 'Ethereum Developer Conference',
+    name: 'Devcon 8 India',
+    logo: '/Assets/partners/devcon-full-logo.svg',
+    fallback: '/Assets/partners/devcon-full-logo.svg',
     url: 'https://devcon.org'
   },
   {
-    name: 'ECH Institute',
-    logo: 'Assets/partners/ech-institute-logo.png',
-    category: 'Ecosystem Lead',
-    tagline: 'Ecosystem Lead · Public Goods',
-    url: 'https://echinstitute.org'
-  },
-  {
-    name: 'Ethlabs',
-    logo: 'Assets/partners/ethlabs-logo.svg',
-    category: 'Protocol R&D',
-    tagline: 'Core Protocol R&D · Scaling',
-    url: 'https://ethlabs.org'
-  },
-  {
-    name: 'EIPsInsight',
-    logo: 'Assets/partners/eipsinsight-logo.gif',
-    category: 'Analytics',
-    tagline: 'Protocol Analytics & Standards Tracker',
-    url: 'https://eipsinsight.com'
-  },
-  {
     name: 'EtherWorld',
-    logo: 'Assets/partners/etherworld-logo.png',
-    category: 'Media',
-    tagline: 'Decentralized Protocol Media',
+    logo: '/Assets/partners/etherworld-full-logo.png',
+    fallback: '/Assets/partners/etherworld-logo.png',
     url: 'https://etherworld.co'
   },
   {
+    name: 'EIPsInsight',
+    logo: '/Assets/partners/eipsinsight-full-logo.gif',
+    fallback: '/Assets/partners/eipsinsight-full-logo.svg',
+    url: 'https://eipsinsight.com'
+  },
+  {
+    name: 'ECH Institute',
+    logo: '/Assets/partners/ech-institute-full-logo.svg',
+    fallback: '/Assets/partners/ech-institute-full-logo.png',
+    url: 'https://echinstitute.org'
+  },
+  {
+    name: 'EVVM',
+    logo: '/Assets/partners/evvm-logo.svg',
+    fallback: '/Assets/partners/evvm-logo.png',
+    url: 'https://www.evvm.info/'
+  },
+  {
     name: 'ETHShala',
-    logo: 'Assets/partners/ethshala-logo.svg',
-    category: 'Education',
-    tagline: 'Builder Education · India',
+    logo: '/Assets/partners/ethshala-full-logo.svg',
+    fallback: '/Assets/partners/ethshala-full-logo.png',
     url: 'https://ethshala.com'
   },
   {
-    name: 'ETHCluj',
-    logo: 'Assets/partners/ethcluj-logo.png',
-    category: 'Community',
-    tagline: 'Ethereum Technical Community · Europe',
-    url: 'https://www.ethcluj.org/'
-  },
-  {
     name: 'ETH Pune',
-    logo: 'Assets/partners/ethpune-white.png',
-    category: 'Community',
-    tagline: 'Ethereum Community · India',
+    logo: '/Assets/partners/ethpune-full-logo.svg',
+    fallback: '/Assets/partners/ethpune-full-logo.png',
     url: 'https://www.ethpune.com'
   },
   {
-    name: 'ETH Cinco De Mayo',
-    logo: 'Assets/partners/ethcincodemayo-icon.png',
-    category: 'Incubathon',
-    tagline: 'Incubathon CDMX · Mexico',
-    url: 'https://x.com/ETHCincoDeMayo'
+    name: 'ETHCluj',
+    logo: '/Assets/partners/ethcluj-vector-logo.svg',
+    fallback: '/Assets/partners/ethcluj-full-logo.png',
+    url: 'https://www.ethcluj.org'
   },
   {
-    name: 'EVVM (@RollAMate)',
-    logo: 'Assets/partners/rollamate-logo.png',
-    category: 'Execution',
-    tagline: 'Modular Execution · Virtual Machine',
-    url: 'https://x.com/RollAMate'
+    name: 'ETH Cinco De Mayo',
+    logo: '/Assets/partners/ethcincodemayo-full-logo.svg',
+    fallback: '/Assets/partners/ethcincodemayo-full-logo.png',
+    url: 'https://ethcdm.com/'
   }
 ];
 
@@ -90,13 +73,13 @@ export default function HomePartners() {
       <div className="wrap" style={{ position: 'relative', zIndex: 2 }}>
         <div className="home-partners-header text-center">
           <div className="sec-eyebrow">Ecosystem Partners &amp; Supporters</div>
-          <h2 className="sec-title">Backed by the Ethereum Ecosystem</h2>
+          <h2 className="sec-title">Backed by the Ecosystem</h2>
           <p className="sec-body">
             Collaborating with active protocol public goods, client teams, research groups, and grassroots developer communities worldwide.
           </p>
         </div>
 
-        {/* Auto Smooth Moving Real Full-Color Logo & Community Name Marquee */}
+        {/* Auto Smooth Moving Real Full-Color Logo Marquee (Clean Borderless Stream) */}
         <div className="partner-logo-slider-wrap" aria-label="Partner Logos Carousel">
           <div className="partner-logo-track">
             {/* Duplicated array for seamless continuous infinite marquee */}
@@ -107,24 +90,20 @@ export default function HomePartners() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="partner-brand-tile"
-                title={`Visit ${p.name} (${p.tagline})`}
+                title={`Visit ${p.name}`}
               >
-                <div className="partner-brand-pod">
-                  <img
-                    src={p.logo}
-                    alt={p.name}
-                    className="partner-brand-img"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="partner-brand-content">
-                  <div className="partner-brand-header">
-                    <span className="partner-brand-name">{p.name}</span>
-                    <span className="partner-brand-badge">{p.category}</span>
-                  </div>
-                  <span className="partner-brand-tagline">{p.tagline}</span>
-                </div>
-                <span className="partner-brand-arrow" aria-hidden="true">↗</span>
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="partner-brand-full-logo"
+                  loading="lazy"
+                  onError={(e) => {
+                    if (p.fallback && e.currentTarget.src !== p.fallback) {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = p.fallback;
+                    }
+                  }}
+                />
               </a>
             ))}
           </div>
