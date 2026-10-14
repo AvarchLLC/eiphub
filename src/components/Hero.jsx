@@ -70,8 +70,14 @@ export default function Hero() {
 
   <div className="hero-ctas">
     <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" className="btn-primary">Join on Luma</a>
-    <Link to="/speakers" className="btn-outline">Apply to Speak ↗</Link>
-    <Link to="/agenda" className="btn-outline">See the agenda ↓</Link>
+    <Link to="/speakers" className="btn-outline">
+      <span>Apply to Speak</span>
+      <span className="btn-outline-arrow btn-arr-diag">↗</span>
+    </Link>
+    <Link to="/agenda" className="btn-outline">
+      <span>See the agenda</span>
+      <span className="btn-outline-arrow btn-arr-down">↓</span>
+    </Link>
   </div>
 
   {/* Hero Student Support Quick Link */}
