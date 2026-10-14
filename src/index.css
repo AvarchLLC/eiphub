@@ -2340,32 +2340,31 @@ nav.nav-scrolled{
   outline-offset:2px;
 }
 
-/* Top: Logo Pod & Actions */
+/* Top: Logo Showcase Stage & Actions Header */
 .psc-top{
   display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:14px;
+  flex-direction:column-reverse;
+  gap:16px;
+  width:100%;
 }
 .psc-logo-pod{
-  width:66px;
-  height:66px;
+  width:100%;
+  height:78px;
   border-radius:14px;
   background:rgba(8, 10, 18, 0.94);
   border:1px solid rgba(255, 255, 255, 0.12);
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:10px;
-  flex-shrink:0;
+  padding:12px 20px;
   box-shadow:0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 .psc-brand-logo{
   width:100%;
   height:100%;
-  max-width:48px;
-  max-height:48px;
+  max-width:240px;
+  max-height:54px;
   object-fit:contain;
   display:block;
   filter:none !important;
@@ -2373,18 +2372,18 @@ nav.nav-scrolled{
   transition:transform .25s ease;
 }
 .partner-showcase-card:hover .psc-logo-pod{
-  transform:scale(1.05);
+  transform:translateY(-2px);
 }
 .partner-showcase-card:hover .psc-brand-logo{
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
 .psc-actions{
   display:flex;
   align-items:center;
+  justify-content:space-between;
+  width:100%;
   gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
 }
 .psc-category-chip{
   font-family:'Manrope',sans-serif;
