@@ -90,7 +90,14 @@ export default function Speakers() {
             <span className="spk-search-icon">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </span>
-            <input type="text" id="spk-search-input" className="spk-search-input" placeholder="Search speakers, talks, topics, or organizations (e.g. Pooja, Besu, ENS, Privacy, EVVM)..." oninput="handleSpeakerSearch(this.value)" autocomplete="off" />
+            <input
+              type="text"
+              id="spk-search-input"
+              className="spk-search-input"
+              placeholder="Search speakers, talks, topics, or organizations (e.g. Pooja, Besu, ENS, Privacy, EVVM)..."
+              onInput={(e) => window.handleSpeakerSearch && window.handleSpeakerSearch(e.target.value)}
+              autoComplete="off"
+            />
             <button type="button" id="spk-search-clear" className="spk-search-clear" onClick={() => window.clearSpeakerSearch && window.clearSpeakerSearch()} title="Clear search">✕</button>
           </div>
         </div>
