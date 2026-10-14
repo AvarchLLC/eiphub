@@ -431,6 +431,18 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/charchit-kumawat.jpg" alt="Charchit Kumawat" />
                   <span>Charchit Kumawat</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('loring')} title="View Loring Harkness's session &amp; bio">
+                  <img src="Assets/speakers/loring-harkness.jpg" alt="Loring Harkness" />
+                  <span>Loring Harkness</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} title="View Yudhishthra's session &amp; bio">
+                  <img src="Assets/speakers/yudhishthra.jpg" alt="Yudhishthra" />
+                  <span>Yudhishthra</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruv')} title="View Dhruv Gera's session &amp; bio">
+                  <img src="Assets/speakers/dhruv-gera.jpg" alt="Dhruv Gera" />
+                  <span>Dhruv Gera</span>
+                </button>
               </div>
             </div>
           </div>
@@ -679,7 +691,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Charchit Kumawat</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Charchit Kumawat · Loring Harkness · Yudhishthra · Dhruv Gera</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

@@ -194,7 +194,7 @@ export default function FAQ() {
               <div className="faq-ans-header">
                 <span className="faq-ans-badge"><span className="ans-pulse-dot"></span> ANSWER</span>
               </div>
-              <p>The EIP Hub is organized collaboratively by recognized community groups dedicated to open standards: <strong>ECH Institute</strong>, <strong>EIPs Insight</strong>, <strong>EtherWorld</strong>, <strong>ETHShala</strong>, <strong>ETHCluj</strong>, and <strong>ETH Pune</strong>, in partnership with Devcon 8 India.</p>
+              <p>The EIP Hub is organized collaboratively by recognized community groups dedicated to open standards: <strong>ECH Institute</strong>, <strong>EIPs Insight</strong>, <strong>EtherWorld</strong>, <strong>ETHShala</strong>, <strong>ETHCluj</strong>, <strong>ETH Pune</strong>, and <strong>ETH Cinco De Mayo</strong>, in partnership with Devcon 8 India.</p>
 
               <div className="faq-partner-card">
                 <div className="faq-partner-header">
@@ -212,10 +212,13 @@ export default function FAQ() {
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: '0' }}><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                     <span id="copy-partner-text">Copy Email</span>
                   </button>
+                  <a href="https://etherworld.co" target="_blank" rel="noopener noreferrer" className="faq-pill-link">EtherWorld ↗</a>
+                  <a href="https://eipsinsight.com" target="_blank" rel="noopener noreferrer" className="faq-pill-link">EIPsInsight ↗</a>
                   <a href="https://echinstitute.org" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ECH Institute ↗</a>
                   <a href="https://ethshala.com" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETHShala ↗</a>
                   <a href="https://www.ethcluj.org/" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETHCluj ↗</a>
                   <a href="https://www.ethpune.com" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETH Pune ↗</a>
+                  <a href="https://ethcdm.com/" target="_blank" rel="noopener noreferrer" className="faq-pill-link">ETH Cinco De Mayo ↗</a>
                 </div>
               </div>
             </div>

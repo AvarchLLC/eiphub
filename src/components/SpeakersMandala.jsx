@@ -133,6 +133,42 @@ const ALL_SPEAKERS = [
     color: '#fbbf24',
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
+  },
+  {
+    id: 'loring',
+    modalId: 'loring',
+    name: 'Loring Harkness',
+    org: 'Shutter Network',
+    track: 'Day 4 · Encrypted Mempools',
+    badgeIcon: '🛡️',
+    photo: 'Assets/speakers/loring-harkness.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
+  },
+  {
+    id: 'yudhishthra',
+    modalId: 'yudhishthra',
+    name: 'Yudhishthra',
+    org: 'Aqua0',
+    track: 'Day 4 · Stablecoins & FX',
+    badgeIcon: '💱',
+    photo: 'Assets/speakers/yudhishthra.jpg',
+    color: '#34d399',
+    glowColor: 'rgba(52, 211, 153, 0.75)',
+    dotType: 'blue'
+  },
+  {
+    id: 'dhruv',
+    modalId: 'dhruv',
+    name: 'Dhruv Gera',
+    org: 'DashX',
+    track: 'Day 4 · ERC-7984 Confidential Tokens',
+    badgeIcon: '💳',
+    photo: 'Assets/speakers/dhruv-gera.jpg',
+    color: '#6ee7b7',
+    glowColor: 'rgba(110, 231, 183, 0.75)',
+    dotType: 'yellow'
   }
 ];
 
@@ -321,7 +357,6 @@ function SacredMandalaSvg({ id = 'main' }) {
 export default function SpeakersMandala() {
   const [speakersList, setSpeakersList] = useState(ALL_SPEAKERS);
   const [isShuffling, setIsShuffling] = useState(false);
-  const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
   const arenaRef = useRef(null);
 
   // Preload all 11 speaker avatars into browser memory so transitions are instant & zero-flicker
@@ -383,12 +418,11 @@ export default function SpeakersMandala() {
 
   // Periodic automatic rotation (gentle 14s interval)
   useEffect(() => {
-    if (hoveredSpeaker) return;
     const timer = setInterval(() => {
       shuffleOrbits();
     }, 14000);
     return () => clearInterval(timer);
-  }, [hoveredSpeaker, isShuffling]);
+  }, [isShuffling]);
 
   const outerSpeakers = speakersList.slice(0, 6);
   const innerSpeakers = speakersList.slice(6, 11);
@@ -472,7 +506,7 @@ export default function SpeakersMandala() {
         {/* EXPANSIVE SEAMLESS DUAL-ORBIT MANDALA ARENA */}
         <div
           ref={arenaRef}
-          className={`mandala-arena ${hoveredSpeaker ? 'is-orbit-paused' : ''}`}
+          className="mandala-arena"
         >
           {/* AMBIENT AURORA BACKDROP GLOW */}
           <div className="mandala-ambient-aurora" aria-hidden="true"></div>
@@ -517,10 +551,7 @@ export default function SpeakersMandala() {
                   type="button"
                   className={`speaker-interactive-node ${isShuffling ? 'is-shuffling' : ''}`}
                   onClick={() => window.openSpeakerModal && window.openSpeakerModal(spk.modalId)}
-                  onMouseEnter={() => setHoveredSpeaker(spk)}
-                  onMouseLeave={() => setHoveredSpeaker(null)}
                   aria-label={`Open talk and bio for ${spk.name}`}
-                  title={`Click to view ${spk.name}'s session & bio`}
                 >
                   <div
                     className="speaker-photo-pod-big pod-outer"
@@ -561,10 +592,7 @@ export default function SpeakersMandala() {
                   type="button"
                   className={`speaker-interactive-node ${isShuffling ? 'is-shuffling' : ''}`}
                   onClick={() => window.openSpeakerModal && window.openSpeakerModal(spk.modalId)}
-                  onMouseEnter={() => setHoveredSpeaker(spk)}
-                  onMouseLeave={() => setHoveredSpeaker(null)}
                   aria-label={`Open talk and bio for ${spk.name}`}
-                  title={`Click to view ${spk.name}'s session & bio`}
                 >
                   <div
                     className="speaker-photo-pod-big pod-inner"
@@ -592,16 +620,7 @@ export default function SpeakersMandala() {
             ))}
           </div>
 
-          {/* FLOATING HOVER PREVIEW BANNER (Clean, never obscures faces) */}
-          {hoveredSpeaker && (
-            <div className="mandala-active-floating-banner">
-              <span className="banner-icon">{hoveredSpeaker.badgeIcon}</span>
-              <span className="banner-name">{hoveredSpeaker.name}</span>
-              <span className="banner-sep">·</span>
-              <span className="banner-track">{hoveredSpeaker.track}</span>
-              <span className="banner-cta">Click to view session details ➔</span>
-            </div>
-          )}
+
         </div>
 
       </div>

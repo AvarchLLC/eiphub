@@ -19,9 +19,10 @@ export default function Navbar() {
         <span className="nav-badge"><span className="nav-badge-dot"></span>Devcon 8</span>
       </Link>
       <ul className="nav-links">
-        <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink></li>
+        <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
         <li><NavLink to="/speakers" className={({ isActive }) => isActive ? 'active' : ''}>Speakers</NavLink></li>
         <li><NavLink to="/partners" className={({ isActive }) => isActive ? 'active' : ''}>Partners</NavLink></li>
+        <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink></li>
       </ul>
       <div className="nav-actions">
         <a href="mailto:team@eiphub.xyz?subject=EIP%20Hub%20Devcon%208%20Inquiry" onClick={handleEmailClick} className="nav-social-mail" title="Email EIP Hub: team@eiphub.xyz" aria-label="Email team@eiphub.xyz">

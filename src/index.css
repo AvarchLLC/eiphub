@@ -1722,7 +1722,7 @@ nav.nav-scrolled{
   font-size:12px;
   line-height:1.6;
   color:rgba(255,255,255,0.82);
-  text-wrap:pretty;
+  width:100%;
 }
 .day-focus-box strong{
   display:block;
@@ -2397,7 +2397,8 @@ nav.nav-scrolled{
   color:#e2e8f0;
   white-space:nowrap;
 }
-.psc-x-link{
+.psc-x-link,
+.psc-in-link{
   width:32px;
   height:32px;
   border-radius:50%;
@@ -2414,7 +2415,8 @@ nav.nav-scrolled{
   position:relative;
   z-index:3;
 }
-.psc-x-link svg{
+.psc-x-link svg,
+.psc-in-link svg{
   width:13px;
   height:13px;
   fill:currentColor;
@@ -2428,6 +2430,16 @@ nav.nav-scrolled{
   box-shadow:0 0 16px rgba(255, 255, 255, 0.6);
 }
 .psc-x-link:hover svg{
+  transform:scale(1.06);
+}
+.psc-in-link:hover{
+  background:#0a66c2 !important;
+  border-color:#0a66c2 !important;
+  color:#ffffff !important;
+  transform:scale(1.14);
+  box-shadow:0 0 16px rgba(10, 102, 194, 0.6);
+}
+.psc-in-link:hover svg{
   transform:scale(1.06);
 }
 
@@ -6981,7 +6993,7 @@ footer{
 }
 .summit-block-sub{
   font-size:14px;color:rgba(255,255,255,0.65);line-height:1.6;margin-top:6px;
-  text-wrap:pretty;
+  width:100%;max-width:100%;
 }
 .summit-numbers-grid{
   display:grid;grid-template-columns:repeat(3, 1fr);gap:18px;
@@ -7362,11 +7374,23 @@ footer{
   color:rgba(255,255,255,0.78);
   line-height:1.72;
   margin:0;
-  max-width:960px;
-  text-wrap:pretty;
+  width:100%;
+  max-width:100%;
 }
 .summit-india-desc strong{
   color:#fff;
+}
+/* Card Information Full-Width Content Rules */
+.summit-india-callout p,
+.summit-act-card p,
+.home-about-pillar-card p,
+.psc-desc,
+.spk-talk-desc,
+.spk-bio,
+.day-card-body p,
+.faq-partner-card p {
+  width: 100%;
+  max-width: 100%;
 }
 .india-highlights-row{
   display:grid;
@@ -9597,38 +9621,10 @@ html, body {
   text-overflow: ellipsis;
 }
 
-/* ── FLOATING HOVER PREVIEW BANNER ── */
+/* ── FLOATING HOVER PREVIEW BANNER (Disabled) ── */
 .mandala-active-floating-banner {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 35;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Manrope', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  background: rgba(12, 17, 36, 0.96);
-  border: 1px solid rgba(251, 191, 36, 0.55);
-  padding: 8px 24px;
-  border-radius: 100px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.75), 0 0 22px rgba(251, 191, 36, 0.35);
-  pointer-events: none;
-  animation: bannerFadeUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: none !important;
 }
-@keyframes bannerFadeUp {
-  from { opacity: 0; transform: translate(-50%, 10px); }
-  to { opacity: 1; transform: translate(-50%, 0); }
-}
-.banner-icon { font-size: 14px; }
-.banner-name { color: #fbbf24; font-weight: 800; }
-.banner-sep { opacity: 0.4; }
-.banner-track { color: rgba(255, 255, 255, 0.85); font-weight: 600; }
-.banner-cta { color: #38bdf8; font-size: 11.5px; margin-left: 6px; }
 
 /* ── Orbit Motion Controls Bar ── */
 .mandala-controls-bar {
@@ -10024,7 +10020,7 @@ html, body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 30px 0;
+  padding: 38px 0;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   margin-bottom: 56px;
@@ -10032,9 +10028,9 @@ html, body {
 .partner-logo-track {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 56px;
   width: max-content;
-  animation: smoothPartnerScroll 55s linear infinite;
+  animation: smoothPartnerScroll 60s linear infinite;
 }
 .partner-logo-slider-wrap:hover .partner-logo-track {
   animation-play-state: paused;
@@ -10044,19 +10040,18 @@ html, body {
   100% { transform: translateX(-50%); }
 }
 
-/* Partner Brand Tile - Equal Fixed-Width Tiles for Consistent Spacing */
+/* Partner Brand Tile - 1.5x Scaled with Dynamic Width for Perfectly Equal Spacing */
 .partner-brand-tile {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 20px;
+  padding: 8px 16px;
   background: transparent;
   border: none;
   border-radius: 12px;
   flex-shrink: 0;
-  /* Fixed width: every logo gets same horizontal space for perfect even gaps */
-  width: 260px;
-  height: 88px;
+  height: 110px;
+  width: auto;
   box-sizing: border-box;
   text-decoration: none;
   box-shadow: none;
@@ -10071,29 +10066,32 @@ html, body {
   transform: translateY(-2px);
 }
 .partner-brand-full-logo {
-  /* Fill the tile width/height, centered with contain */
-  width: 100%;
-  height: 100%;
+  height: 64px;
+  width: auto;
+  max-width: 330px;
   object-fit: contain;
-  opacity: 0.9;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
   transition: transform 0.25s ease, opacity 0.25s ease;
   display: block;
   user-select: none;
 }
 .partner-brand-tile:hover .partner-brand-full-logo {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 @media (max-width: 768px) {
   .partner-brand-tile {
-    width: 180px;
-    height: 60px;
-    padding: 4px 12px;
+    height: 72px;
+    padding: 4px 10px;
+  }
+  .partner-brand-full-logo {
+    height: 42px;
+    max-width: 200px;
   }
   .partner-logo-track {
-    gap: 16px;
+    gap: 28px;
   }
 }
 

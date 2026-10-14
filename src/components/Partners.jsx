@@ -38,26 +38,41 @@ export default function Partners() {
               </div>
               <div className="psc-actions">
                 <span className="psc-category-chip">Decentralized Media</span>
-                <a
-                  href="https://x.com/ether_world"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@ether_world)"
-                  aria-label="Follow EtherWorld on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <a
+                    href="https://x.com/ether_world"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-x-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow on X (@ether_world)"
+                    aria-label="Follow EtherWorld on X"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/etherworld"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-in-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow EtherWorld on LinkedIn"
+                    aria-label="Follow EtherWorld on LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="psc-body">
               <h4 className="psc-title">EtherWorld</h4>
-              <p className="psc-tagline">Decentralized Media &amp; News</p>
+              <p className="psc-tagline">Decentralized Media &amp; Research · Est. 2017</p>
               <p className="psc-desc">
-                Covering Ethereum core protocol upgrades, consensus layer research, All Core Devs reporting, and standards explainers.
+                Independent Ethereum-focused media and research platform covering protocol upgrades, EIPs, AllCoreDevs discussions, security, and governance with over 1,900 articles and 120,000+ readers.
               </p>
             </div>
             <div className="psc-footer">
@@ -83,26 +98,41 @@ export default function Partners() {
               </div>
               <div className="psc-actions">
                 <span className="psc-category-chip">Protocol Analytics</span>
-                <a
-                  href="https://x.com/EIPsInsight"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@EIPsInsight)"
-                  aria-label="Follow EIPsInsight on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <a
+                    href="https://x.com/EIPsInsight"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-x-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow on X (@EIPsInsight)"
+                    aria-label="Follow EIPsInsight on X"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/eipsinsight/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-in-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow EIPsInsight on LinkedIn"
+                    aria-label="Follow EIPsInsight on LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="psc-body">
               <h4 className="psc-title">EIPsInsight</h4>
-              <p className="psc-tagline">Protocol Analytics &amp; Metrics</p>
+              <p className="psc-tagline">Standards Observability &amp; Analytics</p>
               <p className="psc-desc">
-                Dedicated standards analytics tracking EIP/ERC lifecycles, editor activity, proposal statuses, and author metrics.
+                Open-source observability platform tracking Ethereum standards (EIPs/ERCs/RIPs), AllCoreDevs decision ledgers, network upgrade timelines, and Account Abstraction metrics (ERC-4337, EIP-7702, EIP-8141).
               </p>
             </div>
             <div className="psc-footer">
@@ -234,26 +264,41 @@ export default function Partners() {
               </div>
               <div className="psc-actions">
                 <span className="psc-category-chip">Builder Education</span>
-                <a
-                  href="https://x.com/Its_EthShala"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@Its_EthShala)"
-                  aria-label="Follow ETHShala on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <a
+                    href="https://x.com/Its_EthShala"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-x-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow on X (@Its_EthShala)"
+                    aria-label="Follow ETHShala on X"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/ethshala/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-in-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow ETHShala on LinkedIn"
+                    aria-label="Follow ETHShala on LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="psc-body">
               <h4 className="psc-title">ETHShala</h4>
-              <p className="psc-tagline">Builder Education · India</p>
+              <p className="psc-tagline">Builder Education · Universities Across India</p>
               <p className="psc-desc">
-                Grassroots education initiative training thousands of Indian developers in Solidity, smart contract security, and protocol standards.
+                Open education and partner program taking Ethereum directly to universities across India through campus workshops, hackathon support, and developer onboarding inside engineering colleges.
               </p>
             </div>
             <div className="psc-footer">
@@ -279,26 +324,41 @@ export default function Partners() {
               </div>
               <div className="psc-actions">
                 <span className="psc-category-chip">Regional Community</span>
-                <a
-                  href="https://x.com/EthereumPune"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@EthereumPune)"
-                  aria-label="Follow ETH Pune on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <a
+                    href="https://x.com/EthereumPune"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-x-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow on X (@EthereumPune)"
+                    aria-label="Follow ETH Pune on X"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/eth-pune-b90a0336b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-in-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow ETH Pune on LinkedIn"
+                    aria-label="Follow ETH Pune on LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="psc-body">
               <h4 className="psc-title">ETH Pune</h4>
               <p className="psc-tagline">Ethereum Community · India</p>
               <p className="psc-desc">
-                Premier regional developer community in Pune organizing monthly technical hack nights, workshops, and standards study circles.
+                Vibrant regional Ethereum community empowering the next generation of Web3 builders through technical workshops, meetups, and hands-on developer education across Pune.
               </p>
             </div>
             <div className="psc-footer">
@@ -324,26 +384,41 @@ export default function Partners() {
               </div>
               <div className="psc-actions">
                 <span className="psc-category-chip">Technical Community</span>
-                <a
-                  href="https://x.com/ETHCluj"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@ETHCluj)"
-                  aria-label="Follow ETHCluj on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <a
+                    href="https://x.com/ETHCluj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-x-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow on X (@ETHCluj)"
+                    aria-label="Follow ETHCluj on X"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/ethereumcluj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="psc-in-link"
+                    onClick={(e) => e.stopPropagation()}
+                    title="Follow ETHCluj on LinkedIn"
+                    aria-label="Follow ETHCluj on LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="psc-body">
               <h4 className="psc-title">ETHCluj</h4>
-              <p className="psc-tagline">Ethereum Technical Community · Europe</p>
+              <p className="psc-tagline">Ethereum Community · Cluj-Napoca, Romania</p>
               <p className="psc-desc">
-                European technical developer hub uniting engineers, cryptography researchers, and open-source contributors across Central Europe.
+                Ethereum community based in Cluj-Napoca, Romania, uniting developers, researchers, builders, and students through regular meetups, workshops, and the annual ETHCluj conference.
               </p>
             </div>
             <div className="psc-footer">
@@ -368,7 +443,7 @@ export default function Partners() {
                 <img className="psc-brand-logo" src="/Assets/partners/ethcincodemayo-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ethcincodemayo-full-logo.png'; }} alt="ETH Cinco De Mayo" loading="lazy" />
               </div>
               <div className="psc-actions">
-                <span className="psc-category-chip">Incubathon CDMX</span>
+                <span className="psc-category-chip">Non-Profit Community</span>
                 <a
                   href="https://x.com/ETHCincoDeMayo"
                   target="_blank"
@@ -386,9 +461,9 @@ export default function Partners() {
             </div>
             <div className="psc-body">
               <h4 className="psc-title">ETH Cinco De Mayo</h4>
-              <p className="psc-tagline">Incubathon CDMX · Mexico · 10–12 Julio</p>
+              <p className="psc-tagline">Non-Profit Ethereum Community · LATAM</p>
               <p className="psc-desc">
-                Leading Mexican and Latin American Ethereum incubator fostering builders, standards authors, and decentralized applications.
+                Non-profit LATAM organization that has onboarded over 1,300 developers and 50 companies to Ethereum across incubathons, hackathons, university workshops, panels, and pop-up cities.
               </p>
             </div>
             <div className="psc-footer">
