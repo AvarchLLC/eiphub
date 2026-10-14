@@ -12,8 +12,8 @@ export default function HomePage() {
     <div className="page-home">
       <Hero />
       <HomeAbout />
-      <DaysProgram showMatrix={false} />
       <SpeakersMandala />
+      <DaysProgram showMatrix={false} />
       <HomePartners />
       <FAQ />
       <ClosingCta />
