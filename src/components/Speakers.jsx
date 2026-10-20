@@ -233,7 +233,7 @@ export default function Speakers() {
         </div>
 
         {/* Simona Serban (Moved after Rafael Matias) */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="9" id="speaker-card-simona" onClick={() => window.openSpeakerModal && window.openSpeakerModal('simona')} role="button" tabIndex={0} title="Click to view Simona Serban's talk and bio">
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="10" id="speaker-card-simona" onClick={() => window.openSpeakerModal && window.openSpeakerModal('simona')} role="button" tabIndex={0} title="Click to view Simona Serban's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>
@@ -276,7 +276,7 @@ export default function Speakers() {
 
 
         {/* Day 1 & 4 Combined Speaker: German Abal (Visible on All Days) */}
-        <div className="speaker-card spk-combined spk-multi-day" data-spk-day="all" data-popular-rank="7" id="speaker-card-german-combined" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} role="button" tabIndex={0} title="Click to view German Abal's dual sessions and bio">
+        <div className="speaker-card spk-combined spk-multi-day" data-spk-day="all" data-popular-rank="8" id="speaker-card-german-combined" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} role="button" tabIndex={0} title="Click to view German Abal's dual sessions and bio">
           <div className="speaker-card-top-bar" style={{ background: 'linear-gradient(90deg, #fbbf24 0%, #10b981 100%)' }}></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'linear-gradient(90deg, rgba(245,158,11,0.3) 0%, rgba(16,185,129,0.3) 100%)', color: '#fde68a', border: '1px solid rgba(245,158,11,0.5)' }}>Day 1 &amp; Day 4 · Dual Track</span>
@@ -320,7 +320,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 1 Speaker 3: German Abal (EIP Labs - Visible on Day 1 Filter Only) */}
-        <div className="speaker-card spk-day-1 spk-single-day spk-hidden" data-spk-day="1" data-popular-rank="7" id="speaker-card-german-eiplabs" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-eiplabs')} role="button" tabIndex={0} title="Click to view German Abal's talk and bio">
+        <div className="speaker-card spk-day-1 spk-single-day spk-hidden" data-spk-day="1" data-popular-rank="8" id="speaker-card-german-eiplabs" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-eiplabs')} role="button" tabIndex={0} title="Click to view German Abal's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
@@ -446,7 +446,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 2 Speaker 2: Abhimanyu Nag */}
-        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="10" id="speaker-card-abhimanyu" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} role="button" tabIndex={0} title="Click to view Abhimanyu Nag's talk and bio">
+        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="11" id="speaker-card-abhimanyu" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} role="button" tabIndex={0} title="Click to view Abhimanyu Nag's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(129,140,248,0.25)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.45)' }}>Day 2 · Protocol EIPs</span>
@@ -488,7 +488,7 @@ export default function Speakers() {
         </div>
 
         {/* Dr. Daniel Nagy (Moved after Abhimanyu Nag) */}
-        <div className="speaker-card spk-day-3" data-spk-day="3" data-popular-rank="6" id="speaker-card-daniel" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} role="button" tabIndex={0} title="Click to view Dr. Daniel Nagy's talk and bio">
+        <div className="speaker-card spk-day-3" data-spk-day="3" data-popular-rank="7" id="speaker-card-daniel" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} role="button" tabIndex={0} title="Click to view Dr. Daniel Nagy's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(6,182,212,0.25)', color: '#7dd3fc', border: '1px solid rgba(6,182,212,0.45)' }}>Day 3 · Application EIPs</span>
@@ -530,7 +530,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 4 Speaker: Abhay Singh (Moved after Dr. Daniel Nagy) */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="11" id="speaker-card-abhay" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhay')} role="button" tabIndex={0} title="Click to view Abhay Singh's talk and bio">
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="13" id="speaker-card-abhay" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhay')} role="button" tabIndex={0} title="Click to view Abhay Singh's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>
@@ -614,7 +614,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 2 Speaker 4: Maria Silva */}
-        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="13" id="speaker-card-maria" onClick={() => window.openSpeakerModal && window.openSpeakerModal('maria')} role="button" tabIndex={0} title="Click to view Maria Silva's talk and bio">
+        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="6" id="speaker-card-maria" onClick={() => window.openSpeakerModal && window.openSpeakerModal('maria')} role="button" tabIndex={0} title="Click to view Maria Silva's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(129,140,248,0.25)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.45)' }}>Day 2 · Protocol EIPs</span>
@@ -656,7 +656,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 2 Speaker: Gavin Birch */}
-        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="8" id="speaker-card-gavin" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')} role="button" tabIndex={0} title="Click to view Gavin Birch's talk and bio">
+        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="9" id="speaker-card-gavin" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')} role="button" tabIndex={0} title="Click to view Gavin Birch's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(129,140,248,0.25)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.45)' }}>Day 2 · Protocol EIPs</span>
@@ -752,7 +752,7 @@ export default function Speakers() {
         {/* =================================================================== */}
 
         {/* Day 4 Speaker 1: German Abal (EVVM - Visible on Day 4 Filter Only) */}
-        <div className="speaker-card spk-day-4 spk-single-day spk-hidden" data-spk-day="4" data-popular-rank="7" id="speaker-card-german-evvm" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-evvm')} role="button" tabIndex={0} title="Click to view German Abal (EVVM)'s talk and bio">
+        <div className="speaker-card spk-day-4 spk-single-day spk-hidden" data-spk-day="4" data-popular-rank="8" id="speaker-card-german-evvm" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-evvm')} role="button" tabIndex={0} title="Click to view German Abal (EVVM)'s talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>

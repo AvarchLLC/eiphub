@@ -67,7 +67,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 6. Dr. Daniel Nagy
+  // 6. Maria Silva
+  {
+    id: 'maria',
+    modalId: 'maria',
+    name: 'Maria Silva',
+    org: 'Ethereum Foundation',
+    track: 'Day 2 · Glamsterdam Repricing',
+    badgeIcon: '📊',
+    photo: 'Assets/speakers/maria-silva.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
+  },
+  // 7. Dr. Daniel Nagy
   {
     id: 'daniel',
     modalId: 'daniel',
@@ -80,7 +93,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
   },
-  // 7. German Abal
+  // 8. German Abal
   {
     id: 'german',
     modalId: 'german-combined',
@@ -93,7 +106,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 8. Gavin Birch
+  // 9. Gavin Birch
   {
     id: 'gavin',
     modalId: 'gavin',
@@ -106,7 +119,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(129, 140, 248, 0.75)',
     dotType: 'blue'
   },
-  // 9. Simona Serban
+  // 10. Simona Serban
   {
     id: 'simona',
     modalId: 'simona',
@@ -119,7 +132,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 10. Abhimanyu Nag
+  // 11. Abhimanyu Nag
   {
     id: 'abhimanyu',
     modalId: 'abhimanyu',
@@ -130,19 +143,6 @@ const ALL_SPEAKERS = [
     photo: 'Assets/speakers/abhimanyu-nag.png',
     color: '#a855f7',
     glowColor: 'rgba(168, 85, 247, 0.75)',
-    dotType: 'yellow'
-  },
-  // 11. Abhay Singh
-  {
-    id: 'abhay',
-    modalId: 'abhay',
-    name: 'Abhay Singh',
-    org: 'HyprEarn',
-    track: 'Day 4 · AI & Crypto Rails',
-    badgeIcon: '🤖',
-    photo: 'Assets/speakers/abhay-singh.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
   // 12. Rachit Anand Srivastava
@@ -158,18 +158,18 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(236, 72, 153, 0.75)',
     dotType: 'blue'
   },
-  // 13. Maria Silva
+  // 13. Abhay Singh
   {
-    id: 'maria',
-    modalId: 'maria',
-    name: 'Maria Silva',
-    org: 'Ethereum Foundation',
-    track: 'Day 2 · Glamsterdam Repricing',
-    badgeIcon: '📊',
-    photo: 'Assets/speakers/maria-silva.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
+    id: 'abhay',
+    modalId: 'abhay',
+    name: 'Abhay Singh',
+    org: 'HyprEarn',
+    track: 'Day 4 · AI & Crypto Rails',
+    badgeIcon: '🤖',
+    photo: 'Assets/speakers/abhay-singh.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
   },
   // 14. Dhruvang Choudhari
   {
