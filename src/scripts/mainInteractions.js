@@ -1202,7 +1202,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 16 Unique Technical Leaders (17 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 17 Unique Technical Leaders (18 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1210,7 +1210,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 1 Track · Nov 3, 2026'; }
   } else if(day === 2 || day === '2'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'Day 2 · Nov 4 (Protocol EIPs & Network Upgrades) · 4 Technical Speakers'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'Day 2 · Nov 4 (Protocol EIPs & Network Upgrades) · 5 Technical Speakers'; }
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
@@ -1508,17 +1508,17 @@ const SPEAKERS_DATA = {
     dayNum: 2,
     name: 'Justin Florentine',
     photo: 'Assets/speakers/justin-florentine.jpg',
-    affiliation: 'Besu (Hyperledger Besu)',
+    affiliation: 'Besu',
     designation: 'Engineering Manager, Besu',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ Session Time: TBA · Day 2',
+    time: '⏱️ 10:00 AM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'EIP-8184: LUCID Encrypted Mempool',
     talkDesc: "Why encrypting the mempool is hard, and what the latest tradeoffs are. With over $600M extracted from users, encrypted mempools represent a vital defense for Ethereum users. This session explores the technical challenges and trade-offs of mempool encryption, including approaches already ruled out, the complications introduced by post-quantum cryptography, and the current solution model proposed through EIP-8184.",
     bio: [
       'Herding cats, connecting dots.',
-      'Justin Florentine is an Engineering Manager at Hyperledger Besu, focused on connecting ideas, people, and technical efforts within the Ethereum ecosystem.'
+      'Justin Florentine is an Engineering Manager at Besu, focused on connecting ideas, people, and technical efforts within the Ethereum ecosystem.'
     ],
     takeaways: [
       'What approaches to encrypting the mempool have already been ruled out, and why.',

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 16 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 17 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Pooja Ranjan
   {
@@ -15,59 +15,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 2. Stefan
-  {
-    id: 'stefan',
-    modalId: 'stefan',
-    name: 'Stefan',
-    org: 'ethPandaOps · EF',
-    track: 'Day 1 · Devnets & Upgrades',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/stefan.jpg',
-    color: '#38bdf8',
-    glowColor: 'rgba(56, 189, 248, 0.75)',
-    dotType: 'blue'
-  },
-  // 3. Rafael Matias
-  {
-    id: 'rafael',
-    modalId: 'rafael',
-    name: 'Rafael Matias',
-    org: 'ethPandaOps',
-    track: 'Day 1 · Kurtosis Tooling',
-    badgeIcon: '🛠️',
-    photo: 'Assets/speakers/rafael.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
-  },
-  // 4. Simona Serban (Moved after Rafael Matias)
-  {
-    id: 'simona',
-    modalId: 'simona',
-    name: 'Simona Serban',
-    org: 'ETHCluj',
-    track: 'Day 4 · Trustless Collaboration',
-    badgeIcon: '🤝',
-    photo: 'Assets/speakers/simona-serban.jpeg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
-  },
-  // 5. German Abal
-  {
-    id: 'german',
-    modalId: 'german-combined',
-    name: 'German Abal',
-    org: 'EVVM',
-    track: 'Day 1 & Day 4 · Tooling & EVVM',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/german-abal.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
-  },
-  // 6. Jochem Brouwer
+  // 2. Jochem Brouwer
   {
     id: 'jochem',
     modalId: 'jochem',
@@ -80,33 +28,46 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 7. Maria Silva
+  // 3. Justin Florentine
   {
-    id: 'maria',
-    modalId: 'maria',
-    name: 'Maria Silva',
-    org: 'Ethereum Foundation',
-    track: 'Day 2 · Glamsterdam Repricing',
-    badgeIcon: '📊',
-    photo: 'Assets/speakers/maria-silva.jpg',
+    id: 'justin',
+    modalId: 'justin',
+    name: 'Justin Florentine',
+    org: 'Besu',
+    track: 'Day 2 · LUCID Encrypted Mempool',
+    badgeIcon: '🔐',
+    photo: 'Assets/speakers/justin-florentine.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'blue'
+  },
+  // 4. Stefan
+  {
+    id: 'stefan',
+    modalId: 'stefan',
+    name: 'Stefan',
+    org: 'ethPandaOps · EF',
+    track: 'Day 1 · Devnets & Upgrades',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/stefan.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
+  },
+  // 5. Rafael Matias
+  {
+    id: 'rafael',
+    modalId: 'rafael',
+    name: 'Rafael Matias',
+    org: 'ethPandaOps',
+    track: 'Day 1 · Kurtosis Tooling',
+    badgeIcon: '🛠️',
+    photo: 'Assets/speakers/rafael.jpg',
     color: '#06b6d4',
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 8. Abhimanyu Nag
-  {
-    id: 'abhimanyu',
-    modalId: 'abhimanyu',
-    name: 'Abhimanyu Nag',
-    org: 'Univ. of Alberta / Canvas',
-    track: 'Day 2 · Single Slot Finality',
-    badgeIcon: '⏱️',
-    photo: 'Assets/speakers/abhimanyu-nag.png',
-    color: '#a855f7',
-    glowColor: 'rgba(168, 85, 247, 0.75)',
-    dotType: 'yellow'
-  },
-  // 9. Dr. Daniel Nagy (Moved after Abhimanyu Nag)
+  // 6. Dr. Daniel Nagy
   {
     id: 'daniel',
     modalId: 'daniel',
@@ -119,20 +80,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
   },
-  // 10. Rachit Anand Srivastava
+  // 7. German Abal
   {
-    id: 'rachit',
-    modalId: 'rachit',
-    name: 'Rachit Anand Srivastava',
-    org: 'Avail Project',
-    track: 'Day 2 · PeerDAS & ZK',
-    badgeIcon: '🔬',
-    photo: 'Assets/speakers/rachit-anand-srivastava.png',
-    color: '#ec4899',
-    glowColor: 'rgba(236, 72, 153, 0.75)',
-    dotType: 'blue'
+    id: 'german',
+    modalId: 'german-combined',
+    name: 'German Abal',
+    org: 'EVVM',
+    track: 'Day 1 & Day 4 · Tooling & EVVM',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/german-abal.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
   },
-  // 11. Gavin Birch
+  // 8. Gavin Birch
   {
     id: 'gavin',
     modalId: 'gavin',
@@ -145,33 +106,33 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(129, 140, 248, 0.75)',
     dotType: 'blue'
   },
-  // 12. Dhruvang Choudhari
+  // 9. Simona Serban
   {
-    id: 'dhruvang',
-    modalId: 'dhruvang',
-    name: 'Dhruvang Choudhari',
-    org: 'AMINA Bank',
-    track: 'Day 3 · ERC Standards',
-    badgeIcon: '🏦',
-    photo: 'Assets/speakers/dhruvang-choudhari.jpg',
-    color: '#fbbf24',
-    glowColor: 'rgba(251, 191, 36, 0.75)',
+    id: 'simona',
+    modalId: 'simona',
+    name: 'Simona Serban',
+    org: 'ETHCluj',
+    track: 'Day 4 · Trustless Collaboration',
+    badgeIcon: '🤝',
+    photo: 'Assets/speakers/simona-serban.jpeg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 13. Charchit Kumawat
+  // 10. Abhimanyu Nag
   {
-    id: 'charchit',
-    modalId: 'charchit',
-    name: 'Charchit Kumawat',
-    org: 'GeSIM.xyz',
-    track: 'Day 4 · DePIN & Privacy',
-    badgeIcon: '📡',
-    photo: 'Assets/speakers/charchit-kumawat.jpg',
-    color: '#fbbf24',
-    glowColor: 'rgba(251, 191, 36, 0.75)',
+    id: 'abhimanyu',
+    modalId: 'abhimanyu',
+    name: 'Abhimanyu Nag',
+    org: 'Univ. of Alberta / Canvas',
+    track: 'Day 2 · Single Slot Finality',
+    badgeIcon: '⏱️',
+    photo: 'Assets/speakers/abhimanyu-nag.png',
+    color: '#a855f7',
+    glowColor: 'rgba(168, 85, 247, 0.75)',
     dotType: 'yellow'
   },
-  // 14. Abhay Singh
+  // 11. Abhay Singh
   {
     id: 'abhay',
     modalId: 'abhay',
@@ -184,20 +145,46 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 15. Yudhishthra
+  // 12. Rachit Anand Srivastava
   {
-    id: 'yudhishthra',
-    modalId: 'yudhishthra',
-    name: 'Yudhishthra',
-    org: 'Aqua0',
-    track: 'Day 4 · Stablecoins & FX',
-    badgeIcon: '💱',
-    photo: 'Assets/speakers/yudhishthra.jpg',
-    color: '#34d399',
-    glowColor: 'rgba(52, 211, 153, 0.75)',
+    id: 'rachit',
+    modalId: 'rachit',
+    name: 'Rachit Anand Srivastava',
+    org: 'Avail Project',
+    track: 'Day 2 · PeerDAS & ZK',
+    badgeIcon: '🔬',
+    photo: 'Assets/speakers/rachit-anand-srivastava.png',
+    color: '#ec4899',
+    glowColor: 'rgba(236, 72, 153, 0.75)',
     dotType: 'blue'
   },
-  // 16. Dhruv Gera
+  // 13. Maria Silva
+  {
+    id: 'maria',
+    modalId: 'maria',
+    name: 'Maria Silva',
+    org: 'Ethereum Foundation',
+    track: 'Day 2 · Glamsterdam Repricing',
+    badgeIcon: '📊',
+    photo: 'Assets/speakers/maria-silva.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
+  },
+  // 14. Dhruvang Choudhari
+  {
+    id: 'dhruvang',
+    modalId: 'dhruvang',
+    name: 'Dhruvang Choudhari',
+    org: 'AMINA Bank',
+    track: 'Day 3 · ERC Standards',
+    badgeIcon: '🏦',
+    photo: 'Assets/speakers/dhruvang-choudhari.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
+  },
+  // 15. Dhruv Gera
   {
     id: 'dhruv',
     modalId: 'dhruv',
@@ -209,6 +196,32 @@ const ALL_SPEAKERS = [
     color: '#6ee7b7',
     glowColor: 'rgba(110, 231, 183, 0.75)',
     dotType: 'yellow'
+  },
+  // 16. Charchit Kumawat
+  {
+    id: 'charchit',
+    modalId: 'charchit',
+    name: 'Charchit Kumawat',
+    org: 'GeSIM.xyz',
+    track: 'Day 4 · DePIN & Privacy',
+    badgeIcon: '📡',
+    photo: 'Assets/speakers/charchit-kumawat.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
+  },
+  // 17. Yudhishthra
+  {
+    id: 'yudhishthra',
+    modalId: 'yudhishthra',
+    name: 'Yudhishthra',
+    org: 'Aqua0',
+    track: 'Day 4 · Stablecoins & FX',
+    badgeIcon: '💱',
+    photo: 'Assets/speakers/yudhishthra.jpg',
+    color: '#34d399',
+    glowColor: 'rgba(52, 211, 153, 0.75)',
+    dotType: 'blue'
   }
 ];
 
@@ -399,7 +412,7 @@ export default function SpeakersMandala() {
   const [isShuffling, setIsShuffling] = useState(false);
   const arenaRef = useRef(null);
 
-  // Preload all 11 speaker avatars into browser memory so transitions are instant & zero-flicker
+  // Preload all 17 speaker avatars into browser memory so transitions are instant & zero-flicker
   useEffect(() => {
     ALL_SPEAKERS.forEach(spk => {
       const img = new Image();
@@ -465,7 +478,7 @@ export default function SpeakersMandala() {
   }, [isShuffling]);
 
   const outerSpeakers = speakersList.slice(0, 10);
-  const innerSpeakers = speakersList.slice(10, 16);
+  const innerSpeakers = speakersList.slice(10, 17);
 
   return (
     <section className="speakers-mandala-section" id="speakers-preview">

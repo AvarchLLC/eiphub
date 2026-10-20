@@ -114,17 +114,17 @@ export const SPEAKERS_DATA = {
     dayNum: 2,
     name: 'Justin Florentine',
     photo: 'Assets/speakers/justin-florentine.jpg',
-    affiliation: 'Besu (Hyperledger Besu)',
+    affiliation: 'Besu',
     designation: 'Engineering Manager, Besu',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ Session Time: TBA · Day 2',
+    time: '⏱️ 10:00 AM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'EIP-8184: LUCID Encrypted Mempool',
     talkDesc: "Why encrypting the mempool is hard, and what the latest tradeoffs are. With over $600M extracted from users, encrypted mempools represent a vital defense for Ethereum users. This session explores the technical challenges and trade-offs of mempool encryption, including approaches already ruled out, the complications introduced by post-quantum cryptography, and the current solution model proposed through EIP-8184.",
     bio: [
       'Herding cats, connecting dots.',
-      'Justin Florentine is an Engineering Manager at Hyperledger Besu, focused on connecting ideas, people, and technical efforts within the Ethereum ecosystem.'
+      'Justin Florentine is an Engineering Manager at Besu, focused on connecting ideas, people, and technical efforts within the Ethereum ecosystem.'
     ],
     takeaways: [
       'What approaches to encrypting the mempool have already been ruled out, and why.',
