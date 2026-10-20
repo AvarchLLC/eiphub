@@ -1,5 +1,138 @@
 import React from 'react';
 
+const TOP_PARTNERS = [
+  // ── Row 1 (4 logos) ──
+  {
+    id: 'ef',
+    name: 'Ethereum Foundation',
+    category: 'Core Protocol & EF',
+    tagline: 'Protocol Research · Public Goods',
+    desc: 'Non-profit organization dedicated to supporting Ethereum core protocol development, open research, consensus security, and public goods.',
+    logo: '/Assets/partners/ef-full-logo.svg',
+    fallbackLogo: '/Assets/partners/ef-logo.svg',
+    url: 'https://ethereum.foundation',
+    x: 'https://x.com/ethereum',
+    accent: '#627eea'
+  },
+  {
+    id: 'devcon',
+    name: 'Devcon 8',
+    category: 'Host Conference',
+    tagline: 'Ethereum Developer Conference · Mumbai',
+    desc: 'The flagship annual conference for Ethereum developers, researchers, and community members, hosted at Jio World Centre in Mumbai.',
+    logo: '/Assets/partners/devcon-full-logo.svg',
+    fallbackLogo: '/Assets/partners/devcon-full-logo.svg',
+    url: 'https://devcon.org',
+    x: 'https://x.com/EFDevcon',
+    accent: '#f43f5e'
+  },
+  {
+    id: 'ech',
+    name: 'ECH Institute',
+    category: 'Ecosystem Lead',
+    tagline: 'Ecosystem Lead · Public Goods',
+    desc: 'Ecosystem lead driving author mentorship, open standards public goods, and community onboarding worldwide.',
+    logo: '/Assets/partners/ech-institute-full-logo.svg',
+    fallbackLogo: '/Assets/partners/ech-institute-full-logo.png',
+    url: 'https://echinstitute.org',
+    x: 'https://x.com/ECHInstitute',
+    accent: '#10b981'
+  },
+  {
+    id: 'etherworld',
+    name: 'EtherWorld',
+    category: 'Decentralized Media',
+    tagline: 'Decentralized Media & Research · Est. 2017',
+    desc: 'Independent Ethereum-focused media covering protocol upgrades, EIPs, AllCoreDevs discussions, security, and governance with 120,000+ readers.',
+    logo: '/Assets/partners/etherworld-full-logo.png',
+    fallbackLogo: '/Assets/partners/etherworld-logo.png',
+    url: 'https://etherworld.co',
+    x: 'https://x.com/ether_world',
+    linkedin: 'https://www.linkedin.com/company/etherworld',
+    accent: '#38bdf8'
+  },
+
+  // ── Row 2 (4 logos) ──
+  {
+    id: 'eipsinsight',
+    name: 'EIPsInsight',
+    category: 'Protocol Analytics',
+    tagline: 'Standards Observability & Analytics',
+    desc: 'Open-source observability tracking Ethereum standards (EIPs/ERCs/RIPs), AllCoreDevs decision ledgers, network upgrade timelines, and ERC-4337.',
+    logo: '/Assets/partners/eipsinsight-full-logo.gif',
+    fallbackLogo: '/Assets/partners/eipsinsight-full-logo.svg',
+    url: 'https://eipsinsight.com',
+    x: 'https://x.com/EIPsInsight',
+    linkedin: 'https://www.linkedin.com/company/eipsinsight/',
+    accent: '#818cf8'
+  },
+  {
+    id: 'evvm',
+    name: 'EVVM',
+    category: 'Virtual Blockchain Infra',
+    tagline: 'Virtual Blockchain Infrastructure · EVVM',
+    desc: 'Infraless EVM virtualization solving scalability and chain fragmentation by deploying contract-native virtual blockchains inheriting Ethereum security.',
+    logo: '/Assets/partners/evvm-logo.svg',
+    fallbackLogo: '/Assets/partners/evvm-logo.png',
+    url: 'https://www.evvm.info/',
+    x: 'https://x.com/RollAMate',
+    accent: '#ec4899'
+  },
+  {
+    id: 'ethshala',
+    name: 'ETHShala',
+    category: 'Builder Education',
+    tagline: 'Builder Education Across India',
+    desc: 'Open education and partner program taking Ethereum directly to universities across India through campus workshops and developer onboarding.',
+    logo: '/Assets/partners/ethshala-full-logo.svg',
+    fallbackLogo: '/Assets/partners/ethshala-full-logo.png',
+    url: 'https://ethshala.com',
+    x: 'https://x.com/Its_EthShala',
+    linkedin: 'https://www.linkedin.com/company/ethshala/',
+    accent: '#f59e0b'
+  },
+  {
+    id: 'ethpune',
+    name: 'ETH Pune',
+    category: 'Regional Community',
+    tagline: 'Ethereum Community · India',
+    desc: 'Vibrant regional Ethereum community empowering the next generation of Web3 builders through technical workshops and developer education in Pune.',
+    logo: '/Assets/partners/ethpune-full-logo.svg',
+    fallbackLogo: '/Assets/partners/ethpune-full-logo.png',
+    url: 'https://www.ethpune.com',
+    x: 'https://x.com/EthereumPune',
+    linkedin: 'https://www.linkedin.com/in/eth-pune-b90a0336b/',
+    accent: '#06b6d4'
+  },
+
+  // ── Row 3 (2 logos, centered) ──
+  {
+    id: 'ethcluj',
+    name: 'ETHCluj',
+    category: 'Technical Community',
+    tagline: 'Ethereum Community · Cluj-Napoca',
+    desc: 'Ethereum community based in Cluj-Napoca, Romania, uniting developers, researchers, builders, and students through workshops and meetups.',
+    logo: '/Assets/partners/ethcluj-vector-logo.svg',
+    fallbackLogo: '/Assets/partners/ethcluj-full-logo.png',
+    url: 'https://www.ethcluj.org/',
+    x: 'https://x.com/ETHCluj',
+    linkedin: 'https://www.linkedin.com/company/ethereumcluj',
+    accent: '#a855f7'
+  },
+  {
+    id: 'ethcdm',
+    name: 'ETH Cinco De Mayo',
+    category: 'Non-Profit Community',
+    tagline: 'Non-Profit Ethereum Community · LATAM',
+    desc: 'Non-profit LATAM organization that has onboarded over 1,300 developers and 50 companies across incubathons, hackathons, and workshops.',
+    logo: '/Assets/partners/ethcincodemayo-full-logo.svg',
+    fallbackLogo: '/Assets/partners/ethcincodemayo-full-logo.png',
+    url: 'https://ethcdm.com/',
+    x: 'https://x.com/ETHCincoDeMayo',
+    accent: '#14b8a6'
+  }
+];
+
 export default function Partners() {
   return (
     <>
@@ -8,579 +141,97 @@ export default function Partners() {
     <div className="full-inner" style={{ textAlign: 'center' }}>
       <div className="sec-eyebrow">Partners and Supporters</div>
       <div className="sec-title">Our Partners, Communities &amp; Collaborators</div>
-      
-      {/* ============================================================== */}
-      {/* 1. MEDIA, RESEARCH & PROTOCOL ANALYTICS */}
-      {/* ============================================================== */}
-      <div className="partner-category-section">
-        <div className="partner-category-bar">
-          <div className="partner-category-badge badge-media">
-            <span className="cat-badge-dot dot-media"></span>
-            <span>Media &amp; Protocol Research</span>
-          </div>
-          <div className="partner-category-line"></div>
-          <span className="partner-category-count">4 Partners</span>
-        </div>
 
-        <div className="partner-showcase-grid">
-          {/* EtherWorld */}
+      {/* ============================================================== */}
+      {/* 4 + 4 + 2 LOGO ONLY PARTNER SHOWCASE GRID */}
+      {/* Line 1: 4 logos | Line 2: 4 logos | Line 3: 2 logos in center */}
+      {/* Cards show ONLY the logo in resting state; hover reveals info */}
+      {/* ============================================================== */}
+      <div className="partner-clean-grid">
+        {TOP_PARTNERS.map((partner) => (
           <div
-            className="partner-showcase-card card-ew"
-            onClick={() => window.open('https://etherworld.co', '_blank', 'noopener,noreferrer')}
+            key={partner.id}
+            className={`partner-clean-card partner-clean-${partner.id}`}
+            style={{ '--partner-accent': partner.accent }}
+            onClick={() => window.open(partner.url, '_blank', 'noopener,noreferrer')}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://etherworld.co', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit EtherWorld (etherworld.co)"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.open(partner.url, '_blank', 'noopener,noreferrer');
+              }
+            }}
+            title={`Visit ${partner.name} (${partner.url}) · Hover for details`}
           >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/etherworld-full-logo.png" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/etherworld-logo.png'; }} alt="EtherWorld" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Decentralized Media</span>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <a
-                    href="https://x.com/ether_world"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-x-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow on X (@ether_world)"
-                    aria-label="Follow EtherWorld on X"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/etherworld"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-in-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow EtherWorld on LinkedIn"
-                    aria-label="Follow EtherWorld on LinkedIn"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </a>
+            {/* ONLY SHOW THE LOGO (NO OTHER INFORMATION DIRECTLY ON TILE) */}
+            <div className="partner-logo-center">
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="partner-clean-img"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = partner.fallbackLogo;
+                }}
+                loading="lazy"
+              />
+            </div>
+
+            {/* INTERACTIVE HOVER OVERLAY: REVEALS ALL INFORMATION */}
+            <div className="partner-clean-hover">
+              <div className="pch-top">
+                <span className="pch-category">{partner.category}</span>
+                <div className="pch-socials" onClick={(e) => e.stopPropagation()}>
+                  {partner.x && (
+                    <a
+                      href={partner.x}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pch-social-btn"
+                      title={`Follow ${partner.name} on X`}
+                      aria-label="X"
+                    >
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      </svg>
+                    </a>
+                  )}
+                  {partner.linkedin && (
+                    <a
+                      href={partner.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pch-social-btn"
+                      title={`Follow ${partner.name} on LinkedIn`}
+                      aria-label="LinkedIn"
+                    >
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">EtherWorld</h4>
-              <p className="psc-tagline">Decentralized Media &amp; Research · Est. 2017</p>
-              <p className="psc-desc">
-                Independent Ethereum-focused media and research platform covering protocol upgrades, EIPs, AllCoreDevs discussions, security, and governance with over 1,900 articles and 120,000+ readers.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit etherworld.co</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
 
-          {/* EIPsInsight */}
-          <div
-            className="partner-showcase-card card-eips"
-            onClick={() => window.open('https://eipsinsight.com', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://eipsinsight.com', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit EIPsInsight (eipsinsight.com)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/eipsinsight-full-logo.gif" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/eipsinsight-full-logo.svg'; }} alt="EIPsInsight" loading="lazy" />
+              <div className="pch-middle">
+                <h4 className="pch-title">{partner.name}</h4>
+                <p className="pch-tagline">{partner.tagline}</p>
+                <p className="pch-desc">{partner.desc}</p>
               </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Protocol Analytics</span>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <a
-                    href="https://x.com/EIPsInsight"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-x-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow on X (@EIPsInsight)"
-                    aria-label="Follow EIPsInsight on X"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/eipsinsight/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-in-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow EIPsInsight on LinkedIn"
-                    aria-label="Follow EIPsInsight on LinkedIn"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">EIPsInsight</h4>
-              <p className="psc-tagline">Standards Observability &amp; Analytics</p>
-              <p className="psc-desc">
-                Open-source observability platform tracking Ethereum standards (EIPs/ERCs/RIPs), AllCoreDevs decision ledgers, network upgrade timelines, and Account Abstraction metrics (ERC-4337, EIP-7702, EIP-8141).
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit eipsinsight.com</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
 
-          {/* ECH Institute */}
-          <div
-            className="partner-showcase-card card-ech"
-            onClick={() => window.open('https://echinstitute.org', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://echinstitute.org', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit ECH Institute (echinstitute.org)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/ech-institute-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ech-institute-full-logo.png'; }} alt="ECH Institute" loading="lazy" />
+              <div className="pch-bottom">
+                <span className="pch-visit-btn">
+                  <span>Visit website</span>
+                  <span className="pch-arr">↗</span>
+                </span>
               </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Ecosystem Lead</span>
-                <a
-                  href="https://x.com/ECHInstitute"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@ECHInstitute)"
-                  aria-label="Follow ECH Institute on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">ECH Institute</h4>
-              <p className="psc-tagline">Ecosystem Lead · Public Goods</p>
-              <p className="psc-desc">
-                Ecosystem lead driving author mentorship, open standards public goods, and community onboarding worldwide.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit echinstitute.org</span>
-                <span className="psc-arr">↗</span>
-              </span>
             </div>
           </div>
-
-          {/* EVVM */}
-          <div
-            className="partner-showcase-card card-evvm"
-            onClick={() => window.open('https://www.evvm.info/', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://www.evvm.info/', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit EVVM (evvm.info)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/evvm-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/evvm-logo.png'; }} alt="EVVM" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Virtual Blockchain Infrastructure</span>
-                <a
-                  href="https://x.com/RollAMate"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@RollAMate)"
-                  aria-label="Follow EVVM on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">EVVM</h4>
-              <p className="psc-tagline">Virtual Blockchain Infrastructure · EVVM</p>
-              <p className="psc-desc">
-                Infraless EVM virtualization solving scalability and chain fragmentation by deploying contract-native virtual blockchains inheriting Ethereum security.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit evvm.info</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* ============================================================== */}
-      {/* 2. COMMUNITY & REGIONAL HUBS */}
-      {/* ============================================================== */}
-      <div className="partner-category-section">
-        <div className="partner-category-bar">
-          <div className="partner-category-badge badge-community">
-            <span className="cat-badge-dot dot-community"></span>
-            <span>Community &amp; Regional Hubs</span>
-          </div>
-          <div className="partner-category-line"></div>
-          <span className="partner-category-count">4 Partners</span>
-        </div>
 
-        <div className="partner-showcase-grid">
-          {/* ETHShala */}
-          <div
-            className="partner-showcase-card card-shala"
-            onClick={() => window.open('https://ethshala.com', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://ethshala.com', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit ETHShala (ethshala.com)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/ethshala-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ethshala-full-logo.png'; }} alt="ETHShala" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Builder Education</span>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <a
-                    href="https://x.com/Its_EthShala"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-x-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow on X (@Its_EthShala)"
-                    aria-label="Follow ETHShala on X"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/ethshala/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-in-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow ETHShala on LinkedIn"
-                    aria-label="Follow ETHShala on LinkedIn"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">ETHShala</h4>
-              <p className="psc-tagline">Builder Education · Universities Across India</p>
-              <p className="psc-desc">
-                Open education and partner program taking Ethereum directly to universities across India through campus workshops, hackathon support, and developer onboarding inside engineering colleges.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit ethshala.com</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-
-          {/* ETH Pune */}
-          <div
-            className="partner-showcase-card card-pune"
-            onClick={() => window.open('https://www.ethpune.com', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://www.ethpune.com', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit ETH Pune (ethpune.com)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/ethpune-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ethpune-full-logo.png'; }} alt="ETH Pune" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Regional Community</span>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <a
-                    href="https://x.com/EthereumPune"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-x-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow on X (@EthereumPune)"
-                    aria-label="Follow ETH Pune on X"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/eth-pune-b90a0336b/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-in-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow ETH Pune on LinkedIn"
-                    aria-label="Follow ETH Pune on LinkedIn"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">ETH Pune</h4>
-              <p className="psc-tagline">Ethereum Community · India</p>
-              <p className="psc-desc">
-                Vibrant regional Ethereum community empowering the next generation of Web3 builders through technical workshops, meetups, and hands-on developer education across Pune.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit ethpune.com</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-
-          {/* ETHCluj */}
-          <div
-            className="partner-showcase-card card-cluj"
-            onClick={() => window.open('https://www.ethcluj.org/', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://www.ethcluj.org/', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit ETHCluj (ethcluj.org)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/ethcluj-vector-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ethcluj-full-logo.png'; }} alt="ETHCluj" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Technical Community</span>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <a
-                    href="https://x.com/ETHCluj"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-x-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow on X (@ETHCluj)"
-                    aria-label="Follow ETHCluj on X"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/ethereumcluj"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="psc-in-link"
-                    onClick={(e) => e.stopPropagation()}
-                    title="Follow ETHCluj on LinkedIn"
-                    aria-label="Follow ETHCluj on LinkedIn"
-                  >
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">ETHCluj</h4>
-              <p className="psc-tagline">Ethereum Community · Cluj-Napoca, Romania</p>
-              <p className="psc-desc">
-                Ethereum community based in Cluj-Napoca, Romania, uniting developers, researchers, builders, and students through regular meetups, workshops, and the annual ETHCluj conference.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit ethcluj.org</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-
-          {/* ETH Cinco De Mayo */}
-          <div
-            className="partner-showcase-card card-cinco"
-            onClick={() => window.open('https://ethcdm.com/', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://ethcdm.com/', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit ETH Cinco De Mayo (ethcdm.com)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/ethcincodemayo-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ethcincodemayo-full-logo.png'; }} alt="ETH Cinco De Mayo" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Non-Profit Community</span>
-                <a
-                  href="https://x.com/ETHCincoDeMayo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@ETHCincoDeMayo)"
-                  aria-label="Follow ETH Cinco De Mayo on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">ETH Cinco De Mayo</h4>
-              <p className="psc-tagline">Non-Profit Ethereum Community · LATAM</p>
-              <p className="psc-desc">
-                Non-profit LATAM organization that has onboarded over 1,300 developers and 50 companies to Ethereum across incubathons, hackathons, university workshops, panels, and pop-up cities.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit ethcdm.com</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ============================================================== */}
-      {/* 3. CORE PROTOCOL & FLAGSHIP SUPPORT */}
-      {/* ============================================================== */}
-      <div className="partner-category-section section-core">
-        <div className="partner-category-bar">
-          <div className="partner-category-badge badge-core">
-            <span className="cat-badge-dot dot-core"></span>
-            <span>Core Protocol &amp; Flagship Support</span>
-          </div>
-          <div className="partner-category-line"></div>
-          <span className="partner-category-count">Flagship Support</span>
-        </div>
-
-        <div className="partner-core-grid">
-          {/* Ethereum Foundation */}
-          <div
-            className="partner-showcase-card card-ef"
-            onClick={() => window.open('https://ethereum.foundation', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://ethereum.foundation', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit Ethereum Foundation (ethereum.foundation)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/ef-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/ef-logo.svg'; }} alt="Ethereum Foundation" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Core Governance &amp; EF</span>
-                <a
-                  href="https://x.com/ethereum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@ethereum)"
-                  aria-label="Follow Ethereum Foundation on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">Ethereum Foundation</h4>
-              <p className="psc-tagline">Protocol Research &middot; Public Goods</p>
-              <p className="psc-desc">
-                Non-profit organization dedicated to supporting Ethereum core protocol development, open research, consensus security, and public goods.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit ethereum.foundation</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-
-          {/* Devcon 8 */}
-          <div
-            className="partner-showcase-card card-devcon"
-            onClick={() => window.open('https://devcon.org', '_blank', 'noopener,noreferrer')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://devcon.org', '_blank', 'noopener,noreferrer'); } }}
-            title="Visit Devcon (devcon.org)"
-          >
-            <div className="psc-top">
-              <div className="psc-logo-pod">
-                <img className="psc-brand-logo" src="/Assets/partners/devcon-full-logo.svg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Assets/partners/devcon-full-logo.svg'; }} alt="Devcon" loading="lazy" />
-              </div>
-              <div className="psc-actions">
-                <span className="psc-category-chip">Host Conference</span>
-                <a
-                  href="https://x.com/EFDevcon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="psc-x-link"
-                  onClick={(e) => e.stopPropagation()}
-                  title="Follow on X (@EFDevcon)"
-                  aria-label="Follow Devcon on X"
-                >
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="psc-body">
-              <h4 className="psc-title">Devcon 8</h4>
-              <p className="psc-tagline">Ethereum Developer Conference · Mumbai</p>
-              <p className="psc-desc">
-                The flagship annual conference for Ethereum developers, researchers, and community members, hosted at Jio World Centre in Mumbai.
-              </p>
-            </div>
-            <div className="psc-footer">
-              <span className="psc-visit-link">
-                <span>Visit devcon.org</span>
-                <span className="psc-arr">↗</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* BECOME A PARTNER: GUIDELINES, TIERS & REGULATIONS */}
       <div className="partner-guide-wrap" id="become-a-partner">
