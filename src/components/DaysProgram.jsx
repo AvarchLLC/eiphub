@@ -213,10 +213,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/abhimanyu-nag.png" alt="Abhimanyu Nag" />
                   <span>Abhimanyu Nag</span>
                 </button>
-                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('justin')} title="View Justin Florentine's session & bio">
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('justin')} title="View Justin Florentine's session & bio">
                   <img src="Assets/speakers/justin-florentine.jpg" alt="Justin Florentine" />
                   <span>Justin Florentine</span>
-                </button> */}
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
                   <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
                   <span>Rachit Anand Srivastava</span>
@@ -242,7 +242,15 @@ export default function DaysProgram({ showMatrix = true }) {
 
               <div className="showcase-timeline-list">
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">09:30 – 11:00</span>
+                  <span className="timeline-time-badge">10:00 – 10:45</span>
+                  <div className="timeline-item-body">
+                    <h5>EIP-8184: LUCID Encrypted Mempool</h5>
+                    <p>Keynote &amp; Q&amp;A by Justin Florentine (Besu) on encrypted mempools and $600M+ MEV defense.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">11:00 – 11:45</span>
                   <div className="timeline-item-body">
                     <h5>Protocol EIPs &amp; Fork Lifecycle</h5>
                     <p>From Idea to Meta-EIP, CFI, testnet deployment, and mainnet hard fork activation.</p>
@@ -333,6 +341,14 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruvang')} title="View Dhruvang Choudhari's session &amp; bio">
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} title="View Prem Makeig's session &amp; bio">
+                  <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
+                  <span>Prem Makeig</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
+                  <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
+                  <span>Harish Kotra</span>
                 </button>
               </div>
             </div>
@@ -434,6 +450,14 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-evvm')} title="View German Abal (EVVM)'s session &amp; bio">
                   <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
                   <span>German Abal (EVVM)</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('kevin')} title="View Kevin Jones's session &amp; bio">
+                  <img src="Assets/speakers/kevin-jones.jpg" alt="Kevin Jones" />
+                  <span>Kevin Jones</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('aditya')} title="View Aditya Kumar's session &amp; bio">
+                  <img src="Assets/speakers/aditya-kumar.jpg" alt="Aditya Kumar" />
+                  <span>Aditya Kumar</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('charchit')} title="View Charchit Kumawat's session &amp; bio">
                   <img src="Assets/speakers/charchit-kumawat.jpg" alt="Charchit Kumawat" />
@@ -604,7 +628,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Rachit Anand Srivastava · Gavin Birch · Maria Silva</span>
+              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Justin Florentine · Abhimanyu Nag · Rachit Anand Srivastava · Gavin Birch · Maria Silva</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -655,7 +679,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Application ERC Authors</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Prem Makeig · Harish Kotra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -707,7 +731,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Charchit Kumawat · Abhay Singh · Yudhishthra · Dhruv Gera · Simona Serban</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Kevin Jones · Aditya Kumar · Charchit Kumawat · Abhay Singh · Yudhishthra · Dhruv Gera · Simona Serban</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

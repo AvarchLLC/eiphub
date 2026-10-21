@@ -1202,7 +1202,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 16 Unique Technical Leaders (17 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 21 Unique Technical Leaders (22 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1210,15 +1210,15 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 1 Track · Nov 3, 2026'; }
   } else if(day === 2 || day === '2'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'Day 2 · Nov 4 (Protocol EIPs & Network Upgrades) · 4 Technical Speakers'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'Day 2 · Nov 4 (Protocol EIPs & Network Upgrades) · 5 Technical Speakers'; }
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 1 Technical Speaker'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 4 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
-    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 5 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 7 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 4 Track · Nov 6, 2026'; }
   }
 
@@ -1508,17 +1508,17 @@ const SPEAKERS_DATA = {
     dayNum: 2,
     name: 'Justin Florentine',
     photo: 'Assets/speakers/justin-florentine.jpg',
-    affiliation: 'Besu (Hyperledger Besu)',
+    affiliation: 'Besu',
     designation: 'Engineering Manager, Besu',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ Session Time: TBA · Day 2',
+    time: '⏱️ 10:00 AM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'EIP-8184: LUCID Encrypted Mempool',
     talkDesc: "Why encrypting the mempool is hard, and what the latest tradeoffs are. With over $600M extracted from users, encrypted mempools represent a vital defense for Ethereum users. This session explores the technical challenges and trade-offs of mempool encryption, including approaches already ruled out, the complications introduced by post-quantum cryptography, and the current solution model proposed through EIP-8184.",
     bio: [
       'Herding cats, connecting dots.',
-      'Justin Florentine is an Engineering Manager at Hyperledger Besu, focused on connecting ideas, people, and technical efforts within the Ethereum ecosystem.'
+      'Justin Florentine is an Engineering Manager at Besu, focused on connecting ideas, people, and technical efforts within the Ethereum ecosystem.'
     ],
     takeaways: [
       'What approaches to encrypting the mempool have already been ruled out, and why.',
@@ -1937,6 +1937,119 @@ const SPEAKERS_DATA = {
     audience: ['EIP Authors', 'Core Developers', 'Rollup Engineers', 'Open Source Tooling Builders'],
     linkedin: 'https://www.linkedin.com/in/germanabal/',
     twitter: 'https://x.com/ariutokintumi'
+  },
+  aditya: {
+    dayNum: 4,
+    name: 'Aditya Kumar',
+    photo: 'Assets/speakers/aditya-kumar.jpg',
+    affiliation: 'Vara Network / Gear Foundation',
+    designation: 'Senior Developer Relations Engineer Lead, Vara Network / Gear Foundation',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Beyond Collateral: Privacy and Verification in Onchain Credit',
+    talkDesc: 'Drawing on practical experience building onchain credit applications, this session traces a receivable from verification through funding and repayment, examining who needs access to which information at each stage. It explores how signed statements, cryptographic commitments, and controlled disclosure support this process while making clear what still depends on offchain evidence and trusted parties. Defining who can access which information, for what purpose, and under whose authority is a core design requirement in onchain credit—distinguishing document integrity and issuer authenticity from the validity of a commercial claim and likelihood of repayment.',
+    bio: [
+      'Aditya Kumar is a Senior Developer Relations Engineer Lead at Vara Network / Gear Foundation, where he builds developer tools and applications, writes technical documentation, and leads hands-on workshops.',
+      'He has worked on a business credit platform spanning receivables verification, underwriting assistance, stablecoin settlement, and repayment, as well as a privacy product focused on programmable privacy and conditional disclosure. He brings a builder’s perspective to Ethereum standards, grounded in practical experience with verification, sensitive business data, and the trust assumptions behind onchain applications.'
+    ],
+    takeaways: [
+      'How to map disclosure requirements across a receivable’s lifecycle, giving each participant access to the information their role requires.',
+      'What signatures, commitments, and cryptographic proofs establish—and why verifying a statement or computation does not independently establish the truth of an invoice or guarantee repayment.',
+      'Which parts of credit evidence could benefit from common interfaces: issuer identity, document references, validity periods, disclosure permissions, and changes in repayment status.',
+      'How EIP-712 structured signing helps applications agree on what was approved or attested to, while informing future standards for credit evidence and controlled disclosure.'
+    ],
+    relatedEip: 'EIP-712: Typed structured data hashing and signing',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-712',
+    audience: ['Developers', 'Protocol Designers', 'Enterprise Builders', 'DeFi Researchers'],
+    linkedin: 'https://linkedin.com/in/adityaa-kr',
+    twitter: 'https://x.com/Adityaakrx',
+    telegram: '@adityakrx',
+    discord: '@adiii06'
+  },
+  harish: {
+    dayNum: 3,
+    name: 'Harish Kotra',
+    photo: 'Assets/speakers/harish-kotra.webp',
+    affiliation: 'Independent / AI Consultant',
+    designation: 'Independent AI Consultant & Agent Architect',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: '623,494 Agents Registered. 19 With Evidence. What ERC-8004 measures, and the registry it has not shipped',
+    talkDesc: "ERC-8004 has registered more than 623,000 agents across 24 chains, but a study of 10,000 found only 19 with metadata, a declared service, reputation feedback, and cross-chain registration together. This talk reads that deployment data against the specification, breaks down what the Identity and Reputation registries actually guarantee, and argues what the still-unshipped Validation Registry must attest before agent trust becomes something software can query. Builders are about to make procurement, escrow, and payment decisions on the assumption that a registered agent is a verified one—this session shows where the real gaps and contribution windows lie.",
+    bio: [
+      'Harish Kotra is an independent AI consultant, builder, and agent architect. He works on agent identity, evaluation, and verifiable observability: how an autonomous system’s claims get checked rather than trusted.',
+      'He publishes one AI build a day in public on DailyBuild.xyz, a running record of what actually ships versus what only demos well, and builds local-first agent tooling, MCP servers, and evaluation harnesses. Over the past year, his work moved from shipping agents to auditing the standards they register against, including reading on-chain deployment data for ERC-8004.'
+    ],
+    takeaways: [
+      'How to read an ERC’s real adoption: registration counts versus operational evidence, and the three checks to run on any agent standard.',
+      'What ERC-8004’s Identity and Reputation registries do and do not guarantee, with on-chain numbers showing why reputation is not yet a reliable signal.',
+      'What a Validation Registry has to attest (evidence and re-execution, not just a score) before agent trust is queryable, plus concrete proposals for the authors.'
+    ],
+    relatedEip: 'ERC-8004: Trustless Agent Registry & ERC-8183',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8004',
+    audience: ['Developers', 'Agent Architects', 'Protocol Researchers', 'Governance Contributors'],
+    linkedin: 'https://linkedin.com/in/harishkotra',
+    twitter: 'https://x.com/harishkotra',
+    telegram: '@HarishKotra'
+  },
+  kevin: {
+    dayNum: 4,
+    name: 'Kevin Jones',
+    photo: 'Assets/speakers/kevin-jones.jpg',
+    affiliation: '1Claw',
+    designation: 'Founder, 1Claw',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Bringing a Billion Agents On Ethereum',
+    talkDesc: 'A billion agents are about to come onchain, but none of the existing infrastructure was built to support that. This talk dives into techniques like Multi-Party Computation (MPC), Trusted Execution Environments (TEEs), and Hardware Security Modules (HSMs) to solve the agentic trust problem and power the emerging agentic economy. Discover how to provide autonomous AI agents with sovereign wallet access while enforcing cryptographic policies and execution boundaries.',
+    bio: [
+      'Kevin Jones is the founder of 1Claw, building secure infrastructure, wallet access, and policy frameworks for autonomous onchain agents.',
+      'He specializes in DevSecOps, hardware-grade security, MPC, and TEE integrations designed to enable AI agents to safely transact on Ethereum at scale.'
+    ],
+    takeaways: [
+      'How techniques like MPC, TEEs, and HSMs solve the agentic trust problem to power the agentic economy',
+      'Architectures for giving autonomous AI agents safe, sovereign access to their own wallets',
+      'How to create granular policy frameworks to enforce cryptographic limitations on agent execution'
+    ],
+    relatedEip: 'Agent Wallets, MPC & TEE Key Management Standards',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Developers', 'Security Engineers', 'Agent Architects', 'Enterprise Builders'],
+    linkedin: 'https://linkedin.com/in/kevinjonescreates',
+    twitter: 'https://x.com/DevSecOpz'
+  },
+  prem: {
+    dayNum: 3,
+    name: 'Prem Makeig',
+    photo: 'Assets/speakers/prem-makeig.jpg',
+    affiliation: 'Unruggable',
+    designation: 'Co-Founder, Unruggable (premm.eth)',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Agent Identity Standards',
+    talkDesc: 'Agents are quickly becoming a new class of blockchain users and will soon be responsible for the vast majority of transactions. Agents need identity to develop reputations and trust, allowing them to cooperate and work together onchain. Without strong onchain identity for agents, agents will be controllable by centralized services, further centralizing control over the new user interface of decentralized blockchains.',
+    bio: [
+      'Prem Makeig (premm.eth) is co-founder of Unruggable. He is an author or contributor to ERC-8004, ERC-8217, and ERC-8048 for agents, ERC-7930 and ERC-7828 for interoperability, and ENSIPs 19, 24, 25, 26, 28, and 31.',
+      'His work focuses on onchain agent identity, reputation systems, and trustless interoperability standards across decentralized networks.'
+    ],
+    takeaways: [
+      'Why onchain identity is essential for autonomous agents to build reputation, trust, and cooperative workflows',
+      'Preventing centralized services from monopolizing agent coordination and user interfaces',
+      'The emerging agent identity stack across ERC-8004, ERC-8217, ERC-8048, and cross-chain interoperability standards (ERC-7930, ERC-7828)'
+    ],
+    relatedEip: 'ERC-7930, ERC-7828, ERC-8004, ERC-8217, ERC-8048',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8004',
+    audience: ['Developers', 'Agent Architects', 'Protocol Designers', 'ENS & Identity Researchers'],
+    linkedin: null,
+    twitter: 'https://x.com/nxt3d',
+    telegram: '@nxt3d'
   }
 };
 
