@@ -653,5 +653,33 @@ export const SPEAKERS_DATA = {
     audience: ['Developers', 'Security Engineers', 'Agent Architects', 'Enterprise Builders'],
     linkedin: 'https://linkedin.com/in/kevinjonescreates',
     twitter: 'https://x.com/DevSecOpz'
+  },
+  prem: {
+    dayNum: 3,
+    name: 'Prem Makeig',
+    photo: 'Assets/speakers/prem-makeig.jpg',
+    affiliation: 'Unruggable',
+    designation: 'Co-Founder, Unruggable (premm.eth)',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Agent Identity Standards',
+    talkDesc: 'Agents are quickly becoming a new class of blockchain users and will soon be responsible for the vast majority of transactions. Agents need identity to develop reputations and trust, allowing them to cooperate and work together onchain. Without strong onchain identity for agents, agents will be controllable by centralized services, further centralizing control over the new user interface of decentralized blockchains.',
+    bio: [
+      'Prem Makeig (premm.eth) is co-founder of Unruggable. He is an author or contributor to ERC-8004, ERC-8217, and ERC-8048 for agents, ERC-7930 and ERC-7828 for interoperability, and ENSIPs 19, 24, 25, 26, 28, and 31.',
+      'His work focuses on onchain agent identity, reputation systems, and trustless interoperability standards across decentralized networks.'
+    ],
+    takeaways: [
+      'Why onchain identity is essential for autonomous agents to build reputation, trust, and cooperative workflows',
+      'Preventing centralized services from monopolizing agent coordination and user interfaces',
+      'The emerging agent identity stack across ERC-8004, ERC-8217, ERC-8048, and cross-chain interoperability standards (ERC-7930, ERC-7828)'
+    ],
+    relatedEip: 'ERC-7930, ERC-7828, ERC-8004, ERC-8217, ERC-8048',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8004',
+    audience: ['Developers', 'Agent Architects', 'Protocol Designers', 'ENS & Identity Researchers'],
+    linkedin: null,
+    twitter: 'https://x.com/nxt3d',
+    telegram: '@nxt3d'
   }
 };

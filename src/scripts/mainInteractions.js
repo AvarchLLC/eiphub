@@ -1202,7 +1202,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 20 Unique Technical Leaders (21 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 21 Unique Technical Leaders (22 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1214,7 +1214,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 3 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 4 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
@@ -2022,6 +2022,34 @@ const SPEAKERS_DATA = {
     audience: ['Developers', 'Security Engineers', 'Agent Architects', 'Enterprise Builders'],
     linkedin: 'https://linkedin.com/in/kevinjonescreates',
     twitter: 'https://x.com/DevSecOpz'
+  },
+  prem: {
+    dayNum: 3,
+    name: 'Prem Makeig',
+    photo: 'Assets/speakers/prem-makeig.jpg',
+    affiliation: 'Unruggable',
+    designation: 'Co-Founder, Unruggable (premm.eth)',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Agent Identity Standards',
+    talkDesc: 'Agents are quickly becoming a new class of blockchain users and will soon be responsible for the vast majority of transactions. Agents need identity to develop reputations and trust, allowing them to cooperate and work together onchain. Without strong onchain identity for agents, agents will be controllable by centralized services, further centralizing control over the new user interface of decentralized blockchains.',
+    bio: [
+      'Prem Makeig (premm.eth) is co-founder of Unruggable. He is an author or contributor to ERC-8004, ERC-8217, and ERC-8048 for agents, ERC-7930 and ERC-7828 for interoperability, and ENSIPs 19, 24, 25, 26, 28, and 31.',
+      'His work focuses on onchain agent identity, reputation systems, and trustless interoperability standards across decentralized networks.'
+    ],
+    takeaways: [
+      'Why onchain identity is essential for autonomous agents to build reputation, trust, and cooperative workflows',
+      'Preventing centralized services from monopolizing agent coordination and user interfaces',
+      'The emerging agent identity stack across ERC-8004, ERC-8217, ERC-8048, and cross-chain interoperability standards (ERC-7930, ERC-7828)'
+    ],
+    relatedEip: 'ERC-7930, ERC-7828, ERC-8004, ERC-8217, ERC-8048',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8004',
+    audience: ['Developers', 'Agent Architects', 'Protocol Designers', 'ENS & Identity Researchers'],
+    linkedin: null,
+    twitter: 'https://x.com/nxt3d',
+    telegram: '@nxt3d'
   }
 };
 

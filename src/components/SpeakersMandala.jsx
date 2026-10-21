@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 20 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 21 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Pooja Ranjan
   {
@@ -223,7 +223,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Dhruv Gera
+  // 18. Prem Makeig
+  {
+    id: 'prem',
+    modalId: 'prem',
+    name: 'Prem Makeig',
+    org: 'Unruggable',
+    track: 'Day 3 · Agent Identity & ERC-8004',
+    badgeIcon: '🪪',
+    photo: 'Assets/speakers/prem-makeig.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
+  },
+  // 19. Dhruv Gera
   {
     id: 'dhruv',
     modalId: 'dhruv',
@@ -236,7 +249,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(110, 231, 183, 0.75)',
     dotType: 'yellow'
   },
-  // 19. Charchit Kumawat
+  // 20. Charchit Kumawat
   {
     id: 'charchit',
     modalId: 'charchit',
@@ -249,7 +262,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 20. Yudhishthra
+  // 21. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',
@@ -516,8 +529,8 @@ export default function SpeakersMandala() {
     return () => clearInterval(timer);
   }, [isShuffling]);
 
-  const outerSpeakers = speakersList.slice(0, 10);
-  const innerSpeakers = speakersList.slice(10, 20);
+  const outerSpeakers = speakersList.slice(0, 11);
+  const innerSpeakers = speakersList.slice(11, 21);
 
   return (
     <section className="speakers-mandala-section" id="speakers-preview">
@@ -628,7 +641,7 @@ export default function SpeakersMandala() {
           </div>
 
           {/* ============================================================== */}
-          {/* ORBIT 1 (OUTER CIRCLE): 10 SPEAKERS MOVING CLOCKWISE */}
+          {/* ORBIT 1 (OUTER CIRCLE): 11 SPEAKERS MOVING CLOCKWISE */}
           {/* ============================================================== */}
           <div className="mandala-orbit-wheel wheel-outer" aria-label="Outer speakers track">
             {outerSpeakers.map((spk, idx) => (
