@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 21 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 19 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Pooja Ranjan
   {
@@ -80,7 +80,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 7. Dr. Daniel Nagy
+  /* Dr. Daniel Nagy (Commented out)
   {
     id: 'daniel',
     modalId: 'daniel',
@@ -93,7 +93,8 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
   },
-  // 8. German Abal
+  */
+  // 7. German Abal
   {
     id: 'german',
     modalId: 'german-combined',
@@ -106,7 +107,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 9. Gavin Birch
+  // 8. Gavin Birch
   {
     id: 'gavin',
     modalId: 'gavin',
@@ -119,7 +120,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(129, 140, 248, 0.75)',
     dotType: 'blue'
   },
-  // 10. Simona Serban
+  // 9. Simona Serban
   {
     id: 'simona',
     modalId: 'simona',
@@ -132,7 +133,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 11. Abhimanyu Nag
+  // 10. Abhimanyu Nag
   {
     id: 'abhimanyu',
     modalId: 'abhimanyu',
@@ -145,7 +146,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(168, 85, 247, 0.75)',
     dotType: 'yellow'
   },
-  // 12. Rachit Anand Srivastava
+  // 11. Rachit Anand Srivastava
   {
     id: 'rachit',
     modalId: 'rachit',
@@ -158,7 +159,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(236, 72, 153, 0.75)',
     dotType: 'blue'
   },
-  // 13. Abhay Singh
+  // 12. Abhay Singh
   {
     id: 'abhay',
     modalId: 'abhay',
@@ -171,7 +172,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 14. Dhruvang Choudhari
+  // 13. Dhruvang Choudhari
   {
     id: 'dhruvang',
     modalId: 'dhruvang',
@@ -184,7 +185,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 15. Prem Makeig
+  // 14. Prem Makeig
   {
     id: 'prem',
     modalId: 'prem',
@@ -197,7 +198,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 16. Harish Kotra
+  /* Harish Kotra (Commented out)
   {
     id: 'harish',
     modalId: 'harish',
@@ -210,7 +211,8 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 17. Kevin Jones
+  */
+  // 15. Kevin Jones
   {
     id: 'kevin',
     modalId: 'kevin',
@@ -223,7 +225,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Aditya Kumar
+  // 16. Aditya Kumar
   {
     id: 'aditya',
     modalId: 'aditya',
@@ -236,7 +238,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 19. Dhruv Gera
+  // 17. Dhruv Gera
   {
     id: 'dhruv',
     modalId: 'dhruv',
@@ -249,7 +251,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(110, 231, 183, 0.75)',
     dotType: 'yellow'
   },
-  // 20. Charchit Kumawat
+  // 18. Charchit Kumawat
   {
     id: 'charchit',
     modalId: 'charchit',
@@ -262,7 +264,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 21. Yudhishthra
+  // 19. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',
@@ -529,8 +531,8 @@ export default function SpeakersMandala() {
     return () => clearInterval(timer);
   }, [isShuffling]);
 
-  const outerSpeakers = speakersList.slice(0, 11);
-  const innerSpeakers = speakersList.slice(11, 21);
+  const outerSpeakers = speakersList.slice(0, 10);
+  const innerSpeakers = speakersList.slice(10, 19);
 
   return (
     <section className="speakers-mandala-section" id="speakers-preview">
@@ -641,7 +643,7 @@ export default function SpeakersMandala() {
           </div>
 
           {/* ============================================================== */}
-          {/* ORBIT 1 (OUTER CIRCLE): 11 SPEAKERS MOVING CLOCKWISE */}
+          {/* ORBIT 1 (OUTER CIRCLE): 10 SPEAKERS MOVING CLOCKWISE */}
           {/* ============================================================== */}
           <div className="mandala-orbit-wheel wheel-outer" aria-label="Outer speakers track">
             {outerSpeakers.map((spk, idx) => (
@@ -682,7 +684,7 @@ export default function SpeakersMandala() {
           </div>
 
           {/* ============================================================== */}
-          {/* ORBIT 2 (INNER CIRCLE): 10 SPEAKERS MOVING COUNTER-CLOCKWISE */}
+          {/* ORBIT 2 (INNER CIRCLE): 9 SPEAKERS MOVING COUNTER-CLOCKWISE */}
           {/* ============================================================== */}
           <div className="mandala-orbit-wheel wheel-inner" aria-label="Inner speakers track">
             {innerSpeakers.map((spk, idx) => (

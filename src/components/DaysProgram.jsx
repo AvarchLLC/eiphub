@@ -334,10 +334,10 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 3 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} title="View Dr. Daniel Nagy's session &amp; bio">
+                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} title="View Dr. Daniel Nagy's session &amp; bio">
                   <img src="Assets/speakers/daniel-nagy.png" alt="Dr. Daniel Nagy" />
                   <span>Dr. Daniel Nagy</span>
-                </button>
+                </button> */}
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruvang')} title="View Dhruvang Choudhari's session &amp; bio">
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
@@ -346,10 +346,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
                   <span>Prem Makeig</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
+                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
                   <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
                   <span>Harish Kotra</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -679,7 +679,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Prem Makeig · Harish Kotra</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Prem Makeig</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
