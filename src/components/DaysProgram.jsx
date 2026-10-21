@@ -447,6 +447,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
                   <span>German Abal (EVVM)</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('kevin')} title="View Kevin Jones's session &amp; bio">
+                  <img src="Assets/speakers/kevin-jones.jpg" alt="Kevin Jones" />
+                  <span>Kevin Jones</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('charchit')} title="View Charchit Kumawat's session &amp; bio">
                   <img src="Assets/speakers/charchit-kumawat.jpg" alt="Charchit Kumawat" />
                   <span>Charchit Kumawat</span>
@@ -723,7 +727,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Charchit Kumawat · Abhay Singh · Aditya Kumar · Yudhishthra · Dhruv Gera · Simona Serban</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Kevin Jones · Charchit Kumawat · Abhay Singh · Aditya Kumar · Yudhishthra · Dhruv Gera · Simona Serban</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

@@ -1202,7 +1202,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 19 Unique Technical Leaders (20 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 20 Unique Technical Leaders (21 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1218,7 +1218,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
-    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 6 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 7 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 4 Track · Nov 6, 2026'; }
   }
 
@@ -1995,6 +1995,33 @@ const SPEAKERS_DATA = {
     linkedin: 'https://linkedin.com/in/harishkotra',
     twitter: 'https://x.com/harishkotra',
     telegram: '@HarishKotra'
+  },
+  kevin: {
+    dayNum: 4,
+    name: 'Kevin Jones',
+    photo: 'Assets/speakers/kevin-jones.jpg',
+    affiliation: '1Claw',
+    designation: 'Founder, 1Claw',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Bringing a Billion Agents On Ethereum',
+    talkDesc: 'A billion agents are about to come onchain, but none of the existing infrastructure was built to support that. This talk dives into techniques like Multi-Party Computation (MPC), Trusted Execution Environments (TEEs), and Hardware Security Modules (HSMs) to solve the agentic trust problem and power the emerging agentic economy. Discover how to provide autonomous AI agents with sovereign wallet access while enforcing cryptographic policies and execution boundaries.',
+    bio: [
+      'Kevin Jones is the founder of 1Claw, building secure infrastructure, wallet access, and policy frameworks for autonomous onchain agents.',
+      'He specializes in DevSecOps, hardware-grade security, MPC, and TEE integrations designed to enable AI agents to safely transact on Ethereum at scale.'
+    ],
+    takeaways: [
+      'How techniques like MPC, TEEs, and HSMs solve the agentic trust problem to power the agentic economy',
+      'Architectures for giving autonomous AI agents safe, sovereign access to their own wallets',
+      'How to create granular policy frameworks to enforce cryptographic limitations on agent execution'
+    ],
+    relatedEip: 'Agent Wallets, MPC & TEE Key Management Standards',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Developers', 'Security Engineers', 'Agent Architects', 'Enterprise Builders'],
+    linkedin: 'https://linkedin.com/in/kevinjonescreates',
+    twitter: 'https://x.com/DevSecOpz'
   }
 };
 

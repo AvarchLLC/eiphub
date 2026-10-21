@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 19 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 20 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Pooja Ranjan
   {
@@ -210,7 +210,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 17. Dhruv Gera
+  // 17. Kevin Jones
+  {
+    id: 'kevin',
+    modalId: 'kevin',
+    name: 'Kevin Jones',
+    org: '1Claw',
+    track: 'Day 4 · Billion Agents Onchain',
+    badgeIcon: '🤖',
+    photo: 'Assets/speakers/kevin-jones.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
+  },
+  // 18. Dhruv Gera
   {
     id: 'dhruv',
     modalId: 'dhruv',
@@ -223,7 +236,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(110, 231, 183, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Charchit Kumawat
+  // 19. Charchit Kumawat
   {
     id: 'charchit',
     modalId: 'charchit',
@@ -236,7 +249,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 19. Yudhishthra
+  // 20. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',
@@ -504,7 +517,7 @@ export default function SpeakersMandala() {
   }, [isShuffling]);
 
   const outerSpeakers = speakersList.slice(0, 10);
-  const innerSpeakers = speakersList.slice(10, 19);
+  const innerSpeakers = speakersList.slice(10, 20);
 
   return (
     <section className="speakers-mandala-section" id="speakers-preview">
@@ -656,7 +669,7 @@ export default function SpeakersMandala() {
           </div>
 
           {/* ============================================================== */}
-          {/* ORBIT 2 (INNER CIRCLE): 9 SPEAKERS MOVING COUNTER-CLOCKWISE */}
+          {/* ORBIT 2 (INNER CIRCLE): 10 SPEAKERS MOVING COUNTER-CLOCKWISE */}
           {/* ============================================================== */}
           <div className="mandala-orbit-wheel wheel-inner" aria-label="Inner speakers track">
             {innerSpeakers.map((spk, idx) => (

@@ -626,5 +626,32 @@ export const SPEAKERS_DATA = {
     linkedin: 'https://linkedin.com/in/harishkotra',
     twitter: 'https://x.com/harishkotra',
     telegram: '@HarishKotra'
+  },
+  kevin: {
+    dayNum: 4,
+    name: 'Kevin Jones',
+    photo: 'Assets/speakers/kevin-jones.jpg',
+    affiliation: '1Claw',
+    designation: 'Founder, 1Claw',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Bringing a Billion Agents On Ethereum',
+    talkDesc: 'A billion agents are about to come onchain, but none of the existing infrastructure was built to support that. This talk dives into techniques like Multi-Party Computation (MPC), Trusted Execution Environments (TEEs), and Hardware Security Modules (HSMs) to solve the agentic trust problem and power the emerging agentic economy. Discover how to provide autonomous AI agents with sovereign wallet access while enforcing cryptographic policies and execution boundaries.',
+    bio: [
+      'Kevin Jones is the founder of 1Claw, building secure infrastructure, wallet access, and policy frameworks for autonomous onchain agents.',
+      'He specializes in DevSecOps, hardware-grade security, MPC, and TEE integrations designed to enable AI agents to safely transact on Ethereum at scale.'
+    ],
+    takeaways: [
+      'How techniques like MPC, TEEs, and HSMs solve the agentic trust problem to power the agentic economy',
+      'Architectures for giving autonomous AI agents safe, sovereign access to their own wallets',
+      'How to create granular policy frameworks to enforce cryptographic limitations on agent execution'
+    ],
+    relatedEip: 'Agent Wallets, MPC & TEE Key Management Standards',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Developers', 'Security Engineers', 'Agent Architects', 'Enterprise Builders'],
+    linkedin: 'https://linkedin.com/in/kevinjonescreates',
+    twitter: 'https://x.com/DevSecOpz'
   }
 };
