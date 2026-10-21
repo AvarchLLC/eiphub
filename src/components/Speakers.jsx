@@ -80,7 +80,7 @@ export default function Speakers() {
           <button type="button" className="spk-day-tab-btn" data-spk-day="4" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(4)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#6ee7b7' }}></span>
             <span>Day 4 · Nov 6 (Enterprise Readiness &amp; EIPs for Consideration)</span>
-            <span className="spk-count-pill">8 Speakers</span>
+            <span className="spk-count-pill">9 Speakers</span>
           </button>
         </div>
 
@@ -404,8 +404,49 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 7. Gavin Birch (Day 2 · Protocol EIPs) */}
-        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="7" id="speaker-card-gavin" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')} role="button" tabIndex={0} title="Click to view Gavin Birch's talk and bio">
+        {/* 7. Gavin Birch (Day 2 & Day 4 Dual Track - Combined Card on All Days) */}
+        <div className="speaker-card spk-combined spk-multi-day" data-spk-day="all" data-popular-rank="7" id="speaker-card-gavin-combined" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin-combined')} role="button" tabIndex={0} title="Click to view Gavin Birch's dual sessions and bio">
+          <div className="speaker-card-top-bar" style={{ background: 'linear-gradient(90deg, #818cf8 0%, #10b981 100%)' }}></div>
+          <div className="speaker-photo-wrap">
+            <span className="spk-photo-track-badge" style={{ background: 'linear-gradient(90deg, rgba(129,140,248,0.3) 0%, rgba(16,185,129,0.3) 100%)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.5)' }}>Day 2 &amp; Day 4 · Dual Track</span>
+            <span className="spk-photo-verified" style={{ color: '#c7d2fe', background: 'rgba(129,140,248,0.22)', borderColor: 'rgba(129,140,248,0.45)' }}>⚡ 2 Tracks</span>
+            <img src="Assets/speakers/gavin-birch.jpg" alt="Gavin Birch" className="speaker-photo-img" loading="lazy" />
+          </div>
+          <div className="speaker-info">
+            <div className="speaker-name-row">
+              <h4 className="speaker-name">Gavin Birch</h4>
+              <a href="https://x.com/Ether_Gavin" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Gavin Birch on X (@Ether_Gavin)" onClick={(e) => e.stopPropagation()}>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>@Ether_Gavin</span>
+              </a>
+            </div>
+            <div className="speaker-meta-row">
+              <div className="speaker-org-tag" style={{ background: 'rgba(129,140,248,0.12)', color: '#818cf8', borderColor: 'rgba(129,140,248,0.3)' }}>Armada</div>
+            </div>
+            <p className="speaker-designation">Cofounder, Armada · Operational Privacy &amp; Protocol Design</p>
+          </div>
+          <div className="speaker-talk-snip">
+            <div className="talk-format-badge" style={{ background: 'linear-gradient(90deg, rgba(129,140,248,0.2) 0%, rgba(16,185,129,0.2) 100%)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.35)' }}>⚡ 2 Confirmed Sessions (Day 2 &amp; Day 4)</div>
+            <div className="talk-title-text" style={{ fontSize: '12.5px', lineHeight: '1.45' }}>
+              <div style={{ marginBottom: '4px' }}><span style={{ color: '#818cf8', fontWeight: '700' }}>Day 2 (12:00 PM):</span> Frame txs &amp; private payments: EIP-8141 in practice</div>
+              <div><span style={{ color: '#6ee7b7', fontWeight: '700' }}>Day 4 (11:00 AM):</span> More like Ethereum, less like SaaS: Infra guarantees for onchain business</div>
+            </div>
+          </div>
+          <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
+            <div className="speaker-social-icons">
+              <a href="https://x.com/Ether_Gavin" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Gavin Birch on X" aria-label="X">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin-combined')}>
+              <span>View Both Talks</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Gavin Birch (Day 2 Track Filter Only) */}
+        <div className="speaker-card spk-day-2 spk-single-day spk-hidden" data-spk-day="2" data-popular-rank="7" id="speaker-card-gavin-day2" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin-day2')} role="button" tabIndex={0} title="Click to view Gavin Birch's Day 2 talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(129,140,248,0.25)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.45)' }}>Day 2 · Protocol EIPs</span>
@@ -436,7 +477,46 @@ export default function Speakers() {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
             </div>
-            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')}>
+            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin-day2')}>
+              <span>View Talk &amp; Bio</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Gavin Birch (Day 4 Track Filter Only) */}
+        <div className="speaker-card spk-day-4 spk-single-day spk-hidden" data-spk-day="4" data-popular-rank="7" id="speaker-card-gavin-day4" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin-day4')} role="button" tabIndex={0} title="Click to view Gavin Birch's Day 4 talk and bio">
+          <div className="speaker-card-top-bar"></div>
+          <div className="speaker-photo-wrap">
+            <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>
+            <span className="spk-photo-verified">✓ Confirmed</span>
+            <img src="Assets/speakers/gavin-birch.jpg" alt="Gavin Birch" className="speaker-photo-img" loading="lazy" />
+          </div>
+          <div className="speaker-info">
+            <div className="speaker-name-row">
+              <h4 className="speaker-name">Gavin Birch</h4>
+              <a href="https://x.com/Ether_Gavin" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Gavin Birch on X (@Ether_Gavin)" onClick={(e) => e.stopPropagation()}>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>@Ether_Gavin</span>
+              </a>
+            </div>
+            <div className="speaker-meta-row">
+              <div className="speaker-org-tag">Armada</div>
+            </div>
+            <p className="speaker-designation">Cofounder, Armada</p>
+          </div>
+          <div className="speaker-talk-snip">
+            <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
+            <div className="talk-title-text">More like Ethereum, less like SaaS: Infra guarantees for onchain business</div>
+            <div className="talk-time-text">⏱️ 11:00 AM · Day 4 Track (Confirmed)</div>
+          </div>
+          <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
+            <div className="speaker-social-icons">
+              <a href="https://x.com/Ether_Gavin" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Gavin Birch on X" aria-label="X">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin-day4')}>
               <span>View Talk &amp; Bio</span>
               <span>➔</span>
             </button>

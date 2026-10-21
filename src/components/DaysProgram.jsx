@@ -731,7 +731,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Aditya Kumar · Charchit Kumawat · Dhruv Gera · German Abal (EVVM) · Kevin Jones · Simona Serban · Yudhishthra</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Aditya Kumar · Charchit Kumawat · Dhruv Gera · Gavin Birch (Armada) · German Abal (EVVM) · Kevin Jones · Simona Serban · Yudhishthra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

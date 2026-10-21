@@ -97,15 +97,15 @@ const ALL_SPEAKERS = [
   // 7. Gavin Birch
   {
     id: 'gavin',
-    modalId: 'gavin',
+    modalId: 'gavin-combined',
     name: 'Gavin Birch',
     org: 'Armada',
-    track: 'Day 2 · Frame Txs (EIP-8141)',
-    badgeIcon: '🛡️',
+    track: 'Day 2 & Day 4 · Protocol & Enterprise',
+    badgeIcon: '⚡',
     photo: 'Assets/speakers/gavin-birch.jpg',
     color: '#818cf8',
     glowColor: 'rgba(129, 140, 248, 0.75)',
-    dotType: 'blue'
+    dotType: 'yellow'
   },
   // 8. German Abal
   {
