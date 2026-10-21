@@ -184,18 +184,18 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 15. Aditya Kumar
+  // 15. Prem Makeig
   {
-    id: 'aditya',
-    modalId: 'aditya',
-    name: 'Aditya Kumar',
-    org: 'Vara / Gear Foundation',
-    track: 'Day 4 · Privacy & Onchain Credit',
-    badgeIcon: '🔐',
-    photo: 'Assets/speakers/aditya-kumar.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
+    id: 'prem',
+    modalId: 'prem',
+    name: 'Prem Makeig',
+    org: 'Unruggable',
+    track: 'Day 3 · Agent Identity & ERC-8004',
+    badgeIcon: '🪪',
+    photo: 'Assets/speakers/prem-makeig.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
   },
   // 16. Harish Kotra
   {
@@ -223,18 +223,18 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Prem Makeig
+  // 18. Aditya Kumar
   {
-    id: 'prem',
-    modalId: 'prem',
-    name: 'Prem Makeig',
-    org: 'Unruggable',
-    track: 'Day 3 · Agent Identity & ERC-8004',
-    badgeIcon: '🪪',
-    photo: 'Assets/speakers/prem-makeig.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
+    id: 'aditya',
+    modalId: 'aditya',
+    name: 'Aditya Kumar',
+    org: 'Vara / Gear Foundation',
+    track: 'Day 4 · Privacy & Onchain Credit',
+    badgeIcon: '🔐',
+    photo: 'Assets/speakers/aditya-kumar.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
   },
   // 19. Dhruv Gera
   {

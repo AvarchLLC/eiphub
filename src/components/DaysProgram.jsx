@@ -342,13 +342,13 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
-                  <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
-                  <span>Harish Kotra</span>
-                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} title="View Prem Makeig's session &amp; bio">
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
                   <span>Prem Makeig</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
+                  <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
+                  <span>Harish Kotra</span>
                 </button>
               </div>
             </div>
@@ -455,6 +455,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/kevin-jones.jpg" alt="Kevin Jones" />
                   <span>Kevin Jones</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('aditya')} title="View Aditya Kumar's session &amp; bio">
+                  <img src="Assets/speakers/aditya-kumar.jpg" alt="Aditya Kumar" />
+                  <span>Aditya Kumar</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('charchit')} title="View Charchit Kumawat's session &amp; bio">
                   <img src="Assets/speakers/charchit-kumawat.jpg" alt="Charchit Kumawat" />
                   <span>Charchit Kumawat</span>
@@ -462,10 +466,6 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhay')} title="View Abhay Singh's session &amp; bio">
                   <img src="Assets/speakers/abhay-singh.jpg" alt="Abhay Singh" />
                   <span>Abhay Singh</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('aditya')} title="View Aditya Kumar's session &amp; bio">
-                  <img src="Assets/speakers/aditya-kumar.jpg" alt="Aditya Kumar" />
-                  <span>Aditya Kumar</span>
                 </button>
                 {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('loring')} title="View Loring Harkness's session &amp; bio">
                   <img src="Assets/speakers/loring-harkness.jpg" alt="Loring Harkness" />
@@ -679,7 +679,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Harish Kotra · Prem Makeig</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Prem Makeig · Harish Kotra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -731,7 +731,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Kevin Jones · Charchit Kumawat · Abhay Singh · Aditya Kumar · Yudhishthra · Dhruv Gera · Simona Serban</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Kevin Jones · Aditya Kumar · Charchit Kumawat · Abhay Singh · Yudhishthra · Dhruv Gera · Simona Serban</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
