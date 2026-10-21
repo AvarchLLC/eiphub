@@ -11,7 +11,7 @@ export default function Speakers() {
       <div className="speakers-console-top">
         <div className="speakers-console-status">
           <span className="speakers-beacon" id="spk-console-beacon" style={{ background: '#818cf8', boxShadow: '0 0 12px #818cf8' }}></span>
-          <span id="spk-console-status-text" style={{ color: '#c7d2fe' }}>All 4 Summit Days · 18 Unique Technical Leaders (19 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)</span>
+          <span id="spk-console-status-text" style={{ color: '#c7d2fe' }}>All 4 Summit Days · 19 Unique Technical Leaders (20 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)</span>
         </div>
         <span className="speakers-console-badge" id="spk-console-badge">Devcon 8 India · Nov 3–6, 2026</span>
       </div>
@@ -21,14 +21,14 @@ export default function Speakers() {
         <div className="spk-metric-card">
           <div className="spk-metric-icon">🎙️</div>
           <div>
-            <div className="spk-metric-num">18 Leaders</div>
+            <div className="spk-metric-num">19 Leaders</div>
             <div className="spk-metric-label">Keynote Authors &amp; Editors</div>
           </div>
         </div>
         <div className="spk-metric-card">
           <div className="spk-metric-icon">⚡</div>
           <div>
-            <div className="spk-metric-num">19 Sessions</div>
+            <div className="spk-metric-num">20 Sessions</div>
             <div className="spk-metric-label">Keynotes, Clinics &amp; Panels</div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Speakers() {
         <div className="spk-day-filter-wrap" role="tablist" aria-label="Summit Speaker Days Filter">
           <button type="button" className="spk-day-tab-btn active" data-spk-day="all" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay('all')} role="tab" aria-selected="true">
             <span>All Days (Nov 3–6)</span>
-            <span className="spk-count-pill">18 Speakers</span>
+            <span className="spk-count-pill">19 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="1" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(1)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#fbbf24' }}></span>
@@ -747,6 +747,48 @@ export default function Speakers() {
           </div>
         </div>
 
+        {/* Day 3 Speaker 3: Harish Kotra */}
+        <div className="speaker-card spk-day-3" data-spk-day="3" data-popular-rank="16" id="speaker-card-harish" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} role="button" tabIndex={0} title="Click to view Harish Kotra's talk and bio">
+          <div className="speaker-card-top-bar"></div>
+          <div className="speaker-photo-wrap">
+            <span className="spk-photo-track-badge" style={{ background: 'rgba(6,182,212,0.25)', color: '#7dd3fc', border: '1px solid rgba(6,182,212,0.45)' }}>Day 3 · Application EIPs</span>
+            <span className="spk-photo-verified">✓ Confirmed</span>
+            <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" className="speaker-photo-img" loading="lazy" />
+          </div>
+          <div className="speaker-info">
+            <div className="speaker-name-row">
+              <h4 className="speaker-name">Harish Kotra</h4>
+              <a href="https://x.com/harishkotra" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Harish Kotra on X (@harishkotra)" onClick={(e) => e.stopPropagation()}>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>@harishkotra</span>
+              </a>
+            </div>
+            <div className="speaker-meta-row">
+              <div className="speaker-org-tag">Independent AI Consultant</div>
+            </div>
+            <p className="speaker-designation">Independent AI Consultant &amp; Agent Architect</p>
+          </div>
+          <div className="speaker-talk-snip">
+            <div className="talk-format-badge" style={{ background: 'rgba(6,182,212,0.18)', color: '#7dd3fc' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
+            <div className="talk-title-text">623,494 Agents Registered. 19 With Evidence (ERC-8004)</div>
+            <div className="talk-time-text">⏱️ Day 3 Track (Confirmed)</div>
+          </div>
+          <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
+            <div className="speaker-social-icons">
+              <a href="https://linkedin.com/in/harishkotra" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Harish Kotra on LinkedIn" aria-label="LinkedIn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://x.com/harishkotra" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Harish Kotra on X" aria-label="X">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')}>
+              <span>View Talk &amp; Bio</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
         {/* =================================================================== */}
         {/* DAY 4 SPEAKERS (COLOR: GREEN / EMERALD - ENTERPRISE READINESS & EIPS) */}
         {/* =================================================================== */}
@@ -794,7 +836,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 4 Speaker 2: Charchit Kumawat */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="17" id="speaker-card-charchit" onClick={() => window.openSpeakerModal && window.openSpeakerModal('charchit')} role="button" tabIndex={0} title="Click to view Charchit Kumawat's talk and bio">
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="18" id="speaker-card-charchit" onClick={() => window.openSpeakerModal && window.openSpeakerModal('charchit')} role="button" tabIndex={0} title="Click to view Charchit Kumawat's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>
@@ -881,7 +923,7 @@ export default function Speakers() {
         */}
 
         {/* Day 4 Speaker 4: Yudhishthra */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="18" id="speaker-card-yudhishthra" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} role="button" tabIndex={0} title="Click to view Yudhishthra's talk and bio">
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="19" id="speaker-card-yudhishthra" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} role="button" tabIndex={0} title="Click to view Yudhishthra's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>
@@ -966,7 +1008,7 @@ export default function Speakers() {
         </div>
 
         {/* Day 4 Speaker 5: Dhruv Gera */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="16" id="speaker-card-dhruv" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruv')} role="button" tabIndex={0} title="Click to view Dhruv Gera's talk and bio">
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="17" id="speaker-card-dhruv" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruv')} role="button" tabIndex={0} title="Click to view Dhruv Gera's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>

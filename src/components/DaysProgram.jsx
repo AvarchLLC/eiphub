@@ -342,6 +342,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
+                  <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
+                  <span>Harish Kotra</span>
+                </button>
               </div>
             </div>
           </div>
@@ -667,7 +671,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Application ERC Authors</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Harish Kotra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

@@ -9773,7 +9773,7 @@ html, body {
   100% { transform: rotate(594deg) translateX(415px) rotate(-594deg) translate(-50%, -50%); }
 }
 
-/* ── INNER ORBIT: 8 SLOTS (RADIUS 265px, 128s COUNTER-CLOCKWISE - 0.5x SPEED) ── */
+/* ── INNER ORBIT: 9 SLOTS (RADIUS 265px, 128s COUNTER-CLOCKWISE - 0.5x SPEED) ── */
 .slot-inner-0 { animation: orbitInner0 128s linear infinite; }
 .slot-inner-1 { animation: orbitInner1 128s linear infinite; }
 .slot-inner-2 { animation: orbitInner2 128s linear infinite; }
@@ -9782,6 +9782,7 @@ html, body {
 .slot-inner-5 { animation: orbitInner5 128s linear infinite; }
 .slot-inner-6 { animation: orbitInner6 128s linear infinite; }
 .slot-inner-7 { animation: orbitInner7 128s linear infinite; }
+.slot-inner-8 { animation: orbitInner8 128s linear infinite; }
 
 @keyframes orbitInner0 {
   0%   { transform: rotate(-90deg) translateX(265px) rotate(90deg) translate(-50%, -50%); }
@@ -9792,59 +9793,67 @@ html, body {
 }
 
 @keyframes orbitInner1 {
-  0%   { transform: rotate(-45deg) translateX(265px) rotate(45deg) translate(-50%, -50%); }
-  25%  { transform: rotate(-135deg) translateX(265px) rotate(135deg) translate(-50%, -50%); }
-  50%  { transform: rotate(-225deg) translateX(265px) rotate(225deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-315deg) translateX(265px) rotate(315deg) translate(-50%, -50%); }
-  100% { transform: rotate(-405deg) translateX(265px) rotate(405deg) translate(-50%, -50%); }
+  0%   { transform: rotate(-50deg) translateX(265px) rotate(50deg) translate(-50%, -50%); }
+  25%  { transform: rotate(-140deg) translateX(265px) rotate(140deg) translate(-50%, -50%); }
+  50%  { transform: rotate(-230deg) translateX(265px) rotate(230deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-320deg) translateX(265px) rotate(320deg) translate(-50%, -50%); }
+  100% { transform: rotate(-410deg) translateX(265px) rotate(410deg) translate(-50%, -50%); }
 }
 
 @keyframes orbitInner2 {
-  0%   { transform: rotate(0deg) translateX(265px) rotate(0deg) translate(-50%, -50%); }
-  25%  { transform: rotate(-90deg) translateX(265px) rotate(90deg) translate(-50%, -50%); }
-  50%  { transform: rotate(-180deg) translateX(265px) rotate(180deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-270deg) translateX(265px) rotate(270deg) translate(-50%, -50%); }
-  100% { transform: rotate(-360deg) translateX(265px) rotate(360deg) translate(-50%, -50%); }
+  0%   { transform: rotate(-10deg) translateX(265px) rotate(10deg) translate(-50%, -50%); }
+  25%  { transform: rotate(-100deg) translateX(265px) rotate(100deg) translate(-50%, -50%); }
+  50%  { transform: rotate(-190deg) translateX(265px) rotate(190deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-280deg) translateX(265px) rotate(280deg) translate(-50%, -50%); }
+  100% { transform: rotate(-370deg) translateX(265px) rotate(370deg) translate(-50%, -50%); }
 }
 
 @keyframes orbitInner3 {
-  0%   { transform: rotate(45deg) translateX(265px) rotate(-45deg) translate(-50%, -50%); }
-  25%  { transform: rotate(-45deg) translateX(265px) rotate(45deg) translate(-50%, -50%); }
-  50%  { transform: rotate(-135deg) translateX(265px) rotate(135deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-225deg) translateX(265px) rotate(225deg) translate(-50%, -50%); }
-  100% { transform: rotate(-315deg) translateX(265px) rotate(315deg) translate(-50%, -50%); }
+  0%   { transform: rotate(30deg) translateX(265px) rotate(-30deg) translate(-50%, -50%); }
+  25%  { transform: rotate(-60deg) translateX(265px) rotate(60deg) translate(-50%, -50%); }
+  50%  { transform: rotate(-150deg) translateX(265px) rotate(150deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-240deg) translateX(265px) rotate(240deg) translate(-50%, -50%); }
+  100% { transform: rotate(-330deg) translateX(265px) rotate(330deg) translate(-50%, -50%); }
 }
 
 @keyframes orbitInner4 {
-  0%   { transform: rotate(90deg) translateX(265px) rotate(-90deg) translate(-50%, -50%); }
-  25%  { transform: rotate(0deg) translateX(265px) rotate(0deg) translate(-50%, -50%); }
-  50%  { transform: rotate(-90deg) translateX(265px) rotate(90deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-180deg) translateX(265px) rotate(180deg) translate(-50%, -50%); }
-  100% { transform: rotate(-270deg) translateX(265px) rotate(270deg) translate(-50%, -50%); }
+  0%   { transform: rotate(70deg) translateX(265px) rotate(-70deg) translate(-50%, -50%); }
+  25%  { transform: rotate(-20deg) translateX(265px) rotate(20deg) translate(-50%, -50%); }
+  50%  { transform: rotate(-110deg) translateX(265px) rotate(110deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-200deg) translateX(265px) rotate(200deg) translate(-50%, -50%); }
+  100% { transform: rotate(-290deg) translateX(265px) rotate(290deg) translate(-50%, -50%); }
 }
 
 @keyframes orbitInner5 {
-  0%   { transform: rotate(135deg) translateX(265px) rotate(-135deg) translate(-50%, -50%); }
-  25%  { transform: rotate(45deg) translateX(265px) rotate(-45deg) translate(-50%, -50%); }
-  50%  { transform: rotate(-45deg) translateX(265px) rotate(45deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-135deg) translateX(265px) rotate(135deg) translate(-50%, -50%); }
-  100% { transform: rotate(-225deg) translateX(265px) rotate(225deg) translate(-50%, -50%); }
+  0%   { transform: rotate(110deg) translateX(265px) rotate(-110deg) translate(-50%, -50%); }
+  25%  { transform: rotate(20deg) translateX(265px) rotate(-20deg) translate(-50%, -50%); }
+  50%  { transform: rotate(-70deg) translateX(265px) rotate(70deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-160deg) translateX(265px) rotate(160deg) translate(-50%, -50%); }
+  100% { transform: rotate(-250deg) translateX(265px) rotate(250deg) translate(-50%, -50%); }
 }
 
 @keyframes orbitInner6 {
-  0%   { transform: rotate(180deg) translateX(265px) rotate(-180deg) translate(-50%, -50%); }
-  25%  { transform: rotate(90deg) translateX(265px) rotate(-90deg) translate(-50%, -50%); }
-  50%  { transform: rotate(0deg) translateX(265px) rotate(0deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-90deg) translateX(265px) rotate(90deg) translate(-50%, -50%); }
-  100% { transform: rotate(-180deg) translateX(265px) rotate(180deg) translate(-50%, -50%); }
+  0%   { transform: rotate(150deg) translateX(265px) rotate(-150deg) translate(-50%, -50%); }
+  25%  { transform: rotate(60deg) translateX(265px) rotate(-60deg) translate(-50%, -50%); }
+  50%  { transform: rotate(-30deg) translateX(265px) rotate(30deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-120deg) translateX(265px) rotate(120deg) translate(-50%, -50%); }
+  100% { transform: rotate(-210deg) translateX(265px) rotate(210deg) translate(-50%, -50%); }
 }
 
 @keyframes orbitInner7 {
-  0%   { transform: rotate(225deg) translateX(265px) rotate(-225deg) translate(-50%, -50%); }
-  25%  { transform: rotate(135deg) translateX(265px) rotate(-135deg) translate(-50%, -50%); }
-  50%  { transform: rotate(45deg) translateX(265px) rotate(-45deg) translate(-50%, -50%); }
-  75%  { transform: rotate(-45deg) translateX(265px) rotate(45deg) translate(-50%, -50%); }
-  100% { transform: rotate(-135deg) translateX(265px) rotate(135deg) translate(-50%, -50%); }
+  0%   { transform: rotate(190deg) translateX(265px) rotate(-190deg) translate(-50%, -50%); }
+  25%  { transform: rotate(100deg) translateX(265px) rotate(-100deg) translate(-50%, -50%); }
+  50%  { transform: rotate(10deg) translateX(265px) rotate(-10deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-80deg) translateX(265px) rotate(80deg) translate(-50%, -50%); }
+  100% { transform: rotate(-170deg) translateX(265px) rotate(170deg) translate(-50%, -50%); }
+}
+
+@keyframes orbitInner8 {
+  0%   { transform: rotate(230deg) translateX(265px) rotate(-230deg) translate(-50%, -50%); }
+  25%  { transform: rotate(140deg) translateX(265px) rotate(-140deg) translate(-50%, -50%); }
+  50%  { transform: rotate(50deg) translateX(265px) rotate(-50deg) translate(-50%, -50%); }
+  75%  { transform: rotate(-40deg) translateX(265px) rotate(40deg) translate(-50%, -50%); }
+  100% { transform: rotate(-130deg) translateX(265px) rotate(130deg) translate(-50%, -50%); }
 }
 
 /* ── SPEAKER INTERACTIVE NODE (SEAMLESS CELESTIAL TRANSITIONS) ── */

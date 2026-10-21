@@ -598,5 +598,33 @@ export const SPEAKERS_DATA = {
     twitter: 'https://x.com/Adityaakrx',
     telegram: '@adityakrx',
     discord: '@adiii06'
+  },
+  harish: {
+    dayNum: 3,
+    name: 'Harish Kotra',
+    photo: 'Assets/speakers/harish-kotra.webp',
+    affiliation: 'Independent / AI Consultant',
+    designation: 'Independent AI Consultant & Agent Architect',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: '623,494 Agents Registered. 19 With Evidence. What ERC-8004 measures, and the registry it has not shipped',
+    talkDesc: "ERC-8004 has registered more than 623,000 agents across 24 chains, but a study of 10,000 found only 19 with metadata, a declared service, reputation feedback, and cross-chain registration together. This talk reads that deployment data against the specification, breaks down what the Identity and Reputation registries actually guarantee, and argues what the still-unshipped Validation Registry must attest before agent trust becomes something software can query. Builders are about to make procurement, escrow, and payment decisions on the assumption that a registered agent is a verified one—this session shows where the real gaps and contribution windows lie.",
+    bio: [
+      'Harish Kotra is an independent AI consultant, builder, and agent architect. He works on agent identity, evaluation, and verifiable observability: how an autonomous system’s claims get checked rather than trusted.',
+      'He publishes one AI build a day in public on DailyBuild.xyz, a running record of what actually ships versus what only demos well, and builds local-first agent tooling, MCP servers, and evaluation harnesses. Over the past year, his work moved from shipping agents to auditing the standards they register against, including reading on-chain deployment data for ERC-8004.'
+    ],
+    takeaways: [
+      'How to read an ERC’s real adoption: registration counts versus operational evidence, and the three checks to run on any agent standard.',
+      'What ERC-8004’s Identity and Reputation registries do and do not guarantee, with on-chain numbers showing why reputation is not yet a reliable signal.',
+      'What a Validation Registry has to attest (evidence and re-execution, not just a score) before agent trust is queryable, plus concrete proposals for the authors.'
+    ],
+    relatedEip: 'ERC-8004: Trustless Agent Registry & ERC-8183',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8004',
+    audience: ['Developers', 'Agent Architects', 'Protocol Researchers', 'Governance Contributors'],
+    linkedin: 'https://linkedin.com/in/harishkotra',
+    twitter: 'https://x.com/harishkotra',
+    telegram: '@HarishKotra'
   }
 };
