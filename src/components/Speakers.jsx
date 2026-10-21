@@ -21,8 +21,8 @@ export default function Speakers() {
         <div className="spk-metric-card">
           <div className="spk-metric-icon">🎙️</div>
           <div>
-            <div className="spk-metric-num">19 Leaders</div>
-            <div className="spk-metric-label">Keynote Authors &amp; Editors</div>
+            <div className="spk-metric-num">19 Speakers</div>
+            <div className="spk-metric-label">Keynote Speakers &amp; Contributors</div>
           </div>
         </div>
         <div className="spk-metric-card">
