@@ -568,5 +568,35 @@ export const SPEAKERS_DATA = {
     audience: ['EIP Authors', 'Core Developers', 'Rollup Engineers', 'Open Source Tooling Builders'],
     linkedin: 'https://www.linkedin.com/in/germanabal/',
     twitter: 'https://x.com/ariutokintumi'
+  },
+  aditya: {
+    dayNum: 4,
+    name: 'Aditya Kumar',
+    photo: 'Assets/speakers/aditya-kumar.jpg',
+    affiliation: 'Vara Network / Gear Foundation',
+    designation: 'Senior Developer Relations Engineer Lead, Vara Network / Gear Foundation',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Beyond Collateral: Privacy and Verification in Onchain Credit',
+    talkDesc: 'Drawing on practical experience building onchain credit applications, this session traces a receivable from verification through funding and repayment, examining who needs access to which information at each stage. It explores how signed statements, cryptographic commitments, and controlled disclosure support this process while making clear what still depends on offchain evidence and trusted parties. Defining who can access which information, for what purpose, and under whose authority is a core design requirement in onchain credit—distinguishing document integrity and issuer authenticity from the validity of a commercial claim and likelihood of repayment.',
+    bio: [
+      'Aditya Kumar is a Senior Developer Relations Engineer Lead at Vara Network / Gear Foundation, where he builds developer tools and applications, writes technical documentation, and leads hands-on workshops.',
+      'He has worked on a business credit platform spanning receivables verification, underwriting assistance, stablecoin settlement, and repayment, as well as a privacy product focused on programmable privacy and conditional disclosure. He brings a builder’s perspective to Ethereum standards, grounded in practical experience with verification, sensitive business data, and the trust assumptions behind onchain applications.'
+    ],
+    takeaways: [
+      'How to map disclosure requirements across a receivable’s lifecycle, giving each participant access to the information their role requires.',
+      'What signatures, commitments, and cryptographic proofs establish—and why verifying a statement or computation does not independently establish the truth of an invoice or guarantee repayment.',
+      'Which parts of credit evidence could benefit from common interfaces: issuer identity, document references, validity periods, disclosure permissions, and changes in repayment status.',
+      'How EIP-712 structured signing helps applications agree on what was approved or attested to, while informing future standards for credit evidence and controlled disclosure.'
+    ],
+    relatedEip: 'EIP-712: Typed structured data hashing and signing',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-712',
+    audience: ['Developers', 'Protocol Designers', 'Enterprise Builders', 'DeFi Researchers'],
+    linkedin: 'https://linkedin.com/in/adityaa-kr',
+    twitter: 'https://x.com/Adityaakrx',
+    telegram: '@adityakrx',
+    discord: '@adiii06'
   }
 };

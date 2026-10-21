@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 17 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 18 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Pooja Ranjan
   {
@@ -184,7 +184,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 15. Dhruv Gera
+  // 15. Aditya Kumar
+  {
+    id: 'aditya',
+    modalId: 'aditya',
+    name: 'Aditya Kumar',
+    org: 'Vara / Gear Foundation',
+    track: 'Day 4 · Privacy & Onchain Credit',
+    badgeIcon: '🔐',
+    photo: 'Assets/speakers/aditya-kumar.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
+  },
+  // 16. Dhruv Gera
   {
     id: 'dhruv',
     modalId: 'dhruv',
@@ -197,7 +210,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(110, 231, 183, 0.75)',
     dotType: 'yellow'
   },
-  // 16. Charchit Kumawat
+  // 17. Charchit Kumawat
   {
     id: 'charchit',
     modalId: 'charchit',
@@ -210,7 +223,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 17. Yudhishthra
+  // 18. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',
@@ -412,7 +425,7 @@ export default function SpeakersMandala() {
   const [isShuffling, setIsShuffling] = useState(false);
   const arenaRef = useRef(null);
 
-  // Preload all 17 speaker avatars into browser memory so transitions are instant & zero-flicker
+  // Preload all 18 speaker avatars into browser memory so transitions are instant & zero-flicker
   useEffect(() => {
     ALL_SPEAKERS.forEach(spk => {
       const img = new Image();
@@ -478,7 +491,7 @@ export default function SpeakersMandala() {
   }, [isShuffling]);
 
   const outerSpeakers = speakersList.slice(0, 10);
-  const innerSpeakers = speakersList.slice(10, 17);
+  const innerSpeakers = speakersList.slice(10, 18);
 
   return (
     <section className="speakers-mandala-section" id="speakers-preview">
