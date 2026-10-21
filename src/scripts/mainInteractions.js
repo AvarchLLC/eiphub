@@ -1144,18 +1144,19 @@ function copyContactEmail(email, btnEl){
   });
 }
 
-// Sort speaker cards in the grid by data-popular-rank (ascending = most popular first)
-function sortSpeakersByPopularity(){
+// Sort speaker cards in the grid alphabetically (A to Z by speaker name)
+function sortSpeakersAlphabetically(){
   var grid = document.getElementById('speakers-grid-container');
   if(!grid) return;
-  var cards = Array.from(grid.querySelectorAll('.speaker-card[data-popular-rank]'));
+  var cards = Array.from(grid.querySelectorAll('.speaker-card'));
   cards.sort(function(a, b){
-    var ra = parseInt(a.getAttribute('data-popular-rank'), 10) || 999;
-    var rb = parseInt(b.getAttribute('data-popular-rank'), 10) || 999;
-    return ra - rb;
+    var nameA = (a.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
+    var nameB = (b.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
+    return nameA.localeCompare(nameB);
   });
   cards.forEach(function(c){ grid.appendChild(c); });
 }
+var sortSpeakersByPopularity = sortSpeakersAlphabetically;
 
 // Summit Speakers Day Filter Controller
 function filterSpeakerDay(day){
@@ -1218,7 +1219,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
-    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 7 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 8 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 4 Track · Nov 6, 2026'; }
   }
 
@@ -1232,8 +1233,8 @@ function filterSpeakerDay(day){
   }
   if(noResultsEl) noResultsEl.style.display = 'none';
 
-  // Re-order visible cards by popularity rank
-  sortSpeakersByPopularity();
+  // Re-order visible cards alphabetically (A-Z)
+  sortSpeakersAlphabetically();
 }
 
 
@@ -1314,11 +1315,11 @@ function clearSpeakerSearch(){
   }
 }
 
-// Summit Speakers Sorting Controller (Popular/Featured First vs Alphabetical A-Z vs Z-A)
-var currentSpeakerSortMode = 'popular';
+// Summit Speakers Sorting Controller (Alphabetical A-Z by default, or Z-A)
+var currentSpeakerSortMode = 'alpha-asc';
 
 function sortSpeakers(mode){
-  currentSpeakerSortMode = mode || 'popular';
+  currentSpeakerSortMode = mode || 'alpha-asc';
 
   // Update active state on sort buttons
   var btns = document.querySelectorAll('.spk-sort-btn');
@@ -1342,17 +1343,9 @@ function sortSpeakers(mode){
     var nameA = (a.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
     var nameB = (b.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
 
-    if(currentSpeakerSortMode === 'alpha-asc'){
-      return nameA.localeCompare(nameB);
-    } else if(currentSpeakerSortMode === 'alpha-desc'){
+    if(currentSpeakerSortMode === 'alpha-desc'){
       return nameB.localeCompare(nameA);
     } else {
-      // 'popular' mode: Rank by popularity tier (Keynote/EF leaders first, then alphabetical)
-      var rankA = parseInt(a.getAttribute('data-popular-rank') || '99', 10);
-      var rankB = parseInt(b.getAttribute('data-popular-rank') || '99', 10);
-      if(rankA !== rankB){
-        return rankA - rankB;
-      }
       return nameA.localeCompare(nameB);
     }
   });
@@ -2258,9 +2251,10 @@ window.addEventListener('keydown', function(e){
   window.openSpeakerModal = openSpeakerModal;
   window.closeSpeakerModal = closeSpeakerModal;
   window.SPEAKERS_DATA = SPEAKERS_DATA;
-  window.sortSpeakersByPopularity = sortSpeakersByPopularity;
+  window.sortSpeakersAlphabetically = sortSpeakersAlphabetically;
+  window.sortSpeakersByPopularity = sortSpeakersAlphabetically;
 
-  // Sort speakers by popularity on initial load
-  sortSpeakersByPopularity();
+  // Sort speakers alphabetically on initial load
+  sortSpeakersAlphabetically();
 
 }
