@@ -1076,7 +1076,7 @@ export default function Speakers() {
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
             <span className="spk-photo-verified">✓ Confirmed</span>
-            <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" className="speaker-photo-img" loading="lazy" />
+            <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias" className="speaker-photo-img" loading="lazy" />
           </div>
           <div className="speaker-info">
             <div className="speaker-name-row">
@@ -1087,14 +1087,14 @@ export default function Speakers() {
               </a>
             </div>
             <div className="speaker-meta-row">
-              <div className="speaker-org-tag">ethPandaOps · EF</div>
+              <div className="speaker-org-tag">Ethereum Foundation · ethPandaOps</div>
             </div>
-            <p className="speaker-designation">DevOps Engineer, ethPandaOps · Core Protocol Contributor</p>
+            <p className="speaker-designation">Software Engineer, Ethereum Foundation</p>
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(245,158,11,0.18)', color: '#fbbf24' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">Devnet Operations: Kurtosis Packaging &amp; Multi-Client EIP Testing</div>
-            <div className="talk-time-text">⏱️ Session Time: TBA · Day 1 Track</div>
+            <div className="talk-title-text">How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam</div>
+            <div className="talk-time-text">⏱️ Day 1 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">

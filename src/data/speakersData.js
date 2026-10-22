@@ -91,28 +91,29 @@ export const SPEAKERS_DATA = {
     dayNum: 1,
     name: 'Rafael Matias',
     photo: 'Assets/speakers/rafael.jpg',
-    affiliation: 'ethPandaOps · Ethereum Foundation',
-    designation: 'DevOps Engineer, ethPandaOps · Core Protocol Contributor',
+    affiliation: 'Ethereum Foundation · ethPandaOps',
+    designation: 'Software Engineer, Ethereum Foundation',
     day: 'Day 1 – November 3, 2026',
     track: 'Day 1 · Nov 3 · EIP Process & General Overview',
-    time: '⏱️ Session Time: TBA · Day 1',
+    time: '⏱️ Day 1 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Devnet Operations: Kurtosis Packaging & Multi-Client EIP Testing',
-    talkDesc: 'Discover the automated testing pipelines, Kurtosis packaging patterns, and open-source infrastructure tools engineered by ethPandaOps that allow any author or team to instantiate local multi-client Ethereum networks to benchmark EIPs.',
+    talkTitle: 'How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam',
+    talkDesc: 'Glamsterdam raises Ethereum’s gas limit from 60M to 200M and reprices EVM operations, so every gas cost has to match how long clients actually take to execute it. We walk through the pipeline that measures this end to end: designing benchmarks that isolate single operations, running them on realistic state across all execution clients with benchmarkoor, and replaying the same workloads on devnets and mainnet shadow forks to confirm the results hold on a live network.',
     bio: [
-      'Rafael Matias (@skylenet) is a DevOps Engineer at the Ethereum Foundation and core member of ethPandaOps. He has contributed across major repositories including go-ethereum (geth), ethereum-package, and genesis generation tooling.',
-      'Rafael focuses on building reproducible, containerized test environments that accelerate the feedback loop between protocol research, client engineering, and specification testing.'
+      'Rafael Matias (@skylenet) is a Software Engineer at the Ethereum Foundation and core member of ethPandaOps.',
+      'He contributes across major protocol testing infrastructure, benchmarkoor performance suites, and devnet orchestration tooling to stress-test execution and consensus clients under real-world network loads.'
     ],
     takeaways: [
-      'Deploying reproducible multi-client devnets locally using ethereum-package and Kurtosis',
-      'Automating benchmark test suites for proposed state and opcode changes',
-      'Collaborating effectively across disparate client engineering teams during upgrade testing'
+      'Designing benchmarks that isolate one EVM operation and turn its measured cost into gas',
+      'Comparing all execution clients fairly on realistic state with benchmarkoor',
+      'Turning benchmarks into end-to-end load tests on devnets and mainnet shadow forks'
     ],
-    relatedEip: 'Core EIPs & Ethereum Infrastructure',
-    relatedEipUrl: 'https://github.com/ethpandaops/ethereum-package',
-    audience: ['Core Developers', 'Tooling Engineers', 'Client Implementers', 'Node Operators'],
+    relatedEip: 'EIP-2780 & EIP-8038 (EVM Gas Repricing for Glamsterdam)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8038',
+    audience: ['Developers', 'Core Developers', 'Client Teams', 'Protocol Researchers'],
     linkedin: null,
-    twitter: 'https://x.com/skylenet'
+    twitter: 'https://x.com/skylenet',
+    github: 'https://github.com/skylenet'
   },
   'german-eiplabs': {
     dayNum: 1,

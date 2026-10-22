@@ -244,12 +244,12 @@ const ALL_SPEAKERS = [
     modalId: 'rafael',
     name: 'Rafael Matias',
     org: 'ethPandaOps',
-    track: 'Day 1 · Kurtosis Tooling',
-    badgeIcon: '🛠️',
+    track: 'Day 1 · Benchmarking Glamsterdam',
+    badgeIcon: '⏱️',
     photo: 'Assets/speakers/rafael.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
   },
   // 18. Simona Serban
   {
