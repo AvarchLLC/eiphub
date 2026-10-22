@@ -1203,11 +1203,11 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 19 Unique Technical Leaders (21 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 20 Unique Technical Leaders (22 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
-    if(statusText){ statusText.style.color = '#fde68a'; statusText.textContent = 'Day 1 · Nov 3 (EIP Process & General Overview) · 5 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#fde68a'; statusText.textContent = 'Day 1 · Nov 3 (EIP Process & General Overview) · 6 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 1 Track · Nov 3, 2026'; }
   } else if(day === 2 || day === '2'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
@@ -1358,6 +1358,36 @@ function sortSpeakers(mode){
 // Speaker Details Data & Modal Handler
 const SPEAKERS_DATA = {
   // --- DAY 1: EIP PROCESS & GENERAL OVERVIEW ---
+  matthew: {
+    dayNum: 1,
+    name: 'Matthew Keil',
+    photo: 'Assets/speakers/matthew-keil.jpg',
+    affiliation: 'Lodestar · ChainSafe',
+    designation: 'Engineering Manager, Lodestar (ChainSafe)',
+    day: 'Day 1 – November 3, 2026',
+    track: 'Day 1 · Nov 3 · EIP Process & General Overview',
+    time: '⏱️ 3:00 PM · Day 1 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'EIP Selection to Support Fast Fork Cadence',
+    talkDesc: 'EIP selection is a critical part of the all-core-devs process and the pressure to include "all the things" in the next fork is high. I want to entice the community and developer group to turn that process on its head and make forks smaller. Smaller forks ship faster and counter-intuitively more EIPs can be included in a given period. I also want to encourage the ecosystem to further buy into the process of planning several forks ahead for larger features. We, as an ecosystem, can increase overall development cadence by having a clear vision of the future, outlining that vision on a roadmap and then using that roadmap to do resource planning for the implementation of the features that we want to see come to life.',
+    bio: [
+      'Matthew Keil is Engineering Manager at ChainSafe working on Lodestar, the premier TypeScript consensus client for Ethereum.',
+      'Passionate about shaping Ethereum’s future and shepherding the ecosystem towards an impactful, sustainable, and high-cadence future, he advocates for forward roadmap planning, smaller fork scopes, and multi-client isolation testing.'
+    ],
+    takeaways: [
+      'Why smaller hard forks ship faster and counter-intuitively allow more EIPs to be safely included over time',
+      'Roadmap and forward planning: how multi-fork feature coordination eases implementation and client readiness',
+      'Improving all-core-devs cadence through isolation testing, feature limiting, and forward resource planning'
+    ],
+    relatedEip: 'EIP-1: EIP Purpose and Guidelines & Hard Fork Cadence',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-1',
+    audience: ['Core Developers', 'Client Teams', 'EIP Authors', 'Ethereum Community'],
+    linkedin: null,
+    twitter: 'https://x.com/matthewkeil',
+    github: 'https://github.com/matthewkeil',
+    telegram: '@mattheweliaskeil',
+    discord: 'matthewkeil'
+  },
   pooja: {
     dayNum: 1,
     name: 'Pooja Ranjan',

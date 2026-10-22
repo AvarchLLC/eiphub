@@ -21,14 +21,14 @@ export default function Speakers() {
         <div className="spk-metric-card">
           <div className="spk-metric-icon">🎙️</div>
           <div>
-            <div className="spk-metric-num">19 Speakers</div>
+            <div className="spk-metric-num">20 Speakers</div>
             <div className="spk-metric-label">Keynote Speakers &amp; Contributors</div>
           </div>
         </div>
         <div className="spk-metric-card">
           <div className="spk-metric-icon">⚡</div>
           <div>
-            <div className="spk-metric-num">20 Sessions</div>
+            <div className="spk-metric-num">22 Sessions</div>
             <div className="spk-metric-label">Keynotes, Clinics &amp; Panels</div>
           </div>
         </div>
@@ -60,12 +60,12 @@ export default function Speakers() {
         <div className="spk-day-filter-wrap" role="tablist" aria-label="Summit Speaker Days Filter">
           <button type="button" className="spk-day-tab-btn active" data-spk-day="all" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay('all')} role="tab" aria-selected="true">
             <span>All Days (Nov 3–6)</span>
-            <span className="spk-count-pill">19 Speakers</span>
+            <span className="spk-count-pill">20 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="1" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(1)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#fbbf24' }}></span>
             <span>Day 1 · Nov 3 (EIP Process &amp; General Overview)</span>
-            <span className="spk-count-pill">4 Speakers</span>
+            <span className="spk-count-pill">6 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="2" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(2)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#818cf8' }}></span>
@@ -902,8 +902,53 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 13. Pooja Ranjan (Day 1 · EIP Process) */}
-        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="13" id="speaker-card-pooja" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} role="button" tabIndex={0} title="Click to view Pooja Ranjan's talk and bio">
+        {/* 13. Matthew Keil (Day 1 · EIP Process) */}
+        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="13" id="speaker-card-matthew" onClick={() => window.openSpeakerModal && window.openSpeakerModal('matthew')} role="button" tabIndex={0} title="Click to view Matthew Keil's talk and bio">
+          <div className="speaker-card-top-bar"></div>
+          <div className="speaker-photo-wrap">
+            <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
+            <span className="spk-photo-verified">✓ Confirmed</span>
+            <img src="Assets/speakers/matthew-keil.jpg" alt="Matthew Keil" className="speaker-photo-img" loading="lazy" />
+          </div>
+          <div className="speaker-info">
+            <div className="speaker-name-row">
+              <h4 className="speaker-name">Matthew Keil</h4>
+              <a href="https://x.com/matthewkeil" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Matthew Keil on X (@matthewkeil)" onClick={(e) => e.stopPropagation()}>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>@matthewkeil</span>
+              </a>
+            </div>
+            <div className="speaker-meta-row">
+              <div className="speaker-org-tag">Lodestar · ChainSafe</div>
+            </div>
+            <p className="speaker-designation">Engineering Manager, Lodestar (ChainSafe)</p>
+          </div>
+          <div className="speaker-talk-snip">
+            <div className="talk-format-badge" style={{ background: 'rgba(245,158,11,0.18)', color: '#fbbf24' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
+            <div className="talk-title-text">EIP Selection to Support Fast Fork Cadence</div>
+            <div className="talk-time-text">⏱️ 3:00 PM · Day 1 Track (Confirmed)</div>
+          </div>
+          <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
+            <div className="speaker-social-icons">
+              <a href="https://x.com/matthewkeil" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Matthew Keil on X" aria-label="X">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://github.com/matthewkeil" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Matthew Keil on GitHub" aria-label="GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://t.me/mattheweliaskeil" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Matthew Keil on Telegram" aria-label="Telegram">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.943z"/></svg>
+              </a>
+            </div>
+            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('matthew')}>
+              <span>View Talk &amp; Bio</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        {/* 14. Pooja Ranjan (Day 1 · EIP Process) */}
+        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="14" id="speaker-card-pooja" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} role="button" tabIndex={0} title="Click to view Pooja Ranjan's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
@@ -944,8 +989,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 14. Prem Makeig (Day 3 · Application EIPs) */}
-        <div className="speaker-card spk-day-3" data-spk-day="3" data-popular-rank="14" id="speaker-card-prem" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} role="button" tabIndex={0} title="Click to view Prem Makeig's talk and bio">
+        {/* 15. Prem Makeig (Day 3 · Application EIPs) */}
+        <div className="speaker-card spk-day-3" data-spk-day="3" data-popular-rank="15" id="speaker-card-prem" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} role="button" tabIndex={0} title="Click to view Prem Makeig's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(6,182,212,0.25)', color: '#7dd3fc', border: '1px solid rgba(6,182,212,0.45)' }}>Day 3 · Application EIPs</span>
@@ -983,8 +1028,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 15. Rachit Anand Srivastava (Day 2 · Protocol EIPs) */}
-        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="15" id="speaker-card-rachit" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} role="button" tabIndex={0} title="Click to view Rachit Anand Srivastava's talk and bio">
+        {/* 16. Rachit Anand Srivastava (Day 2 · Protocol EIPs) */}
+        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="16" id="speaker-card-rachit" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} role="button" tabIndex={0} title="Click to view Rachit Anand Srivastava's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(129,140,248,0.25)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.45)' }}>Day 2 · Protocol EIPs</span>
@@ -1025,8 +1070,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 16. Rafael Matias (Day 1 · EIP Process) */}
-        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="16" id="speaker-card-rafael" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rafael')} role="button" tabIndex={0} title="Click to view Rafael Matias's talk and bio">
+        {/* 17. Rafael Matias (Day 1 · EIP Process) */}
+        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="17" id="speaker-card-rafael" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rafael')} role="button" tabIndex={0} title="Click to view Rafael Matias's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
@@ -1067,8 +1112,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 17. Simona Serban (Day 4 · Enterprise Readiness) */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="17" id="speaker-card-simona" onClick={() => window.openSpeakerModal && window.openSpeakerModal('simona')} role="button" tabIndex={0} title="Click to view Simona Serban's talk and bio">
+        {/* 18. Simona Serban (Day 4 · Enterprise Readiness) */}
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="18" id="speaker-card-simona" onClick={() => window.openSpeakerModal && window.openSpeakerModal('simona')} role="button" tabIndex={0} title="Click to view Simona Serban's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>
@@ -1109,8 +1154,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 18. Stefan (Day 1 · EIP Process) */}
-        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="18" id="speaker-card-stefan" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} role="button" tabIndex={0} title="Click to view Stefan's talk and bio">
+        {/* 19. Stefan (Day 1 · EIP Process) */}
+        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="19" id="speaker-card-stefan" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} role="button" tabIndex={0} title="Click to view Stefan's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
@@ -1148,8 +1193,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 19. Yudhishthra (Day 4 · Enterprise Readiness) */}
-        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="19" id="speaker-card-yudhishthra" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} role="button" tabIndex={0} title="Click to view Yudhishthra's talk and bio">
+        {/* 20. Yudhishthra (Day 4 · Enterprise Readiness) */}
+        <div className="speaker-card spk-day-4" data-spk-day="4" data-popular-rank="20" id="speaker-card-yudhishthra" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} role="button" tabIndex={0} title="Click to view Yudhishthra's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
             <span className="spk-photo-track-badge" style={{ background: 'rgba(16,185,129,0.25)', color: '#6ee7b7', border: '1px solid rgba(16,185,129,0.45)' }}>Day 4 · Enterprise EIPs</span>

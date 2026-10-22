@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 19 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 20 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -186,7 +186,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 13. Pooja Ranjan
+  // 13. Matthew Keil
+  {
+    id: 'matthew',
+    modalId: 'matthew',
+    name: 'Matthew Keil',
+    org: 'Lodestar · ChainSafe',
+    track: 'Day 1 · Fast Fork Cadence',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/matthew-keil.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
+  },
+  // 14. Pooja Ranjan
   {
     id: 'pooja',
     modalId: 'pooja',
@@ -199,7 +212,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 14. Prem Makeig
+  // 15. Prem Makeig
   {
     id: 'prem',
     modalId: 'prem',
@@ -212,7 +225,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 15. Rachit Anand Srivastava
+  // 16. Rachit Anand Srivastava
   {
     id: 'rachit',
     modalId: 'rachit',
@@ -225,7 +238,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(236, 72, 153, 0.75)',
     dotType: 'blue'
   },
-  // 16. Rafael Matias
+  // 17. Rafael Matias
   {
     id: 'rafael',
     modalId: 'rafael',
@@ -238,7 +251,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 17. Simona Serban
+  // 18. Simona Serban
   {
     id: 'simona',
     modalId: 'simona',
@@ -251,7 +264,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Stefan
+  // 19. Stefan
   {
     id: 'stefan',
     modalId: 'stefan',
@@ -264,7 +277,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
   },
-  // 19. Yudhishthra
+  // 20. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',
