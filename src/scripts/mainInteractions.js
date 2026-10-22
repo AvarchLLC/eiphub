@@ -1203,7 +1203,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 20 Unique Technical Leaders (22 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 20 Unique Technical Leaders (23 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1215,7 +1215,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 2 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 3 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
@@ -2031,28 +2031,59 @@ const SPEAKERS_DATA = {
     dayNum: 1,
     name: 'German Abal',
     photo: 'Assets/speakers/german-abal.jpg',
-    affiliation: 'EVVM · ETH Cinco De Mayo',
-    designation: 'Co-Founder & CTO, EVVM · Standards Tooling Contributor',
-    day: 'Day 1 (Nov 3) & Day 4 (Nov 6)',
-    track: 'Dual Track Speaker: EIP Process & Tooling (Day 1) + EVVM State Scaling (Day 4)',
-    time: 'Day 1: Standards Talk · Day 4: 11:00 AM',
-    format: '⚡ 2 Scheduled Technical Sessions',
-    talkTitle: 'Dual Sessions: EIP Process Tooling Workflows & EVVM Scalability',
-    talkDesc: 'German Abal presents two specialized sessions across the summit: (1) On Day 1, exploring open-source CI/CD tooling, markdown schema linters, and verification workflows for EIP authors; (2) On Day 4, breaking down EVVM (Ethereum Virtual Virtual Machine) and how contract-native virtual blockchains enable high-performance execution while settling state on Ethereum.',
+    affiliation: 'EVVM.org · ETH Cinco De Mayo · Apeiron Protocol',
+    designation: 'Founder & Principal Architect, EVVM.org · Apeiron Protocol',
+    day: 'Day 1 (Nov 3), Day 3 (Nov 5) & Day 4 (Nov 6)',
+    track: 'Triple Track Speaker: EIP Process (Day 1) + Self-Sovereign Tokens (Day 3) + EVVM State Scaling (Day 4)',
+    time: 'Day 1: Standards Talk · Day 3: 20m Presentation · Day 4: 11:00 AM',
+    format: '⚡ 3 Scheduled Technical Sessions Across Summit',
+    talkTitle: 'Triple Sessions: Tooling Workflows, Self-Sovereign Tokens & EVVM Architecture',
+    talkDesc: 'German Abal presents three specialized sessions across Devcon 8: (1) On Day 1, exploring open tooling and EIP process pipelines; (2) On Day 3, presenting Apeiron Protocol and self-sovereign token architectures with receiver-side verification and protected state; (3) On Day 4, breaking down EVVM virtual machine scalability, non-conflicting state-transition proofs, and institutional rails.',
     bio: [
-      'German Abal (@ariutokintumi) is a blockchain engineer, co-founder & CTO of EVVM (@RollAMate), author of EIP-8141 and EIP-8250, and core team member of ETH Cinco De Mayo (@ETHCincoDeMayo).',
-      'His contributions span developer tooling that lowers friction for open-source Ethereum specification contributors, as well as novel virtual machine architectures that enable developers to build virtual blockchains natively on top of smart contracts.'
+      'Germán Abal (ariutokintumi) is a protocol architect, inventor, entrepreneur, and the founder and principal architect of EVVM.org and Apeiron Protocol.',
+      'Building internet products since 1996 and researching blockchain since 2009, he combines software architecture, cryptography, security, and developer education across open Ethereum standards.'
     ],
     takeaways: [
-      'Day 1 Session: Automated validation pipelines and developer tooling for accelerating EIP reviews',
-      'Day 4 Session: EVVM architecture, custom transaction models, and settlement on public Ethereum consensus',
-      'Author insights from navigating EIP-8141 and EIP-8250 through peer review and ecosystem adoption'
+      'Day 1 Session: Tooling and workflow automation for accelerating proposal lifecycle and PR readiness',
+      'Day 3 Session: Self-sovereign tokens in Apeiron Protocol — isolating protected state, EXTCODEHASH remote compliance, and receiver-side acceptance',
+      'Day 4 Session: Virtualizing the EVM to eliminate state bloat and execute off-chain multi-threaded state transitions with L1 dispute guarantees'
     ],
-    relatedEip: 'EIP-8141, EIP-8250 & EIP Tooling Pipelines',
-    relatedEipUrl: 'https://eips.ethereum.org/',
-    audience: ['EIP Authors', 'Core Developers', 'Rollup Engineers', 'Open Source Tooling Builders'],
+    relatedEip: 'EIP Process Tooling · Apeiron Token Standard · EVVM Architecture',
+    relatedEipUrl: 'https://eips.ethereum.org',
+    audience: ['Developers', 'Token Architects', 'Smart Contract Engineers', 'Protocol Researchers'],
     linkedin: 'https://www.linkedin.com/in/germanabal/',
-    twitter: 'https://x.com/ariutokintumi'
+    twitter: 'https://x.com/ariutokintumi',
+    telegram: '@llamame',
+    discord: 'ariutokintumi#0001'
+  },
+  'german-day3': {
+    dayNum: 3,
+    name: 'German Abal',
+    photo: 'Assets/speakers/german-abal.jpg',
+    affiliation: 'ETH Cinco de Mayo - EVVM.org',
+    designation: 'Founder, Apeiron Protocol & Principal Architect, EVVM.org',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 20m Presentation + Q&A',
+    talkTitle: 'Self-Sovereign Tokens: Rethinking Onchain Representation',
+    talkDesc: 'Apeiron Protocol proposes a token architecture where users or entities govern Signs through their own Console, with protected state isolated in ConsoleStorage and modular execution delegated to optional Cartridges. The talk explores explicit incoming acceptance, EXTCODEHASH-based remote compliance, and the separation of representation, instance identity, and metadata. Most existing token standards focus on how tokens are created, owned, and transferred, but provide little receiver-side control over what can enter an account or which remote implementations are trusted. Apeiron explores a different model: sovereign representation with explicit trust boundaries, isolated protected state, deterministic code-path compliance, and no passive inbox by default.',
+    bio: [
+      'Germán Abal, known as ariutokintumi, is a protocol architect, inventor and entrepreneur, and the founder and principal architect of EVVM.org.',
+      'He has been building internet products since 1996 and researching blockchain since 2009, combining software architecture, cryptography, security and developer education.'
+    ],
+    takeaways: [
+      'How Apeiron separates protected state, policy, and modular execution across Console, ConsoleStorage, and optional Cartridge contracts',
+      'How EXTCODEHASH allowlists and a canonical handshake let each Console independently verify the remote Console, ConsoleStorage, and active Cartridge before interaction',
+      'How separating tokenId, Sign instance identity, and mutable metadata enables explicit reception and provenance-linked recreation without treating metadata as identity-critical state'
+    ],
+    relatedEip: 'Apeiron Self-Sovereign Token Standard Architecture (ERC Proposal)',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Developers', 'Token Architects', 'Smart Contract Engineers', 'Security Researchers'],
+    linkedin: 'https://www.linkedin.com/in/germanabal/',
+    twitter: 'https://x.com/ariutokintumi',
+    telegram: '@llamame',
+    discord: 'ariutokintumi#0001'
   },
   aditya: {
     dayNum: 4,

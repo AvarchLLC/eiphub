@@ -346,6 +346,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-day3')} title="View German Abal's Day 3 session &amp; bio">
+                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (Apeiron Tokens)" />
+                  <span>German Abal</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} title="View Prem Makeig's session &amp; bio">
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
                   <span>Prem Makeig</span>
@@ -683,7 +687,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Prem Makeig</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · German Abal (Apeiron) · Prem Makeig</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

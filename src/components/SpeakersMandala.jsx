@@ -113,7 +113,7 @@ const ALL_SPEAKERS = [
     modalId: 'german-combined',
     name: 'German Abal',
     org: 'EVVM',
-    track: 'Day 1 & Day 4 · Tooling & EVVM',
+    track: 'Day 1, 3 & 4 · Tooling, Tokens & EVVM',
     badgeIcon: '⚡',
     photo: 'Assets/speakers/german-abal.jpg',
     color: '#10b981',
