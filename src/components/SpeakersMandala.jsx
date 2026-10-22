@@ -112,13 +112,13 @@ const ALL_SPEAKERS = [
     id: 'german',
     modalId: 'german-combined',
     name: 'German Abal',
-    org: 'EVVM',
-    track: 'Day 1, 3 & 4 · Tooling, Tokens & EVVM',
+    org: 'EVVM.org · Apeiron Protocol',
+    track: 'Day 3 & 4 · Tokens & EVVM Architecture',
     badgeIcon: '⚡',
     photo: 'Assets/speakers/german-abal.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
   },
   /* Harish Kotra (Commented out)
   {

@@ -92,10 +92,6 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 1 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} title="View German Abal's session &amp; bio">
-                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
-                  <span>German Abal (EVVM)</span>
-                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('jochem')} title="View Jochem Brouwer's session &amp; bio">
                   <img src="Assets/photos/speaker-jochem-brouwer.jpg" alt="Jochem Brouwer" />
                   <span>Jochem Brouwer</span>
@@ -589,7 +585,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>German Abal (EVVM) · Jochem Brouwer · Matthew Keil (Lodestar) · Pooja Ranjan · Rafael Matias</span>
+              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Jochem Brouwer · Matthew Keil (Lodestar) · Pooja Ranjan · Rafael Matias</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

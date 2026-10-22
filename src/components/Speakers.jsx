@@ -28,7 +28,7 @@ export default function Speakers() {
         <div className="spk-metric-card">
           <div className="spk-metric-icon">⚡</div>
           <div>
-            <div className="spk-metric-num">24 Sessions</div>
+            <div className="spk-metric-num">23 Sessions</div>
             <div className="spk-metric-label">Keynotes, Clinics &amp; Panels</div>
           </div>
         </div>
@@ -65,12 +65,12 @@ export default function Speakers() {
           <button type="button" className="spk-day-tab-btn" data-spk-day="1" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(1)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#fbbf24' }}></span>
             <span>Day 1 · Nov 3 (EIP Process &amp; General Overview)</span>
-            <span className="spk-count-pill">6 Speakers</span>
+            <span className="spk-count-pill">4 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="2" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(2)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#818cf8' }}></span>
             <span>Day 2 · Nov 4 (Protocol EIPs &amp; Network Upgrades)</span>
-            <span className="spk-count-pill">5 Speakers</span>
+            <span className="spk-count-pill">7 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="3" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(3)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#38bdf8' }}></span>
@@ -523,12 +523,12 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 8. German Abal (Day 1, Day 3 & Day 4 Triple Track - Combined Card on All Days) */}
-        <div className="speaker-card spk-combined spk-multi-day" data-spk-day="all" data-popular-rank="8" id="speaker-card-german-combined" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} role="button" tabIndex={0} title="Click to view German Abal's triple sessions and bio">
-          <div className="speaker-card-top-bar" style={{ background: 'linear-gradient(90deg, #fbbf24 0%, #38bdf8 50%, #10b981 100%)' }}></div>
+        {/* 8. German Abal (Day 3 & Day 4 Dual Track - Combined Card on All Days) */}
+        <div className="speaker-card spk-combined spk-multi-day" data-spk-day="all" data-popular-rank="8" id="speaker-card-german-combined" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} role="button" tabIndex={0} title="Click to view German Abal's dual sessions and bio">
+          <div className="speaker-card-top-bar" style={{ background: 'linear-gradient(90deg, #38bdf8 0%, #10b981 100%)' }}></div>
           <div className="speaker-photo-wrap">
-            <span className="spk-photo-track-badge" style={{ background: 'linear-gradient(90deg, rgba(245,158,11,0.3) 0%, rgba(56,189,248,0.3) 50%, rgba(16,185,129,0.3) 100%)', color: '#fde68a', border: '1px solid rgba(245,158,11,0.5)' }}>Day 1, 3 &amp; 4 · 3 Tracks</span>
-            <span className="spk-photo-verified" style={{ color: '#fde68a', background: 'rgba(245,158,11,0.22)', borderColor: 'rgba(245,158,11,0.45)' }}>⚡ 3 Tracks</span>
+            <span className="spk-photo-track-badge" style={{ background: 'linear-gradient(90deg, rgba(56,189,248,0.3) 0%, rgba(16,185,129,0.3) 100%)', color: '#7dd3fc', border: '1px solid rgba(56,189,248,0.5)' }}>Day 3 &amp; 4 · Dual Track</span>
+            <span className="spk-photo-verified" style={{ color: '#7dd3fc', background: 'rgba(56,189,248,0.22)', borderColor: 'rgba(56,189,248,0.45)' }}>⚡ 2 Tracks</span>
             <img src="Assets/speakers/german-abal.jpg" alt="German Abal" className="speaker-photo-img" loading="lazy" />
           </div>
           <div className="speaker-info">
@@ -540,14 +540,13 @@ export default function Speakers() {
               </a>
             </div>
             <div className="speaker-meta-row">
-              <div className="speaker-org-tag" style={{ background: 'rgba(245,158,11,0.12)', color: '#fbbf24', borderColor: 'rgba(245,158,11,0.3)' }}>EVVM.org · ETH Cinco De Mayo · Apeiron Protocol</div>
+              <div className="speaker-org-tag" style={{ background: 'rgba(56,189,248,0.12)', color: '#38bdf8', borderColor: 'rgba(56,189,248,0.3)' }}>EVVM.org · ETH Cinco De Mayo · Apeiron Protocol</div>
             </div>
             <p className="speaker-designation">Founder &amp; Principal Architect, EVVM.org · Apeiron Protocol</p>
           </div>
           <div className="speaker-talk-snip">
-            <div className="talk-format-badge" style={{ background: 'linear-gradient(90deg, rgba(245,158,11,0.2) 0%, rgba(56,189,248,0.2) 50%, rgba(16,185,129,0.2) 100%)', color: '#fde68a', border: '1px solid rgba(245,158,11,0.35)' }}>⚡ 3 Confirmed Sessions Across Summit</div>
+            <div className="talk-format-badge" style={{ background: 'linear-gradient(90deg, rgba(56,189,248,0.2) 0%, rgba(16,185,129,0.2) 100%)', color: '#7dd3fc', border: '1px solid rgba(56,189,248,0.35)' }}>⚡ 2 Confirmed Sessions Across Summit</div>
             <div className="talk-title-text" style={{ fontSize: '12px', lineHeight: '1.4' }}>
-              <div style={{ marginBottom: '3px' }}><span style={{ color: '#fbbf24', fontWeight: '700' }}>Day 1:</span> EIP Process &amp; Standards Tooling Workflows</div>
               <div style={{ marginBottom: '3px' }}><span style={{ color: '#38bdf8', fontWeight: '700' }}>Day 3:</span> Self-Sovereign Tokens: Rethinking Onchain Representation</div>
               <div><span style={{ color: '#6ee7b7', fontWeight: '700' }}>Day 4:</span> EVVM: Virtual Machine Architecture &amp; State Scaling</div>
             </div>
@@ -562,49 +561,7 @@ export default function Speakers() {
               </a>
             </div>
             <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')}>
-              <span>View All 3 Talks</span>
-              <span>➔</span>
-            </button>
-          </div>
-        </div>
-
-        {/* German Abal (Day 1 Track Filter Only) */}
-        <div className="speaker-card spk-day-1 spk-single-day spk-hidden" data-spk-day="1" data-popular-rank="8" id="speaker-card-german-eiplabs" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-eiplabs')} role="button" tabIndex={0} title="Click to view German Abal's Day 1 talk and bio">
-          <div className="speaker-card-top-bar"></div>
-          <div className="speaker-photo-wrap">
-            <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
-            <span className="spk-photo-verified">✓ Confirmed</span>
-            <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EIP Labs)" className="speaker-photo-img" loading="lazy" />
-          </div>
-          <div className="speaker-info">
-            <div className="speaker-name-row">
-              <h4 className="speaker-name">German Abal</h4>
-              <a href="https://x.com/ariutokintumi" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="German Abal on X (@ariutokintumi)" onClick={(e) => e.stopPropagation()}>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                <span>@ariutokintumi</span>
-              </a>
-            </div>
-            <div className="speaker-meta-row">
-              <div className="speaker-org-tag">EVVM · EIP Labs</div>
-            </div>
-            <p className="speaker-designation">Co-Founder &amp; CTO, EVVM · Standards Contributor</p>
-          </div>
-          <div className="speaker-talk-snip">
-            <div className="talk-format-badge" style={{ background: 'rgba(245,158,11,0.18)', color: '#fbbf24' }}>⚡ Tooling &amp; Standards Talk</div>
-            <div className="talk-title-text">EIP Process &amp; Standards Tooling: Accelerating Proposal Workflows</div>
-            <div className="talk-time-text">⏱️ Session Time: TBA · Day 1 Track</div>
-          </div>
-          <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
-            <div className="speaker-social-icons">
-              <a href="https://www.linkedin.com/in/germanabal/" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="German Abal on LinkedIn" aria-label="LinkedIn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              </a>
-              <a href="https://x.com/ariutokintumi" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="German Abal (@ariutokintumi) on X" aria-label="X">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-            </div>
-            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-eiplabs')}>
-              <span>View Talk &amp; Bio</span>
+              <span>View Both Talks</span>
               <span>➔</span>
             </button>
           </div>

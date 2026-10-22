@@ -2057,27 +2057,26 @@ const SPEAKERS_DATA = {
 
   // --- DUAL TRACK COMBINED PROFILES (FOR ALL DAYS VIEW) ---
   'german-combined': {
-    dayNum: 1,
+    dayNum: 3,
     name: 'German Abal',
     photo: 'Assets/speakers/german-abal.jpg',
     affiliation: 'EVVM.org · ETH Cinco De Mayo · Apeiron Protocol',
     designation: 'Founder & Principal Architect, EVVM.org · Apeiron Protocol',
-    day: 'Day 1 (Nov 3), Day 3 (Nov 5) & Day 4 (Nov 6)',
-    track: 'Triple Track Speaker: EIP Process (Day 1) + Self-Sovereign Tokens (Day 3) + EVVM State Scaling (Day 4)',
-    time: 'Day 1: Standards Talk · Day 3: 20m Presentation · Day 4: 11:00 AM',
-    format: '⚡ 3 Scheduled Technical Sessions Across Summit',
-    talkTitle: 'Triple Sessions: Tooling Workflows, Self-Sovereign Tokens & EVVM Architecture',
-    talkDesc: 'German Abal presents three specialized sessions across Devcon 8: (1) On Day 1, exploring open tooling and EIP process pipelines; (2) On Day 3, presenting Apeiron Protocol and self-sovereign token architectures with receiver-side verification and protected state; (3) On Day 4, breaking down EVVM virtual machine scalability, non-conflicting state-transition proofs, and institutional rails.',
+    day: 'Day 3 (Nov 5) & Day 4 (Nov 6)',
+    track: 'Dual Track Speaker: Self-Sovereign Tokens (Day 3) + EVVM State Scaling (Day 4)',
+    time: 'Day 3: 20m Presentation · Day 4: 11:00 AM',
+    format: '⚡ 2 Scheduled Technical Sessions Across Summit',
+    talkTitle: 'Dual Track Sessions: Self-Sovereign Tokens & EVVM Architecture',
+    talkDesc: 'German Abal presents two specialized sessions across Devcon 8: (1) On Day 3, presenting Apeiron Protocol and self-sovereign token architectures with receiver-side verification and protected state; (2) On Day 4, breaking down EVVM virtual machine scalability, non-conflicting state-transition proofs, and institutional rails.',
     bio: [
       'Germán Abal (ariutokintumi) is a protocol architect, inventor, entrepreneur, and the founder and principal architect of EVVM.org and Apeiron Protocol.',
       'Building internet products since 1996 and researching blockchain since 2009, he combines software architecture, cryptography, security, and developer education across open Ethereum standards.'
     ],
     takeaways: [
-      'Day 1 Session: Tooling and workflow automation for accelerating proposal lifecycle and PR readiness',
       'Day 3 Session: Self-sovereign tokens in Apeiron Protocol — isolating protected state, EXTCODEHASH remote compliance, and receiver-side acceptance',
       'Day 4 Session: Virtualizing the EVM to eliminate state bloat and execute off-chain multi-threaded state transitions with L1 dispute guarantees'
     ],
-    relatedEip: 'EIP Process Tooling · Apeiron Token Standard · EVVM Architecture',
+    relatedEip: 'Apeiron Token Standard · EVVM State Scaling Architecture',
     relatedEipUrl: 'https://eips.ethereum.org',
     audience: ['Developers', 'Token Architects', 'Smart Contract Engineers', 'Protocol Researchers'],
     linkedin: 'https://www.linkedin.com/in/germanabal/',
