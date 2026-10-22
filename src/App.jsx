@@ -51,8 +51,11 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/speakers" element={<SpeakersPage />} />
+            <Route path="/speaker" element={<SpeakersPage />} />
             <Route path="/agenda" element={<AgendaPage />} />
+            <Route path="/schedule" element={<AgendaPage />} />
             <Route path="/partners" element={<PartnersPage />} />
+            <Route path="/partner" element={<PartnersPage />} />
             <Route path="/student-initiative" element={<StudentInitiativePage />} />
             <Route path="/students" element={<StudentInitiativePage />} />
             <Route path="/student-pass" element={<StudentInitiativePage />} />
