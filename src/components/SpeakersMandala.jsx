@@ -1,86 +1,60 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 21 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 19 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
-  // 1. Pooja Ranjan
+  // 1. Abhay Singh
   {
-    id: 'pooja',
-    modalId: 'pooja',
-    name: 'Pooja Ranjan',
-    org: 'ECH Institute',
-    track: 'Day 1 · Keynote & Governance',
-    badgeIcon: '🎙️',
-    photo: 'Assets/speakers/pooja-ranjan.jpg',
-    color: '#fbbf24',
-    glowColor: 'rgba(251, 191, 36, 0.75)',
+    id: 'abhay',
+    modalId: 'abhay',
+    name: 'Abhay Singh',
+    org: 'HyprEarn',
+    track: 'Day 4 · AI & Crypto Rails',
+    badgeIcon: '🤖',
+    photo: 'Assets/speakers/abhay-singh.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 2. Jochem Brouwer
+  // 2. Abhimanyu Nag
   {
-    id: 'jochem',
-    modalId: 'jochem',
-    name: 'Jochem Brouwer',
-    org: 'Ethereum Foundation · EIP Editor',
-    track: 'Day 1 · EIP Process Review',
-    badgeIcon: '🖋️',
-    photo: 'Assets/photos/speaker-jochem-brouwer.jpg',
-    color: '#fbbf24',
-    glowColor: 'rgba(251, 191, 36, 0.75)',
+    id: 'abhimanyu',
+    modalId: 'abhimanyu',
+    name: 'Abhimanyu Nag',
+    org: 'Univ. of Alberta / Canvas',
+    track: 'Day 2 · Single Slot Finality',
+    badgeIcon: '⏱️',
+    photo: 'Assets/speakers/abhimanyu-nag.png',
+    color: '#a855f7',
+    glowColor: 'rgba(168, 85, 247, 0.75)',
     dotType: 'yellow'
   },
-  // 3. Justin Florentine
+  // 3. Aditya Kumar
   {
-    id: 'justin',
-    modalId: 'justin',
-    name: 'Justin Florentine',
-    org: 'Besu',
-    track: 'Day 2 · LUCID Encrypted Mempool',
+    id: 'aditya',
+    modalId: 'aditya',
+    name: 'Aditya Kumar',
+    org: 'Vara / Gear Foundation',
+    track: 'Day 4 · Privacy & Onchain Credit',
     badgeIcon: '🔐',
-    photo: 'Assets/speakers/justin-florentine.jpg',
-    color: '#818cf8',
-    glowColor: 'rgba(129, 140, 248, 0.75)',
-    dotType: 'blue'
+    photo: 'Assets/speakers/aditya-kumar.jpg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
   },
-  // 4. Stefan
+  // 4. Charchit Kumawat
   {
-    id: 'stefan',
-    modalId: 'stefan',
-    name: 'Stefan',
-    org: 'ethPandaOps · EF',
-    track: 'Day 1 · Devnets & Upgrades',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/stefan.jpg',
-    color: '#38bdf8',
-    glowColor: 'rgba(56, 189, 248, 0.75)',
-    dotType: 'blue'
+    id: 'charchit',
+    modalId: 'charchit',
+    name: 'Charchit Kumawat',
+    org: 'GeSIM.xyz',
+    track: 'Day 4 · DePIN & Privacy',
+    badgeIcon: '📡',
+    photo: 'Assets/speakers/charchit-kumawat.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
   },
-  // 5. Rafael Matias
-  {
-    id: 'rafael',
-    modalId: 'rafael',
-    name: 'Rafael Matias',
-    org: 'ethPandaOps',
-    track: 'Day 1 · Kurtosis Tooling',
-    badgeIcon: '🛠️',
-    photo: 'Assets/speakers/rafael.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
-  },
-  // 6. Maria Silva
-  {
-    id: 'maria',
-    modalId: 'maria',
-    name: 'Maria Silva',
-    org: 'Ethereum Foundation',
-    track: 'Day 2 · Glamsterdam Repricing',
-    badgeIcon: '📊',
-    photo: 'Assets/speakers/maria-silva.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
-  },
-  // 7. Dr. Daniel Nagy
+  /* Dr. Daniel Nagy (Commented out)
   {
     id: 'daniel',
     modalId: 'daniel',
@@ -92,6 +66,46 @@ const ALL_SPEAKERS = [
     color: '#38bdf8',
     glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
+  },
+  */
+  // 5. Dhruv Gera
+  {
+    id: 'dhruv',
+    modalId: 'dhruv',
+    name: 'Dhruv Gera',
+    org: 'DashX',
+    track: 'Day 4 · ERC-7984 Confidential Tokens',
+    badgeIcon: '💳',
+    photo: 'Assets/speakers/dhruv-gera.jpg',
+    color: '#6ee7b7',
+    glowColor: 'rgba(110, 231, 183, 0.75)',
+    dotType: 'yellow'
+  },
+  // 6. Dhruvang Choudhari
+  {
+    id: 'dhruvang',
+    modalId: 'dhruvang',
+    name: 'Dhruvang Choudhari',
+    org: 'AMINA Bank',
+    track: 'Day 3 · ERC Standards',
+    badgeIcon: '🏦',
+    photo: 'Assets/speakers/dhruvang-choudhari.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
+  },
+  // 7. Gavin Birch
+  {
+    id: 'gavin',
+    modalId: 'gavin-combined',
+    name: 'Gavin Birch',
+    org: 'Armada',
+    track: 'Day 2 & Day 4 · Protocol & Enterprise',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'yellow'
   },
   // 8. German Abal
   {
@@ -106,98 +120,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 9. Gavin Birch
-  {
-    id: 'gavin',
-    modalId: 'gavin',
-    name: 'Gavin Birch',
-    org: 'Armada',
-    track: 'Day 2 · Frame Txs (EIP-8141)',
-    badgeIcon: '🛡️',
-    photo: 'Assets/speakers/gavin-birch.jpg',
-    color: '#818cf8',
-    glowColor: 'rgba(129, 140, 248, 0.75)',
-    dotType: 'blue'
-  },
-  // 10. Simona Serban
-  {
-    id: 'simona',
-    modalId: 'simona',
-    name: 'Simona Serban',
-    org: 'ETHCluj',
-    track: 'Day 4 · Trustless Collaboration',
-    badgeIcon: '🤝',
-    photo: 'Assets/speakers/simona-serban.jpeg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
-  },
-  // 11. Abhimanyu Nag
-  {
-    id: 'abhimanyu',
-    modalId: 'abhimanyu',
-    name: 'Abhimanyu Nag',
-    org: 'Univ. of Alberta / Canvas',
-    track: 'Day 2 · Single Slot Finality',
-    badgeIcon: '⏱️',
-    photo: 'Assets/speakers/abhimanyu-nag.png',
-    color: '#a855f7',
-    glowColor: 'rgba(168, 85, 247, 0.75)',
-    dotType: 'yellow'
-  },
-  // 12. Rachit Anand Srivastava
-  {
-    id: 'rachit',
-    modalId: 'rachit',
-    name: 'Rachit Anand Srivastava',
-    org: 'Avail Project',
-    track: 'Day 2 · PeerDAS & ZK',
-    badgeIcon: '🔬',
-    photo: 'Assets/speakers/rachit-anand-srivastava.png',
-    color: '#ec4899',
-    glowColor: 'rgba(236, 72, 153, 0.75)',
-    dotType: 'blue'
-  },
-  // 13. Abhay Singh
-  {
-    id: 'abhay',
-    modalId: 'abhay',
-    name: 'Abhay Singh',
-    org: 'HyprEarn',
-    track: 'Day 4 · AI & Crypto Rails',
-    badgeIcon: '🤖',
-    photo: 'Assets/speakers/abhay-singh.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
-  },
-  // 14. Dhruvang Choudhari
-  {
-    id: 'dhruvang',
-    modalId: 'dhruvang',
-    name: 'Dhruvang Choudhari',
-    org: 'AMINA Bank',
-    track: 'Day 3 · ERC Standards',
-    badgeIcon: '🏦',
-    photo: 'Assets/speakers/dhruvang-choudhari.jpg',
-    color: '#fbbf24',
-    glowColor: 'rgba(251, 191, 36, 0.75)',
-    dotType: 'yellow'
-  },
-  // 15. Prem Makeig
-  {
-    id: 'prem',
-    modalId: 'prem',
-    name: 'Prem Makeig',
-    org: 'Unruggable',
-    track: 'Day 3 · Agent Identity & ERC-8004',
-    badgeIcon: '🪪',
-    photo: 'Assets/speakers/prem-makeig.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
-  },
-  // 16. Harish Kotra
+  /* Harish Kotra (Commented out)
   {
     id: 'harish',
     modalId: 'harish',
@@ -210,7 +133,34 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 17. Kevin Jones
+  */
+  // 9. Jochem Brouwer
+  {
+    id: 'jochem',
+    modalId: 'jochem',
+    name: 'Jochem Brouwer',
+    org: 'Ethereum Foundation · EIP Editor',
+    track: 'Day 1 · EIP Process Review',
+    badgeIcon: '🖋️',
+    photo: 'Assets/photos/speaker-jochem-brouwer.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
+  },
+  // 10. Justin Florentine
+  {
+    id: 'justin',
+    modalId: 'justin',
+    name: 'Justin Florentine',
+    org: 'Besu',
+    track: 'Day 2 · LUCID Encrypted Mempool',
+    badgeIcon: '🔐',
+    photo: 'Assets/speakers/justin-florentine.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'blue'
+  },
+  // 11. Kevin Jones
   {
     id: 'kevin',
     modalId: 'kevin',
@@ -223,46 +173,98 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Aditya Kumar
+  // 12. Maria Silva
   {
-    id: 'aditya',
-    modalId: 'aditya',
-    name: 'Aditya Kumar',
-    org: 'Vara / Gear Foundation',
-    track: 'Day 4 · Privacy & Onchain Credit',
-    badgeIcon: '🔐',
-    photo: 'Assets/speakers/aditya-kumar.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
+    id: 'maria',
+    modalId: 'maria',
+    name: 'Maria Silva',
+    org: 'Ethereum Foundation',
+    track: 'Day 2 · Glamsterdam Repricing',
+    badgeIcon: '📊',
+    photo: 'Assets/speakers/maria-silva.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
   },
-  // 19. Dhruv Gera
+  // 13. Pooja Ranjan
   {
-    id: 'dhruv',
-    modalId: 'dhruv',
-    name: 'Dhruv Gera',
-    org: 'DashX',
-    track: 'Day 4 · ERC-7984 Confidential Tokens',
-    badgeIcon: '💳',
-    photo: 'Assets/speakers/dhruv-gera.jpg',
-    color: '#6ee7b7',
-    glowColor: 'rgba(110, 231, 183, 0.75)',
-    dotType: 'yellow'
-  },
-  // 20. Charchit Kumawat
-  {
-    id: 'charchit',
-    modalId: 'charchit',
-    name: 'Charchit Kumawat',
-    org: 'GeSIM.xyz',
-    track: 'Day 4 · DePIN & Privacy',
-    badgeIcon: '📡',
-    photo: 'Assets/speakers/charchit-kumawat.jpg',
+    id: 'pooja',
+    modalId: 'pooja',
+    name: 'Pooja Ranjan',
+    org: 'ECH Institute',
+    track: 'Day 1 · Keynote & Governance',
+    badgeIcon: '🎙️',
+    photo: 'Assets/speakers/pooja-ranjan.jpg',
     color: '#fbbf24',
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 21. Yudhishthra
+  // 14. Prem Makeig
+  {
+    id: 'prem',
+    modalId: 'prem',
+    name: 'Prem Makeig',
+    org: 'Unruggable',
+    track: 'Day 3 · Agent Identity & ERC-8004',
+    badgeIcon: '🪪',
+    photo: 'Assets/speakers/prem-makeig.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
+  },
+  // 15. Rachit Anand Srivastava
+  {
+    id: 'rachit',
+    modalId: 'rachit',
+    name: 'Rachit Anand Srivastava',
+    org: 'Avail Project',
+    track: 'Day 2 · PeerDAS & ZK',
+    badgeIcon: '🔬',
+    photo: 'Assets/speakers/rachit-anand-srivastava.png',
+    color: '#ec4899',
+    glowColor: 'rgba(236, 72, 153, 0.75)',
+    dotType: 'blue'
+  },
+  // 16. Rafael Matias
+  {
+    id: 'rafael',
+    modalId: 'rafael',
+    name: 'Rafael Matias',
+    org: 'ethPandaOps',
+    track: 'Day 1 · Kurtosis Tooling',
+    badgeIcon: '🛠️',
+    photo: 'Assets/speakers/rafael.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
+  },
+  // 17. Simona Serban
+  {
+    id: 'simona',
+    modalId: 'simona',
+    name: 'Simona Serban',
+    org: 'ETHCluj',
+    track: 'Day 4 · Trustless Collaboration',
+    badgeIcon: '🤝',
+    photo: 'Assets/speakers/simona-serban.jpeg',
+    color: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.75)',
+    dotType: 'yellow'
+  },
+  // 18. Stefan
+  {
+    id: 'stefan',
+    modalId: 'stefan',
+    name: 'Stefan',
+    org: 'ethPandaOps · EF',
+    track: 'Day 1 · Devnets & Upgrades',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/stefan.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
+  },
+  // 19. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',
@@ -529,8 +531,8 @@ export default function SpeakersMandala() {
     return () => clearInterval(timer);
   }, [isShuffling]);
 
-  const outerSpeakers = speakersList.slice(0, 11);
-  const innerSpeakers = speakersList.slice(11, 21);
+  const outerSpeakers = speakersList.slice(0, 10);
+  const innerSpeakers = speakersList.slice(10, 19);
 
   return (
     <section className="speakers-mandala-section" id="speakers-preview">
@@ -641,7 +643,7 @@ export default function SpeakersMandala() {
           </div>
 
           {/* ============================================================== */}
-          {/* ORBIT 1 (OUTER CIRCLE): 11 SPEAKERS MOVING CLOCKWISE */}
+          {/* ORBIT 1 (OUTER CIRCLE): 10 SPEAKERS MOVING CLOCKWISE */}
           {/* ============================================================== */}
           <div className="mandala-orbit-wheel wheel-outer" aria-label="Outer speakers track">
             {outerSpeakers.map((spk, idx) => (
@@ -682,7 +684,7 @@ export default function SpeakersMandala() {
           </div>
 
           {/* ============================================================== */}
-          {/* ORBIT 2 (INNER CIRCLE): 10 SPEAKERS MOVING COUNTER-CLOCKWISE */}
+          {/* ORBIT 2 (INNER CIRCLE): 9 SPEAKERS MOVING COUNTER-CLOCKWISE */}
           {/* ============================================================== */}
           <div className="mandala-orbit-wheel wheel-inner" aria-label="Inner speakers track">
             {innerSpeakers.map((spk, idx) => (

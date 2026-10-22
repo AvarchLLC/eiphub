@@ -627,6 +627,124 @@ export const SPEAKERS_DATA = {
     twitter: 'https://x.com/harishkotra',
     telegram: '@HarishKotra'
   },
+  gavin: {
+    dayNum: 2,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
+    designation: 'Cofounder, Armada · Operational Privacy & Protocol Design',
+    day: 'Day 2 (Nov 4) & Day 4 (Nov 6)',
+    track: 'Dual Track Speaker: Protocol EIPs (Day 2) + Enterprise Readiness (Day 4)',
+    time: 'Day 2: 12:00 PM · Day 4: 11:00 AM',
+    format: '⚡ 2 Scheduled Technical Sessions (Day 2 & Day 4)',
+    talkTitle: 'Dual Sessions: Frame Transactions (EIP-8141) & Onchain Business Infra Guarantees',
+    talkDesc: 'Gavin Birch presents two specialized sessions across the summit: (1) On Day 2 (12:00 PM), examining EIP-8141 Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type using Armada’s shielded payment architecture; (2) On Day 4 (11:00 AM), exploring how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'Day 2 Session: How EIP-8141 separates authorization, gas payment, and execution natively on Ethereum',
+      'Day 2 Session: How shielded payments map onto Frame validation, sponsorship, and execution, plus remaining constraints around public mempool admission',
+      'Day 4 Session: Translating Ethereum trust-minimized guarantees into concrete enterprise business-continuity and risk controls',
+      'Day 4 Session: Why asset-recovery is too weak a test for infrastructure used in ongoing business operations and how privacy infrastructure preserves execution'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions & Enterprise Risk Controls',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Authors', 'Core Developers', 'Protocol Researchers', 'Enterprise Architects', 'Privacy Engineers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
+  'gavin-combined': {
+    dayNum: 2,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
+    designation: 'Cofounder, Armada · Operational Privacy & Protocol Design',
+    day: 'Day 2 (Nov 4) & Day 4 (Nov 6)',
+    track: 'Dual Track Speaker: Protocol EIPs (Day 2) + Enterprise Readiness (Day 4)',
+    time: 'Day 2: 12:00 PM · Day 4: 11:00 AM',
+    format: '⚡ 2 Scheduled Technical Sessions (Day 2 & Day 4)',
+    talkTitle: 'Dual Sessions: Frame Transactions (EIP-8141) & Onchain Business Infra Guarantees',
+    talkDesc: 'Gavin Birch presents two specialized sessions across the summit: (1) On Day 2 (12:00 PM), examining EIP-8141 Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type using Armada’s shielded payment architecture; (2) On Day 4 (11:00 AM), exploring how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'Day 2 Session: How EIP-8141 separates authorization, gas payment, and execution natively on Ethereum',
+      'Day 2 Session: How shielded payments map onto Frame validation, sponsorship, and execution, plus remaining constraints around public mempool admission',
+      'Day 4 Session: Translating Ethereum trust-minimized guarantees into concrete enterprise business-continuity and risk controls',
+      'Day 4 Session: Why asset-recovery is too weak a test for infrastructure used in ongoing business operations and how privacy infrastructure preserves execution'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions & Enterprise Risk Controls',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Authors', 'Core Developers', 'Protocol Researchers', 'Enterprise Architects', 'Privacy Engineers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
+  'gavin-day2': {
+    dayNum: 2,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
+    designation: 'Cofounder, Armada',
+    day: 'Day 2 – November 4, 2026',
+    track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
+    time: '⏱️ 12:00 PM · Day 2 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Frame txs & private payments: EIP-8141 in practice',
+    talkDesc: 'EIP-8141 will enable Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type. Using Armada’s shielded payment architecture as a case study, this talk explores what Frames enable for private transactions, where the current proposal still creates constraints, and what a practical implementation could look like. Privacy systems have some of the hardest tx-submission problems, and rather than depending upon external infra providers, Frames could make private txs substantially more native for Ethereum.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'How EIP-8141 separates authorization, gas payment, and execution natively on Ethereum',
+      'How shielded payments map onto Frame validation, sponsorship, and execution',
+      'The remaining engineering and privacy constraints around public mempool admission, state dependencies, sponsorship, and metadata leakage'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Authors', 'Core Developers', 'Protocol Researchers', 'Privacy Engineers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
+  'gavin-day4': {
+    dayNum: 4,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
+    designation: 'Cofounder, Armada',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ 11:00 AM · Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'More like Ethereum, less like SaaS: Infra guarantees for onchain business',
+    talkDesc: 'As businesses move payments, treasury, and financial operations onchain, more and more they depend on infrastructure they do not control. This talk explores how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down. As businesses move financial operations onchain, they need infrastructure that works even when operators, intermediaries, or governance fail.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'How Ethereum’s trust-minimized guarantees translate into concrete enterprise risk controls',
+      'Why asset-recovery is too weak a test for infrastructure used in ongoing business operations',
+      'How privacy infrastructure illustrates the need to preserve useful properties such as privacy, access, and execution, even when operators disappear or are replaced'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions & Enterprise Risk Controls',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Enterprise Architects', 'DeFi Treasuries', 'Core Developers', 'Protocol Designers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
   kevin: {
     dayNum: 4,
     name: 'Kevin Jones',

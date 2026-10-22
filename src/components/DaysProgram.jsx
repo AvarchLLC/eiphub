@@ -92,18 +92,6 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 1 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} title="View Pooja Ranjan's session &amp; bio">
-                  <img src="Assets/speakers/pooja-ranjan.jpg" alt="Pooja Ranjan" />
-                  <span>Pooja Ranjan</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan's session &amp; bio">
-                  <img src="Assets/speakers/stefan.jpg" alt="Stefan (@stefan_star)" />
-                  <span>Stefan</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rafael')} title="View Rafael Matias's session &amp; bio">
-                  <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" />
-                  <span>Rafael Matias</span>
-                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} title="View German Abal's session &amp; bio">
                   <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
                   <span>German Abal (EVVM)</span>
@@ -111,6 +99,18 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('jochem')} title="View Jochem Brouwer's session &amp; bio">
                   <img src="Assets/photos/speaker-jochem-brouwer.jpg" alt="Jochem Brouwer" />
                   <span>Jochem Brouwer</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} title="View Pooja Ranjan's session &amp; bio">
+                  <img src="Assets/speakers/pooja-ranjan.jpg" alt="Pooja Ranjan" />
+                  <span>Pooja Ranjan</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rafael')} title="View Rafael Matias's session &amp; bio">
+                  <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" />
+                  <span>Rafael Matias</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan's session &amp; bio">
+                  <img src="Assets/speakers/stefan.jpg" alt="Stefan (@stefan_star)" />
+                  <span>Stefan</span>
                 </button>
               </div>
             </div>
@@ -209,25 +209,25 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Featured Day 2 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} title="View Abhimanyu Nag's session & bio">
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} title="View Abhimanyu Nag's session &amp; bio">
                   <img src="Assets/speakers/abhimanyu-nag.png" alt="Abhimanyu Nag" />
                   <span>Abhimanyu Nag</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('justin')} title="View Justin Florentine's session & bio">
-                  <img src="Assets/speakers/justin-florentine.jpg" alt="Justin Florentine" />
-                  <span>Justin Florentine</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
-                  <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
-                  <span>Rachit Anand Srivastava</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')} title="View Gavin Birch's session &amp; bio">
                   <img src="Assets/speakers/gavin-birch.jpg" alt="Gavin Birch" />
                   <span>Gavin Birch</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('justin')} title="View Justin Florentine's session &amp; bio">
+                  <img src="Assets/speakers/justin-florentine.jpg" alt="Justin Florentine" />
+                  <span>Justin Florentine</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('maria')} title="View Maria Silva's session &amp; bio">
                   <img src="Assets/speakers/maria-silva.jpg" alt="Maria Silva" />
                   <span>Maria Silva</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
+                  <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
+                  <span>Rachit Anand Srivastava</span>
                 </button>
               </div>
             </div>
@@ -334,10 +334,10 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 3 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} title="View Dr. Daniel Nagy's session &amp; bio">
+                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} title="View Dr. Daniel Nagy's session &amp; bio">
                   <img src="Assets/speakers/daniel-nagy.png" alt="Dr. Daniel Nagy" />
                   <span>Dr. Daniel Nagy</span>
-                </button>
+                </button> */}
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruvang')} title="View Dhruvang Choudhari's session &amp; bio">
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
@@ -346,10 +346,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
                   <span>Prem Makeig</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
+                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
                   <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
                   <span>Harish Kotra</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -447,13 +447,9 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 4 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-evvm')} title="View German Abal (EVVM)'s session &amp; bio">
-                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
-                  <span>German Abal (EVVM)</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('kevin')} title="View Kevin Jones's session &amp; bio">
-                  <img src="Assets/speakers/kevin-jones.jpg" alt="Kevin Jones" />
-                  <span>Kevin Jones</span>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhay')} title="View Abhay Singh's session &amp; bio">
+                  <img src="Assets/speakers/abhay-singh.jpg" alt="Abhay Singh" />
+                  <span>Abhay Singh</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('aditya')} title="View Aditya Kumar's session &amp; bio">
                   <img src="Assets/speakers/aditya-kumar.jpg" alt="Aditya Kumar" />
@@ -463,25 +459,29 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/charchit-kumawat.jpg" alt="Charchit Kumawat" />
                   <span>Charchit Kumawat</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhay')} title="View Abhay Singh's session &amp; bio">
-                  <img src="Assets/speakers/abhay-singh.jpg" alt="Abhay Singh" />
-                  <span>Abhay Singh</span>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruv')} title="View Dhruv Gera's session &amp; bio">
+                  <img src="Assets/speakers/dhruv-gera.jpg" alt="Dhruv Gera" />
+                  <span>Dhruv Gera</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-evvm')} title="View German Abal (EVVM)'s session &amp; bio">
+                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
+                  <span>German Abal (EVVM)</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('kevin')} title="View Kevin Jones's session &amp; bio">
+                  <img src="Assets/speakers/kevin-jones.jpg" alt="Kevin Jones" />
+                  <span>Kevin Jones</span>
                 </button>
                 {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('loring')} title="View Loring Harkness's session &amp; bio">
                   <img src="Assets/speakers/loring-harkness.jpg" alt="Loring Harkness" />
                   <span>Loring Harkness</span>
                 </button> */}
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} title="View Yudhishthra's session &amp; bio">
-                  <img src="Assets/speakers/yudhishthra.jpg" alt="Yudhishthra" />
-                  <span>Yudhishthra</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruv')} title="View Dhruv Gera's session &amp; bio">
-                  <img src="Assets/speakers/dhruv-gera.jpg" alt="Dhruv Gera" />
-                  <span>Dhruv Gera</span>
-                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('simona')} title="View Simona Serban's session &amp; bio">
                   <img src="Assets/speakers/simona-serban.jpeg" alt="Simona Serban" />
                   <span>Simona Serban</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')} title="View Yudhishthra's session &amp; bio">
+                  <img src="Assets/speakers/yudhishthra.jpg" alt="Yudhishthra" />
+                  <span>Yudhishthra</span>
                 </button>
               </div>
             </div>
@@ -577,7 +577,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Pooja Ranjan · Stefan · Rafael Matias · German Abal · Jochem Brouwer</span>
+              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>German Abal (EVVM) · Jochem Brouwer · Pooja Ranjan · Rafael Matias · Stefan</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -628,7 +628,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Justin Florentine · Abhimanyu Nag · Rachit Anand Srivastava · Gavin Birch · Maria Silva</span>
+              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Maria Silva · Rachit Anand Srivastava</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -679,7 +679,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Prem Makeig · Harish Kotra</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Prem Makeig</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -731,7 +731,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>German Abal (EVVM) · Kevin Jones · Aditya Kumar · Charchit Kumawat · Abhay Singh · Yudhishthra · Dhruv Gera · Simona Serban</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Aditya Kumar · Charchit Kumawat · Dhruv Gera · Gavin Birch (Armada) · German Abal (EVVM) · Kevin Jones · Simona Serban · Yudhishthra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

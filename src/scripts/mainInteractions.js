@@ -1144,18 +1144,19 @@ function copyContactEmail(email, btnEl){
   });
 }
 
-// Sort speaker cards in the grid by data-popular-rank (ascending = most popular first)
-function sortSpeakersByPopularity(){
+// Sort speaker cards in the grid alphabetically (A to Z by speaker name)
+function sortSpeakersAlphabetically(){
   var grid = document.getElementById('speakers-grid-container');
   if(!grid) return;
-  var cards = Array.from(grid.querySelectorAll('.speaker-card[data-popular-rank]'));
+  var cards = Array.from(grid.querySelectorAll('.speaker-card'));
   cards.sort(function(a, b){
-    var ra = parseInt(a.getAttribute('data-popular-rank'), 10) || 999;
-    var rb = parseInt(b.getAttribute('data-popular-rank'), 10) || 999;
-    return ra - rb;
+    var nameA = (a.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
+    var nameB = (b.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
+    return nameA.localeCompare(nameB);
   });
   cards.forEach(function(c){ grid.appendChild(c); });
 }
+var sortSpeakersByPopularity = sortSpeakersAlphabetically;
 
 // Summit Speakers Day Filter Controller
 function filterSpeakerDay(day){
@@ -1202,7 +1203,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 21 Unique Technical Leaders (22 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 19 Unique Technical Leaders (21 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1214,11 +1215,11 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 4 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 2 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
-    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 7 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#6ee7b7'; statusText.textContent = 'Day 4 · Nov 6 (Enterprise Readiness & EIPs for Consideration) · 9 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 4 Track · Nov 6, 2026'; }
   }
 
@@ -1232,8 +1233,8 @@ function filterSpeakerDay(day){
   }
   if(noResultsEl) noResultsEl.style.display = 'none';
 
-  // Re-order visible cards by popularity rank
-  sortSpeakersByPopularity();
+  // Re-order visible cards alphabetically (A-Z)
+  sortSpeakersAlphabetically();
 }
 
 
@@ -1314,11 +1315,11 @@ function clearSpeakerSearch(){
   }
 }
 
-// Summit Speakers Sorting Controller (Popular/Featured First vs Alphabetical A-Z vs Z-A)
-var currentSpeakerSortMode = 'popular';
+// Summit Speakers Sorting Controller (Alphabetical A-Z by default, or Z-A)
+var currentSpeakerSortMode = 'alpha-asc';
 
 function sortSpeakers(mode){
-  currentSpeakerSortMode = mode || 'popular';
+  currentSpeakerSortMode = mode || 'alpha-asc';
 
   // Update active state on sort buttons
   var btns = document.querySelectorAll('.spk-sort-btn');
@@ -1342,17 +1343,9 @@ function sortSpeakers(mode){
     var nameA = (a.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
     var nameB = (b.querySelector('.speaker-name')?.textContent || '').trim().toLowerCase();
 
-    if(currentSpeakerSortMode === 'alpha-asc'){
-      return nameA.localeCompare(nameB);
-    } else if(currentSpeakerSortMode === 'alpha-desc'){
+    if(currentSpeakerSortMode === 'alpha-desc'){
       return nameB.localeCompare(nameA);
     } else {
-      // 'popular' mode: Rank by popularity tier (Keynote/EF leaders first, then alphabetical)
-      var rankA = parseInt(a.getAttribute('data-popular-rank') || '99', 10);
-      var rankB = parseInt(b.getAttribute('data-popular-rank') || '99', 10);
-      if(rankA !== rankB){
-        return rankA - rankB;
-      }
       return nameA.localeCompare(nameB);
     }
   });
@@ -1625,13 +1618,73 @@ const SPEAKERS_DATA = {
     name: 'Gavin Birch',
     photo: 'Assets/speakers/gavin-birch.jpg',
     affiliation: 'Armada',
+    designation: 'Cofounder, Armada · Operational Privacy & Protocol Design',
+    day: 'Day 2 (Nov 4) & Day 4 (Nov 6)',
+    track: 'Dual Track Speaker: Protocol EIPs (Day 2) + Enterprise Readiness (Day 4)',
+    time: 'Day 2: 12:00 PM · Day 4: 11:00 AM',
+    format: '⚡ 2 Scheduled Technical Sessions (Day 2 & Day 4)',
+    talkTitle: 'Dual Sessions: Frame Transactions (EIP-8141) & Onchain Business Infra Guarantees',
+    talkDesc: 'Gavin Birch presents two specialized sessions across the summit: (1) On Day 2 (12:00 PM), examining EIP-8141 Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type using Armada’s shielded payment architecture; (2) On Day 4 (11:00 AM), exploring how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'Day 2 Session: How EIP-8141 separates authorization, gas payment, and execution natively on Ethereum',
+      'Day 2 Session: How shielded payments map onto Frame validation, sponsorship, and execution, plus remaining constraints around public mempool admission',
+      'Day 4 Session: Translating Ethereum trust-minimized guarantees into concrete enterprise business-continuity and risk controls',
+      'Day 4 Session: Why asset-recovery is too weak a test for infrastructure used in ongoing business operations and how privacy infrastructure preserves execution'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions & Enterprise Risk Controls',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Authors', 'Core Developers', 'Protocol Researchers', 'Enterprise Architects', 'Privacy Engineers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
+  'gavin-combined': {
+    dayNum: 2,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
+    designation: 'Cofounder, Armada · Operational Privacy & Protocol Design',
+    day: 'Day 2 (Nov 4) & Day 4 (Nov 6)',
+    track: 'Dual Track Speaker: Protocol EIPs (Day 2) + Enterprise Readiness (Day 4)',
+    time: 'Day 2: 12:00 PM · Day 4: 11:00 AM',
+    format: '⚡ 2 Scheduled Technical Sessions (Day 2 & Day 4)',
+    talkTitle: 'Dual Sessions: Frame Transactions (EIP-8141) & Onchain Business Infra Guarantees',
+    talkDesc: 'Gavin Birch presents two specialized sessions across the summit: (1) On Day 2 (12:00 PM), examining EIP-8141 Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type using Armada’s shielded payment architecture; (2) On Day 4 (11:00 AM), exploring how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'Day 2 Session: How EIP-8141 separates authorization, gas payment, and execution natively on Ethereum',
+      'Day 2 Session: How shielded payments map onto Frame validation, sponsorship, and execution, plus remaining constraints around public mempool admission',
+      'Day 4 Session: Translating Ethereum trust-minimized guarantees into concrete enterprise business-continuity and risk controls',
+      'Day 4 Session: Why asset-recovery is too weak a test for infrastructure used in ongoing business operations and how privacy infrastructure preserves execution'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions & Enterprise Risk Controls',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Authors', 'Core Developers', 'Protocol Researchers', 'Enterprise Architects', 'Privacy Engineers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
+  'gavin-day2': {
+    dayNum: 2,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
     designation: 'Cofounder, Armada',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ 12:00 PM · Day 2 (Nov 4)',
+    time: '⏱️ 12:00 PM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'Frame txs & private payments: EIP-8141 in practice',
-    talkDesc: 'EIP-8141 will enable Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type. Using Armada’s shielded payment architecture as a case study, this talk explores what Frames enable for private transactions, where the current proposal still creates constraints, and what a practical implementation could look like.',
+    talkDesc: 'EIP-8141 will enable Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type. Using Armada’s shielded payment architecture as a case study, this talk explores what Frames enable for private transactions, where the current proposal still creates constraints, and what a practical implementation could look like. Privacy systems have some of the hardest tx-submission problems, and rather than depending upon external infra providers, Frames could make private txs substantially more native for Ethereum.',
     bio: [
       'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
       'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
@@ -1644,6 +1697,35 @@ const SPEAKERS_DATA = {
     relatedEip: 'EIP-8141: Frame Transactions',
     relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
     audience: ['Authors', 'Core Developers', 'Protocol Researchers', 'Privacy Engineers'],
+    linkedin: null,
+    twitter: 'https://x.com/Ether_Gavin',
+    telegram: '@gavinly',
+    discord: 'gavinly'
+  },
+  'gavin-day4': {
+    dayNum: 4,
+    name: 'Gavin Birch',
+    photo: 'Assets/speakers/gavin-birch.jpg',
+    affiliation: 'Armada',
+    designation: 'Cofounder, Armada',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
+    time: '⏱️ 11:00 AM · Day 4 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'More like Ethereum, less like SaaS: Infra guarantees for onchain business',
+    talkDesc: 'As businesses move payments, treasury, and financial operations onchain, more and more they depend on infrastructure they do not control. This talk explores how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down. As businesses move financial operations onchain, they need infrastructure that works even when operators, intermediaries, or governance fail.',
+    bio: [
+      'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
+      'His work focuses on operational privacy, mechanism design, and how emerging Ethereum protocol features can reduce reliance on trusted transaction infrastructure.'
+    ],
+    takeaways: [
+      'How Ethereum’s trust-minimized guarantees translate into concrete enterprise risk controls',
+      'Why asset-recovery is too weak a test for infrastructure used in ongoing business operations',
+      'How privacy infrastructure illustrates the need to preserve useful properties such as privacy, access, and execution, even when operators disappear or are replaced'
+    ],
+    relatedEip: 'EIP-8141: Frame Transactions & Enterprise Risk Controls',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8141',
+    audience: ['Enterprise Architects', 'DeFi Treasuries', 'Core Developers', 'Protocol Designers'],
     linkedin: null,
     twitter: 'https://x.com/Ether_Gavin',
     telegram: '@gavinly',
@@ -2258,9 +2340,10 @@ window.addEventListener('keydown', function(e){
   window.openSpeakerModal = openSpeakerModal;
   window.closeSpeakerModal = closeSpeakerModal;
   window.SPEAKERS_DATA = SPEAKERS_DATA;
-  window.sortSpeakersByPopularity = sortSpeakersByPopularity;
+  window.sortSpeakersAlphabetically = sortSpeakersAlphabetically;
+  window.sortSpeakersByPopularity = sortSpeakersAlphabetically;
 
-  // Sort speakers by popularity on initial load
-  sortSpeakersByPopularity();
+  // Sort speakers alphabetically on initial load
+  sortSpeakersAlphabetically();
 
 }
