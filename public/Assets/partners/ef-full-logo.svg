@@ -1,6 +1,6 @@
-<svg width="140" height="52" viewBox="0 0 140 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="216" height="64" viewBox="0 0 216 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Official Ethereum Multi-Color Diamond Prism -->
-  <g transform="translate(6, 5) scale(1.05)">
+  <g transform="translate(6, 4.3) scale(1.38)">
     <path d="M11.656 0v13.781L.5 20.488 11.656 0Z" fill="#FFEB5C"/>
     <path d="M22.813 20.487 11.656 0v13.781l11.157 6.706Z" fill="#F08A78"/>
     <path d="M11.656 13.781v14.223L.5 20.487l11.156-6.705Z" fill="#58B36F"/>
@@ -9,6 +9,6 @@
     <path d="M22.813 22.916 11.656 40.154v-9.722l11.157-7.516Z" fill="#6B7ABA"/>
   </g>
   <!-- Authentic EF Wordmark -->
-  <text x="42" y="23" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.14em">ETHEREUM</text>
-  <text x="42" y="38" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="0.22em">FOUNDATION</text>
+  <text x="52" y="28" font-family="'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="900" fill="#ffffff" letter-spacing="0.14em">ETHEREUM</text>
+  <text x="52" y="49" font-family="'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="800" fill="#cbd5e1" letter-spacing="0.24em">FOUNDATION</text>
 </svg>

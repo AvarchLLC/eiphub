@@ -2744,16 +2744,16 @@ nav.nav-scrolled{
 }
 
 /* Optical visual-weight balance: every partner logo displays at harmonious equal size */
-.partner-clean-ef .partner-clean-img { max-height: 58px; max-width: 220px; }
-.partner-clean-devcon .partner-clean-img { max-height: 56px; max-width: 195px; }
+.partner-clean-ef .partner-clean-img { max-height: 76px; max-width: 260px; }
+.partner-clean-devcon .partner-clean-img { max-height: 80px; max-width: 230px; }
 .partner-clean-ech .partner-clean-img { max-height: 58px; max-width: 215px; }
 .partner-clean-etherworld .partner-clean-img { max-height: 54px; max-width: 210px; }
-.partner-clean-eipsinsight .partner-clean-img { max-height: 52px; max-width: 210px; }
+.partner-clean-eipsinsight .partner-clean-img { max-height: 68px; max-width: 240px; }
 .partner-clean-evvm .partner-clean-img { max-height: 48px; max-width: 170px; }
-.partner-clean-ethshala .partner-clean-img { max-height: 54px; max-width: 195px; }
-.partner-clean-ethpune .partner-clean-img { max-height: 54px; max-width: 190px; }
-.partner-clean-ethcluj .partner-clean-img { max-height: 52px; max-width: 185px; }
-.partner-clean-ethcdm .partner-clean-img { max-height: 52px; max-width: 190px; }
+.partner-clean-ethshala .partner-clean-img { max-height: 82px; max-width: 260px; }
+.partner-clean-ethpune .partner-clean-img { max-height: 80px; max-width: 260px; }
+.partner-clean-ethcluj .partner-clean-img { max-height: 72px; max-width: 230px; }
+.partner-clean-ethcdm .partner-clean-img { max-height: 72px; max-width: 230px; }
 
 /* HOVER REVEAL: SLEEK GLASS OVERLAY WITH DETAILS */
 .partner-clean-hover {
@@ -10442,6 +10442,35 @@ html, body {
 .partner-brand-tile:hover .partner-brand-full-logo {
   opacity: 1;
   transform: scale(1.06);
+}
+/* Per-partner size overrides in the HomePartners slider */
+.partner-brand-tile[title="Visit ETHShala"] .partner-brand-full-logo {
+  height: 86px;
+  max-width: 290px;
+}
+.partner-brand-tile[title="Visit ETH Pune"] .partner-brand-full-logo {
+  height: 84px;
+  max-width: 290px;
+}
+.partner-brand-tile[title="Visit EIPsInsight"] .partner-brand-full-logo {
+  height: 76px;
+  max-width: 270px;
+}
+.partner-brand-tile[title="Visit Ethereum Foundation"] .partner-brand-full-logo {
+  height: 80px;
+  max-width: 280px;
+}
+.partner-brand-tile[title="Visit Devcon 8 India"] .partner-brand-full-logo {
+  height: 84px;
+  max-width: 260px;
+}
+.partner-brand-tile[title="Visit ETHCluj"] .partner-brand-full-logo {
+  height: 78px;
+  max-width: 260px;
+}
+.partner-brand-tile[title="Visit ETH Cinco De Mayo"] .partner-brand-full-logo {
+  height: 78px;
+  max-width: 260px;
 }
 
 @media (max-width: 768px) {
