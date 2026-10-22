@@ -221,6 +221,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/justin-florentine.jpg" alt="Justin Florentine" />
                   <span>Justin Florentine</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('louis')} title="View Louis Tsai's session &amp; bio">
+                  <img src="Assets/speakers/louis-tsai.jpg" alt="Louis Tsai" />
+                  <span>Louis Tsai</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('maria')} title="View Maria Silva's session &amp; bio">
                   <img src="Assets/speakers/maria-silva.jpg" alt="Maria Silva" />
                   <span>Maria Silva</span>
@@ -636,7 +640,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Maria Silva · Rachit Anand Srivastava · Stefan Starflinger (ethPandaOps)</span>
+              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Louis Tsai (Spec Team) · Maria Silva · Rachit Anand Srivastava · Stefan Starflinger (ethPandaOps)</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 20 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 21 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -173,7 +173,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 12. Maria Silva
+  // 12. Louis Tsai
+  {
+    id: 'louis',
+    modalId: 'louis',
+    name: 'Louis Tsai',
+    org: 'Ethereum Foundation · Spec Team',
+    track: 'Day 2 · Benchmarking Glamsterdam',
+    badgeIcon: '⏱️',
+    photo: 'Assets/speakers/louis-tsai.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'yellow'
+  },
+  // 13. Maria Silva
   {
     id: 'maria',
     modalId: 'maria',
@@ -186,7 +199,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 13. Matthew Keil
+  // 14. Matthew Keil
   {
     id: 'matthew',
     modalId: 'matthew',
@@ -199,7 +212,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 14. Pooja Ranjan
+  // 15. Pooja Ranjan
   {
     id: 'pooja',
     modalId: 'pooja',
@@ -212,7 +225,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 15. Prem Makeig
+  // 16. Prem Makeig
   {
     id: 'prem',
     modalId: 'prem',
@@ -225,7 +238,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 16. Rachit Anand Srivastava
+  // 17. Rachit Anand Srivastava
   {
     id: 'rachit',
     modalId: 'rachit',
@@ -238,7 +251,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(236, 72, 153, 0.75)',
     dotType: 'blue'
   },
-  // 17. Rafael Matias
+  // 18. Rafael Matias
   {
     id: 'rafael',
     modalId: 'rafael',
@@ -251,7 +264,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Simona Serban
+  // 19. Simona Serban
   {
     id: 'simona',
     modalId: 'simona',
@@ -264,7 +277,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 19. Stefan Starflinger
+  // 20. Stefan Starflinger
   {
     id: 'stefan',
     modalId: 'stefan',
@@ -277,7 +290,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(129, 140, 248, 0.75)',
     dotType: 'yellow'
   },
-  // 20. Yudhishthra
+  // 21. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',

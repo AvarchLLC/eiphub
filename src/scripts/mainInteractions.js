@@ -1203,7 +1203,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 20 Unique Technical Leaders (23 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 21 Unique Technical Leaders (24 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1617,6 +1617,35 @@ const SPEAKERS_DATA = {
     twitter: 'https://x.com/privacy_prophet',
     telegram: '@privacy_prophet',
     discord: 'privacy_prophet'
+  },
+  louis: {
+    dayNum: 2,
+    name: 'Louis Tsai',
+    photo: 'Assets/speakers/louis-tsai.jpg',
+    affiliation: 'Ethereum Foundation · Spec Team',
+    designation: 'Software Engineer, Ethereum Foundation Spec Team',
+    day: 'Day 2 – November 4, 2026',
+    track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
+    time: '⏱️ Day 2 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam',
+    talkDesc: 'Glamsterdam raises Ethereum’s gas limit from 60M to 200M and reprices EVM operations, so every gas cost has to match how long clients actually take to execute it. We walk through the pipeline that measures this end to end: designing benchmarks that isolate single operations, running them on realistic state across all execution clients with benchmarkoor, and replaying the same workloads on devnets and mainnet shadow forks to confirm the results hold on a live network.',
+    bio: [
+      'Louis Tsai is a Software Engineer on the Ethereum Foundation’s Spec Team, working on Ethereum execution specifications and core protocol development.',
+      'His work centers on EVM benchmarking, client performance telemetry, gas cost modeling, and empirical testing for the Glamsterdam execution layer upgrades.'
+    ],
+    takeaways: [
+      'Designing benchmarks that isolate one EVM operation and turn its measured cost into gas',
+      'Comparing all execution clients fairly on realistic mainnet state using benchmarkoor',
+      'Turning isolated benchmarks into end-to-end load tests on devnets and mainnet shadow forks'
+    ],
+    relatedEip: 'EIP-2780 & EIP-8038 (EVM Gas Repricing for Glamsterdam)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8038',
+    audience: ['Developers', 'Core Developers', 'Client Teams', 'Protocol Researchers'],
+    linkedin: null,
+    twitter: 'https://x.com/0xlouistsai',
+    telegram: '@louistsai',
+    github: 'https://github.com/0xlouistsai'
   },
   maria: {
     dayNum: 2,
