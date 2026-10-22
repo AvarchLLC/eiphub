@@ -1203,7 +1203,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 19 Unique Technical Leaders (21 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 21 Unique Technical Leaders (24 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1215,7 +1215,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 2 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 3 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
@@ -1358,6 +1358,36 @@ function sortSpeakers(mode){
 // Speaker Details Data & Modal Handler
 const SPEAKERS_DATA = {
   // --- DAY 1: EIP PROCESS & GENERAL OVERVIEW ---
+  matthew: {
+    dayNum: 1,
+    name: 'Matthew Keil',
+    photo: 'Assets/speakers/matthew-keil.jpg',
+    affiliation: 'Lodestar · ChainSafe',
+    designation: 'Engineering Manager, Lodestar (ChainSafe)',
+    day: 'Day 1 – November 3, 2026',
+    track: 'Day 1 · Nov 3 · EIP Process & General Overview',
+    time: '⏱️ 3:00 PM · Day 1 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'EIP Selection to Support Fast Fork Cadence',
+    talkDesc: 'EIP selection is a critical part of the all-core-devs process and the pressure to include "all the things" in the next fork is high. I want to entice the community and developer group to turn that process on its head and make forks smaller. Smaller forks ship faster and counter-intuitively more EIPs can be included in a given period. I also want to encourage the ecosystem to further buy into the process of planning several forks ahead for larger features. We, as an ecosystem, can increase overall development cadence by having a clear vision of the future, outlining that vision on a roadmap and then using that roadmap to do resource planning for the implementation of the features that we want to see come to life.',
+    bio: [
+      'Matthew Keil is Engineering Manager at ChainSafe working on Lodestar, the premier TypeScript consensus client for Ethereum.',
+      'Passionate about shaping Ethereum’s future and shepherding the ecosystem towards an impactful, sustainable, and high-cadence future, he advocates for forward roadmap planning, smaller fork scopes, and multi-client isolation testing.'
+    ],
+    takeaways: [
+      'Why smaller hard forks ship faster and counter-intuitively allow more EIPs to be safely included over time',
+      'Roadmap and forward planning: how multi-fork feature coordination eases implementation and client readiness',
+      'Improving all-core-devs cadence through isolation testing, feature limiting, and forward resource planning'
+    ],
+    relatedEip: 'EIP-1: EIP Purpose and Guidelines & Hard Fork Cadence',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-1',
+    audience: ['Core Developers', 'Client Teams', 'EIP Authors', 'Ethereum Community'],
+    linkedin: null,
+    twitter: 'https://x.com/matthewkeil',
+    github: 'https://github.com/matthewkeil',
+    telegram: '@mattheweliaskeil',
+    discord: 'matthewkeil'
+  },
   pooja: {
     dayNum: 1,
     name: 'Pooja Ranjan',
@@ -1386,58 +1416,62 @@ const SPEAKERS_DATA = {
     twitter: 'https://x.com/poojaranjan19'
   },
   stefan: {
-    dayNum: 1,
-    name: 'Stefan',
-    photo: 'Assets/speakers/stefan.jpg',
+    dayNum: 2,
+    name: 'Stefan Starflinger',
+    photo: 'Assets/speakers/stefan-starflinger.jpg',
     affiliation: 'ethPandaOps · Ethereum Foundation',
-    designation: 'DevOps & Devnet Operations Engineer, ethPandaOps',
-    day: 'Day 1 – November 3, 2026',
-    track: 'Day 1 · Nov 3 · EIP Process & General Overview',
-    time: '⏱️ Session Time: TBA · Day 1',
+    designation: 'DevOps Engineer, ethPandaOps · Ethereum Foundation',
+    day: 'Day 2 – November 4, 2026',
+    track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
+    time: '⏱️ Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Testing Ethereum Upgrades: Devnets, Shadow Forks & EIP Validation',
-    talkDesc: 'An inside look into how ethPandaOps deploys, stress-tests, and monitors multi-client Ethereum development networks to validate Core EIPs, diagnose client divergences, and ensure smooth mainnet activations.',
+    talkTitle: 'How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam',
+    talkDesc: 'Glamsterdam raises Ethereum’s gas limit from 60M to 200M and reprices EVM operations, so every gas cost has to match how long clients actually take to execute it. We walk through the pipeline that measures this end to end: designing benchmarks that isolate single operations, running them on realistic state across all execution clients with benchmarkoor, and replaying the same workloads on devnets and mainnet shadow forks to confirm the results hold on a live network.',
     bio: [
-      'Stefan (@stefan_star) is an infrastructure and DevOps engineer with ethPandaOps at the Ethereum Foundation. He specializes in spinning up ephemeral devnets, shadow forking mainnet state, and coordinating client teams across execution and consensus layer transitions.',
-      'His work provides essential tooling and live operational telemetry that empowers core developers and EIP authors to validate complex protocol changes at scale before network deployment.'
+      'Stefan Starflinger is a DevOps engineer at the Ethereum Foundation’s ethPandaOps team, running the Glamsterdam execution-layer devnets and shadow forks.',
+      'Previously at Bitfly (the team behind ethermine.org and beaconcha.in), his work focuses on large-scale client performance telemetry, benchmark harnesses, and live network stress testing across multi-client topologies.'
     ],
     takeaways: [
-      'How multi-client devnets are orchestrated to stress-test complex Core EIPs',
-      'Diagnosing execution and consensus client interoperability issues under real load',
-      'Best practices for testing and validating protocol specification edge-cases'
+      'Designing benchmarks that isolate one EVM operation and turn its measured execution time into gas',
+      'Comparing all execution clients fairly on realistic mainnet state using benchmarkoor',
+      'Turning isolated benchmarks into end-to-end load tests on multi-client devnets and mainnet shadow forks'
     ],
-    relatedEip: 'Core EIPs & Ethereum Devnet Infrastructure',
-    relatedEipUrl: 'https://github.com/ethpandaops',
-    audience: ['Core Developers', 'Client Implementers', 'DevOps Engineers', 'Protocol Researchers'],
+    relatedEip: 'EIP-7904, EIP-8038, EIP-2780, EIP-8037, EIP-7928, EIP-7954 (Glamsterdam Repricing)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-7904',
+    audience: ['Developers', 'Core Developers', 'Client Teams', 'Protocol Researchers'],
     linkedin: null,
-    twitter: 'https://x.com/stefan_star'
+    twitter: 'https://x.com/stefan_star',
+    github: 'https://github.com/qu0b',
+    telegram: '@stefan32032',
+    discord: 'qu0b'
   },
   rafael: {
     dayNum: 1,
     name: 'Rafael Matias',
     photo: 'Assets/speakers/rafael.jpg',
-    affiliation: 'ethPandaOps · Ethereum Foundation',
-    designation: 'DevOps Engineer, ethPandaOps · Core Protocol Contributor',
+    affiliation: 'Ethereum Foundation · ethPandaOps',
+    designation: 'Software Engineer, Ethereum Foundation',
     day: 'Day 1 – November 3, 2026',
     track: 'Day 1 · Nov 3 · EIP Process & General Overview',
-    time: '⏱️ Session Time: TBA · Day 1',
+    time: '⏱️ Day 1 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Devnet Operations: Kurtosis Packaging & Multi-Client EIP Testing',
-    talkDesc: 'Discover the automated testing pipelines, Kurtosis packaging patterns, and open-source infrastructure tools engineered by ethPandaOps that allow any author or team to instantiate local multi-client Ethereum networks to benchmark EIPs.',
+    talkTitle: 'How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam',
+    talkDesc: 'Glamsterdam raises Ethereum’s gas limit from 60M to 200M and reprices EVM operations, so every gas cost has to match how long clients actually take to execute it. We walk through the pipeline that measures this end to end: designing benchmarks that isolate single operations, running them on realistic state across all execution clients with benchmarkoor, and replaying the same workloads on devnets and mainnet shadow forks to confirm the results hold on a live network.',
     bio: [
-      'Rafael Matias (@skylenet) is a DevOps Engineer at the Ethereum Foundation and core member of ethPandaOps. He has contributed across major repositories including go-ethereum (geth), ethereum-package, and genesis generation tooling.',
-      'Rafael focuses on building reproducible, containerized test environments that accelerate the feedback loop between protocol research, client engineering, and specification testing.'
+      'Rafael Matias (@skylenet) is a Software Engineer at the Ethereum Foundation and core member of ethPandaOps.',
+      'He contributes across major protocol testing infrastructure, benchmarkoor performance suites, and devnet orchestration tooling to stress-test execution and consensus clients under real-world network loads.'
     ],
     takeaways: [
-      'Deploying reproducible multi-client devnets locally using ethereum-package and Kurtosis',
-      'Automating benchmark test suites for proposed state and opcode changes',
-      'Collaborating effectively across disparate client engineering teams during upgrade testing'
+      'Designing benchmarks that isolate one EVM operation and turn its measured cost into gas',
+      'Comparing all execution clients fairly on realistic state with benchmarkoor',
+      'Turning benchmarks into end-to-end load tests on devnets and mainnet shadow forks'
     ],
-    relatedEip: 'Core EIPs & Ethereum Infrastructure',
-    relatedEipUrl: 'https://github.com/ethpandaops/ethereum-package',
-    audience: ['Core Developers', 'Tooling Engineers', 'Client Implementers', 'Node Operators'],
+    relatedEip: 'EIP-2780 & EIP-8038 (EVM Gas Repricing for Glamsterdam)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8038',
+    audience: ['Developers', 'Core Developers', 'Client Teams', 'Protocol Researchers'],
     linkedin: null,
-    twitter: 'https://x.com/skylenet'
+    twitter: 'https://x.com/skylenet',
+    github: 'https://github.com/skylenet'
   },
   'german-eiplabs': {
     dayNum: 1,
@@ -1583,6 +1617,35 @@ const SPEAKERS_DATA = {
     twitter: 'https://x.com/privacy_prophet',
     telegram: '@privacy_prophet',
     discord: 'privacy_prophet'
+  },
+  louis: {
+    dayNum: 2,
+    name: 'Louis Tsai',
+    photo: 'Assets/speakers/louis-tsai.jpg',
+    affiliation: 'Ethereum Foundation · Spec Team',
+    designation: 'Software Engineer, Ethereum Foundation Spec Team',
+    day: 'Day 2 – November 4, 2026',
+    track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
+    time: '⏱️ Day 2 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam',
+    talkDesc: 'Glamsterdam raises Ethereum’s gas limit from 60M to 200M and reprices EVM operations, so every gas cost has to match how long clients actually take to execute it. We walk through the pipeline that measures this end to end: designing benchmarks that isolate single operations, running them on realistic state across all execution clients with benchmarkoor, and replaying the same workloads on devnets and mainnet shadow forks to confirm the results hold on a live network.',
+    bio: [
+      'Louis Tsai is a Software Engineer on the Ethereum Foundation’s Spec Team, working on Ethereum execution specifications and core protocol development.',
+      'His work centers on EVM benchmarking, client performance telemetry, gas cost modeling, and empirical testing for the Glamsterdam execution layer upgrades.'
+    ],
+    takeaways: [
+      'Designing benchmarks that isolate one EVM operation and turn its measured cost into gas',
+      'Comparing all execution clients fairly on realistic mainnet state using benchmarkoor',
+      'Turning isolated benchmarks into end-to-end load tests on devnets and mainnet shadow forks'
+    ],
+    relatedEip: 'EIP-2780 & EIP-8038 (EVM Gas Repricing for Glamsterdam)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8038',
+    audience: ['Developers', 'Core Developers', 'Client Teams', 'Protocol Researchers'],
+    linkedin: null,
+    twitter: 'https://x.com/0xlouistsai',
+    telegram: '@louistsai',
+    github: 'https://github.com/0xlouistsai'
   },
   maria: {
     dayNum: 2,
@@ -1994,31 +2057,61 @@ const SPEAKERS_DATA = {
 
   // --- DUAL TRACK COMBINED PROFILES (FOR ALL DAYS VIEW) ---
   'german-combined': {
-    dayNum: 1,
+    dayNum: 3,
     name: 'German Abal',
     photo: 'Assets/speakers/german-abal.jpg',
-    affiliation: 'EVVM · ETH Cinco De Mayo',
-    designation: 'Co-Founder & CTO, EVVM · Standards Tooling Contributor',
-    day: 'Day 1 (Nov 3) & Day 4 (Nov 6)',
-    track: 'Dual Track Speaker: EIP Process & Tooling (Day 1) + EVVM State Scaling (Day 4)',
-    time: 'Day 1: Standards Talk · Day 4: 11:00 AM',
-    format: '⚡ 2 Scheduled Technical Sessions',
-    talkTitle: 'Dual Sessions: EIP Process Tooling Workflows & EVVM Scalability',
-    talkDesc: 'German Abal presents two specialized sessions across the summit: (1) On Day 1, exploring open-source CI/CD tooling, markdown schema linters, and verification workflows for EIP authors; (2) On Day 4, breaking down EVVM (Ethereum Virtual Virtual Machine) and how contract-native virtual blockchains enable high-performance execution while settling state on Ethereum.',
+    affiliation: 'EVVM.org · ETH Cinco De Mayo · Apeiron Protocol',
+    designation: 'Founder & Principal Architect, EVVM.org · Apeiron Protocol',
+    day: 'Day 3 (Nov 5) & Day 4 (Nov 6)',
+    track: 'Dual Track Speaker: Self-Sovereign Tokens (Day 3) + EVVM State Scaling (Day 4)',
+    time: 'Day 3: 20m Presentation · Day 4: 11:00 AM',
+    format: '⚡ 2 Scheduled Technical Sessions Across Summit',
+    talkTitle: 'Dual Track Sessions: Self-Sovereign Tokens & EVVM Architecture',
+    talkDesc: 'German Abal presents two specialized sessions across Devcon 8: (1) On Day 3, presenting Apeiron Protocol and self-sovereign token architectures with receiver-side verification and protected state; (2) On Day 4, breaking down EVVM virtual machine scalability, non-conflicting state-transition proofs, and institutional rails.',
     bio: [
-      'German Abal (@ariutokintumi) is a blockchain engineer, co-founder & CTO of EVVM (@RollAMate), author of EIP-8141 and EIP-8250, and core team member of ETH Cinco De Mayo (@ETHCincoDeMayo).',
-      'His contributions span developer tooling that lowers friction for open-source Ethereum specification contributors, as well as novel virtual machine architectures that enable developers to build virtual blockchains natively on top of smart contracts.'
+      'Germán Abal (ariutokintumi) is a protocol architect, inventor, entrepreneur, and the founder and principal architect of EVVM.org and Apeiron Protocol.',
+      'Building internet products since 1996 and researching blockchain since 2009, he combines software architecture, cryptography, security, and developer education across open Ethereum standards.'
     ],
     takeaways: [
-      'Day 1 Session: Automated validation pipelines and developer tooling for accelerating EIP reviews',
-      'Day 4 Session: EVVM architecture, custom transaction models, and settlement on public Ethereum consensus',
-      'Author insights from navigating EIP-8141 and EIP-8250 through peer review and ecosystem adoption'
+      'Day 3 Session: Self-sovereign tokens in Apeiron Protocol — isolating protected state, EXTCODEHASH remote compliance, and receiver-side acceptance',
+      'Day 4 Session: Virtualizing the EVM to eliminate state bloat and execute off-chain multi-threaded state transitions with L1 dispute guarantees'
     ],
-    relatedEip: 'EIP-8141, EIP-8250 & EIP Tooling Pipelines',
-    relatedEipUrl: 'https://eips.ethereum.org/',
-    audience: ['EIP Authors', 'Core Developers', 'Rollup Engineers', 'Open Source Tooling Builders'],
+    relatedEip: 'Apeiron Token Standard · EVVM State Scaling Architecture',
+    relatedEipUrl: 'https://eips.ethereum.org',
+    audience: ['Developers', 'Token Architects', 'Smart Contract Engineers', 'Protocol Researchers'],
     linkedin: 'https://www.linkedin.com/in/germanabal/',
-    twitter: 'https://x.com/ariutokintumi'
+    twitter: 'https://x.com/ariutokintumi',
+    telegram: '@llamame',
+    discord: 'ariutokintumi#0001'
+  },
+  'german-day3': {
+    dayNum: 3,
+    name: 'German Abal',
+    photo: 'Assets/speakers/german-abal.jpg',
+    affiliation: 'ETH Cinco de Mayo - EVVM.org',
+    designation: 'Founder, Apeiron Protocol & Principal Architect, EVVM.org',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ Day 3 Track (Confirmed)',
+    format: '🎙️ 20m Presentation + Q&A',
+    talkTitle: 'Self-Sovereign Tokens: Rethinking Onchain Representation',
+    talkDesc: 'Apeiron Protocol proposes a token architecture where users or entities govern Signs through their own Console, with protected state isolated in ConsoleStorage and modular execution delegated to optional Cartridges. The talk explores explicit incoming acceptance, EXTCODEHASH-based remote compliance, and the separation of representation, instance identity, and metadata. Most existing token standards focus on how tokens are created, owned, and transferred, but provide little receiver-side control over what can enter an account or which remote implementations are trusted. Apeiron explores a different model: sovereign representation with explicit trust boundaries, isolated protected state, deterministic code-path compliance, and no passive inbox by default.',
+    bio: [
+      'Germán Abal, known as ariutokintumi, is a protocol architect, inventor and entrepreneur, and the founder and principal architect of EVVM.org.',
+      'He has been building internet products since 1996 and researching blockchain since 2009, combining software architecture, cryptography, security and developer education.'
+    ],
+    takeaways: [
+      'How Apeiron separates protected state, policy, and modular execution across Console, ConsoleStorage, and optional Cartridge contracts',
+      'How EXTCODEHASH allowlists and a canonical handshake let each Console independently verify the remote Console, ConsoleStorage, and active Cartridge before interaction',
+      'How separating tokenId, Sign instance identity, and mutable metadata enables explicit reception and provenance-linked recreation without treating metadata as identity-critical state'
+    ],
+    relatedEip: 'Apeiron Self-Sovereign Token Standard Architecture (ERC Proposal)',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Developers', 'Token Architects', 'Smart Contract Engineers', 'Security Researchers'],
+    linkedin: 'https://www.linkedin.com/in/germanabal/',
+    twitter: 'https://x.com/ariutokintumi',
+    telegram: '@llamame',
+    discord: 'ariutokintumi#0001'
   },
   aditya: {
     dayNum: 4,

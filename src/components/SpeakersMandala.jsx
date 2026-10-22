@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 19 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 21 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -112,13 +112,13 @@ const ALL_SPEAKERS = [
     id: 'german',
     modalId: 'german-combined',
     name: 'German Abal',
-    org: 'EVVM',
-    track: 'Day 1 & Day 4 · Tooling & EVVM',
+    org: 'EVVM.org · Apeiron Protocol',
+    track: 'Day 3 & 4 · Tokens & EVVM Architecture',
     badgeIcon: '⚡',
     photo: 'Assets/speakers/german-abal.jpg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
   },
   /* Harish Kotra (Commented out)
   {
@@ -173,7 +173,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 12. Maria Silva
+  // 12. Louis Tsai
+  {
+    id: 'louis',
+    modalId: 'louis',
+    name: 'Louis Tsai',
+    org: 'Ethereum Foundation · Spec Team',
+    track: 'Day 2 · Benchmarking Glamsterdam',
+    badgeIcon: '⏱️',
+    photo: 'Assets/speakers/louis-tsai.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'yellow'
+  },
+  // 13. Maria Silva
   {
     id: 'maria',
     modalId: 'maria',
@@ -186,7 +199,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 13. Pooja Ranjan
+  // 14. Matthew Keil
+  {
+    id: 'matthew',
+    modalId: 'matthew',
+    name: 'Matthew Keil',
+    org: 'Lodestar · ChainSafe',
+    track: 'Day 1 · Fast Fork Cadence',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/matthew-keil.jpg',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
+  },
+  // 15. Pooja Ranjan
   {
     id: 'pooja',
     modalId: 'pooja',
@@ -199,7 +225,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 14. Prem Makeig
+  // 16. Prem Makeig
   {
     id: 'prem',
     modalId: 'prem',
@@ -212,7 +238,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
-  // 15. Rachit Anand Srivastava
+  // 17. Rachit Anand Srivastava
   {
     id: 'rachit',
     modalId: 'rachit',
@@ -225,20 +251,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(236, 72, 153, 0.75)',
     dotType: 'blue'
   },
-  // 16. Rafael Matias
+  // 18. Rafael Matias
   {
     id: 'rafael',
     modalId: 'rafael',
     name: 'Rafael Matias',
     org: 'ethPandaOps',
-    track: 'Day 1 · Kurtosis Tooling',
-    badgeIcon: '🛠️',
+    track: 'Day 1 · Benchmarking Glamsterdam',
+    badgeIcon: '⏱️',
     photo: 'Assets/speakers/rafael.jpg',
-    color: '#06b6d4',
-    glowColor: 'rgba(6, 182, 212, 0.75)',
-    dotType: 'blue'
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
+    dotType: 'yellow'
   },
-  // 17. Simona Serban
+  // 19. Simona Serban
   {
     id: 'simona',
     modalId: 'simona',
@@ -251,20 +277,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 18. Stefan
+  // 20. Stefan Starflinger
   {
     id: 'stefan',
     modalId: 'stefan',
-    name: 'Stefan',
+    name: 'Stefan Starflinger',
     org: 'ethPandaOps · EF',
-    track: 'Day 1 · Devnets & Upgrades',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/stefan.jpg',
-    color: '#38bdf8',
-    glowColor: 'rgba(56, 189, 248, 0.75)',
-    dotType: 'blue'
+    track: 'Day 2 · Benchmarking Glamsterdam',
+    badgeIcon: '⏱️',
+    photo: 'Assets/speakers/stefan-starflinger.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'yellow'
   },
-  // 19. Yudhishthra
+  // 21. Yudhishthra
   {
     id: 'yudhishthra',
     modalId: 'yudhishthra',

@@ -92,13 +92,13 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 1 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-combined')} title="View German Abal's session &amp; bio">
-                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (EVVM)" />
-                  <span>German Abal (EVVM)</span>
-                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('jochem')} title="View Jochem Brouwer's session &amp; bio">
                   <img src="Assets/photos/speaker-jochem-brouwer.jpg" alt="Jochem Brouwer" />
                   <span>Jochem Brouwer</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('matthew')} title="View Matthew Keil's session &amp; bio">
+                  <img src="Assets/speakers/matthew-keil.jpg" alt="Matthew Keil" />
+                  <span>Matthew Keil</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} title="View Pooja Ranjan's session &amp; bio">
                   <img src="Assets/speakers/pooja-ranjan.jpg" alt="Pooja Ranjan" />
@@ -108,11 +108,7 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" />
                   <span>Rafael Matias</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan's session &amp; bio">
-                  <img src="Assets/speakers/stefan.jpg" alt="Stefan (@stefan_star)" />
-                  <span>Stefan</span>
-                </button>
-              </div>
+                </div>
             </div>
           </div>
 
@@ -221,6 +217,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/justin-florentine.jpg" alt="Justin Florentine" />
                   <span>Justin Florentine</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('louis')} title="View Louis Tsai's session &amp; bio">
+                  <img src="Assets/speakers/louis-tsai.jpg" alt="Louis Tsai" />
+                  <span>Louis Tsai</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('maria')} title="View Maria Silva's session &amp; bio">
                   <img src="Assets/speakers/maria-silva.jpg" alt="Maria Silva" />
                   <span>Maria Silva</span>
@@ -228,6 +228,10 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
                   <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
                   <span>Rachit Anand Srivastava</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan Starflinger's session &amp; bio">
+                  <img src="Assets/speakers/stefan-starflinger.jpg" alt="Stefan Starflinger" />
+                  <span>Stefan Starflinger</span>
                 </button>
               </div>
             </div>
@@ -341,6 +345,10 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruvang')} title="View Dhruvang Choudhari's session &amp; bio">
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-day3')} title="View German Abal's Day 3 session &amp; bio">
+                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (Apeiron Tokens)" />
+                  <span>German Abal</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} title="View Prem Makeig's session &amp; bio">
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
@@ -577,7 +585,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>German Abal (EVVM) · Jochem Brouwer · Pooja Ranjan · Rafael Matias · Stefan</span>
+              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Jochem Brouwer · Matthew Keil (Lodestar) · Pooja Ranjan · Rafael Matias</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -628,7 +636,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Maria Silva · Rachit Anand Srivastava</span>
+              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Louis Tsai (Spec Team) · Maria Silva · Rachit Anand Srivastava · Stefan Starflinger (ethPandaOps)</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -679,7 +687,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Prem Makeig</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · German Abal (Apeiron) · Prem Makeig</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
