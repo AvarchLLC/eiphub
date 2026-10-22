@@ -1154,36 +1154,42 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 19. Stefan (Day 1 · EIP Process) */}
-        <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="19" id="speaker-card-stefan" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} role="button" tabIndex={0} title="Click to view Stefan's talk and bio">
+        {/* 19. Stefan Starflinger (Day 2 · Protocol EIPs) */}
+        <div className="speaker-card spk-day-2" data-spk-day="2" data-popular-rank="19" id="speaker-card-stefan" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} role="button" tabIndex={0} title="Click to view Stefan Starflinger's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
-            <span className="spk-photo-track-badge" style={{ background: 'rgba(245,158,11,0.25)', color: '#fbbf24', border: '1px solid rgba(245,158,11,0.45)' }}>Day 1 · EIP Process</span>
+            <span className="spk-photo-track-badge" style={{ background: 'rgba(129,140,248,0.25)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.45)' }}>Day 2 · Protocol EIPs</span>
             <span className="spk-photo-verified">✓ Confirmed</span>
-            <img src="Assets/speakers/stefan.jpg" alt="Stefan (@stefan_star)" className="speaker-photo-img" loading="lazy" />
+            <img src="Assets/speakers/stefan-starflinger.jpg" alt="Stefan Starflinger" className="speaker-photo-img" loading="lazy" />
           </div>
           <div className="speaker-info">
             <div className="speaker-name-row">
-              <h4 className="speaker-name">Stefan</h4>
-              <a href="https://x.com/stefan_star" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Stefan on X (@stefan_star)" onClick={(e) => e.stopPropagation()}>
+              <h4 className="speaker-name">Stefan Starflinger</h4>
+              <a href="https://x.com/stefan_star" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Stefan Starflinger on X (@stefan_star)" onClick={(e) => e.stopPropagation()}>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 <span>@stefan_star</span>
               </a>
             </div>
             <div className="speaker-meta-row">
-              <div className="speaker-org-tag">ethPandaOps · EF</div>
+              <div className="speaker-org-tag">ethPandaOps · Ethereum Foundation</div>
             </div>
-            <p className="speaker-designation">DevOps &amp; Devnet Operations Engineer, ethPandaOps</p>
+            <p className="speaker-designation">DevOps Engineer, ethPandaOps · Ethereum Foundation</p>
           </div>
           <div className="speaker-talk-snip">
-            <div className="talk-format-badge" style={{ background: 'rgba(245,158,11,0.18)', color: '#fbbf24' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">Testing Ethereum Upgrades: Devnets, Shadow Forks &amp; EIP Validation</div>
-            <div className="talk-time-text">⏱️ Session Time: TBA · Day 1 Track</div>
+            <div className="talk-format-badge" style={{ background: 'rgba(129,140,248,0.18)', color: '#c7d2fe' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
+            <div className="talk-title-text">How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam</div>
+            <div className="talk-time-text">⏱️ Day 2 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
-              <a href="https://x.com/stefan_star" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Stefan on X" aria-label="X">
+              <a href="https://x.com/stefan_star" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Stefan Starflinger on X" aria-label="X">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://github.com/qu0b" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Stefan Starflinger on GitHub" aria-label="GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://t.me/stefan32032" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Stefan Starflinger on Telegram" aria-label="Telegram">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.943z"/></svg>
               </a>
             </div>
             <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')}>

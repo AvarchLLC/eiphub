@@ -264,18 +264,18 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 19. Stefan
+  // 19. Stefan Starflinger
   {
     id: 'stefan',
     modalId: 'stefan',
-    name: 'Stefan',
+    name: 'Stefan Starflinger',
     org: 'ethPandaOps · EF',
-    track: 'Day 1 · Devnets & Upgrades',
-    badgeIcon: '⚡',
-    photo: 'Assets/speakers/stefan.jpg',
-    color: '#38bdf8',
-    glowColor: 'rgba(56, 189, 248, 0.75)',
-    dotType: 'blue'
+    track: 'Day 2 · Benchmarking Glamsterdam',
+    badgeIcon: '⏱️',
+    photo: 'Assets/speakers/stefan-starflinger.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'yellow'
   },
   // 20. Yudhishthra
   {

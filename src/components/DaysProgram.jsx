@@ -112,11 +112,7 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" />
                   <span>Rafael Matias</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan's session &amp; bio">
-                  <img src="Assets/speakers/stefan.jpg" alt="Stefan (@stefan_star)" />
-                  <span>Stefan</span>
-                </button>
-              </div>
+                </div>
             </div>
           </div>
 
@@ -232,6 +228,10 @@ export default function DaysProgram({ showMatrix = true }) {
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
                   <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
                   <span>Rachit Anand Srivastava</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan Starflinger's session &amp; bio">
+                  <img src="Assets/speakers/stefan-starflinger.jpg" alt="Stefan Starflinger" />
+                  <span>Stefan Starflinger</span>
                 </button>
               </div>
             </div>
@@ -581,7 +581,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>German Abal (EVVM) · Jochem Brouwer · Matthew Keil (Lodestar) · Pooja Ranjan · Rafael Matias · Stefan</span>
+              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>German Abal (EVVM) · Jochem Brouwer · Matthew Keil (Lodestar) · Pooja Ranjan · Rafael Matias</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -632,7 +632,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Maria Silva · Rachit Anand Srivastava</span>
+              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Maria Silva · Rachit Anand Srivastava · Stefan Starflinger (ethPandaOps)</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

@@ -58,31 +58,34 @@ export const SPEAKERS_DATA = {
     twitter: 'https://x.com/poojaranjan19'
   },
   stefan: {
-    dayNum: 1,
-    name: 'Stefan',
-    photo: 'Assets/speakers/stefan.jpg',
+    dayNum: 2,
+    name: 'Stefan Starflinger',
+    photo: 'Assets/speakers/stefan-starflinger.jpg',
     affiliation: 'ethPandaOps · Ethereum Foundation',
-    designation: 'DevOps & Devnet Operations Engineer, ethPandaOps',
-    day: 'Day 1 – November 3, 2026',
-    track: 'Day 1 · Nov 3 · EIP Process & General Overview',
-    time: '⏱️ Session Time: TBA · Day 1',
+    designation: 'DevOps Engineer, ethPandaOps · Ethereum Foundation',
+    day: 'Day 2 – November 4, 2026',
+    track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
+    time: '⏱️ Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Testing Ethereum Upgrades: Devnets, Shadow Forks & EIP Validation',
-    talkDesc: 'An inside look into how ethPandaOps deploys, stress-tests, and monitors multi-client Ethereum development networks to validate Core EIPs, diagnose client divergences, and ensure smooth mainnet activations.',
+    talkTitle: 'How Fast Is Your Client? Benchmarking the Ethereum Execution Layer for Glamsterdam',
+    talkDesc: 'Glamsterdam raises Ethereum’s gas limit from 60M to 200M and reprices EVM operations, so every gas cost has to match how long clients actually take to execute it. We walk through the pipeline that measures this end to end: designing benchmarks that isolate single operations, running them on realistic state across all execution clients with benchmarkoor, and replaying the same workloads on devnets and mainnet shadow forks to confirm the results hold on a live network.',
     bio: [
-      'Stefan (@stefan_star) is an infrastructure and DevOps engineer with ethPandaOps at the Ethereum Foundation. He specializes in spinning up ephemeral devnets, shadow forking mainnet state, and coordinating client teams across execution and consensus layer transitions.',
-      'His work provides essential tooling and live operational telemetry that empowers core developers and EIP authors to validate complex protocol changes at scale before network deployment.'
+      'Stefan Starflinger is a DevOps engineer at the Ethereum Foundation’s ethPandaOps team, running the Glamsterdam execution-layer devnets and shadow forks.',
+      'Previously at Bitfly (the team behind ethermine.org and beaconcha.in), his work focuses on large-scale client performance telemetry, benchmark harnesses, and live network stress testing across multi-client topologies.'
     ],
     takeaways: [
-      'How multi-client devnets are orchestrated to stress-test complex Core EIPs',
-      'Diagnosing execution and consensus client interoperability issues under real load',
-      'Best practices for testing and validating protocol specification edge-cases'
+      'Designing benchmarks that isolate one EVM operation and turn its measured execution time into gas',
+      'Comparing all execution clients fairly on realistic mainnet state using benchmarkoor',
+      'Turning isolated benchmarks into end-to-end load tests on multi-client devnets and mainnet shadow forks'
     ],
-    relatedEip: 'Core EIPs & Ethereum Devnet Infrastructure',
-    relatedEipUrl: 'https://github.com/ethpandaops',
-    audience: ['Core Developers', 'Client Implementers', 'DevOps Engineers', 'Protocol Researchers'],
+    relatedEip: 'EIP-7904, EIP-8038, EIP-2780, EIP-8037, EIP-7928, EIP-7954 (Glamsterdam Repricing)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-7904',
+    audience: ['Developers', 'Core Developers', 'Client Teams', 'Protocol Researchers'],
     linkedin: null,
-    twitter: 'https://x.com/stefan_star'
+    twitter: 'https://x.com/stefan_star',
+    github: 'https://github.com/qu0b',
+    telegram: '@stefan32032',
+    discord: 'qu0b'
   },
   rafael: {
     dayNum: 1,
