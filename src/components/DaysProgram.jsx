@@ -39,17 +39,17 @@ export default function DaysProgram({ showMatrix = true }) {
       </div>
 
       <div className="day-view-mode-toggle" aria-label="View format toggle">
-        <button type="button" className="view-mode-btn" id="btn-view-explorer" onClick={() => window.switchDayViewMode && window.switchDayViewMode('explorer')}>
+        <button type="button" className="view-mode-btn active" id="btn-view-explorer" onClick={() => window.switchDayViewMode && window.switchDayViewMode('explorer')}>
           <span>🎛️ Detailed Explorer</span>
         </button>
-        <button type="button" className="view-mode-btn active" id="btn-view-grid" onClick={() => window.switchDayViewMode && window.switchDayViewMode('grid')}>
+        <button type="button" className="view-mode-btn" id="btn-view-grid" onClick={() => window.switchDayViewMode && window.switchDayViewMode('grid')}>
           <span>▦ 4-Day Grid</span>
         </button>
       </div>
     </div>
 
-    {/* Interactive Day Showcase Panel */}
-    <div className="day-showcase-panel showcase-day-1" id="day-showcase-panel" style={{ display: 'none' }}>
+    {/* Interactive Day Showcase Panel (Default View: Detailed Explorer) */}
+    <div className="day-showcase-panel showcase-day-1" id="day-showcase-panel" style={{ display: 'block' }}>
       <div className="showcase-top-bar"></div>
 
       {/* Slide Day 1 */}
@@ -108,6 +108,14 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/rafael.jpg" alt="Rafael Matias (@skylenet)" />
                   <span>Rafael Matias</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan Starflinger's session &amp; bio">
+                  <img src="Assets/speakers/stefan-starflinger.jpg" alt="Stefan Starflinger" />
+                  <span>Stefan Starflinger</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('louis')} title="View Louis Tsai's session &amp; bio">
+                  <img src="Assets/speakers/louis-tsai.jpg" alt="Louis Tsai" />
+                  <span>Louis Tsai</span>
+                </button>
                 </div>
             </div>
           </div>
@@ -115,52 +123,95 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="showcase-right">
             <div>
               <div className="showcase-timeline-header">
-                <h4><span>📜</span> Day 1 Stage Highlights</h4>
+                <h4><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Day 1 Stage Highlights</h4>
                 <span className="showcase-timeline-sub">Jio World Centre · Mumbai</span>
               </div>
 
               <div className="showcase-timeline-list">
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">09:30 – 11:00</span>
+                  <span className="timeline-time-badge">12:00 – 12:20</span>
                   <div className="timeline-item-body">
-                    <h5>Intro to EIPs &amp; Author Lifecycle</h5>
-                    <p>Foundations of open Ethereum specifications, categories, and EIP-1 structure.</p>
+                    <span className="timeline-format-tag tag-welcome"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span>Welcome · Community</span></span>
+                    <h5>EIP Hub Opening</h5>
+                    <p>Opening remarks by Pooja Ranjan inaugurating the EIP Hub at Devcon 8 Mumbai.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">11:30 – 13:30</span>
+                  <span className="timeline-time-badge">12:20 – 13:00</span>
                   <div className="timeline-item-body">
-                    <h5>Live Proposal Review Clinics</h5>
-                    <p>1-on-1 walk-throughs with official EIP Editors on draft formatting and resolving PR feedback.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Governance &amp; AI</span></span>
+                    <h5>EIP Content in the New AI-Era: Why Specification Clarity Matters More Than Ever</h5>
+                    <p>Keynote by Jochem Brouwer on why specifications must maintain rigorous clarity for both core developers and autonomous AI implementers.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:30 – 16:30</span>
+                  <span className="timeline-time-badge">13:10 – 14:10</span>
                   <div className="timeline-item-body">
-                    <h5>GitHub Workflows &amp; Editor Tooling</h5>
-                    <p>Bot automation, markdown linters, and consensus tracking across Ethereum repos.</p>
+                    <span className="timeline-format-tag tag-workshop"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Workshop · Onboarding</span></span>
+                    <h5>Your Path Into Ethereum Ecosystem with EIP Hub</h5>
+                    <p>Interactive onboarding workshop with Pooja Ranjan, Dhanush Naik, and Subhrajeet Bhattacharjee on contributing to core standards.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">17:00 – 18:30</span>
+                  <span className="timeline-time-badge">14:20 – 15:00</span>
                   <div className="timeline-item-body">
-                    <h5>Mentorship Circle &amp; First-Time Authors</h5>
-                    <p>Hands-on guidance for new Indian and global developers joining Ethereum protocol governance.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Glamsterdam &amp; Clients</span></span>
+                    <h5>How Fast Is Your Client? Benchmarking Execution Layer for Glamsterdam</h5>
+                    <p>Stefan Starflinger, Rafael Matias &amp; Louis Tsai on benchmarking 60M→200M gas limits, opcode repricing, and shadow fork tests.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">15:00 – 15:30</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Hard Forks</span></span>
+                    <h5>EIP Selection to Support Fast Fork Cadence</h5>
+                    <p>Matthew Keil (Lodestar) on adopting smaller, high-cadence hard forks and forward multi-fork roadmap planning.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">15:30 – 16:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Break · Networking</span></span>
+                    <h5>Lunch &amp; Networking Break</h5>
+                    <p>Midday community luncheon and networking at Jio World Centre.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">16:00 – 17:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Fishbowl · Process</span></span>
+                    <h5>EIP Process AMA (Fishbowl Q&amp;A)</h5>
+                    <p>Open community AMA with Pooja Ranjan and Jochem Brouwer on PR review triage, EIP-1 guidelines, and status flows.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">17:00 – 17:30</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Interactive Quiz Game</span></span>
+                    <h5>EIP Signal Quiz Game - Understanding EIPs</h5>
+                    <p>Live interactive quiz game testing standards knowledge with summit prizes.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">17:30 – 18:10</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Community Connect &amp; Wrap-Up</span></span>
+                    <h5>EIP Hub Community Connect &amp; Daily Wrap-Up</h5>
+                    <p>Closing mixer with editors, first-time authors, and Day 2 consensus preview.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="showcase-action-footer">
-              <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" className="btn-showcase-primary">
-                <span>Join on Luma</span>
-                <span>↗</span>
-              </a>
-              <a href="#apply-as-speaker" className="btn-showcase-secondary">Propose a Talk ➔</a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -205,33 +256,25 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Featured Day 2 Speakers</div>
               <div className="showcase-speakers-chips">
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} title="View Abhimanyu Nag's session &amp; bio">
-                  <img src="Assets/speakers/abhimanyu-nag.png" alt="Abhimanyu Nag" />
-                  <span>Abhimanyu Nag</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')} title="View Gavin Birch's session &amp; bio">
-                  <img src="Assets/speakers/gavin-birch.jpg" alt="Gavin Birch" />
-                  <span>Gavin Birch</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('justin')} title="View Justin Florentine's session &amp; bio">
-                  <img src="Assets/speakers/justin-florentine.jpg" alt="Justin Florentine" />
-                  <span>Justin Florentine</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('louis')} title="View Louis Tsai's session &amp; bio">
-                  <img src="Assets/speakers/louis-tsai.jpg" alt="Louis Tsai" />
-                  <span>Louis Tsai</span>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
+                  <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
+                  <span>Rachit Anand</span>
                 </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('maria')} title="View Maria Silva's session &amp; bio">
                   <img src="Assets/speakers/maria-silva.jpg" alt="Maria Silva" />
                   <span>Maria Silva</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('rachit')} title="View Rachit Anand Srivastava's session &amp; bio">
-                  <img src="Assets/speakers/rachit-anand-srivastava.png" alt="Rachit Anand Srivastava" />
-                  <span>Rachit Anand Srivastava</span>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('gavin')} title="View Gavin Birch's session &amp; bio">
+                  <img src="Assets/speakers/gavin-birch.jpg" alt="Gavin Birch" />
+                  <span>Gavin Birch</span>
                 </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('stefan')} title="View Stefan Starflinger's session &amp; bio">
-                  <img src="Assets/speakers/stefan-starflinger.jpg" alt="Stefan Starflinger" />
-                  <span>Stefan Starflinger</span>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('abhimanyu')} title="View Abhimanyu Nag's session &amp; bio">
+                  <img src="Assets/speakers/abhimanyu-nag.png" alt="Abhimanyu Nag" />
+                  <span>Abhimanyu Nag</span>
+                </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yoon')} title="View Yoon Hyoung Lee's session &amp; bio">
+                  <img src="Assets/speakers/yoon-hyoung-lee.jpg" alt="Yoon Hyoung Lee" />
+                  <span>Yoon Hyoung Lee</span>
                 </button>
               </div>
             </div>
@@ -240,60 +283,113 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="showcase-right">
             <div>
               <div className="showcase-timeline-header">
-                <h4><span>⚡</span> Day 2 Stage Highlights</h4>
+                <h4><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Day 2 Stage Highlights</h4>
                 <span className="showcase-timeline-sub">Jio World Centre · Mumbai</span>
               </div>
 
               <div className="showcase-timeline-list">
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">10:00 – 10:45</span>
+                  <span className="timeline-time-badge">09:00 – 09:10</span>
                   <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-welcome"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span>Welcome · Remarks</span></span>
+                    <h5>Welcome &amp; Opening Remarks</h5>
+                    <p>Kicking off Day 2 on Protocol EIPs, consensus mechanisms, and client upgrades.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">09:10 – 09:30</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Cryptography</span></span>
+                    <h5>Ethereum in the Age of Proofs</h5>
+                    <p>Rachit Anand Srivastava on PeerDAS, KZG multiproofs, zkVMs, and post-quantum proving systems.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">09:30 – 10:20</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Protocol Security</span></span>
                     <h5>EIP-8184: LUCID Encrypted Mempool</h5>
-                    <p>Keynote &amp; Q&amp;A by Justin Florentine (Besu) on encrypted mempools and $600M+ MEV defense.</p>
+                    <p>Why encrypting the mempool is hard, trade-offs around ordering and DOS resistance, and the EIP-8184 model.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">11:00 – 11:45</span>
+                  <span className="timeline-time-badge">10:20 – 11:00</span>
                   <div className="timeline-item-body">
-                    <h5>Protocol EIPs &amp; Fork Lifecycle</h5>
-                    <p>From Idea to Meta-EIP, CFI, testnet deployment, and mainnet hard fork activation.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Gas Repricing</span></span>
+                    <h5>The Price Is Right: Setting Gas Prices for Glamsterdam</h5>
+                    <p>Maria Silva on synthetic block tests, cross-client measurements, EIP-8038 and EIP-2780 repricing models.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">11:30 – 13:30</span>
+                  <span className="timeline-time-badge">11:00 – 11:40</span>
                   <div className="timeline-item-body">
-                    <h5>AllCoreDevs Consensus Roundtable</h5>
-                    <p>Client implementations review with Geth, Nethermind, Besu, Prysm &amp; Lighthouse.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · EIP-8141</span></span>
+                    <h5>Frame txs &amp; private payments: EIP-8141 in practice</h5>
+                    <p>Gavin Birch on separating transaction validation, gas payment, and execution natively on Ethereum.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:30 – 16:30</span>
+                  <span className="timeline-time-badge">11:40 – 12:20</span>
                   <div className="timeline-item-body">
-                    <h5>Testing, Fuzzing &amp; Devnet Interop</h5>
-                    <p>Live testing harnesses, devnet shadow forks, and cross-client interoperability clinics.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>⏱️ Talk · SSF Consensus</span></span>
+                    <h5>Limits to Single Slot Finality</h5>
+                    <p>Abhimanyu Nag exploring consensus bounds, validator set scaling, and trade-offs for Single Slot Finality.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">17:00 – 18:30</span>
+                  <span className="timeline-time-badge">12:20 – 13:00</span>
                   <div className="timeline-item-body">
-                    <h5>Future Protocol Roadmap Discussion</h5>
-                    <p>Open debate on long-term scaling, verkle trees, state expiry, and cryptographic security.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Post-Quantum</span></span>
+                    <h5>Post-Quantum Ethereum on Execution Layer: EIP-7885 to EIP-8288</h5>
+                    <p>Yoon Hyoung Lee on lattice-based cryptography vs hash-based signatures with proof aggregation.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">13:00 – 14:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Break · Networking</span></span>
+                    <h5>Lunch &amp; Networking Break</h5>
+                    <p>Catered lunch break with core client engineers and protocol researchers.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">14:00 – 15:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>AMA · AllCoreDevs</span></span>
+                    <h5>EIP Process AMA (Protocol &amp; Core Focus)</h5>
+                    <p>AllCoreDevs workflow AMA with Pooja Ranjan covering fork scoping and testing pipelines.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">15:00 – 16:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Interactive Quiz Game</span></span>
+                    <h5>EIP Signal Quiz Game - Protocol &amp; Core Ethereum</h5>
+                    <p>Challenging quiz game on hard forks, EVM internals, and protocol mechanics.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">16:00 – 17:10</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Community Connect &amp; Wrap-Up</span></span>
+                    <h5>EIP Hub Community Connect &amp; Daily Wrap-Up</h5>
+                    <p>Client engineers mixer and summary previewing Day 3 Application ERCs.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="showcase-action-footer">
-              <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" className="btn-showcase-primary">
-                <span>Join on Luma</span>
-                <span>↗</span>
-              </a>
-              <a href="#apply-as-speaker" className="btn-showcase-secondary">Propose a Talk ➔</a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -338,26 +434,19 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 3 Speakers</div>
               <div className="showcase-speakers-chips">
-                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} title="View Dr. Daniel Nagy's session &amp; bio">
-                  <img src="Assets/speakers/daniel-nagy.png" alt="Dr. Daniel Nagy" />
-                  <span>Dr. Daniel Nagy</span>
-                </button> */}
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruvang')} title="View Dhruvang Choudhari's session &amp; bio">
-                  <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
-                  <span>Dhruvang Choudhari</span>
-                </button>
-                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('german-day3')} title="View German Abal's Day 3 session &amp; bio">
-                  <img src="Assets/speakers/german-abal.jpg" alt="German Abal (Apeiron Tokens)" />
-                  <span>German Abal</span>
-                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} title="View Prem Makeig's session &amp; bio">
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
                   <span>Prem Makeig</span>
                 </button>
-                {/* <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('harish')} title="View Harish Kotra's session &amp; bio">
-                  <img src="Assets/speakers/harish-kotra.webp" alt="Harish Kotra" />
-                  <span>Harish Kotra</span>
-                </button> */}
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('dhruvang')} title="View Dhruvang Choudhari's session &amp; bio">
+                  <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
+                  <span>Dhruvang Choudhari</span>
+                </button>
+                
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('thiru')} title="View Thirumurugan Sivalingam's session &amp; bio">
+                  <img src="Assets/speakers/thirumurugan-sivalingam.jpg" alt="Thirumurugan Sivalingam" />
+                  <span>Thirumurugan S.</span>
+                </button>
               </div>
             </div>
           </div>
@@ -365,52 +454,104 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="showcase-right">
             <div>
               <div className="showcase-timeline-header">
-                <h4><span>💎</span> Day 3 Stage Highlights</h4>
+                <h4><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Day 3 Stage Highlights</h4>
                 <span className="showcase-timeline-sub">Jio World Centre · Mumbai</span>
               </div>
 
               <div className="showcase-timeline-list">
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">09:30 – 11:00</span>
+                  <span className="timeline-time-badge">09:00 – 09:30</span>
                   <div className="timeline-item-body">
-                    <h5>Next-Gen ERC Standards &amp; Account Abstraction</h5>
-                    <p>Exploring modern token standards, session keys, and smart contract account interoperability.</p>
+                    <span className="timeline-format-tag tag-welcome"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span>Welcome · Opening</span></span>
+                    <h5>Welcome &amp; Opening Remarks</h5>
+                    <p>Inaugurating Day 3 on Application ERC standards, smart account abstraction, and real-world adoption.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">11:30 – 13:30</span>
+                  <span className="timeline-time-badge">09:30 – 10:00</span>
                   <div className="timeline-item-body">
-                    <h5>Live Interactive ERC Review Clinics</h5>
-                    <p>Smart contract security feedback, interface audits, and live author consultations.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>🪪 Talk · Agent Standards</span></span>
+                    <h5>Agent Identity Standards</h5>
+                    <p>Prem Makeig on decentralized onchain agent identity, reputation systems, and ERC-8004.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:30 – 16:30</span>
+                  <span className="timeline-time-badge">10:00 – 10:40</span>
                   <div className="timeline-item-body">
-                    <h5>Tooling Showcase &amp; Developer Experience</h5>
-                    <p>Live demos of SDKs, linters, test harnesses, and smart contract verification tools.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Institutional ERCs</span></span>
+                    <h5>The Token Is Standardised. The Institution Isn't: Where Should Ethereum Standards Stop?</h5>
+                    <p>Dhruvang Choudhari on regulated assets, ERC-3643, ERC-7943, and the protocol boundary.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">17:00 – 18:30</span>
+                  <span className="timeline-time-badge">11:00 – 11:30</span>
                   <div className="timeline-item-body">
-                    <h5>Real-World Standards Adoption Panel</h5>
-                    <p>dApp builders and wallet teams discussing production deployment challenges.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Trustless Systems</span></span>
+                    <h5>Building Trustless Systems, Together</h5>
+                    <p>Simona Serban on balancing human trust with code trustlessness from lessons building ETHCluj.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">11:30 – 12:10</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · EIP-7702</span></span>
+                    <h5>EIP-7702 in Practice for Dapps</h5>
+                    <p>Thirumurugan Sivalingam on safe dapp integration with ERC-5792, ERC-7715, and passkey EOAs.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">12:10 – 13:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>AMA · Application ERCs</span></span>
+                    <h5>EIP Process AMA (Application Standards Focus)</h5>
+                    <p>Pooja Ranjan &amp; Jochem Brouwer on drafting ERCs, token interfaces, and wallet RPCs.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">13:00 – 14:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Break · Networking</span></span>
+                    <h5>Lunch &amp; Networking Break</h5>
+                    <p>Midday lunch and author office hours with ERC editors.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">15:00 – 16:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Community Connect</span></span>
+                    <h5>EIP Hub Community Connect</h5>
+                    <p>Peer networking with smart contract architects, dapp founders, and auditors.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">16:00 – 17:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Interactive Quiz Game</span></span>
+                    <h5>EIP Signal Quiz Game - Applications &amp; ERC Standards</h5>
+                    <p>Competitive quiz on ERC-20, ERC-721, ERC-4337, and modern token standards.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">17:00 – 17:10</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-closing"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg><span>Daily Wrap-Up</span></span>
+                    <h5>EIP Hub Daily Wrap-Up</h5>
+                    <p>Recap and preview of Day 4 Enterprise Readiness &amp; Scale.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="showcase-action-footer">
-              <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" className="btn-showcase-primary">
-                <span>Join on Luma</span>
-                <span>↗</span>
-              </a>
-              <a href="#apply-as-speaker" className="btn-showcase-secondary">Propose a Talk ➔</a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -498,59 +639,120 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="showcase-right">
             <div>
               <div className="showcase-timeline-header">
-                <h4><span>🏢</span> Day 4 Stage Highlights</h4>
+                <h4><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Day 4 Stage Highlights</h4>
                 <span className="showcase-timeline-sub">Jio World Centre · Mumbai</span>
               </div>
 
               <div className="showcase-timeline-list">
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">09:30 – 11:00</span>
+                  <span className="timeline-time-badge">09:00 – 09:10</span>
                   <div className="timeline-item-body">
-                    <h5>Enterprise Standards &amp; Regulatory Fit</h5>
-                    <p>Bridging open Ethereum specifications with corporate auditability, security, and compliance.</p>
+                    <span className="timeline-format-tag tag-welcome"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span>Welcome · Remarks</span></span>
+                    <h5>Welcome &amp; Opening Remarks</h5>
+                    <p>Opening the grand finale day on Enterprise Readiness, Agentic Trust, and Onchain Scaling.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">11:30 – 13:30</span>
+                  <span className="timeline-time-badge">09:10 – 09:30</span>
                   <div className="timeline-item-body">
-                    <h5>From Proposal to Production Adoption</h5>
-                    <p>Lessons learned scaling standards into high-throughput enterprise infrastructure.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · DePIN &amp; Telecom</span></span>
+                    <h5>Privacy &amp; Human Connectivity</h5>
+                    <p>Charchit Kumawat on what it actually takes to run telecom on-chain and user privacy demand.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:30 – 16:30</span>
+                  <span className="timeline-time-badge">09:30 – 09:50</span>
                   <div className="timeline-item-body">
-                    <h5>Institutional Layer 2 &amp; Privacy Architectures</h5>
-                    <p>Privacy-preserving standards, rollup interoperability, and consortium testnets.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · AI &amp; Crypto</span></span>
+                    <h5>The Agent Economy: Why AI Needs Crypto Rails</h5>
+                    <p>Abhay Singh on real-world perp trading agents, signing, permissions, and financial settlement.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">17:00 – 18:30</span>
+                  <span className="timeline-time-badge">09:50 – 10:30</span>
                   <div className="timeline-item-body">
-                    <h5>EIP Hub Devcon 8 Closing Roundtable</h5>
-                    <p>Community retrospective, working group mandates, and next steps for Ethereum standards.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Confidential Tokens</span></span>
+                    <h5>Are Confidential Tokens Ready for Enterprise Payments?</h5>
+                    <p>Dhruv Gera on ERC-7984, encrypted balances, enterprise auditability, and fiat settlement.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">10:30 – 11:10</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · FX &amp; Liquidity</span></span>
+                    <h5>Why Your Local-Currency Stablecoin Has No Market</h5>
+                    <p>Yudhishthra on thin markets, spreads, cross-chain liquidity fragmentation, and fixing FX rails.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">11:10 – 12:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Wallets</span></span>
+                    <h5>Bringing a Billion Agents On Ethereum</h5>
+                    <p>Kevin Jones on MPC, TEEs, and HSM key management solving the agentic trust problem.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">12:00 – 13:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Token Architecture</span></span>
+                    <h5>Self-Sovereign Tokens: Rethinking Onchain Representation</h5>
+                    <p>German Abal on Apeiron Protocol, protected state in ConsoleStorage, and modular execution.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">13:00 – 13:30</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Break · Networking</span></span>
+                    <h5>Lunch &amp; Networking Break</h5>
+                    <p>Catered lunch break with institutional leaders and founders.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">13:30 – 14:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>AMA · Enterprise EIPs</span></span>
+                    <h5>EIP Process AMA (Enterprise Adoption)</h5>
+                    <p>Closing AMA with Pooja Ranjan on institutional participation in Ethereum standards.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">14:00 – 15:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Championship Quiz Game</span></span>
+                    <h5>EIP Signal Quiz Game - Enterprise &amp; Adoption</h5>
+                    <p>Grand championship quiz covering all 4 days with recognition for top contributors.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">15:00 – 15:30</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-closing"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg><span>Closing Ceremony</span></span>
+                    <h5>EIP Hub Wrap-Up &amp; Closing Ceremony</h5>
+                    <p>Pooja Ranjan presenting the retrospective on 4 days of standards and future roadmap.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="showcase-action-footer">
-              <a href="https://lu.ma/czi58jpe" target="_blank" rel="noopener noreferrer" className="btn-showcase-primary">
-                <span>Join on Luma</span>
-                <span>↗</span>
-              </a>
-              <a href="#apply-as-speaker" className="btn-showcase-secondary">Propose a Talk ➔</a>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
 
-    {/* 4-Day Comparative Grid (Balanced 2x2 Layout - Default View) */}
-    <div className="days-grid" id="days-grid-container">
+    {/* 4-Day Comparative Grid (Hidden by default; Detailed Explorer is active) */}
+    <div className="days-grid" id="days-grid-container" style={{ display: 'none' }}>
       {/* Day 1: EIP Process & General Overview */}
       <div className="day-card day-card-1" id="day-card-1">
         <div className="day-card-top-bar"></div>
@@ -585,7 +787,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Jochem Brouwer · Matthew Keil (Lodestar) · Pooja Ranjan · Rafael Matias</span>
+              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Jochem Brouwer · Louis Tsai · Matthew Keil · Pooja Ranjan · Rafael Matias · Stefan Starflinger</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -636,7 +838,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Justin Florentine · Louis Tsai (Spec Team) · Maria Silva · Rachit Anand Srivastava · Stefan Starflinger (ethPandaOps)</span>
+              <span className="day-meta-val" style={{ color: '#c7d2fe', fontWeight: '600' }}>Abhimanyu Nag · Gavin Birch · Maria Silva · Rachit Anand Srivastava · Yoon Hyoung Lee</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -687,7 +889,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · German Abal (Apeiron) · Prem Makeig</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Prem Makeig · Simona Serban · Thirumurugan Sivalingam</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -739,7 +941,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Aditya Kumar · Charchit Kumawat · Dhruv Gera · Gavin Birch (Armada) · German Abal (EVVM) · Kevin Jones · Simona Serban · Yudhishthra</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Charchit Kumawat · Dhruv Gera · German Abal · Kevin Jones · Yudhishthra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

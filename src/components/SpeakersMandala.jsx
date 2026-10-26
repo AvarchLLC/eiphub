@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 21 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 22 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -147,7 +147,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
-  // 10. Justin Florentine
+  /* Justin Florentine (Commented out)
   {
     id: 'justin',
     modalId: 'justin',
@@ -160,6 +160,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(129, 140, 248, 0.75)',
     dotType: 'blue'
   },
+  */
   // 11. Kevin Jones
   {
     id: 'kevin',
@@ -179,11 +180,11 @@ const ALL_SPEAKERS = [
     modalId: 'louis',
     name: 'Louis Tsai',
     org: 'Ethereum Foundation · Spec Team',
-    track: 'Day 2 · Benchmarking Glamsterdam',
+    track: 'Day 1 · Spec & Glamsterdam',
     badgeIcon: '⏱️',
     photo: 'Assets/speakers/louis-tsai.jpg',
-    color: '#818cf8',
-    glowColor: 'rgba(129, 140, 248, 0.75)',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
   // 13. Maria Silva
@@ -270,12 +271,12 @@ const ALL_SPEAKERS = [
     modalId: 'simona',
     name: 'Simona Serban',
     org: 'ETHCluj',
-    track: 'Day 4 · Trustless Collaboration',
+    track: 'Day 3 · Trustless Systems',
     badgeIcon: '🤝',
     photo: 'Assets/speakers/simona-serban.jpeg',
-    color: '#10b981',
-    glowColor: 'rgba(16, 185, 129, 0.75)',
-    dotType: 'yellow'
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
   },
   // 20. Stefan Starflinger
   {
@@ -283,11 +284,11 @@ const ALL_SPEAKERS = [
     modalId: 'stefan',
     name: 'Stefan Starflinger',
     org: 'ethPandaOps · EF',
-    track: 'Day 2 · Benchmarking Glamsterdam',
+    track: 'Day 1 · Benchmarking Glamsterdam',
     badgeIcon: '⏱️',
     photo: 'Assets/speakers/stefan-starflinger.jpg',
-    color: '#818cf8',
-    glowColor: 'rgba(129, 140, 248, 0.75)',
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
   // 21. Yudhishthra
@@ -302,6 +303,32 @@ const ALL_SPEAKERS = [
     color: '#34d399',
     glowColor: 'rgba(52, 211, 153, 0.75)',
     dotType: 'blue'
+  },
+  // 22. Thirumurugan Sivalingam
+  {
+    id: 'thiru',
+    modalId: 'thiru',
+    name: 'Thirumurugan Sivalingam',
+    org: 'Gryphin',
+    track: 'Day 3 · EIP-7702 & ERC-5792',
+    badgeIcon: '⚡',
+    photo: 'Assets/speakers/thirumurugan-sivalingam.jpg',
+    color: '#06b6d4',
+    glowColor: 'rgba(6, 182, 212, 0.75)',
+    dotType: 'blue'
+  },
+  // 23. Yoon Hyoung Lee
+  {
+    id: 'yoon',
+    modalId: 'yoon',
+    name: 'Yoon Hyoung Lee',
+    org: 'Yonsei Univ.',
+    track: 'Day 2 · Post-Quantum & EIP-7885',
+    badgeIcon: '🔬',
+    photo: 'Assets/speakers/yoon-hyoung-lee.jpg',
+    color: '#818cf8',
+    glowColor: 'rgba(129, 140, 248, 0.75)',
+    dotType: 'yellow'
   }
 ];
 

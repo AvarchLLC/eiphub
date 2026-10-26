@@ -1,5 +1,6 @@
 import React from 'react';
 import PageHero from '../components/PageHero.jsx';
+import ScheduleMatrix from '../components/ScheduleMatrix.jsx';
 import DaysProgram from '../components/DaysProgram.jsx';
 
 export default function AgendaPage() {
@@ -7,19 +8,24 @@ export default function AgendaPage() {
     <div className="page-standalone page-agenda">
       {/* Creative Page Hero */}
       <PageHero
-        badgeText="Curated Programming"
-        eyebrow="4-Day Summit Tracks · Devcon 8"
+        badgeText="Official Master Schedule"
+        eyebrow="4-Day Summit Tracks · Devcon 8 · Jio World Centre"
         theme="purple"
         title={
           <>
-            Four Days of{' '}
-            <span className="text-gradient-purple">Standards &amp; Innovation</span>
+            Complete 4-Day{' '}
+            <span className="text-gradient-purple">Summit Schedule</span>
           </>
         }
-        subtitle="Guiding attendees from proposal drafting and core protocol network upgrades to smart contract ERC standards and enterprise production deployments."
+        subtitle="Search, filter, and explore all 40+ sessions across all four summit days. From core protocol breakthroughs and client benchmarking to ERC application standards and enterprise adoption."
       />
 
+      {/* Interactive Master Schedule Matrix with Search & Filter */}
+      <ScheduleMatrix />
+
+      {/* Detailed Track Architecture & Thematic Breakdown */}
       <DaysProgram showMatrix={true} />
     </div>
   );
 }
+
