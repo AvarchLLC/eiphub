@@ -1208,7 +1208,7 @@ function filterSpeakerDay(day){
 
   if(day === 'all'){
     if(beacon){ beacon.style.background = '#818cf8'; beacon.style.boxShadow = '0 0 12px #818cf8'; }
-    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 22 Unique Technical Leaders (25 Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
+    if(statusText){ statusText.style.color = '#c7d2fe'; statusText.textContent = 'All 4 Summit Days · 23 Unique Technical Leaders (26 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)'; }
     if(badge){ badge.textContent = 'Devcon 8 India · Nov 3–6, 2026'; }
   } else if(day === 1 || day === '1'){
     if(beacon){ beacon.style.background = '#fbbf24'; beacon.style.boxShadow = '0 0 12px #fbbf24'; }
@@ -1220,7 +1220,7 @@ function filterSpeakerDay(day){
     if(badge){ badge.textContent = 'Day 2 Track · Nov 4, 2026'; }
   } else if(day === 3 || day === '3'){
     if(beacon){ beacon.style.background = '#06b6d4'; beacon.style.boxShadow = '0 0 12px #06b6d4'; }
-    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 4 Technical Sessions'; }
+    if(statusText){ statusText.style.color = '#7dd3fc'; statusText.textContent = 'Day 3 · Nov 5 (Application EIPs & Ecosystem Support) · 5 Technical Sessions'; }
     if(badge){ badge.textContent = 'Day 3 Track · Nov 5, 2026'; }
   } else if(day === 4 || day === '4'){
     if(beacon){ beacon.style.background = '#10b981'; beacon.style.boxShadow = '0 0 12px #10b981'; }
@@ -1624,6 +1624,35 @@ const SPEAKERS_DATA = {
     twitter: 'https://x.com/privacy_prophet',
     telegram: '@privacy_prophet',
     discord: 'privacy_prophet'
+  },
+  leigh: {
+    dayNum: 3,
+    name: 'Leigh Cronian',
+    photo: 'Assets/speakers/leigh-cronian.jpg',
+    affiliation: 'Cybercentry',
+    designation: 'Founder / Managing Director, Cybercentry',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ 2:15 PM – 3:00 PM · Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Verify, authorise, execute: ERC-8126, ERC-8196 and the road to ERC-8004 Final',
+    talkDesc: "Three standards address the same problem from different angles: ERC-8004 registers and validates agents, ERC-8126 verifies them and produces a 0-100 risk score, and ERC-8196 limits what a verified agent can do to an owner's policy. This talk composes all three in a working implementation, deployed and Sourcify-verified on Sepolia, and sets out what remains to take ERC-8004 to Final. Autonomous agents are being handed keys faster than the standards for constraining them are being composed. Each of the three layers is useful alone and considerably stronger together: an identity and validation registry, a verification score, and policy-bound execution with an auditable trail. Showing them working as one stack, on chain, is the fastest way to move the whole set from specification to adoption.",
+    bio: [
+      'Leigh Cronian founded Cybercentry and has spent 32 years in cyber security. He co-authored two Final standards for autonomous agents: ERC-8126 (AI Agent Verification), which standardises multi-layer checks and a 0-100 risk score, and ERC-8196 (AI Agent Authenticated Wallet), which requires policy-bound execution with cryptographic proof of compliance.',
+      'He builds and publishes the implementations behind the standards he writes: he deployed erc8126scan.ai, verified the ERC-8196 Reference Wallet on Sepolia, and produced an ERC-8004 Validation Registry adapter that matches the canonical ABI. He also contributed tooling to the EIP process, including a replacement for the Auto Stagnant Bot, now under review in ethereum/ERCs, and has offered to help take ERC-8004 to Final.'
+    ],
+    takeaways: [
+      'How the three layers compose in practice: registry-backed identity and validation, a verification score gating execution, and policy enforcement with EIP-712 signed actions, replay protection, a hash-chained audit trail and ERC-4337 compatibility',
+      'What a deployed implementation looks like end to end: the ERC-8196 reference wallet on Sepolia, Sourcify-verified, with a full signed lifecycle on chain and an adapter built to ERC-8004\'s canonical ABI rather than a mock',
+      'Where the trust sits and how to bound it: the stack acts on whatever score the verifier returns, so fail-closed defaults, a staleness window, key rotation and verifier migration are what make that assumption survivable'
+    ],
+    relatedEip: 'ERC-8004 (Draft), ERC-8126 (Final), ERC-8196 (Final), ERC-4337 (Final), EIP-712 (Final), ERC-191 (Final)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8126',
+    audience: ['Developers', 'Security Researchers', 'AI Agent Architects', 'Wallet Developers'],
+    linkedin: 'https://www.linkedin.com/in/leigh-cronian/',
+    twitter: 'https://x.com/Leigh_Cronian',
+    github: 'https://github.com/leighcronian',
+    discord: 'cybercentry#1120439643704410112'
   },
   louis: {
     dayNum: 1,

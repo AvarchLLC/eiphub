@@ -442,7 +442,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/dhruvang-choudhari.jpg" alt="Dhruvang Choudhari" />
                   <span>Dhruvang Choudhari</span>
                 </button>
-                
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('leigh')} title="View Leigh Cronian's session &amp; bio">
+                  <img src="Assets/speakers/leigh-cronian.jpg" alt="Leigh Cronian" />
+                  <span>Leigh Cronian</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('thiru')} title="View Thirumurugan Sivalingam's session &amp; bio">
                   <img src="Assets/speakers/thirumurugan-sivalingam.jpg" alt="Thirumurugan Sivalingam" />
                   <span>Thirumurugan S.</span>
@@ -519,6 +522,15 @@ export default function DaysProgram({ showMatrix = true }) {
                     <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Break · Networking</span></span>
                     <h5>Lunch &amp; Networking Break</h5>
                     <p>Midday lunch and author office hours with ERC editors.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">14:15 – 15:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Security</span></span>
+                    <h5>Verify, authorise, execute: ERC-8126, ERC-8196 and the road to ERC-8004 Final</h5>
+                    <p>Leigh Cronian on multi-layer agent verification, risk scores, and policy-bound onchain execution.</p>
                   </div>
                 </div>
 
@@ -889,7 +901,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Prem Makeig · Simona Serban · Thirumurugan Sivalingam</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Leigh Cronian · Prem Makeig · Simona Serban · Thirumurugan Sivalingam</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

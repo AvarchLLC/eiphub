@@ -508,6 +508,23 @@ export const SUMMIT_SCHEDULE = [
     isBreak: true
   },
   {
+    id: 'd3-leigh',
+    day: 3,
+    date: 'Thu 5 Nov',
+    dateFull: 'Thursday, November 5, 2026',
+    from: '14:15',
+    to: '15:00',
+    timeDisplay: '2:15 PM – 3:00 PM',
+    title: 'Verify, authorise, execute: ERC-8126, ERC-8196 and the road to ERC-8004 Final',
+    format: 'Talk',
+    formatIcon: '🛡️',
+    speakers: 'Leigh Cronian (Cybercentry)',
+    speakerKeys: ['leigh'],
+    description: "Three standards address the same problem from different angles: ERC-8004 registers and validates agents, ERC-8126 verifies them and produces a 0-100 risk score, and ERC-8196 limits what a verified agent can do to an owner's policy. This talk composes all three in a working implementation, deployed and Sourcify-verified on Sepolia, and sets out what remains to take ERC-8004 to Final.",
+    topic: 'AI Agent Standards & Security',
+    isBreak: false
+  },
+  {
     id: 'd3-connect',
     day: 3,
     date: 'Thu 5 Nov',

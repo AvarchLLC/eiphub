@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 22 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 23 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -174,7 +174,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 12. Louis Tsai
+  // 12. Leigh Cronian
+  {
+    id: 'leigh',
+    modalId: 'leigh',
+    name: 'Leigh Cronian',
+    org: 'Cybercentry',
+    track: 'Day 3 · AI Agent Security & ERC-8126',
+    badgeIcon: '🛡️',
+    photo: 'Assets/speakers/leigh-cronian.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
+  },
+  // 13. Louis Tsai
   {
     id: 'louis',
     modalId: 'louis',
