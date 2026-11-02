@@ -1,5 +1,22 @@
 export const SPEAKERS_DATA = {
+  /* Jeedimetla Charan (Commented out per user request)
+  charan: {
+    dayNum: 1,
+    name: 'Jeedimetla Charan',
+    affiliation: 'Ethereum Contributor',
+    designation: 'Speaker',
+    day: 'TBA',
+    track: 'TBA',
+    time: 'TBA',
+    format: 'Talk',
+    talkTitle: 'TBA',
+    talkDesc: 'TBA',
+    bio: ['Jeedimetla Charan is an Ethereum contributor.'],
+    audience: ['Developers']
+  },
+  */
   // --- DAY 1: EIP PROCESS & GENERAL OVERVIEW ---
+  /* Matthew Keil (Commented out per user request)
   matthew: {
     dayNum: 1,
     name: 'Matthew Keil',
@@ -30,6 +47,7 @@ export const SPEAKERS_DATA = {
     telegram: '@mattheweliaskeil',
     discord: 'matthewkeil'
   },
+  */
   pooja: {
     dayNum: 1,
     name: 'Pooja Ranjan',
@@ -38,9 +56,9 @@ export const SPEAKERS_DATA = {
     designation: 'Founder, ECH Institute & EIP Editor / Devcon EIP Hub Lead',
     day: 'Day 1 – November 3, 2026',
     track: 'Day 1 · Nov 3 · EIP Process & General Overview',
-    time: '⏱️ Session Time: TBA · Day 1',
+    time: '⏱️ 12:00 PM – 12:20 PM · Day 1 Track (Confirmed)',
     format: '🎙️ Keynote & Governance Overview',
-    talkTitle: 'EIP Process & Overview: The Journey of Ethereum Standards',
+    talkTitle: 'Draft to Standards: Proposals Need People (Keynote)',
     talkDesc: 'An authoritative overview of how Ethereum Improvement Proposals are born, reviewed, and finalized. Discover the vital roles of EIP Editors, ECH Institute coordinators, client developers, and community consensus in keeping Ethereum decentralized, robust, and open.',
     bio: [
       'Pooja Ranjan is the founder of ECH Institute. She has been instrumental in coordinating Ethereum network upgrades, facilitating AllCoreDevs meetings, and mentoring contributors across the global Ethereum ecosystem.',
@@ -232,6 +250,35 @@ export const SPEAKERS_DATA = {
     telegram: '@privacy_prophet',
     discord: 'privacy_prophet'
   },
+  leigh: {
+    dayNum: 3,
+    name: 'Leigh Cronian',
+    photo: 'Assets/speakers/leigh-cronian.jpg',
+    affiliation: 'Cybercentry',
+    designation: 'Founder / Managing Director, Cybercentry',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ 12:10 PM – 1:00 PM · Day 3 Track (Confirmed)',
+    format: '🎙️ 30m Talk + 15m Q&A',
+    talkTitle: 'Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final',
+    talkDesc: "Three standards address the same problem from different angles: ERC-8004 registers and validates agents, ERC-8126 verifies them and produces a 0-100 risk score, and ERC-8196 limits what a verified agent can do to an owner's policy. This talk composes all three in a working implementation, deployed and Sourcify-verified on Sepolia, and sets out what remains to take ERC-8004 to Final. Autonomous agents are being handed keys faster than the standards for constraining them are being composed. Each of the three layers is useful alone and considerably stronger together: an identity and validation registry, a verification score, and policy-bound execution with an auditable trail. Showing them working as one stack, on chain, is the fastest way to move the whole set from specification to adoption.",
+    bio: [
+      'Leigh Cronian founded Cybercentry and has spent 32 years in cyber security. He co-authored two Final standards for autonomous agents: ERC-8126 (AI Agent Verification), which standardises multi-layer checks and a 0-100 risk score, and ERC-8196 (AI Agent Authenticated Wallet), which requires policy-bound execution with cryptographic proof of compliance.',
+      'He builds and publishes the implementations behind the standards he writes: he deployed erc8126scan.ai, verified the ERC-8196 Reference Wallet on Sepolia, and produced an ERC-8004 Validation Registry adapter that matches the canonical ABI. He also contributed tooling to the EIP process, including a replacement for the Auto Stagnant Bot, now under review in ethereum/ERCs, and has offered to help take ERC-8004 to Final.'
+    ],
+    takeaways: [
+      'How the three layers compose in practice: registry-backed identity and validation, a verification score gating execution, and policy enforcement with EIP-712 signed actions, replay protection, a hash-chained audit trail and ERC-4337 compatibility',
+      'What a deployed implementation looks like end to end: the ERC-8196 reference wallet on Sepolia, Sourcify-verified, with a full signed lifecycle on chain and an adapter built to ERC-8004\'s canonical ABI rather than a mock',
+      'Where the trust sits and how to bound it: the stack acts on whatever score the verifier returns, so fail-closed defaults, a staleness window, key rotation and verifier migration are what make that assumption survivable'
+    ],
+    relatedEip: 'ERC-8004 (Draft), ERC-8126 (Final), ERC-8196 (Final), ERC-4337 (Final), EIP-712 (Final), ERC-191 (Final)',
+    relatedEipUrl: 'https://eips.ethereum.org/EIPS/eip-8126',
+    audience: ['Developers', 'Security Researchers', 'AI Agent Architects', 'Wallet Developers'],
+    linkedin: 'https://www.linkedin.com/in/leigh-cronian/',
+    twitter: 'https://x.com/Leigh_Cronian',
+    github: 'https://github.com/leighcronian',
+    discord: 'cybercentry#1120439643704410112'
+  },
   louis: {
     dayNum: 1,
     name: 'Louis Tsai',
@@ -269,7 +316,7 @@ export const SPEAKERS_DATA = {
     designation: 'Researcher, Ethereum Foundation',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ 10:20 AM – 11:00 AM · Day 2 Track (Confirmed)',
+    time: '⏱️ 9:30 AM – 10:20 AM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'The Price Is Right: Setting Gas Prices for Glamsterdam',
     talkDesc: 'Ethereum’s gas schedule is both an accounting system and a safety boundary, so choosing new numbers requires more than timing a few opcodes. This talk opens the black box behind the Glamsterdam repricing work: how synthetic blocks isolate state access and transaction overhead, how results across execution clients are normalized, and how a throughput target becomes concrete gas costs. Using EIP 8038 and EIP 2780 as case studies, it explains how measurements, resource decomposition, conservative assumptions, and edge cases shape the final model. Attendees will learn how to read repricing evidence, challenge its assumptions, and understand why numbers such as cold access costs and intrinsic transaction gas change.',
@@ -298,9 +345,9 @@ export const SPEAKERS_DATA = {
     designation: 'Cofounder, Armada',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ 12:00 PM · Day 2 (Nov 4)',
+    time: '⏱️ 11:00 AM – 11:40 AM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Frame txs & private payments: EIP-8141 in practice',
+    talkTitle: 'Frame Txs & Private Payments: EIP-8141 in Practice',
     talkDesc: 'EIP-8141 will enable Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type. Using Armada’s shielded payment architecture as a case study, this talk explores what Frames enable for private transactions, where the current proposal still creates constraints, and what a practical implementation could look like.',
     bio: [
       'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
@@ -329,7 +376,7 @@ export const SPEAKERS_DATA = {
     track: 'Day 1 · Nov 3 · EIP Process & General Overview',
     time: '⏱️ 12:20 PM – 1:00 PM · Day 1 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'EIP Content in the New AI-Era: Why Specification Clarity Matters More Than Ever',
+    talkTitle: 'EIP Content in the New AI Era: Why Specification Clarity Matters More Than Ever',
     talkDesc: 'We are all using AIs much more than in the past. We point our AIs to implement specifications, such as EIP documents. These documents are not only used as the root source of truth now, but will also be like this in the future. It is therefore even more important that the quality of these documents is as high as possible. Not just for core developers, but also for AIs which implement it, and for the general communication with the public.',
     bio: [
       'Jochem Brouwer works on Execution Layer Specifications at the Ethereum Foundation and is an active EIP Editor.',
@@ -356,7 +403,7 @@ export const SPEAKERS_DATA = {
     designation: 'Author, ERC-8009 · Cryptographer & Swarm Designer',
     day: 'Day 3 – November 5, 2026',
     track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
-    time: '⏱️ 10:00 AM · Day 3 (Nov 5)',
+    time: '⏱️ 10:30 AM – 11:00 AM · Day 3 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'ERC-8009 & Clear-Signing',
     talkDesc: "Discussion on Clear-Signing as a solution to the primary security challenge of the Ethereum ecosystem today known as 'Blind Signing', featuring a live demo on real Trezor and Ledger devices. It demonstrates a concrete way to resolve the vulnerability that led to some of the largest hacks in crypto history, such as the ByBit $1.5B exploit.",
@@ -383,7 +430,7 @@ export const SPEAKERS_DATA = {
     designation: 'Crypto Research Analyst, AMINA Group / Bank',
     day: 'Day 3 – November 5, 2026',
     track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
-    time: '⏱️ 10:00 AM – 10:40 AM · Day 3 Track (Confirmed)',
+    time: '⏱️ 10:00 AM – 10:30 AM · Day 3 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: "The Token Is Standardised. The Institution Isn't: Where Should Ethereum Standards Stop?",
     talkDesc: "Putting an asset on Ethereum is becoming the easy part. The difficult part starts when that asset has investors with different eligibility, jurisdictions, compliance requirements, custody arrangements and transfer rules. This talk examines what standards such as ERC-3643 and ERC-7943 are getting right, where they still leave gaps, and whether we are standardising the right layer of institutional finance.",
@@ -417,7 +464,7 @@ export const SPEAKERS_DATA = {
     track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
     time: '⏱️ 11:00 AM · Day 4',
     format: '👥 EVM & Scalability Architecture Presentation',
-    talkTitle: 'EVVM: Ethereum Virtual Virtual Machine Architecture & State Scaling',
+    talkTitle: 'The Token Is Standardised. The Institution Isn’t: Where Should Ethereum Standards Stop?',
     talkDesc: 'Explore EVVM (Ethereum Virtual Virtual Machine) and how contract-native virtual blockchains enable high-performance execution, custom rulesets, and privacy while maintaining trust-minimized settlement on Ethereum.',
     bio: [
       'German Abal (@ariutokintumi) is a blockchain engineer, co-founder & CTO of EVVM, author of EIP-8141 and EIP-8250, and core team member of ETH Cinco De Mayo.',
@@ -444,7 +491,7 @@ export const SPEAKERS_DATA = {
     track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
     time: '⏱️ 9:10 AM – 9:30 AM · Day 4 Track (Confirmed)',
     format: '⚡ 20m Presentation',
-    talkTitle: 'Privacy & human connectivity',
+    talkTitle: 'Privacy & Human Connectivity',
     talkDesc: "I’ll cover what it actually takes to run telecom on-chain, what users will and won’t pay for. The people who most need private connectivity (travellers, journalists, users in restrictive markets, crypto-native users who don’t want identity tied to traffic) are the ones locked out. Crypto solved permissionless money but not permissionless connectivity.",
     bio: [
       'Charchit Kumawat is the Founder & CEO of GeSIM and a Web3 product builder and growth specialist.',
@@ -559,7 +606,7 @@ export const SPEAKERS_DATA = {
     track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
     time: '⏱️ 9:50 AM – 10:30 AM · Day 4 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Are Confidential Tokens Ready for Enterprise Payments? (Impl: ERC-7984)',
+    talkTitle: 'Are Confidential Tokens Ready for Enterprise Payments?',
     talkDesc: "ERC-7984 standardizes confidential fungible tokens with encrypted balances and transfer amounts. Drawing on building stablecoin cross-border payment rails at DashX, this talk tests the interface against what enterprise payments need: auditability, selective disclosure, reconciliation, and fiat settlement.",
     bio: [
       'Dhruv Gera is the Founder & CEO of DashX Payments and a second-time founder building cross-border payment rails.',
@@ -614,7 +661,7 @@ export const SPEAKERS_DATA = {
     designation: 'Founder & Principal Architect, EVVM.org · Apeiron Protocol',
     day: 'Day 3 (Nov 5) & Day 4 (Nov 6)',
     track: 'Dual Track Speaker: Self-Sovereign Tokens (Day 3) + EVVM State Scaling (Day 4)',
-    time: 'Day 3: 20m Presentation · Day 4: 11:00 AM',
+    time: 'Day 4: 1:30 PM – 2:00 PM',
     format: '⚡ 2 Scheduled Technical Sessions Across Summit',
     talkTitle: 'Dual Track Sessions: Self-Sovereign Tokens & EVVM Architecture',
     talkDesc: 'German Abal presents two specialized sessions across Devcon 8: (1) On Day 3, presenting Apeiron Protocol and self-sovereign token architectures with receiver-side verification and protected state; (2) On Day 4, breaking down EVVM virtual machine scalability, non-conflicting state-transition proofs, and institutional rails.',
@@ -635,14 +682,14 @@ export const SPEAKERS_DATA = {
     discord: 'ariutokintumi#0001'
   },
   'german-day3': {
-    dayNum: 3,
+    dayNum: 4,
     name: 'German Abal',
     photo: 'Assets/speakers/german-abal.jpg',
     affiliation: 'ETH Cinco de Mayo - EVVM.org',
     designation: 'Founder, Apeiron Protocol & Principal Architect, EVVM.org',
-    day: 'Day 3 – November 5, 2026',
-    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
-    time: '⏱️ Day 3 Track (Confirmed)',
+    day: 'Day 4 – November 6, 2026',
+    track: 'Day 4 · Nov 6 · Enterprise Readiness & Adoption',
+    time: '⏱️ 1:30 PM – 2:00 PM · Day 4 Track (Confirmed)',
     format: '🎙️ 20m Presentation + Q&A',
     talkTitle: 'Self-Sovereign Tokens: Rethinking Onchain Representation',
     talkDesc: 'Apeiron Protocol proposes a token architecture where users or entities govern Signs through their own Console, with protected state isolated in ConsoleStorage and modular execution delegated to optional Cartridges. The talk explores explicit incoming acceptance, EXTCODEHASH-based remote compliance, and the separation of representation, instance identity, and metadata. Most existing token standards focus on how tokens are created, owned, and transferred, but provide little receiver-side control over what can enter an account or which remote implementations are trusted. Apeiron explores a different model: sovereign representation with explicit trust boundaries, isolated protected state, deterministic code-path compliance, and no passive inbox by default.',
@@ -693,6 +740,7 @@ export const SPEAKERS_DATA = {
     telegram: '@adityakrx',
     discord: '@adiii06'
   },
+  /* Harish Kotra (Commented out per user request)
   harish: {
     dayNum: 3,
     name: 'Harish Kotra',
@@ -721,6 +769,7 @@ export const SPEAKERS_DATA = {
     twitter: 'https://x.com/harishkotra',
     telegram: '@HarishKotra'
   },
+  */
   gavin: {
     dayNum: 2,
     name: 'Gavin Birch',
@@ -759,7 +808,7 @@ export const SPEAKERS_DATA = {
     designation: 'Cofounder, Armada · Operational Privacy & Protocol Design',
     day: 'Day 2 (Nov 4) & Day 4 (Nov 6)',
     track: 'Dual Track Speaker: Protocol EIPs (Day 2) + Enterprise Readiness (Day 4)',
-    time: 'Day 2: 12:00 PM · Day 4: 11:00 AM',
+    time: 'Day 2: 11:00 AM – 11:40 AM · Day 4: 12:00 PM – 1:00 PM',
     format: '⚡ 2 Scheduled Technical Sessions (Day 2 & Day 4)',
     talkTitle: 'Dual Sessions: Frame Transactions (EIP-8141) & Onchain Business Infra Guarantees',
     talkDesc: 'Gavin Birch presents two specialized sessions across the summit: (1) On Day 2 (12:00 PM), examining EIP-8141 Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type using Armada’s shielded payment architecture; (2) On Day 4 (11:00 AM), exploring how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down.',
@@ -789,9 +838,9 @@ export const SPEAKERS_DATA = {
     designation: 'Cofounder, Armada',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
-    time: '⏱️ 12:00 PM · Day 2 Track (Confirmed)',
+    time: '⏱️ 11:00 AM – 11:40 AM · Day 2 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Frame txs & private payments: EIP-8141 in practice',
+    talkTitle: 'Frame Txs & Private Payments: EIP-8141 in Practice',
     talkDesc: 'EIP-8141 will enable Frame Transactions, separating transaction validation, gas payment, and execution in a native Ethereum transaction type. Using Armada’s shielded payment architecture as a case study, this talk explores what Frames enable for private transactions, where the current proposal still creates constraints, and what a practical implementation could look like. Privacy systems have some of the hardest tx-submission problems, and rather than depending upon external infra providers, Frames could make private txs substantially more native for Ethereum.',
     bio: [
       'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
@@ -818,9 +867,9 @@ export const SPEAKERS_DATA = {
     designation: 'Cofounder, Armada',
     day: 'Day 4 – November 6, 2026',
     track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
-    time: '⏱️ 11:00 AM · Day 4 Track (Confirmed)',
+    time: '⏱️ 12:00 PM – 1:00 PM · Day 4 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'More like Ethereum, less like SaaS: Infra guarantees for onchain business',
+    talkTitle: 'More Like Ethereum, Less Like SaaS: Infra Guarantees for Onchain Business',
     talkDesc: 'As businesses move payments, treasury, and financial operations onchain, more and more they depend on infrastructure they do not control. This talk explores how Ethereum properties such as credible exit, permissionless access, replaceable intermediaries, and constrained governance can become practical business-continuity guarantees, and why privacy systems expose where those guarantees still break down. As businesses move financial operations onchain, they need infrastructure that works even when operators, intermediaries, or governance fail.',
     bio: [
       'Gavin Birch is the founder of Armada, privacy infrastructure for organizational stablecoin flows on Ethereum.',
@@ -849,7 +898,7 @@ export const SPEAKERS_DATA = {
     track: 'Day 4 · Nov 6 · Enterprise Readiness & EIPs for Consideration',
     time: '⏱️ 11:10 AM – 12:00 PM · Day 4 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
-    talkTitle: 'Bringing a Billion Agents On Ethereum',
+    talkTitle: 'Bringing a Billion Agents on Ethereum',
     talkDesc: 'A billion agents are about to come onchain, but none of the existing infrastructure was built to support that. This talk dives into techniques like Multi-Party Computation (MPC), Trusted Execution Environments (TEEs), and Hardware Security Modules (HSMs) to solve the agentic trust problem and power the emerging agentic economy. Discover how to provide autonomous AI agents with sovereign wallet access while enforcing cryptographic policies and execution boundaries.',
     bio: [
       'Kevin Jones is the founder of 1Claw, building secure infrastructure, wallet access, and policy frameworks for autonomous onchain agents.',
@@ -893,6 +942,36 @@ export const SPEAKERS_DATA = {
     linkedin: null,
     twitter: 'https://x.com/nxt3d',
     telegram: '@nxt3d'
+  },
+  taran: {
+    dayNum: 3,
+    name: 'Taran Dhillon',
+    photo: 'Assets/speakers/taran-dhillon.jpg',
+    affiliation: 'Kula',
+    designation: 'Head of Digital Assets, Kula',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ 2:00 PM – 2:20 PM · Day 3 Track (Confirmed)',
+    format: '🎙️ 20m Presentation + Q&A',
+    talkTitle: 'Why Titled Assets Need More Than a Token Standard',
+    talkDesc: 'A practical introduction to Kula’s six proposed ERC interfaces for titled assets, covering the shared infrastructure needed to represent asset identity, documents, transfer routes, compliance history, impact data, and NAV on Ethereum. The talk explains how these interfaces can complement token standards such as ERC-3643 and ERC-7943 for regulated real-world asset deployments. Most tokenisation projects can issue a token, but still rely on bespoke systems to answer the operational questions institutions and regulators need answered: what asset the token relates to, which documents govern it, whether a transfer route is permitted, what compliance actions occurred, and whether an asset value is current. Shared interfaces make those records more consistent, inspectable, and portable across applications.',
+    bio: [
+      'Taran Dhillon is Head of Digital Assets at Kula, a decentralised impact investment firm focused on unlocking access to overlooked real-world assets and emerging markets through digital infrastructure and governance.',
+      'His work sits at the intersection of digital assets, real-world assets, and institutional adoption, with a particular focus on how blockchain standards can move beyond technical innovation to support practical, regulated applications.',
+      'He has worked across token infrastructure, governance frameworks, exchange and market-making strategy, and the development of digital representations of real-world assets.'
+    ],
+    takeaways: [
+      'Why token transfer compliance alone does not provide the full infrastructure required for regulated titled assets',
+      'How the six proposed ERC interfaces separate asset identity, document commitments, transfer-route permissions, event history, impact reporting, and valuation into independently usable components',
+      'How developers, institutions, and regulators can use open Ethereum interfaces to reduce bespoke integration work while retaining deployment-specific governance and legal controls'
+    ],
+    relatedEip: 'ERC-8325, ERC-8326, ERC-8327, ERC-8328, ERC-8329, ERC-8330 (Titled Asset Interfaces)',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Enterprises', 'Developers', 'RWA Architects', 'Institutional Investors', 'Compliance Officers'],
+    linkedin: 'https://www.linkedin.com/in/taran-dhillon-64a444254/',
+    twitter: 'https://x.com/kula_dao',
+    telegram: '@TS0010',
+    discord: 'KULA_DAO'
   },
   thiru: {
     dayNum: 3,

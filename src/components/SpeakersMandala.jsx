@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 22 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 23 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -174,7 +174,20 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(16, 185, 129, 0.75)',
     dotType: 'yellow'
   },
-  // 12. Louis Tsai
+  // 12. Leigh Cronian
+  {
+    id: 'leigh',
+    modalId: 'leigh',
+    name: 'Leigh Cronian',
+    org: 'Cybercentry',
+    track: 'Day 3 · AI Agent Security & ERC-8126',
+    badgeIcon: '🛡️',
+    photo: 'Assets/speakers/leigh-cronian.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
+    dotType: 'blue'
+  },
+  // 13. Louis Tsai
   {
     id: 'louis',
     modalId: 'louis',
@@ -200,6 +213,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
+  /* Matthew Keil (Commented out)
   // 14. Matthew Keil
   {
     id: 'matthew',
@@ -213,6 +227,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
+  */
   // 15. Pooja Ranjan
   {
     id: 'pooja',
@@ -302,6 +317,19 @@ const ALL_SPEAKERS = [
     photo: 'Assets/speakers/yudhishthra.jpg',
     color: '#34d399',
     glowColor: 'rgba(52, 211, 153, 0.75)',
+    dotType: 'blue'
+  },
+  // 21. Taran Dhillon
+  {
+    id: 'taran',
+    modalId: 'taran',
+    name: 'Taran Dhillon',
+    org: 'Kula',
+    track: 'Day 3 · Titled Asset ERCs',
+    badgeIcon: '📜',
+    photo: 'Assets/speakers/taran-dhillon.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
   },
   // 22. Thirumurugan Sivalingam
