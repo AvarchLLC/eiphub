@@ -96,10 +96,12 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/photos/speaker-jochem-brouwer.jpg" alt="Jochem Brouwer" />
                   <span>Jochem Brouwer</span>
                 </button>
+                {/* Matthew Keil (Commented out)
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('matthew')} title="View Matthew Keil's session &amp; bio">
                   <img src="Assets/speakers/matthew-keil.jpg" alt="Matthew Keil" />
                   <span>Matthew Keil</span>
                 </button>
+                */}
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} title="View Pooja Ranjan's session &amp; bio">
                   <img src="Assets/speakers/pooja-ranjan.jpg" alt="Pooja Ranjan" />
                   <span>Pooja Ranjan</span>
@@ -167,9 +169,9 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">15:00 – 15:30</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Hard Forks</span></span>
-                    <h5>EIP Selection to Support Fast Fork Cadence</h5>
-                    <p>Matthew Keil (Lodestar) on adopting smaller, high-cadence hard forks and forward multi-fork roadmap planning.</p>
+                    <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Interactive Quiz Game</span></span>
+                    <h5>EIP Signal Quiz Game: Understanding EIPs</h5>
+                    <p>Dhanush Naik hosting interactive quiz game testing standards knowledge and network upgrade concepts.</p>
                   </div>
                 </div>
 
@@ -509,9 +511,9 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">11:00 – 11:30</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Security</span></span>
-                    <h5>Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final</h5>
-                    <p>Leigh Cronian on multi-layer agent verification, risk scores, and policy-bound onchain execution.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Trustless Systems</span></span>
+                    <h5>Building Trustless Systems, Together</h5>
+                    <p>Simona Serban on balancing human trust with code trustlessness from lessons building ETHCluj.</p>
                   </div>
                 </div>
 
@@ -527,9 +529,9 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">12:10 – 13:00</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Trustless Systems</span></span>
-                    <h5>Building Trustless Systems, Together</h5>
-                    <p>Simona Serban on balancing human trust with code trustlessness from lessons building ETHCluj.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Security</span></span>
+                    <h5>Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final</h5>
+                    <p>Leigh Cronian on multi-layer agent verification, risk scores, and policy-bound onchain execution.</p>
                   </div>
                 </div>
 
@@ -824,7 +826,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Jochem Brouwer · Louis Tsai · Matthew Keil · Pooja Ranjan · Rafael Matias · Stefan Starflinger</span>
+              <span className="day-meta-val" style={{ color: '#fbbf24', fontWeight: '600' }}>Jochem Brouwer · Louis Tsai · Pooja Ranjan · Rafael Matias · Stefan Starflinger</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>

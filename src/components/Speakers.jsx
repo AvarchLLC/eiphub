@@ -11,7 +11,7 @@ export default function Speakers() {
       <div className="speakers-console-top">
         <div className="speakers-console-status">
           <span className="speakers-beacon" id="spk-console-beacon" style={{ background: '#818cf8', boxShadow: '0 0 12px #818cf8' }}></span>
-          <span id="spk-console-status-text" style={{ color: '#c7d2fe' }}>All 4 Summit Days · 24 Unique Technical Leaders (27 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)</span>
+          <span id="spk-console-status-text" style={{ color: '#c7d2fe' }}>All 4 Summit Days · 23 Unique Technical Leaders (26 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)</span>
         </div>
         <span className="speakers-console-badge" id="spk-console-badge">Devcon 8 India · Nov 3–6, 2026</span>
       </div>
@@ -21,14 +21,14 @@ export default function Speakers() {
         <div className="spk-metric-card">
           <div className="spk-metric-icon">🎙️</div>
           <div>
-            <div className="spk-metric-num">24 Speakers</div>
+            <div className="spk-metric-num">23 Speakers</div>
             <div className="spk-metric-label">Keynote Speakers &amp; Contributors</div>
           </div>
         </div>
         <div className="spk-metric-card">
           <div className="spk-metric-icon">⚡</div>
           <div>
-            <div className="spk-metric-num">27 Sessions</div>
+            <div className="spk-metric-num">26 Sessions</div>
             <div className="spk-metric-label">Keynotes, Clinics &amp; Panels</div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Speakers() {
         <div className="spk-day-filter-wrap" role="tablist" aria-label="Summit Speaker Days Filter">
           <button type="button" className="spk-day-tab-btn active" data-spk-day="all" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay('all')} role="tab" aria-selected="true">
             <span>All Days (Nov 3–6)</span>
-            <span className="spk-count-pill">23 Speakers</span>
+            <span className="spk-count-pill">22 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="1" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(1)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#fbbf24' }}></span>
@@ -842,7 +842,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(56,189,248,0.18)', color: '#38bdf8' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
             <div className="talk-title-text">Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final</div>
-            <div className="talk-time-text">⏱️ 11:00 AM – 11:30 AM · Day 3 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 12:10 PM – 1:00 PM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -947,7 +947,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 14. Matthew Keil (Day 1 · EIP Process) */}
+        {/* Matthew Keil (Commented out per user request)
+        14. Matthew Keil (Day 1 · EIP Process)
         <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="14" id="speaker-card-matthew" onClick={() => window.openSpeakerModal && window.openSpeakerModal('matthew')} role="button" tabIndex={0} title="Click to view Matthew Keil's talk and bio">
           <div className="speaker-card-top-bar"></div>
           <div className="speaker-photo-wrap">
@@ -991,6 +992,7 @@ export default function Speakers() {
             </button>
           </div>
         </div>
+        */}
 
         {/* 15. Pooja Ranjan (Day 1 · EIP Process) */}
         <div className="speaker-card spk-day-1" data-spk-day="1" data-popular-rank="15" id="speaker-card-pooja" onClick={() => window.openSpeakerModal && window.openSpeakerModal('pooja')} role="button" tabIndex={0} title="Click to view Pooja Ranjan's talk and bio">
@@ -1090,7 +1092,7 @@ export default function Speakers() {
               </a>
             </div>
             <div className="speaker-meta-row">
-              <div className="speaker-org-tag">Avail Project</div>
+              <div className="speaker-org-tag">Avail</div>
             </div>
             <p className="speaker-designation">Senior Research and Development Engineer</p>
           </div>
@@ -1181,7 +1183,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
             <div className="talk-title-text">Building Trustless Systems, Together</div>
-            <div className="talk-time-text">⏱️ 12:10 PM – 1:00 PM · Day 3 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 11:00 AM – 11:30 AM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">

@@ -73,7 +73,7 @@ export const SUMMIT_SCHEDULE = [
     isBreak: false
   },
   {
-    id: 'd1-matthew-forks',
+    id: 'd1-quiz-dhanush',
     day: 1,
     date: 'Tue 3 Nov',
     dateFull: 'Tuesday, November 3, 2026',
@@ -81,10 +81,10 @@ export const SUMMIT_SCHEDULE = [
     to: '15:30',
     timeDisplay: '3:00 PM – 3:30 PM',
     title: 'EIP Signal Quiz Game: Understanding EIPs',
-    format: 'Talk',
-    formatIcon: '🚀',
+    format: 'Quiz',
+    formatIcon: '🎮',
     speakers: 'Dhanush Naik',
-    speakerKeys: ['matthew'],
+    speakerKeys: [],
     description: 'Encourage the Ethereum ecosystem to adopt smaller, faster forks that enable more EIPs to ship over time, while planning multiple forks ahead through a clear roadmap to improve resource allocation and accelerate overall development cadence.',
     topic: 'Consensus & Hard Forks',
     isBreak: false
@@ -457,20 +457,20 @@ export const SUMMIT_SCHEDULE = [
     isBreak: false
   },
   {
-    id: 'd3-leigh',
+    id: 'd3-simona',
     day: 3,
     date: 'Thu 5 Nov',
     dateFull: 'Thursday, November 5, 2026',
     from: '11:00',
     to: '11:30',
     timeDisplay: '11:00 AM – 11:30 AM',
-    title: 'Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final',
+    title: 'Building Trustless Systems, Together',
     format: 'Talk',
-    formatIcon: '🛡️',
-    speakers: 'Leigh Cronian (Cybercentry)',
-    speakerKeys: ['leigh'],
-    description: "Three standards address the same problem from different angles: ERC-8004 registers and validates agents, ERC-8126 verifies them and produces a 0-100 risk score, and ERC-8196 limits what a verified agent can do to an owner's policy. This talk composes all three in a working implementation, deployed and Sourcify-verified on Sepolia, and sets out what remains to take ERC-8004 to Final.",
-    topic: 'AI Agent Standards & Security',
+    formatIcon: '🌐',
+    speakers: 'Simona Serban (ETHCluj)',
+    speakerKeys: ['simona'],
+    description: 'Exploring the tension between human trust and code-based trustlessness in Ethereum, this talk draws on experiences building the ETHCluj community to examine how open collaboration, accountability, and shared ownership can thrive in a rapidly evolving world shaped by AI, privacy, and security challenges.',
+    topic: 'Trustless Systems & Community',
     isBreak: false
   },
   {
@@ -491,20 +491,20 @@ export const SUMMIT_SCHEDULE = [
     isBreak: false
   },
   {
-    id: 'd3-simona',
+    id: 'd3-leigh',
     day: 3,
     date: 'Thu 5 Nov',
     dateFull: 'Thursday, November 5, 2026',
     from: '12:10',
     to: '13:00',
     timeDisplay: '12:10 PM – 1:00 PM',
-    title: 'Building Trustless Systems, Together',
+    title: 'Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final',
     format: 'Talk',
-    formatIcon: '🌐',
-    speakers: 'Simona Serban (ETHCluj)',
-    speakerKeys: ['simona'],
-    description: 'Exploring the tension between human trust and code-based trustlessness in Ethereum, this talk draws on experiences building the ETHCluj community to examine how open collaboration, accountability, and shared ownership can thrive in a rapidly evolving world shaped by AI, privacy, and security challenges.',
-    topic: 'Trustless Systems & Community',
+    formatIcon: '🛡️',
+    speakers: 'Leigh Cronian (Cybercentry)',
+    speakerKeys: ['leigh'],
+    description: "Three standards address the same problem from different angles: ERC-8004 registers and validates agents, ERC-8126 verifies them and produces a 0-100 risk score, and ERC-8196 limits what a verified agent can do to an owner's policy. This talk composes all three in a working implementation, deployed and Sourcify-verified on Sepolia, and sets out what remains to take ERC-8004 to Final.",
+    topic: 'AI Agent Standards & Security',
     isBreak: false
   },
   {

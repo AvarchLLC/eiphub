@@ -1,5 +1,22 @@
 export const SPEAKERS_DATA = {
+  /* Jeedimetla Charan (Commented out per user request)
+  charan: {
+    dayNum: 1,
+    name: 'Jeedimetla Charan',
+    affiliation: 'Ethereum Contributor',
+    designation: 'Speaker',
+    day: 'TBA',
+    track: 'TBA',
+    time: 'TBA',
+    format: 'Talk',
+    talkTitle: 'TBA',
+    talkDesc: 'TBA',
+    bio: ['Jeedimetla Charan is an Ethereum contributor.'],
+    audience: ['Developers']
+  },
+  */
   // --- DAY 1: EIP PROCESS & GENERAL OVERVIEW ---
+  /* Matthew Keil (Commented out per user request)
   matthew: {
     dayNum: 1,
     name: 'Matthew Keil',
@@ -30,6 +47,7 @@ export const SPEAKERS_DATA = {
     telegram: '@mattheweliaskeil',
     discord: 'matthewkeil'
   },
+  */
   pooja: {
     dayNum: 1,
     name: 'Pooja Ranjan',
@@ -206,7 +224,7 @@ export const SPEAKERS_DATA = {
     dayNum: 2,
     name: 'Rachit Anand Srivastava',
     photo: 'Assets/speakers/rachit-anand-srivastava.png',
-    affiliation: 'Avail Project',
+    affiliation: 'Avail',
     designation: 'Senior Research and Development Engineer',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
@@ -240,7 +258,7 @@ export const SPEAKERS_DATA = {
     designation: 'Founder / Managing Director, Cybercentry',
     day: 'Day 3 – November 5, 2026',
     track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
-    time: '⏱️ 11:00 AM – 11:30 AM · Day 3 Track (Confirmed)',
+    time: '⏱️ 12:10 PM – 1:00 PM · Day 3 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final',
     talkDesc: "Three standards address the same problem from different angles: ERC-8004 registers and validates agents, ERC-8126 verifies them and produces a 0-100 risk score, and ERC-8196 limits what a verified agent can do to an owner's policy. This talk composes all three in a working implementation, deployed and Sourcify-verified on Sepolia, and sets out what remains to take ERC-8004 to Final. Autonomous agents are being handed keys faster than the standards for constraining them are being composed. Each of the three layers is useful alone and considerably stronger together: an identity and validation registry, a verification score, and policy-bound execution with an auditable trail. Showing them working as one stack, on chain, is the fastest way to move the whole set from specification to adoption.",
@@ -614,7 +632,7 @@ export const SPEAKERS_DATA = {
     designation: 'Co-founder, ETHCluj · Community Builder',
     day: 'Day 3 – November 5, 2026',
     track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
-    time: '⏱️ 12:10 PM – 1:00 PM · Day 3 Track (Confirmed)',
+    time: '⏱️ 11:00 AM – 11:30 AM · Day 3 Track (Confirmed)',
     format: '🎙️ 30m Talk + 15m Q&A',
     talkTitle: 'Building Trustless Systems, Together',
     talkDesc: 'Ethereum is built on a powerful promise: creating systems that remove our reliance on trusted intermediaries. Yet, building these very systems requires human trust: people who trust each other enough to collaborate openly, share knowledge, challenge assumptions, and hold each other accountable. From her experience helping build the ETHCluj community, this talk explores the unique tension between human trust and code-based trustlessness, showing how we can keep collaborating effectively as AI, privacy concerns, and security challenges reshape how we connect and build.',
@@ -722,6 +740,7 @@ export const SPEAKERS_DATA = {
     telegram: '@adityakrx',
     discord: '@adiii06'
   },
+  /* Harish Kotra (Commented out per user request)
   harish: {
     dayNum: 3,
     name: 'Harish Kotra',
@@ -750,6 +769,7 @@ export const SPEAKERS_DATA = {
     twitter: 'https://x.com/harishkotra',
     telegram: '@HarishKotra'
   },
+  */
   gavin: {
     dayNum: 2,
     name: 'Gavin Birch',
