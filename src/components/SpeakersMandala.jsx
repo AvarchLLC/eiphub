@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 23 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 24 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -315,6 +315,19 @@ const ALL_SPEAKERS = [
     photo: 'Assets/speakers/yudhishthra.jpg',
     color: '#34d399',
     glowColor: 'rgba(52, 211, 153, 0.75)',
+    dotType: 'blue'
+  },
+  // 21. Taran Dhillon
+  {
+    id: 'taran',
+    modalId: 'taran',
+    name: 'Taran Dhillon',
+    org: 'Kula',
+    track: 'Day 3 · Titled Asset ERCs',
+    badgeIcon: '📜',
+    photo: 'Assets/speakers/taran-dhillon.jpg',
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.75)',
     dotType: 'blue'
   },
   // 22. Thirumurugan Sivalingam

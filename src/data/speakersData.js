@@ -923,6 +923,36 @@ export const SPEAKERS_DATA = {
     twitter: 'https://x.com/nxt3d',
     telegram: '@nxt3d'
   },
+  taran: {
+    dayNum: 3,
+    name: 'Taran Dhillon',
+    photo: 'Assets/speakers/taran-dhillon.jpg',
+    affiliation: 'Kula',
+    designation: 'Head of Digital Assets, Kula',
+    day: 'Day 3 – November 5, 2026',
+    track: 'Day 3 · Nov 5 · Application EIPs & Ecosystem Support',
+    time: '⏱️ 2:00 PM – 2:25 PM · Day 3 Track (Confirmed)',
+    format: '🎙️ 20m Presentation + Q&A',
+    talkTitle: 'Why Titled Assets Need More Than a Token Standard',
+    talkDesc: 'A practical introduction to Kula’s six proposed ERC interfaces for titled assets, covering the shared infrastructure needed to represent asset identity, documents, transfer routes, compliance history, impact data, and NAV on Ethereum. The talk explains how these interfaces can complement token standards such as ERC-3643 and ERC-7943 for regulated real-world asset deployments. Most tokenisation projects can issue a token, but still rely on bespoke systems to answer the operational questions institutions and regulators need answered: what asset the token relates to, which documents govern it, whether a transfer route is permitted, what compliance actions occurred, and whether an asset value is current. Shared interfaces make those records more consistent, inspectable, and portable across applications.',
+    bio: [
+      'Taran Dhillon is Head of Digital Assets at Kula, a decentralised impact investment firm focused on unlocking access to overlooked real-world assets and emerging markets through digital infrastructure and governance.',
+      'His work sits at the intersection of digital assets, real-world assets, and institutional adoption, with a particular focus on how blockchain standards can move beyond technical innovation to support practical, regulated applications.',
+      'He has worked across token infrastructure, governance frameworks, exchange and market-making strategy, and the development of digital representations of real-world assets.'
+    ],
+    takeaways: [
+      'Why token transfer compliance alone does not provide the full infrastructure required for regulated titled assets',
+      'How the six proposed ERC interfaces separate asset identity, document commitments, transfer-route permissions, event history, impact reporting, and valuation into independently usable components',
+      'How developers, institutions, and regulators can use open Ethereum interfaces to reduce bespoke integration work while retaining deployment-specific governance and legal controls'
+    ],
+    relatedEip: 'ERC-8325, ERC-8326, ERC-8327, ERC-8328, ERC-8329, ERC-8330 (Titled Asset Interfaces)',
+    relatedEipUrl: 'https://eips.ethereum.org/erc',
+    audience: ['Enterprises', 'Developers', 'RWA Architects', 'Institutional Investors', 'Compliance Officers'],
+    linkedin: 'https://www.linkedin.com/in/taran-dhillon-64a444254/',
+    twitter: 'https://x.com/kula_dao',
+    telegram: '@TS0010',
+    discord: 'KULA_DAO'
+  },
   thiru: {
     dayNum: 3,
     name: 'Thirumurugan Sivalingam',

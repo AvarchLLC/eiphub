@@ -11,7 +11,7 @@ export default function Speakers() {
       <div className="speakers-console-top">
         <div className="speakers-console-status">
           <span className="speakers-beacon" id="spk-console-beacon" style={{ background: '#818cf8', boxShadow: '0 0 12px #818cf8' }}></span>
-          <span id="spk-console-status-text" style={{ color: '#c7d2fe' }}>All 4 Summit Days · 23 Unique Technical Leaders (26 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)</span>
+          <span id="spk-console-status-text" style={{ color: '#c7d2fe' }}>All 4 Summit Days · 24 Unique Technical Leaders (27 Confirmed Sessions) · Devcon 8 India (Nov 3–6, 2026)</span>
         </div>
         <span className="speakers-console-badge" id="spk-console-badge">Devcon 8 India · Nov 3–6, 2026</span>
       </div>
@@ -21,14 +21,14 @@ export default function Speakers() {
         <div className="spk-metric-card">
           <div className="spk-metric-icon">🎙️</div>
           <div>
-            <div className="spk-metric-num">23 Speakers</div>
+            <div className="spk-metric-num">24 Speakers</div>
             <div className="spk-metric-label">Keynote Speakers &amp; Contributors</div>
           </div>
         </div>
         <div className="spk-metric-card">
           <div className="spk-metric-icon">⚡</div>
           <div>
-            <div className="spk-metric-num">26 Sessions</div>
+            <div className="spk-metric-num">27 Sessions</div>
             <div className="spk-metric-label">Keynotes, Clinics &amp; Panels</div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Speakers() {
         <div className="spk-day-filter-wrap" role="tablist" aria-label="Summit Speaker Days Filter">
           <button type="button" className="spk-day-tab-btn active" data-spk-day="all" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay('all')} role="tab" aria-selected="true">
             <span>All Days (Nov 3–6)</span>
-            <span className="spk-count-pill">22 Speakers</span>
+            <span className="spk-count-pill">23 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="1" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(1)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#fbbf24' }}></span>
@@ -75,7 +75,7 @@ export default function Speakers() {
           <button type="button" className="spk-day-tab-btn" data-spk-day="3" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(3)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#38bdf8' }}></span>
             <span>Day 3 · Nov 5 (Application EIPs &amp; Ecosystem Support)</span>
-            <span className="spk-count-pill">4 Speakers</span>
+            <span className="spk-count-pill">5 Speakers</span>
           </button>
           <button type="button" className="spk-day-tab-btn" data-spk-day="4" onClick={() => window.filterSpeakerDay && window.filterSpeakerDay(4)} role="tab" aria-selected="false">
             <span className="spk-tab-dot" style={{ color: '#6ee7b7' }}></span>
@@ -1281,6 +1281,51 @@ export default function Speakers() {
 
             </div>
             <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('yudhishthra')}>
+              <span>View Talk &amp; Bio</span>
+              <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        {/* 21. Taran Dhillon (Day 3 · Application EIPs) */}
+        <div className="speaker-card spk-day-3" data-spk-day="3" data-popular-rank="21" id="speaker-card-taran" onClick={() => window.openSpeakerModal && window.openSpeakerModal('taran')} role="button" tabIndex={0} title="Click to view Taran Dhillon's talk and bio">
+          <div className="speaker-card-top-bar"></div>
+          <div className="speaker-photo-wrap">
+            <span className="spk-photo-track-badge" style={{ background: 'rgba(56,189,248,0.25)', color: '#38bdf8', border: '1px solid rgba(56,189,248,0.45)' }}>Day 3 · Application EIPs</span>
+            <span className="spk-photo-verified">✓ Confirmed</span>
+            <img src="Assets/speakers/taran-dhillon.jpg" alt="Taran Dhillon" className="speaker-photo-img" loading="lazy" />
+          </div>
+          <div className="speaker-info">
+            <div className="speaker-name-row">
+              <h4 className="speaker-name">Taran Dhillon</h4>
+              <a href="https://x.com/kula_dao" target="_blank" rel="noopener noreferrer" className="spk-card-x-pill" title="Taran Dhillon on X (@kula_dao)" onClick={(e) => e.stopPropagation()}>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>@kula_dao</span>
+              </a>
+            </div>
+            <div className="speaker-meta-row">
+              <div className="speaker-org-tag">Kula</div>
+            </div>
+            <p className="speaker-designation">Head of Digital Assets, Kula</p>
+          </div>
+          <div className="speaker-talk-snip">
+            <div className="talk-format-badge" style={{ background: 'rgba(56,189,248,0.18)', color: '#38bdf8' }}>🎙️ 20m Presentation + Q&amp;A</div>
+            <div className="talk-title-text">Why Titled Assets Need More Than a Token Standard</div>
+            <div className="talk-time-text">⏱️ 2:00 PM – 2:25 PM · Day 3 Track (Confirmed)</div>
+          </div>
+          <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
+            <div className="speaker-social-icons">
+              <a href="https://www.linkedin.com/in/taran-dhillon-64a444254/" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Taran Dhillon on LinkedIn" aria-label="LinkedIn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://x.com/kula_dao" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Taran Dhillon on X" aria-label="X">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://t.me/TS0010" target="_blank" rel="noopener noreferrer" className="spk-social-link" title="Taran Dhillon on Telegram" aria-label="Telegram">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              </a>
+            </div>
+            <button type="button" className="btn-speaker-card-view" onClick={() => window.openSpeakerModal && window.openSpeakerModal('taran')}>
               <span>View Talk &amp; Bio</span>
               <span>➔</span>
             </button>

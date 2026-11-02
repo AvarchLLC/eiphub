@@ -446,6 +446,10 @@ export default function DaysProgram({ showMatrix = true }) {
                   <img src="Assets/speakers/leigh-cronian.jpg" alt="Leigh Cronian" />
                   <span>Leigh Cronian</span>
                 </button>
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('taran')} title="View Taran Dhillon's session &amp; bio">
+                  <img src="Assets/speakers/taran-dhillon.jpg" alt="Taran Dhillon" />
+                  <span>Taran Dhillon</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('thiru')} title="View Thirumurugan Sivalingam's session &amp; bio">
                   <img src="Assets/speakers/thirumurugan-sivalingam.jpg" alt="Thirumurugan Sivalingam" />
                   <span>Thirumurugan S.</span>
@@ -526,7 +530,16 @@ export default function DaysProgram({ showMatrix = true }) {
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:15 – 15:00</span>
+                  <span className="timeline-time-badge">14:00 – 14:25</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Titled Assets</span></span>
+                    <h5>Why Titled Assets Need More Than a Token Standard</h5>
+                    <p>Taran Dhillon on Kula’s proposed ERC interfaces for titled assets, asset identity, and institutional compliance.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">14:25 – 15:00</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Security</span></span>
                     <h5>Verify, authorise, execute: ERC-8126, ERC-8196 and the road to ERC-8004 Final</h5>
@@ -901,7 +914,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Leigh Cronian · Prem Makeig · Simona Serban · Thirumurugan Sivalingam</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Leigh Cronian · Prem Makeig · Simona Serban · Taran Dhillon · Thirumurugan Sivalingam</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
