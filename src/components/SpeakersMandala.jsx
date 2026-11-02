@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// All 24 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
+// All 23 Confirmed Protocol Leaders & Authors (Full Cosmos Orbit Presentation)
 const ALL_SPEAKERS = [
   // 1. Abhay Singh
   {
@@ -213,6 +213,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(6, 182, 212, 0.75)',
     dotType: 'blue'
   },
+  /* Matthew Keil (Commented out)
   // 14. Matthew Keil
   {
     id: 'matthew',
@@ -226,6 +227,7 @@ const ALL_SPEAKERS = [
     glowColor: 'rgba(251, 191, 36, 0.75)',
     dotType: 'yellow'
   },
+  */
   // 15. Pooja Ranjan
   {
     id: 'pooja',
