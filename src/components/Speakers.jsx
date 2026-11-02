@@ -254,7 +254,7 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>⚡ 20m Presentation</div>
-            <div className="talk-title-text">Privacy &amp; human connectivity</div>
+            <div className="talk-title-text">Privacy & Human Connectivity</div>
             <div className="talk-time-text">⏱️ 9:10 AM – 9:30 AM · Day 4 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
@@ -297,7 +297,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(6,182,212,0.18)', color: '#7dd3fc' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
             <div className="talk-title-text">ERC-8009 &amp; Clear-Signing</div>
-            <div className="talk-time-text">⏱️ 10:00 AM · Day 3 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 10:30 AM – 11:00 AM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -339,7 +339,7 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">Are Confidential Tokens Ready for Enterprise Payments? (Impl: ERC-7984)</div>
+            <div className="talk-title-text">Are Confidential Tokens Ready for Enterprise Payments?</div>
             <div className="talk-time-text">⏱️ 9:50 AM – 10:30 AM · Day 4 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
@@ -382,8 +382,8 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(6,182,212,0.18)', color: '#7dd3fc' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">The Token Is Standardised. The Institution Isn't: Where Should Ethereum Standards Stop?</div>
-            <div className="talk-time-text">⏱️ 10:00 AM – 10:40 AM · Day 3 Track (Confirmed)</div>
+            <div className="talk-title-text">The Token Is Standardised. The Institution Isn’t: Where Should Ethereum Standards Stop?</div>
+            <div className="talk-time-text">⏱️ 10:00 AM – 10:30 AM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -468,8 +468,8 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(129,140,248,0.18)', color: '#c7d2fe' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">Frame txs &amp; private payments: EIP-8141 in practice</div>
-            <div className="talk-time-text">⏱️ Day 2: 11:00 AM · Day 4: 11:00 AM</div>
+            <div className="talk-title-text">Frame Txs & Private Payments: EIP-8141 in Practice</div>
+            <div className="talk-time-text">⏱️ 11:00 AM – 11:40 AM · Day 2 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -507,8 +507,8 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">More like Ethereum, less like SaaS: Infra guarantees for onchain business</div>
-            <div className="talk-time-text">⏱️ 11:00 AM · Day 4 Track (Confirmed)</div>
+            <div className="talk-title-text">More Like Ethereum, Less Like SaaS: Infra Guarantees for Onchain Business</div>
+            <div className="talk-time-text">⏱️ 12:00 PM – 1:00 PM · Day 4 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -591,7 +591,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(6,182,212,0.18)', color: '#7dd3fc' }}>🎙️ 20m Presentation</div>
             <div className="talk-title-text">Self-Sovereign Tokens: Rethinking Onchain Representation</div>
-            <div className="talk-time-text">⏱️ 12:00 PM – 1:00 PM · Day 4 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 1:30 PM – 2:00 PM · Day 4 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -633,7 +633,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>👥 Scalability Architecture</div>
             <div className="talk-title-text">EVVM: Ethereum Virtual Virtual Machine Architecture &amp; State Scaling</div>
-            <div className="talk-time-text">⏱️ 11:00 AM · Day 4 (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 1:30 PM – 2:00 PM · Day 4 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -755,7 +755,7 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">Bringing a Billion Agents On Ethereum</div>
+            <div className="talk-title-text">Bringing a Billion Agents on Ethereum</div>
             <div className="talk-time-text">⏱️ 11:10 AM – 12:00 PM · Day 4 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
@@ -841,8 +841,8 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(56,189,248,0.18)', color: '#38bdf8' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
-            <div className="talk-title-text">Verify, authorise, execute: ERC-8126, ERC-8196 and the road to ERC-8004 Final</div>
-            <div className="talk-time-text">⏱️ 2:15 PM – 3:00 PM · Day 3 Track (Confirmed)</div>
+            <div className="talk-title-text">Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final</div>
+            <div className="talk-time-text">⏱️ 11:00 AM – 11:30 AM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -929,7 +929,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(129,140,248,0.18)', color: '#c7d2fe' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
             <div className="talk-title-text">The Price Is Right: Setting Gas Prices for Glamsterdam</div>
-            <div className="talk-time-text">⏱️ 10:20 AM – 11:00 AM · Day 2 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 9:30 AM – 10:20 AM · Day 2 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -1015,8 +1015,8 @@ export default function Speakers() {
           </div>
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(245,158,11,0.18)', color: '#fbbf24' }}>🎙️ Keynote &amp; Governance</div>
-            <div className="talk-title-text">EIP Process &amp; Overview: The Journey of Ethereum Standards</div>
-            <div className="talk-time-text">⏱️ Session Time: TBA · Day 1 Track</div>
+            <div className="talk-title-text">Draft to Standards: Proposals Need People (Keynote)</div>
+            <div className="talk-time-text">⏱️ 12:00 PM – 12:20 PM · Day 1 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -1181,7 +1181,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(16,185,129,0.18)', color: '#6ee7b7' }}>🎙️ 30m Talk + 15m Q&amp;A</div>
             <div className="talk-title-text">Building Trustless Systems, Together</div>
-            <div className="talk-time-text">⏱️ 11:00 AM – 11:30 AM · Day 3 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 12:10 PM – 1:00 PM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">
@@ -1311,7 +1311,7 @@ export default function Speakers() {
           <div className="speaker-talk-snip">
             <div className="talk-format-badge" style={{ background: 'rgba(56,189,248,0.18)', color: '#38bdf8' }}>🎙️ 20m Presentation + Q&amp;A</div>
             <div className="talk-title-text">Why Titled Assets Need More Than a Token Standard</div>
-            <div className="talk-time-text">⏱️ 2:00 PM – 2:25 PM · Day 3 Track (Confirmed)</div>
+            <div className="talk-time-text">⏱️ 2:00 PM – 2:20 PM · Day 3 Track (Confirmed)</div>
           </div>
           <div className="speaker-card-actions" onClick={(e) => e.stopPropagation()}>
             <div className="speaker-social-icons">

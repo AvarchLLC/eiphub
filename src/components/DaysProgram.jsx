@@ -132,8 +132,8 @@ export default function DaysProgram({ showMatrix = true }) {
                   <span className="timeline-time-badge">12:00 – 12:20</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-welcome"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span>Welcome · Community</span></span>
-                    <h5>EIP Hub Opening</h5>
-                    <p>Opening remarks by Pooja Ranjan inaugurating the EIP Hub at Devcon 8 Mumbai.</p>
+                    <h5>Draft to Standards: Proposals Need People (Keynote)</h5>
+                    <p>Opening keynote by Pooja Ranjan on how proposals become standard and why standards need people.</p>
                   </div>
                 </div>
 
@@ -309,15 +309,6 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">09:30 – 10:20</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Protocol Security</span></span>
-                    <h5>EIP-8184: LUCID Encrypted Mempool</h5>
-                    <p>Why encrypting the mempool is hard, trade-offs around ordering and DOS resistance, and the EIP-8184 model.</p>
-                  </div>
-                </div>
-
-                <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">10:20 – 11:00</span>
-                  <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Gas Repricing</span></span>
                     <h5>The Price Is Right: Setting Gas Prices for Glamsterdam</h5>
                     <p>Maria Silva on synthetic block tests, cross-client measurements, EIP-8038 and EIP-2780 repricing models.</p>
@@ -325,10 +316,19 @@ export default function DaysProgram({ showMatrix = true }) {
                 </div>
 
                 <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">10:20 – 11:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Reading · EIP-8037</span></span>
+                    <h5>White Paper Reading: EIP-8037</h5>
+                    <p>Rongxin, QZ, and Maria Silva analyzing EIP-8037 gas dynamics and state boundary models.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">11:00 – 11:40</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · EIP-8141</span></span>
-                    <h5>Frame txs &amp; private payments: EIP-8141 in practice</h5>
+                    <h5>Frame Txs &amp; Private Payments: EIP-8141 in Practice</h5>
                     <p>Gavin Birch on separating transaction validation, gas payment, and execution natively on Ethereum.</p>
                   </div>
                 </div>
@@ -434,6 +434,10 @@ export default function DaysProgram({ showMatrix = true }) {
             <div className="showcase-speakers-bar">
               <div className="showcase-speakers-bar-title">Scheduled Day 3 Speakers</div>
               <div className="showcase-speakers-chips">
+                <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('daniel')} title="View Dr. Daniel Nagy's session &amp; bio">
+                  <img src="Assets/speakers/daniel-nagy.png" alt="Dr. Daniel Nagy" />
+                  <span>Daniel Nagy</span>
+                </button>
                 <button type="button" className="spk-day-chip" onClick={() => window.openSpeakerModal && window.openSpeakerModal('prem')} title="View Prem Makeig's session &amp; bio">
                   <img src="Assets/speakers/prem-makeig.jpg" alt="Prem Makeig" />
                   <span>Prem Makeig</span>
@@ -485,20 +489,29 @@ export default function DaysProgram({ showMatrix = true }) {
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">10:00 – 10:40</span>
+                  <span className="timeline-time-badge">10:00 – 10:30</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Institutional ERCs</span></span>
-                    <h5>The Token Is Standardised. The Institution Isn't: Where Should Ethereum Standards Stop?</h5>
+                    <h5>The Token Is Standardised. The Institution Isn’t: Where Should Ethereum Standards Stop?</h5>
                     <p>Dhruvang Choudhari on regulated assets, ERC-3643, ERC-7943, and the protocol boundary.</p>
+                  </div>
+                </div>
+
+                <div className="showcase-timeline-item">
+                  <span className="timeline-time-badge">10:30 – 11:00</span>
+                  <div className="timeline-item-body">
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Clear-Signing</span></span>
+                    <h5>ERC-8009 &amp; Clear-Signing</h5>
+                    <p>Dr. Daniel Nagy on cryptographic clear-signing to solve blind signing vulnerabilities in Web3 wallet interactions.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">11:00 – 11:30</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Trustless Systems</span></span>
-                    <h5>Building Trustless Systems, Together</h5>
-                    <p>Simona Serban on balancing human trust with code trustlessness from lessons building ETHCluj.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Security</span></span>
+                    <h5>Verify, Authorise, Execute: ERC-8126, ERC-8196 and the Road to ERC-8004 Final</h5>
+                    <p>Leigh Cronian on multi-layer agent verification, risk scores, and policy-bound onchain execution.</p>
                   </div>
                 </div>
 
@@ -514,9 +527,9 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">12:10 – 13:00</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>AMA · Application ERCs</span></span>
-                    <h5>EIP Process AMA (Application Standards Focus)</h5>
-                    <p>Pooja Ranjan &amp; Jochem Brouwer on drafting ERCs, token interfaces, and wallet RPCs.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Trustless Systems</span></span>
+                    <h5>Building Trustless Systems, Together</h5>
+                    <p>Simona Serban on balancing human trust with code trustlessness from lessons building ETHCluj.</p>
                   </div>
                 </div>
 
@@ -530,7 +543,7 @@ export default function DaysProgram({ showMatrix = true }) {
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:00 – 14:25</span>
+                  <span className="timeline-time-badge">14:00 – 14:20</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Titled Assets</span></span>
                     <h5>Why Titled Assets Need More Than a Token Standard</h5>
@@ -539,20 +552,20 @@ export default function DaysProgram({ showMatrix = true }) {
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:25 – 15:00</span>
+                  <span className="timeline-time-badge">14:20 – 15:00</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Agent Security</span></span>
-                    <h5>Verify, authorise, execute: ERC-8126, ERC-8196 and the road to ERC-8004 Final</h5>
-                    <p>Leigh Cronian on multi-layer agent verification, risk scores, and policy-bound onchain execution.</p>
+                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Open Session · Networking</span></span>
+                    <h5>Open Session / Networking</h5>
+                    <p>Informal breakout discussions and standards coordination.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">15:00 – 16:00</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-break"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><span>Community Connect</span></span>
-                    <h5>EIP Hub Community Connect</h5>
-                    <p>Peer networking with smart contract architects, dapp founders, and auditors.</p>
+                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Fishbowl · Paper Reading</span></span>
+                    <h5>White Paper Reading: ERC-7930 (Fishbowl)</h5>
+                    <p>Rongxin, QZ, and Prem Makeig on ERC-7930 interoperable agent standards.</p>
                   </div>
                 </div>
 
@@ -560,7 +573,7 @@ export default function DaysProgram({ showMatrix = true }) {
                   <span className="timeline-time-badge">16:00 – 17:00</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Interactive Quiz Game</span></span>
-                    <h5>EIP Signal Quiz Game - Applications &amp; ERC Standards</h5>
+                    <h5>EIP Signal Quiz Game: Applications &amp; ERC Standards</h5>
                     <p>Competitive quiz on ERC-20, ERC-721, ERC-4337, and modern token standards.</p>
                   </div>
                 </div>
@@ -726,9 +739,9 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">12:00 – 13:00</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Token Architecture</span></span>
-                    <h5>Self-Sovereign Tokens: Rethinking Onchain Representation</h5>
-                    <p>German Abal on Apeiron Protocol, protected state in ConsoleStorage, and modular execution.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Business Continuity</span></span>
+                    <h5>More Like Ethereum, Less Like SaaS: Infra Guarantees for Onchain Business</h5>
+                    <p>Gavin Birch on translating credible exit, permissionless access, and constrained governance into business continuity guarantees.</p>
                   </div>
                 </div>
 
@@ -744,23 +757,23 @@ export default function DaysProgram({ showMatrix = true }) {
                 <div className="showcase-timeline-item">
                   <span className="timeline-time-badge">13:30 – 14:00</span>
                   <div className="timeline-item-body">
-                    <span className="timeline-format-tag tag-ama"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>AMA · Enterprise EIPs</span></span>
-                    <h5>EIP Process AMA (Enterprise Adoption)</h5>
-                    <p>Closing AMA with Pooja Ranjan on institutional participation in Ethereum standards.</p>
+                    <span className="timeline-format-tag tag-talk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk · Token Architecture</span></span>
+                    <h5>Self-Sovereign Tokens: Rethinking Onchain Representation</h5>
+                    <p>German Abal on Apeiron Protocol, protected state in ConsoleStorage, and modular execution.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">14:00 – 15:00</span>
+                  <span className="timeline-time-badge">14:00 – 14:30</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-quiz"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H15c-.55 0-1-.45-1-1v-2.34c3.27-.67 6-3.73 6-7.32V4H4v3.34c0 3.59 2.73 6.65 6 7.32z"/></svg><span>Championship Quiz Game</span></span>
-                    <h5>EIP Signal Quiz Game - Enterprise &amp; Adoption</h5>
-                    <p>Grand championship quiz covering all 4 days with recognition for top contributors.</p>
+                    <h5>EIP Signal Quiz Game: Enterprise &amp; Adoption</h5>
+                    <p>Grand championship quiz covering enterprise standards with recognition for top contributors.</p>
                   </div>
                 </div>
 
                 <div className="showcase-timeline-item">
-                  <span className="timeline-time-badge">15:00 – 15:30</span>
+                  <span className="timeline-time-badge">14:30 – 15:00</span>
                   <div className="timeline-item-body">
                     <span className="timeline-format-tag tag-closing"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg><span>Closing Ceremony</span></span>
                     <h5>EIP Hub Wrap-Up &amp; Closing Ceremony</h5>
@@ -769,7 +782,6 @@ export default function DaysProgram({ showMatrix = true }) {
                 </div>
               </div>
             </div>
-
 
           </div>
         </div>
@@ -914,7 +926,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dhruvang Choudhari · Leigh Cronian · Prem Makeig · Simona Serban · Taran Dhillon · Thirumurugan Sivalingam</span>
+              <span className="day-meta-val" style={{ color: '#38bdf8', fontWeight: '600' }}>Dr. Daniel Nagy · Dhruvang Choudhari · Leigh Cronian · Prem Makeig · Simona Serban · Taran Dhillon · Thirumurugan Sivalingam</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
@@ -966,7 +978,7 @@ export default function DaysProgram({ showMatrix = true }) {
           <div className="day-meta-tags">
             <div className="day-meta-row">
               <span className="day-meta-label">Speakers</span>
-              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Charchit Kumawat · Dhruv Gera · German Abal · Kevin Jones · Yudhishthra</span>
+              <span className="day-meta-val" style={{ color: '#6ee7b7', fontWeight: '600' }}>Abhay Singh · Charchit Kumawat · Dhruv Gera · Gavin Birch · German Abal · Kevin Jones · Pooja Ranjan · Yudhishthra</span>
             </div>
             <div className="day-meta-row">
               <span className="day-meta-label">Booth Duty</span>
