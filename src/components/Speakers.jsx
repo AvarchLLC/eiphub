@@ -1092,7 +1092,7 @@ export default function Speakers() {
               </a>
             </div>
             <div className="speaker-meta-row">
-              <div className="speaker-org-tag">Avail Project</div>
+              <div className="speaker-org-tag">Avail</div>
             </div>
             <p className="speaker-designation">Senior Research and Development Engineer</p>
           </div>

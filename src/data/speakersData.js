@@ -224,7 +224,7 @@ export const SPEAKERS_DATA = {
     dayNum: 2,
     name: 'Rachit Anand Srivastava',
     photo: 'Assets/speakers/rachit-anand-srivastava.png',
-    affiliation: 'Avail Project',
+    affiliation: 'Avail',
     designation: 'Senior Research and Development Engineer',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',

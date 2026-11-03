@@ -259,7 +259,7 @@ const ALL_SPEAKERS = [
     id: 'rachit',
     modalId: 'rachit',
     name: 'Rachit Anand Srivastava',
-    org: 'Avail Project',
+    org: 'Avail',
     track: 'Day 2 · PeerDAS & ZK',
     badgeIcon: '🔬',
     photo: 'Assets/speakers/rachit-anand-srivastava.png',

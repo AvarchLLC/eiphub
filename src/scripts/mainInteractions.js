@@ -2,8 +2,8 @@
 export function initSiteInteractions() {
   if (typeof window === 'undefined') return;
 
-// Countdown — Devcon 8 India: 3 Nov 2026, 08:30 IST to 6 Nov 2026, 19:00 IST
-const eventStart = new Date(new Date('2026-11-03T08:30:00+05:30').getTime() + (4 * 60 * 60 * 1000));
+// Countdown — Devcon 8 India: 3 Nov 2026, 12:00 PM IST to 6 Nov 2026, 19:00 IST
+const eventStart = new Date('2026-11-03T12:00:00+05:30');
 const eventEnd   = new Date('2026-11-06T19:00:00+05:30');
 
 function tick(){
@@ -1617,7 +1617,7 @@ const SPEAKERS_DATA = {
     dayNum: 2,
     name: 'Rachit Anand Srivastava',
     photo: 'Assets/speakers/rachit-anand-srivastava.png',
-    affiliation: 'Avail Project',
+    affiliation: 'Avail',
     designation: 'Senior Research and Development Engineer',
     day: 'Day 2 – November 4, 2026',
     track: 'Day 2 · Nov 4 · Protocol EIPs & Network Upgrades',
